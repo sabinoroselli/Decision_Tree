@@ -1,0 +1,863 @@
+
+Gurobi 11.0.0 (mac64[arm]) logging started Fri Apr 19 16:16:02 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_2.txt"
+Set parameter TimeLimit to value 3600
+Unknown variable 'd[0]' in MIP start 0 - ignored
+Unknown variable 'a[Hospital_identification_number_for_blood_sample,0]' in MIP start 0 - ignored
+Unknown variable 'a[Age_of_patient,0]' in MIP start 0 - ignored
+Unknown variable 'a[Date_that_blood_sample_was_taken,0]' in MIP start 0 - ignored
+Unknown variable 'a[ml,0]' in MIP start 0 - ignored
+Unknown variable 'a[m2,0]' in MIP start 0 - ignored
+Unknown variable 'a[m3,0]' in MIP start 0 - ignored
+Unknown variable 'a[m4,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_1,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_2,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_3,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_4,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_5,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_6,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_7,0]' in MIP start 0 - ignored
+Unknown variable 'z[78,1]' in MIP start 0 - ignored
+Unknown variable 'z[78,2]' in MIP start 0 - ignored
+Unknown variable 'z[174,1]' in MIP start 0 - ignored
+Unknown variable 'z[174,2]' in MIP start 0 - ignored
+Unknown variable 'z[108,1]' in MIP start 0 - ignored
+Unknown variable 'z[108,2]' in MIP start 0 - ignored
+Unknown variable 'z[175,1]' in MIP start 0 - ignored
+Unknown variable 'z[175,2]' in MIP start 0 - ignored
+Unknown variable 'z[188,1]' in MIP start 0 - ignored
+Unknown variable 'z[188,2]' in MIP start 0 - ignored
+Unknown variable 'z[135,1]' in MIP start 0 - ignored
+Unknown variable 'z[135,2]' in MIP start 0 - ignored
+Unknown variable 'z[79,1]' in MIP start 0 - ignored
+Unknown variable 'z[79,2]' in MIP start 0 - ignored
+Unknown variable 'z[1,1]' in MIP start 0 - ignored
+Unknown variable 'z[1,2]' in MIP start 0 - ignored
+Unknown variable 'z[82,1]' in MIP start 0 - ignored
+Unknown variable 'z[82,2]' in MIP start 0 - ignored
+Unknown variable 'z[112,1]' in MIP start 0 - ignored
+Unknown variable 'z[112,2]' in MIP start 0 - ignored
+Unknown variable 'z[201,1]' in MIP start 0 - ignored
+Unknown variable 'z[201,2]' in MIP start 0 - ignored
+Unknown variable 'z[158,1]' in MIP start 0 - ignored
+Unknown variable 'z[158,2]' in MIP start 0 - ignored
+Unknown variable 'z[169,1]' in MIP start 0 - ignored
+Unknown variable 'z[169,2]' in MIP start 0 - ignored
+Unknown variable 'z[197,1]' in MIP start 0 - ignored
+Unknown variable 'z[197,2]' in MIP start 0 - ignored
+Unknown variable 'z[111,1]' in MIP start 0 - ignored
+Unknown variable 'z[111,2]' in MIP start 0 - ignored
+Unknown variable 'z[36,1]' in MIP start 0 - ignored
+Unknown variable 'z[36,2]' in MIP start 0 - ignored
+Unknown variable 'z[92,1]' in MIP start 0 - ignored
+Unknown variable 'z[92,2]' in MIP start 0 - ignored
+Unknown variable 'z[180,1]' in MIP start 0 - ignored
+Unknown variable 'z[180,2]' in MIP start 0 - ignored
+Unknown variable 'z[128,1]' in MIP start 0 - ignored
+Unknown variable 'z[128,2]' in MIP start 0 - ignored
+Unknown variable 'z[62,1]' in MIP start 0 - ignored
+Unknown variable 'z[62,2]' in MIP start 0 - ignored
+Unknown variable 'z[0,1]' in MIP start 0 - ignored
+Unknown variable 'z[0,2]' in MIP start 0 - ignored
+Unknown variable 'z[27,1]' in MIP start 0 - ignored
+Unknown variable 'z[27,2]' in MIP start 0 - ignored
+Unknown variable 'z[100,1]' in MIP start 0 - ignored
+Unknown variable 'z[100,2]' in MIP start 0 - ignored
+Unknown variable 'z[166,1]' in MIP start 0 - ignored
+Unknown variable 'z[166,2]' in MIP start 0 - ignored
+Unknown variable 'z[119,1]' in MIP start 0 - ignored
+Unknown variable 'z[119,2]' in MIP start 0 - ignored
+Unknown variable 'z[205,1]' in MIP start 0 - ignored
+Unknown variable 'z[205,2]' in MIP start 0 - ignored
+Unknown variable 'z[20,1]' in MIP start 0 - ignored
+Unknown variable 'z[20,2]' in MIP start 0 - ignored
+Unknown variable 'z[189,1]' in MIP start 0 - ignored
+Unknown variable 'z[189,2]' in MIP start 0 - ignored
+Unknown variable 'z[185,1]' in MIP start 0 - ignored
+Unknown variable 'z[185,2]' in MIP start 0 - ignored
+Unknown variable 'z[165,1]' in MIP start 0 - ignored
+Unknown variable 'z[165,2]' in MIP start 0 - ignored
+Unknown variable 'z[151,1]' in MIP start 0 - ignored
+Unknown variable 'z[151,2]' in MIP start 0 - ignored
+Unknown variable 'z[77,1]' in MIP start 0 - ignored
+Unknown variable 'z[77,2]' in MIP start 0 - ignored
+Unknown variable 'z[30,1]' in MIP start 0 - ignored
+Unknown variable 'z[30,2]' in MIP start 0 - ignored
+Unknown variable 'z[163,1]' in MIP start 0 - ignored
+Unknown variable 'z[163,2]' in MIP start 0 - ignored
+Unknown variable 'z[17,1]' in MIP start 0 - ignored
+Unknown variable 'z[17,2]' in MIP start 0 - ignored
+Unknown variable 'z[59,1]' in MIP start 0 - ignored
+Unknown variable 'z[59,2]' in MIP start 0 - ignored
+Unknown variable 'z[190,1]' in MIP start 0 - ignored
+Unknown variable 'z[190,2]' in MIP start 0 - ignored
+Unknown variable 'z[74,1]' in MIP start 0 - ignored
+Unknown variable 'z[74,2]' in MIP start 0 - ignored
+Unknown variable 'z[143,1]' in MIP start 0 - ignored
+Unknown variable 'z[143,2]' in MIP start 0 - ignored
+Unknown variable 'z[147,1]' in MIP start 0 - ignored
+Unknown variable 'z[147,2]' in MIP start 0 - ignored
+Unknown variable 'z[171,1]' in MIP start 0 - ignored
+Unknown variable 'z[171,2]' in MIP start 0 - ignored
+Unknown variable 'z[93,1]' in MIP start 0 - ignored
+Unknown variable 'z[93,2]' in MIP start 0 - ignored
+Unknown variable 'z[208,1]' in MIP start 0 - ignored
+Unknown variable 'z[208,2]' in MIP start 0 - ignored
+Unknown variable 'z[21,1]' in MIP start 0 - ignored
+Unknown variable 'z[21,2]' in MIP start 0 - ignored
+Unknown variable 'z[123,1]' in MIP start 0 - ignored
+Unknown variable 'z[123,2]' in MIP start 0 - ignored
+Unknown variable 'z[55,1]' in MIP start 0 - ignored
+Unknown variable 'z[55,2]' in MIP start 0 - ignored
+Unknown variable 'z[16,1]' in MIP start 0 - ignored
+Unknown variable 'z[16,2]' in MIP start 0 - ignored
+Unknown variable 'z[186,1]' in MIP start 0 - ignored
+Unknown variable 'z[186,2]' in MIP start 0 - ignored
+Unknown variable 'z[153,1]' in MIP start 0 - ignored
+Unknown variable 'z[153,2]' in MIP start 0 - ignored
+Unknown variable 'z[87,1]' in MIP start 0 - ignored
+Unknown variable 'z[87,2]' in MIP start 0 - ignored
+Unknown variable 'z[97,1]' in MIP start 0 - ignored
+Unknown variable 'z[97,2]' in MIP start 0 - ignored
+Unknown variable 'z[125,1]' in MIP start 0 - ignored
+Unknown variable 'z[125,2]' in MIP start 0 - ignored
+Unknown variable 'z[61,1]' in MIP start 0 - ignored
+Unknown variable 'z[61,2]' in MIP start 0 - ignored
+Unknown variable 'z[81,1]' in MIP start 0 - ignored
+Unknown variable 'z[81,2]' in MIP start 0 - ignored
+Unknown variable 'z[68,1]' in MIP start 0 - ignored
+Unknown variable 'z[68,2]' in MIP start 0 - ignored
+Unknown variable 'z[129,1]' in MIP start 0 - ignored
+Unknown variable 'z[129,2]' in MIP start 0 - ignored
+Unknown variable 'z[56,1]' in MIP start 0 - ignored
+Unknown variable 'z[56,2]' in MIP start 0 - ignored
+Unknown variable 'z[19,1]' in MIP start 0 - ignored
+Unknown variable 'z[19,2]' in MIP start 0 - ignored
+Unknown variable 'z[86,1]' in MIP start 0 - ignored
+Unknown variable 'z[86,2]' in MIP start 0 - ignored
+Unknown variable 'z[70,1]' in MIP start 0 - ignored
+Unknown variable 'z[70,2]' in MIP start 0 - ignored
+Unknown variable 'z[137,1]' in MIP start 0 - ignored
+Unknown variable 'z[137,2]' in MIP start 0 - ignored
+Unknown variable 'z[60,1]' in MIP start 0 - ignored
+Unknown variable 'z[60,2]' in MIP start 0 - ignored
+Unknown variable 'z[34,1]' in MIP start 0 - ignored
+Unknown variable 'z[34,2]' in MIP start 0 - ignored
+Unknown variable 'z[40,1]' in MIP start 0 - ignored
+Unknown variable 'z[40,2]' in MIP start 0 - ignored
+Unknown variable 'z[138,1]' in MIP start 0 - ignored
+Unknown variable 'z[138,2]' in MIP start 0 - ignored
+Unknown variable 'z[76,1]' in MIP start 0 - ignored
+Unknown variable 'z[76,2]' in MIP start 0 - ignored
+Unknown variable 'z[200,1]' in MIP start 0 - ignored
+Unknown variable 'z[200,2]' in MIP start 0 - ignored
+Unknown variable 'z[26,1]' in MIP start 0 - ignored
+Unknown variable 'z[26,2]' in MIP start 0 - ignored
+Unknown variable 'z[32,1]' in MIP start 0 - ignored
+Unknown variable 'z[32,2]' in MIP start 0 - ignored
+Unknown variable 'z[204,1]' in MIP start 0 - ignored
+Unknown variable 'z[204,2]' in MIP start 0 - ignored
+Unknown variable 'z[96,1]' in MIP start 0 - ignored
+Unknown variable 'z[96,2]' in MIP start 0 - ignored
+Unknown variable 'z[83,1]' in MIP start 0 - ignored
+Unknown variable 'z[83,2]' in MIP start 0 - ignored
+Unknown variable 'z[110,1]' in MIP start 0 - ignored
+Unknown variable 'z[110,2]' in MIP start 0 - ignored
+Unknown variable 'z[105,1]' in MIP start 0 - ignored
+Unknown variable 'z[105,2]' in MIP start 0 - ignored
+Unknown variable 'z[73,1]' in MIP start 0 - ignored
+Unknown variable 'z[73,2]' in MIP start 0 - ignored
+Unknown variable 'z[117,1]' in MIP start 0 - ignored
+Unknown variable 'z[117,2]' in MIP start 0 - ignored
+Unknown variable 'z[150,1]' in MIP start 0 - ignored
+Unknown variable 'z[150,2]' in MIP start 0 - ignored
+Unknown variable 'z[145,1]' in MIP start 0 - ignored
+Unknown variable 'z[145,2]' in MIP start 0 - ignored
+Unknown variable 'z[164,1]' in MIP start 0 - ignored
+Unknown variable 'z[164,2]' in MIP start 0 - ignored
+Unknown variable 'z[207,1]' in MIP start 0 - ignored
+Unknown variable 'z[207,2]' in MIP start 0 - ignored
+Unknown variable 'z[136,1]' in MIP start 0 - ignored
+Unknown variable 'z[136,2]' in MIP start 0 - ignored
+Unknown variable 'z[39,1]' in MIP start 0 - ignored
+Unknown variable 'z[39,2]' in MIP start 0 - ignored
+Unknown variable 'z[49,1]' in MIP start 0 - ignored
+Unknown variable 'z[49,2]' in MIP start 0 - ignored
+Unknown variable 'z[195,1]' in MIP start 0 - ignored
+Unknown variable 'z[195,2]' in MIP start 0 - ignored
+Unknown variable 'z[132,1]' in MIP start 0 - ignored
+Unknown variable 'z[132,2]' in MIP start 0 - ignored
+Unknown variable 'z[50,1]' in MIP start 0 - ignored
+Unknown variable 'z[50,2]' in MIP start 0 - ignored
+Unknown variable 'z[52,1]' in MIP start 0 - ignored
+Unknown variable 'z[52,2]' in MIP start 0 - ignored
+Unknown variable 'z[80,1]' in MIP start 0 - ignored
+Unknown variable 'z[80,2]' in MIP start 0 - ignored
+Unknown variable 'z[194,1]' in MIP start 0 - ignored
+Unknown variable 'z[194,2]' in MIP start 0 - ignored
+Unknown variable 'z[121,1]' in MIP start 0 - ignored
+Unknown variable 'z[121,2]' in MIP start 0 - ignored
+Unknown variable 'z[198,1]' in MIP start 0 - ignored
+Unknown variable 'z[198,2]' in MIP start 0 - ignored
+Unknown variable 'z[46,1]' in MIP start 0 - ignored
+Unknown variable 'z[46,2]' in MIP start 0 - ignored
+Unknown variable 'z[88,1]' in MIP start 0 - ignored
+Unknown variable 'z[88,2]' in MIP start 0 - ignored
+Unknown variable 'z[69,1]' in MIP start 0 - ignored
+Unknown variable 'z[69,2]' in MIP start 0 - ignored
+Unknown variable 'z[67,1]' in MIP start 0 - ignored
+Unknown variable 'z[67,2]' in MIP start 0 - ignored
+Unknown variable 'z[192,1]' in MIP start 0 - ignored
+Unknown variable 'z[192,2]' in MIP start 0 - ignored
+Unknown variable 'z[58,1]' in MIP start 0 - ignored
+Unknown variable 'z[58,2]' in MIP start 0 - ignored
+Unknown variable 'z[33,1]' in MIP start 0 - ignored
+Unknown variable 'z[33,2]' in MIP start 0 - ignored
+Unknown variable 'z[38,1]' in MIP start 0 - ignored
+Unknown variable 'z[38,2]' in MIP start 0 - ignored
+Unknown variable 'z[103,1]' in MIP start 0 - ignored
+Unknown variable 'z[103,2]' in MIP start 0 - ignored
+Unknown variable 'z[51,1]' in MIP start 0 - ignored
+Unknown variable 'z[51,2]' in MIP start 0 - ignored
+Unknown variable 'z[107,1]' in MIP start 0 - ignored
+Unknown variable 'z[107,2]' in MIP start 0 - ignored
+Unknown variable 'z[170,1]' in MIP start 0 - ignored
+Unknown variable 'z[170,2]' in MIP start 0 - ignored
+Unknown variable 'z[4,1]' in MIP start 0 - ignored
+Unknown variable 'z[4,2]' in MIP start 0 - ignored
+Unknown variable 'z[102,1]' in MIP start 0 - ignored
+Unknown variable 'z[102,2]' in MIP start 0 - ignored
+Unknown variable 'z[167,1]' in MIP start 0 - ignored
+Unknown variable 'z[167,2]' in MIP start 0 - ignored
+Unknown variable 'z[37,1]' in MIP start 0 - ignored
+Unknown variable 'z[37,2]' in MIP start 0 - ignored
+Unknown variable 'z[116,1]' in MIP start 0 - ignored
+Unknown variable 'z[116,2]' in MIP start 0 - ignored
+Unknown variable 'z[124,1]' in MIP start 0 - ignored
+Unknown variable 'z[124,2]' in MIP start 0 - ignored
+Unknown variable 'z[148,1]' in MIP start 0 - ignored
+Unknown variable 'z[148,2]' in MIP start 0 - ignored
+Unknown variable 'z[31,1]' in MIP start 0 - ignored
+Unknown variable 'z[31,2]' in MIP start 0 - ignored
+Unknown variable 'z[63,1]' in MIP start 0 - ignored
+Unknown variable 'z[63,2]' in MIP start 0 - ignored
+Unknown variable 'z[47,1]' in MIP start 0 - ignored
+Unknown variable 'z[47,2]' in MIP start 0 - ignored
+Unknown variable 'z[203,1]' in MIP start 0 - ignored
+Unknown variable 'z[203,2]' in MIP start 0 - ignored
+Unknown variable 'z[95,1]' in MIP start 0 - ignored
+Unknown variable 'z[95,2]' in MIP start 0 - ignored
+Unknown variable 'z[177,1]' in MIP start 0 - ignored
+Unknown variable 'z[177,2]' in MIP start 0 - ignored
+Unknown variable 'z[162,1]' in MIP start 0 - ignored
+Unknown variable 'z[162,2]' in MIP start 0 - ignored
+Unknown variable 'z[7,1]' in MIP start 0 - ignored
+Unknown variable 'z[7,2]' in MIP start 0 - ignored
+Unknown variable 'z[104,1]' in MIP start 0 - ignored
+Unknown variable 'z[104,2]' in MIP start 0 - ignored
+Unknown variable 'z[75,1]' in MIP start 0 - ignored
+Unknown variable 'z[75,2]' in MIP start 0 - ignored
+Unknown variable 'z[43,1]' in MIP start 0 - ignored
+Unknown variable 'z[43,2]' in MIP start 0 - ignored
+Unknown variable 'z[22,1]' in MIP start 0 - ignored
+Unknown variable 'z[22,2]' in MIP start 0 - ignored
+Unknown variable 'z[72,1]' in MIP start 0 - ignored
+Unknown variable 'z[72,2]' in MIP start 0 - ignored
+Unknown variable 'z[15,1]' in MIP start 0 - ignored
+Unknown variable 'z[15,2]' in MIP start 0 - ignored
+Unknown variable 'z[168,1]' in MIP start 0 - ignored
+Unknown variable 'z[168,2]' in MIP start 0 - ignored
+Unknown variable 'l[1]' in MIP start 0 - ignored
+Unknown variable 'l[2]' in MIP start 0 - ignored
+Unknown variable 'Beta[Hospital_identification_number_for_blood_sample,1]' in MIP start 0 - ignored
+Unknown variable 'Beta[Hospital_identification_number_for_blood_sample,2]' in MIP start 0 - ignored
+Unknown variable 'Beta[Age_of_patient,1]' in MIP start 0 - ignored
+Unknown variable 'Beta[Age_of_patient,2]' in MIP start 0 - ignored
+Unknown variable 'Beta[Date_that_blood_sample_was_taken,1]' in MIP start 0 - ignored
+Unknown variable 'Beta[Date_that_blood_sample_was_taken,2]' in MIP start 0 - ignored
+Unknown variable 'Beta[ml,1]' in MIP start 0 - ignored
+Unknown variable 'Beta[ml,2]' in MIP start 0 - ignored
+Unknown variable 'Beta[m2,1]' in MIP start 0 - ignored
+Unknown variable 'Beta[m2,2]' in MIP start 0 - ignored
+Unknown variable 'Beta[m3,1]' in MIP start 0 - ignored
+Unknown variable 'Beta[m3,2]' in MIP start 0 - ignored
+Unknown variable 'Beta[m4,1]' in MIP start 0 - ignored
+Unknown variable 'Beta[m4,2]' in MIP start 0 - ignored
+Unknown variable 'Beta[Observation_number_1,1]' in MIP start 0 - ignored
+Unknown variable 'Beta[Observation_number_1,2]' in MIP start 0 - ignored
+Unknown variable 'Beta[Observation_number_2,1]' in MIP start 0 - ignored
+Unknown variable 'Beta[Observation_number_2,2]' in MIP start 0 - ignored
+Unknown variable 'Beta[Observation_number_3,1]' in MIP start 0 - ignored
+Unknown variable 'Beta[Observation_number_3,2]' in MIP start 0 - ignored
+Unknown variable 'Beta[Observation_number_4,1]' in MIP start 0 - ignored
+Unknown variable 'Beta[Observation_number_4,2]' in MIP start 0 - ignored
+Unknown variable 'Beta[Observation_number_5,1]' in MIP start 0 - ignored
+Unknown variable 'Beta[Observation_number_5,2]' in MIP start 0 - ignored
+Unknown variable 'Beta[Observation_number_6,1]' in MIP start 0 - ignored
+Unknown variable 'Beta[Observation_number_6,2]' in MIP start 0 - ignored
+Unknown variable 'Beta[Observation_number_7,1]' in MIP start 0 - ignored
+Unknown variable 'Beta[Observation_number_7,2]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Hospital_identification_number_for_blood_sample,1]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Hospital_identification_number_for_blood_sample,2]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Age_of_patient,1]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Age_of_patient,2]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Date_that_blood_sample_was_taken,1]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Date_that_blood_sample_was_taken,2]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[ml,1]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[ml,2]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[m2,1]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[m2,2]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[m3,1]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[m3,2]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[m4,1]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[m4,2]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Observation_number_1,1]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Observation_number_1,2]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Observation_number_2,1]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Observation_number_2,2]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Observation_number_3,1]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Observation_number_3,2]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Observation_number_4,1]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Observation_number_4,2]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Observation_number_5,1]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Observation_number_5,2]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Observation_number_6,1]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Observation_number_6,2]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Observation_number_7,1]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Observation_number_7,2]' in MIP start 0 - ignored
+Read MIP start from file WarmStarts/biomed_2.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 260 rows, 132 columns and 773 nonzeros
+Model fingerprint: 0x2f233e9d
+Variable types: 0 continuous, 132 integer (128 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+02]
+
+No start values specified in MIP start
+
+Found heuristic solution: objective 45.0000000
+Presolve removed 260 rows and 132 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 45 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.500000000000e+01, best bound 4.500000000000e+01, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Fri Apr 19 16:16:02 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_2.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/biomed_2.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 260 rows, 132 columns and 773 nonzeros
+Model fingerprint: 0x2ef1f246
+Variable types: 0 continuous, 132 integer (128 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+02]
+
+Loaded user MIP start with objective 45
+
+Presolve removed 260 rows and 132 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 45 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.500000000000e+01, best bound 4.500000000000e+01, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Fri Apr 19 16:16:02 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_2.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/biomed_2.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 260 rows, 132 columns and 773 nonzeros
+Model fingerprint: 0x2ef1f246
+Variable types: 0 continuous, 132 integer (128 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+02]
+
+Loaded user MIP start with objective 45
+
+Presolve removed 260 rows and 132 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 45 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.500000000000e+01, best bound 4.500000000000e+01, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Fri Apr 19 16:16:02 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_2.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/biomed_2.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 260 rows, 132 columns and 773 nonzeros
+Model fingerprint: 0x2ef1f246
+Variable types: 0 continuous, 132 integer (128 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+02]
+
+Loaded user MIP start with objective 45
+
+Presolve removed 260 rows and 132 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 45 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.500000000000e+01, best bound 4.500000000000e+01, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Fri Apr 19 16:16:03 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_2.txt"
+Set parameter TimeLimit to value 3600
+Unknown variable 'z[78,0]' in MIP start 0 - ignored
+Unknown variable 'z[174,0]' in MIP start 0 - ignored
+Unknown variable 'z[108,0]' in MIP start 0 - ignored
+Unknown variable 'z[175,0]' in MIP start 0 - ignored
+Unknown variable 'z[188,0]' in MIP start 0 - ignored
+Unknown variable 'z[135,0]' in MIP start 0 - ignored
+Unknown variable 'z[79,0]' in MIP start 0 - ignored
+Unknown variable 'z[1,0]' in MIP start 0 - ignored
+Unknown variable 'z[82,0]' in MIP start 0 - ignored
+Unknown variable 'z[112,0]' in MIP start 0 - ignored
+Unknown variable 'z[201,0]' in MIP start 0 - ignored
+Unknown variable 'z[158,0]' in MIP start 0 - ignored
+Unknown variable 'z[169,0]' in MIP start 0 - ignored
+Unknown variable 'z[197,0]' in MIP start 0 - ignored
+Unknown variable 'z[111,0]' in MIP start 0 - ignored
+Unknown variable 'z[36,0]' in MIP start 0 - ignored
+Unknown variable 'z[92,0]' in MIP start 0 - ignored
+Unknown variable 'z[180,0]' in MIP start 0 - ignored
+Unknown variable 'z[128,0]' in MIP start 0 - ignored
+Unknown variable 'z[62,0]' in MIP start 0 - ignored
+Unknown variable 'z[0,0]' in MIP start 0 - ignored
+Unknown variable 'z[27,0]' in MIP start 0 - ignored
+Unknown variable 'z[100,0]' in MIP start 0 - ignored
+Unknown variable 'z[166,0]' in MIP start 0 - ignored
+Unknown variable 'z[119,0]' in MIP start 0 - ignored
+Unknown variable 'z[205,0]' in MIP start 0 - ignored
+Unknown variable 'z[20,0]' in MIP start 0 - ignored
+Unknown variable 'z[189,0]' in MIP start 0 - ignored
+Unknown variable 'z[185,0]' in MIP start 0 - ignored
+Unknown variable 'z[165,0]' in MIP start 0 - ignored
+Unknown variable 'z[151,0]' in MIP start 0 - ignored
+Unknown variable 'z[77,0]' in MIP start 0 - ignored
+Unknown variable 'z[30,0]' in MIP start 0 - ignored
+Unknown variable 'z[163,0]' in MIP start 0 - ignored
+Unknown variable 'z[17,0]' in MIP start 0 - ignored
+Unknown variable 'z[59,0]' in MIP start 0 - ignored
+Unknown variable 'z[190,0]' in MIP start 0 - ignored
+Unknown variable 'z[74,0]' in MIP start 0 - ignored
+Unknown variable 'z[143,0]' in MIP start 0 - ignored
+Unknown variable 'z[147,0]' in MIP start 0 - ignored
+Unknown variable 'z[171,0]' in MIP start 0 - ignored
+Unknown variable 'z[93,0]' in MIP start 0 - ignored
+Unknown variable 'z[208,0]' in MIP start 0 - ignored
+Unknown variable 'z[21,0]' in MIP start 0 - ignored
+Unknown variable 'z[123,0]' in MIP start 0 - ignored
+Unknown variable 'z[55,0]' in MIP start 0 - ignored
+Unknown variable 'z[16,0]' in MIP start 0 - ignored
+Unknown variable 'z[186,0]' in MIP start 0 - ignored
+Unknown variable 'z[153,0]' in MIP start 0 - ignored
+Unknown variable 'z[87,0]' in MIP start 0 - ignored
+Unknown variable 'z[97,0]' in MIP start 0 - ignored
+Unknown variable 'z[125,0]' in MIP start 0 - ignored
+Unknown variable 'z[61,0]' in MIP start 0 - ignored
+Unknown variable 'z[81,0]' in MIP start 0 - ignored
+Unknown variable 'z[68,0]' in MIP start 0 - ignored
+Unknown variable 'z[129,0]' in MIP start 0 - ignored
+Unknown variable 'z[56,0]' in MIP start 0 - ignored
+Unknown variable 'z[19,0]' in MIP start 0 - ignored
+Unknown variable 'z[86,0]' in MIP start 0 - ignored
+Unknown variable 'z[70,0]' in MIP start 0 - ignored
+Unknown variable 'z[137,0]' in MIP start 0 - ignored
+Unknown variable 'z[60,0]' in MIP start 0 - ignored
+Unknown variable 'z[34,0]' in MIP start 0 - ignored
+Unknown variable 'z[40,0]' in MIP start 0 - ignored
+Unknown variable 'z[138,0]' in MIP start 0 - ignored
+Unknown variable 'z[76,0]' in MIP start 0 - ignored
+Unknown variable 'z[200,0]' in MIP start 0 - ignored
+Unknown variable 'z[26,0]' in MIP start 0 - ignored
+Unknown variable 'z[32,0]' in MIP start 0 - ignored
+Unknown variable 'z[204,0]' in MIP start 0 - ignored
+Unknown variable 'z[96,0]' in MIP start 0 - ignored
+Unknown variable 'z[83,0]' in MIP start 0 - ignored
+Unknown variable 'z[110,0]' in MIP start 0 - ignored
+Unknown variable 'z[105,0]' in MIP start 0 - ignored
+Unknown variable 'z[73,0]' in MIP start 0 - ignored
+Unknown variable 'z[117,0]' in MIP start 0 - ignored
+Unknown variable 'z[150,0]' in MIP start 0 - ignored
+Unknown variable 'z[145,0]' in MIP start 0 - ignored
+Unknown variable 'z[164,0]' in MIP start 0 - ignored
+Unknown variable 'z[207,0]' in MIP start 0 - ignored
+Unknown variable 'z[136,0]' in MIP start 0 - ignored
+Unknown variable 'z[39,0]' in MIP start 0 - ignored
+Unknown variable 'z[49,0]' in MIP start 0 - ignored
+Unknown variable 'z[195,0]' in MIP start 0 - ignored
+Unknown variable 'z[132,0]' in MIP start 0 - ignored
+Unknown variable 'z[50,0]' in MIP start 0 - ignored
+Unknown variable 'z[52,0]' in MIP start 0 - ignored
+Unknown variable 'z[80,0]' in MIP start 0 - ignored
+Unknown variable 'z[194,0]' in MIP start 0 - ignored
+Unknown variable 'z[121,0]' in MIP start 0 - ignored
+Unknown variable 'z[198,0]' in MIP start 0 - ignored
+Unknown variable 'z[46,0]' in MIP start 0 - ignored
+Unknown variable 'z[88,0]' in MIP start 0 - ignored
+Unknown variable 'z[69,0]' in MIP start 0 - ignored
+Unknown variable 'z[67,0]' in MIP start 0 - ignored
+Unknown variable 'z[192,0]' in MIP start 0 - ignored
+Unknown variable 'z[58,0]' in MIP start 0 - ignored
+Unknown variable 'z[33,0]' in MIP start 0 - ignored
+Unknown variable 'z[38,0]' in MIP start 0 - ignored
+Unknown variable 'z[103,0]' in MIP start 0 - ignored
+Unknown variable 'z[51,0]' in MIP start 0 - ignored
+Unknown variable 'z[107,0]' in MIP start 0 - ignored
+Unknown variable 'z[170,0]' in MIP start 0 - ignored
+Unknown variable 'z[4,0]' in MIP start 0 - ignored
+Unknown variable 'z[102,0]' in MIP start 0 - ignored
+Unknown variable 'z[167,0]' in MIP start 0 - ignored
+Unknown variable 'z[37,0]' in MIP start 0 - ignored
+Unknown variable 'z[116,0]' in MIP start 0 - ignored
+Unknown variable 'z[124,0]' in MIP start 0 - ignored
+Unknown variable 'z[148,0]' in MIP start 0 - ignored
+Unknown variable 'z[31,0]' in MIP start 0 - ignored
+Unknown variable 'z[63,0]' in MIP start 0 - ignored
+Unknown variable 'z[47,0]' in MIP start 0 - ignored
+Unknown variable 'z[203,0]' in MIP start 0 - ignored
+Unknown variable 'z[95,0]' in MIP start 0 - ignored
+Unknown variable 'z[177,0]' in MIP start 0 - ignored
+Unknown variable 'z[162,0]' in MIP start 0 - ignored
+Unknown variable 'z[7,0]' in MIP start 0 - ignored
+Unknown variable 'z[104,0]' in MIP start 0 - ignored
+Unknown variable 'z[75,0]' in MIP start 0 - ignored
+Unknown variable 'z[43,0]' in MIP start 0 - ignored
+Unknown variable 'z[22,0]' in MIP start 0 - ignored
+Unknown variable 'z[72,0]' in MIP start 0 - ignored
+Unknown variable 'z[15,0]' in MIP start 0 - ignored
+Unknown variable 'z[168,0]' in MIP start 0 - ignored
+Unknown variable 'l[0]' in MIP start 0 - ignored
+Unknown variable 'c[1.0,0]' in MIP start 0 - ignored
+Unknown variable 'c[-1.0,0]' in MIP start 0 - ignored
+Unknown variable 'n_k[1.0,0]' in MIP start 0 - ignored
+Unknown variable 'n_k[-1.0,0]' in MIP start 0 - ignored
+Unknown variable 'N[0]' in MIP start 0 - ignored
+Unknown variable 'L[0]' in MIP start 0 - ignored
+Read MIP start from file WarmStarts/biomed_2.mst
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 649 rows, 280 columns and 5562 nonzeros
+Model fingerprint: 0x2dd14dfb
+Variable types: 1 continuous, 279 integer (271 binary)
+Coefficient statistics:
+  Matrix range     [2e-03, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+
+No start values specified in MIP start
+
+Presolve removed 258 rows and 133 columns
+Presolve time: 0.01s
+Presolved: 391 rows, 147 columns, 3926 nonzeros
+Variable types: 1 continuous, 146 integer (141 binary)
+Found heuristic solution: objective 45.0000000
+
+Root relaxation: objective 0.000000e+00, 10 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0    5   45.00000    0.00000   100%     -    0s
+Another try with MIP start
+     0     0    0.00000    0   52   45.00000    0.00000   100%     -    0s
+H    0     0                      29.0000000    0.00000   100%     -    0s
+     0     0    0.00000    0   53   29.00000    0.00000   100%     -    0s
+H    0     0                      23.0000000    0.00000   100%     -    0s
+     0     0    0.00000    0    6   23.00000    0.00000   100%     -    0s
+H    0     0                      22.0000000    1.00000  95.5%     -    0s
+     0     0    1.00825    0   31   22.00000    1.00825  95.4%     -    0s
+     0     0    1.37411    0   54   22.00000    1.37411  93.8%     -    0s
+     0     0    4.00000    0   55   22.00000    4.00000  81.8%     -    0s
+     0     0    4.15243    0   49   22.00000    4.15243  81.1%     -    0s
+     0     0    6.00000    0   35   22.00000    6.00000  72.7%     -    0s
+     0     0    6.00000    0   35   22.00000    6.00000  72.7%     -    0s
+     0     2    6.00000    0   34   22.00000    6.00000  72.7%     -    0s
+
+Cutting planes:
+  Learned: 4
+  Gomory: 13
+  Cover: 507
+  MIR: 68
+  StrongCG: 8
+  GUB cover: 77
+  Inf proof: 2
+  RLT: 21
+  Relax-and-lift: 39
+
+Explored 1092 nodes (22895 simplex iterations) in 0.65 seconds (0.49 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 4: 22 23 29 45 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.200000000000e+01, best bound 2.200000000000e+01, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Fri Apr 19 16:16:03 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_2.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/biomed_2.mst
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 649 rows, 280 columns and 5562 nonzeros
+Model fingerprint: 0xf75fa14d
+Variable types: 1 continuous, 279 integer (271 binary)
+Coefficient statistics:
+  Matrix range     [2e-03, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+
+User MIP start produced solution with objective 22 (0.00s)
+Loaded user MIP start with objective 22
+
+Presolve removed 258 rows and 133 columns
+Presolve time: 0.01s
+Presolved: 391 rows, 147 columns, 3926 nonzeros
+Variable types: 1 continuous, 146 integer (141 binary)
+
+Root relaxation: objective 0.000000e+00, 10 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0    5   22.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   43   22.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   42   22.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   68   22.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   67   22.00000    0.00000   100%     -    0s
+     0     0    1.00000    0    3   22.00000    1.00000  95.5%     -    0s
+     0     0    1.00000    0    6   22.00000    1.00000  95.5%     -    0s
+     0     0    2.52291    0   28   22.00000    2.52291  88.5%     -    0s
+     0     0    2.88275    0   34   22.00000    2.88275  86.9%     -    0s
+     0     0    4.22605    0   46   22.00000    4.22605  80.8%     -    0s
+     0     0    4.94357    0   49   22.00000    4.94357  77.5%     -    0s
+     0     0    7.00000    0   22   22.00000    7.00000  68.2%     -    0s
+     0     0    7.62509    0   34   22.00000    7.62509  65.3%     -    0s
+     0     0    9.00000    0   37   22.00000    9.00000  59.1%     -    0s
+     0     0    9.00000    0   37   22.00000    9.00000  59.1%     -    0s
+     0     2    9.00000    0   37   22.00000    9.00000  59.1%     -    0s
+
+Cutting planes:
+  Learned: 7
+  Gomory: 3
+  Cover: 304
+  MIR: 102
+  StrongCG: 55
+  GUB cover: 138
+  Zero half: 3
+  RLT: 15
+  Relax-and-lift: 19
+
+Explored 422 nodes (13351 simplex iterations) in 0.70 seconds (0.43 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 1: 22 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.200000000000e+01, best bound 2.200000000000e+01, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Fri Apr 19 16:16:04 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_2.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/biomed_2.mst
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 649 rows, 280 columns and 5562 nonzeros
+Model fingerprint: 0xf75fa14d
+Variable types: 1 continuous, 279 integer (271 binary)
+Coefficient statistics:
+  Matrix range     [2e-03, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+
+User MIP start produced solution with objective 22 (0.01s)
+Loaded user MIP start with objective 22
+
+Presolve removed 258 rows and 133 columns
+Presolve time: 0.01s
+Presolved: 391 rows, 147 columns, 3926 nonzeros
+Variable types: 1 continuous, 146 integer (141 binary)
+
+Root relaxation: objective 0.000000e+00, 10 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0    5   22.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   43   22.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   42   22.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   68   22.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   67   22.00000    0.00000   100%     -    0s
+     0     0    1.00000    0    3   22.00000    1.00000  95.5%     -    0s
+     0     0    1.00000    0    6   22.00000    1.00000  95.5%     -    0s
+     0     0    2.52291    0   28   22.00000    2.52291  88.5%     -    0s
+     0     0    2.88275    0   34   22.00000    2.88275  86.9%     -    0s
+     0     0    4.22605    0   46   22.00000    4.22605  80.8%     -    0s
+     0     0    4.94357    0   49   22.00000    4.94357  77.5%     -    0s
+     0     0    7.00000    0   22   22.00000    7.00000  68.2%     -    0s
+     0     0    7.62509    0   34   22.00000    7.62509  65.3%     -    0s
+     0     0    9.00000    0   37   22.00000    9.00000  59.1%     -    0s
+     0     0    9.00000    0   37   22.00000    9.00000  59.1%     -    0s
+     0     2    9.00000    0   37   22.00000    9.00000  59.1%     -    0s
+
+Cutting planes:
+  Learned: 7
+  Gomory: 3
+  Cover: 304
+  MIR: 102
+  StrongCG: 55
+  GUB cover: 138
+  Zero half: 3
+  RLT: 15
+  Relax-and-lift: 19
+
+Explored 422 nodes (13351 simplex iterations) in 0.70 seconds (0.43 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 1: 22 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.200000000000e+01, best bound 2.200000000000e+01, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Fri Apr 19 16:16:05 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_2.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/biomed_2.mst
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 649 rows, 280 columns and 5562 nonzeros
+Model fingerprint: 0xf75fa14d
+Variable types: 1 continuous, 279 integer (271 binary)
+Coefficient statistics:
+  Matrix range     [2e-03, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+
+User MIP start produced solution with objective 22 (0.00s)
+Loaded user MIP start with objective 22
+
+Presolve removed 258 rows and 133 columns
+Presolve time: 0.01s
+Presolved: 391 rows, 147 columns, 3926 nonzeros
+Variable types: 1 continuous, 146 integer (141 binary)
+
+Root relaxation: objective 0.000000e+00, 10 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0    5   22.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   43   22.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   42   22.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   68   22.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   67   22.00000    0.00000   100%     -    0s
+     0     0    1.00000    0    3   22.00000    1.00000  95.5%     -    0s
+     0     0    1.00000    0    6   22.00000    1.00000  95.5%     -    0s
+     0     0    2.52291    0   28   22.00000    2.52291  88.5%     -    0s
+     0     0    2.88275    0   34   22.00000    2.88275  86.9%     -    0s
+     0     0    4.22605    0   46   22.00000    4.22605  80.8%     -    0s
+     0     0    4.94357    0   49   22.00000    4.94357  77.5%     -    0s
+     0     0    7.00000    0   22   22.00000    7.00000  68.2%     -    0s
+     0     0    7.62509    0   34   22.00000    7.62509  65.3%     -    0s
+     0     0    9.00000    0   37   22.00000    9.00000  59.1%     -    0s
+     0     0    9.00000    0   37   22.00000    9.00000  59.1%     -    0s
+     0     2    9.00000    0   37   22.00000    9.00000  59.1%     -    0s
+
+Cutting planes:
+  Learned: 7
+  Gomory: 3
+  Cover: 304
+  MIR: 102
+  StrongCG: 55
+  GUB cover: 138
+  Zero half: 3
+  RLT: 15
+  Relax-and-lift: 19
+
+Explored 422 nodes (13351 simplex iterations) in 0.64 seconds (0.43 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 1: 22 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.200000000000e+01, best bound 2.200000000000e+01, gap 0.0000%

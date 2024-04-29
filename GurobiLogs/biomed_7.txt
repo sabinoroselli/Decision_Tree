@@ -1,0 +1,780 @@
+
+Gurobi 11.0.0 (mac64[arm]) logging started Fri Apr 19 15:31:00 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_7.txt"
+Set parameter TimeLimit to value 3600
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 2225 rows, 744 columns and 25502 nonzeros
+Model fingerprint: 0xe4f9b84a
+Variable types: 3 continuous, 741 integer (725 binary)
+Coefficient statistics:
+  Matrix range     [3e-05, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Presolve removed 6 rows and 4 columns
+Presolve time: 0.01s
+Presolved: 2219 rows, 740 columns, 24158 nonzeros
+Variable types: 3 continuous, 737 integer (725 binary)
+
+Root relaxation: objective 0.000000e+00, 384 iterations, 0.00 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0  147          -    0.00000      -     -    0s
+H    0     0                      63.0000000    0.00000   100%     -    0s
+     0     0    0.00000    0   32   63.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   32   63.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   57   63.00000    0.00000   100%     -    0s
+H    0     0                      49.0000000    0.00000   100%     -    0s
+     0     0    0.00000    0   57   49.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   61   49.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   93   49.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   12   49.00000    0.00000   100%     -    0s
+H    0     0                      37.0000000    0.00000   100%     -    0s
+     0     0    0.00000    0   84   37.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   45   37.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   51   37.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   28   37.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   48   37.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   41   37.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   41   37.00000    0.00000   100%     -    0s
+     0     2    0.00000    0   41   37.00000    0.00000   100%     -    0s
+H   34    24                      34.0000000    0.00000   100%   130    0s
+H   36    24                      31.0000000    0.00000   100%   132    0s
+H   43    35                      29.0000000    0.00000   100%   131    0s
+H   86    77                      25.0000000    0.00000   100%   105    0s
+H  343   305                      24.0000000    0.00000   100%  83.3    1s
+  3895  1439 infeasible   28        24.00000    0.00000   100%  57.9    5s
+H 4760  1195                      20.0000000    0.00000   100%  60.8    7s
+H 4954  1069                      19.0000000    0.00000   100%  63.5    9s
+  5101  1040     cutoff   27        19.00000    0.00000   100%  64.6   10s
+ 19550  1719    1.00000   30  143   19.00000    1.00000  94.7%  47.9   15s
+
+Cutting planes:
+  Cover: 9
+  MIR: 3
+  StrongCG: 2
+  Flow cover: 22
+  GUB cover: 19
+  Zero half: 1
+  Relax-and-lift: 11
+
+Explored 37707 nodes (1337073 simplex iterations) in 16.90 seconds (42.07 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 10: 19 20 24 ... 63
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.900000000000e+01, best bound 1.900000000000e+01, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Fri Apr 19 16:06:22 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_7.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/biomed_7.mst
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 2225 rows, 744 columns and 25502 nonzeros
+Model fingerprint: 0xc67dec71
+Variable types: 3 continuous, 741 integer (725 binary)
+Coefficient statistics:
+  Matrix range     [3e-05, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+
+User MIP start produced solution with objective 19 (0.01s)
+Loaded user MIP start with objective 19
+
+Presolve removed 6 rows and 4 columns
+Presolve time: 0.01s
+Presolved: 2219 rows, 740 columns, 24158 nonzeros
+Variable types: 3 continuous, 737 integer (725 binary)
+
+Root relaxation: objective 0.000000e+00, 384 iterations, 0.00 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0  147   19.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   30   19.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   23   19.00000    0.00000   100%     -    0s
+     0     0    0.00000    0  246   19.00000    0.00000   100%     -    0s
+     0     0    0.00000    0  230   19.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   80   19.00000    0.00000   100%     -    0s
+     0     0    0.00000    0  108   19.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   38   19.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   44   19.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   45   19.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   86   19.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   47   19.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   47   19.00000    0.00000   100%     -    0s
+     0     2    0.00000    0   32   19.00000    0.00000   100%     -    0s
+* 3036   743              15       0.0000000    0.00000  0.00%  57.5    2s
+
+Cutting planes:
+  Cover: 1059
+  Implied bound: 51
+  Clique: 1
+  MIR: 117
+  StrongCG: 8
+  Flow cover: 21
+  GUB cover: 107
+  Inf proof: 3
+  RLT: 16
+  Relax-and-lift: 37
+
+Explored 3129 nodes (189287 simplex iterations) in 2.52 seconds (6.50 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 2: 0 19 
+
+Optimal solution found (tolerance 1.00e-04)
+Warning: max constraint violation (4.1368e-06) exceeds tolerance
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Fri Apr 19 16:06:44 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_7.txt"
+Set parameter TimeLimit to value 3600
+Unknown variable 'a[Observation_number_1,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_1,1]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_1,2]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_2,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_2,1]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_2,2]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_3,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_3,1]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_3,2]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_4,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_4,1]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_4,2]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_5,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_5,1]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_5,2]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_6,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_6,1]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_6,2]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_7,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_7,1]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_7,2]' in MIP start 0 - ignored
+Unknown variable 'c[-1.0,3]' in MIP start 0 - ignored
+Unknown variable 'c[-1.0,4]' in MIP start 0 - ignored
+Unknown variable 'c[-1.0,5]' in MIP start 0 - ignored
+Unknown variable 'c[-1.0,6]' in MIP start 0 - ignored
+Unknown variable 'c[1.0,3]' in MIP start 0 - ignored
+Unknown variable 'c[1.0,4]' in MIP start 0 - ignored
+Unknown variable 'c[1.0,5]' in MIP start 0 - ignored
+Unknown variable 'c[1.0,6]' in MIP start 0 - ignored
+Unknown variable 'n_k[-1.0,3]' in MIP start 0 - ignored
+Unknown variable 'n_k[-1.0,4]' in MIP start 0 - ignored
+Unknown variable 'n_k[-1.0,5]' in MIP start 0 - ignored
+Unknown variable 'n_k[-1.0,6]' in MIP start 0 - ignored
+Unknown variable 'n_k[1.0,3]' in MIP start 0 - ignored
+Unknown variable 'n_k[1.0,4]' in MIP start 0 - ignored
+Unknown variable 'n_k[1.0,5]' in MIP start 0 - ignored
+Unknown variable 'n_k[1.0,6]' in MIP start 0 - ignored
+Unknown variable 'N[3]' in MIP start 0 - ignored
+Unknown variable 'N[4]' in MIP start 0 - ignored
+Unknown variable 'N[5]' in MIP start 0 - ignored
+Unknown variable 'N[6]' in MIP start 0 - ignored
+Unknown variable 'L[3]' in MIP start 0 - ignored
+Unknown variable 'L[4]' in MIP start 0 - ignored
+Unknown variable 'L[5]' in MIP start 0 - ignored
+Unknown variable 'L[6]' in MIP start 0 - ignored
+Read MIP start from file WarmStarts/biomed_7.mst
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 2861 rows, 1438 columns and 23340 nonzeros
+Model fingerprint: 0x5136e698
+Model has 32 general constraints
+Variable types: 739 continuous, 699 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-05, 1e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+01]
+
+User MIP start did not produce a new incumbent solution
+
+Presolve added 60 rows and 0 columns
+Presolve removed 0 rows and 2 columns
+Presolve time: 0.03s
+Presolved: 2921 rows, 1436 columns, 24967 nonzeros
+Variable types: 739 continuous, 697 integer (697 binary)
+Found heuristic solution: objective 39.9682332
+
+Root relaxation: objective 0.000000e+00, 937 iterations, 0.03 seconds (0.09 work units)
+Another try with MIP start
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+H    0     0                      39.2911666    0.00000   100%     -    0s
+     0     0    0.00000    0   54   39.29117    0.00000   100%     -    0s
+H    0     0                      37.9100243    0.00000   100%     -    0s
+     0     0    0.00000    0  121   37.91002    0.00000   100%     -    0s
+H    0     0                      30.3104444    0.00000   100%     -    0s
+     0     0    0.00000    0   80   30.31044    0.00000   100%     -    0s
+     0     0    0.00000    0  103   30.31044    0.00000   100%     -    0s
+     0     0    0.00000    0  148   30.31044    0.00000   100%     -    0s
+H    0     0                      28.9002471    0.00000   100%     -    0s
+     0     0    0.00000    0  171   28.90025    0.00000   100%     -    0s
+     0     0    0.00000    0  171   28.90025    0.00000   100%     -    0s
+     0     0    0.00000    0  210   28.90025    0.00000   100%     -    0s
+     0     0    0.00000    0   53   28.90025    0.00000   100%     -    0s
+     0     0    0.00000    0   46   28.90025    0.00000   100%     -    0s
+     0     2    0.00000    0   46   28.90025    0.00000   100%     -    0s
+H   95    70                      28.6005891    0.00000   100%   191    1s
+H 1117   493                      18.4227550    0.00000   100%  94.9    2s
+  2175   848    7.01397   32  250   18.42275    0.00000   100%  93.4    5s
+  4184  1303    5.13419   22  202   18.42275    0.00000   100%  97.5   10s
+  8080  1138 infeasible   28        18.42275    1.16382  93.7%   101   15s
+ 15683  2173 infeasible   23        18.42275    2.36384  87.2%  87.6   20s
+ 31290  2489   15.49884   41  185   18.42275    6.88026  62.7%  77.4   25s
+
+Cutting planes:
+  Gomory: 16
+  Cover: 15
+  Clique: 6
+  MIR: 23
+  Flow cover: 84
+  GUB cover: 4
+
+Explored 44776 nodes (3171428 simplex iterations) in 28.25 seconds (62.97 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 7: 18.4228 28.6006 28.9002 ... 39.9682
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.842275495785e+01, best bound 1.842275495785e+01, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Fri Apr 19 16:07:22 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_7.txt"
+Set parameter TimeLimit to value 3600
+Unknown variable 'a[Observation_number,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number,1]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number,2]' in MIP start 0 - ignored
+Unknown variable 'Beta[Observation_number,3]' in MIP start 0 - ignored
+Unknown variable 'Beta[Observation_number,4]' in MIP start 0 - ignored
+Unknown variable 'Beta[Observation_number,5]' in MIP start 0 - ignored
+Unknown variable 'Beta[Observation_number,6]' in MIP start 0 - ignored
+Unknown variable 'Beta[Hospital_identification_number_for_blood_sample,3]' in MIP start 0 - ignored
+Unknown variable 'Beta[Hospital_identification_number_for_blood_sample,4]' in MIP start 0 - ignored
+Unknown variable 'Beta[Hospital_identification_number_for_blood_sample,5]' in MIP start 0 - ignored
+Unknown variable 'Beta[Hospital_identification_number_for_blood_sample,6]' in MIP start 0 - ignored
+Unknown variable 'Beta[Age_of_patient,3]' in MIP start 0 - ignored
+Unknown variable 'Beta[Age_of_patient,4]' in MIP start 0 - ignored
+Unknown variable 'Beta[Age_of_patient,5]' in MIP start 0 - ignored
+Unknown variable 'Beta[Age_of_patient,6]' in MIP start 0 - ignored
+Unknown variable 'Beta[Date_that_blood_sample_was_taken,3]' in MIP start 0 - ignored
+Unknown variable 'Beta[Date_that_blood_sample_was_taken,4]' in MIP start 0 - ignored
+Unknown variable 'Beta[Date_that_blood_sample_was_taken,5]' in MIP start 0 - ignored
+Unknown variable 'Beta[Date_that_blood_sample_was_taken,6]' in MIP start 0 - ignored
+Unknown variable 'Beta[ml,3]' in MIP start 0 - ignored
+Unknown variable 'Beta[ml,4]' in MIP start 0 - ignored
+Unknown variable 'Beta[ml,5]' in MIP start 0 - ignored
+Unknown variable 'Beta[ml,6]' in MIP start 0 - ignored
+Unknown variable 'Beta[m2,3]' in MIP start 0 - ignored
+Unknown variable 'Beta[m2,4]' in MIP start 0 - ignored
+Unknown variable 'Beta[m2,5]' in MIP start 0 - ignored
+Unknown variable 'Beta[m2,6]' in MIP start 0 - ignored
+Unknown variable 'Beta[m3,3]' in MIP start 0 - ignored
+Unknown variable 'Beta[m3,4]' in MIP start 0 - ignored
+Unknown variable 'Beta[m3,5]' in MIP start 0 - ignored
+Unknown variable 'Beta[m3,6]' in MIP start 0 - ignored
+Unknown variable 'Beta[m4,3]' in MIP start 0 - ignored
+Unknown variable 'Beta[m4,4]' in MIP start 0 - ignored
+Unknown variable 'Beta[m4,5]' in MIP start 0 - ignored
+Unknown variable 'Beta[m4,6]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Observation_number,3]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Observation_number,4]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Observation_number,5]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Observation_number,6]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Hospital_identification_number_for_blood_sample,3]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Hospital_identification_number_for_blood_sample,4]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Hospital_identification_number_for_blood_sample,5]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Hospital_identification_number_for_blood_sample,6]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Age_of_patient,3]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Age_of_patient,4]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Age_of_patient,5]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Age_of_patient,6]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Date_that_blood_sample_was_taken,3]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Date_that_blood_sample_was_taken,4]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Date_that_blood_sample_was_taken,5]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Date_that_blood_sample_was_taken,6]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[ml,3]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[ml,4]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[ml,5]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[ml,6]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[m2,3]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[m2,4]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[m2,5]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[m2,6]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[m3,3]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[m3,4]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[m3,5]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[m3,6]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[m4,3]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[m4,4]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[m4,5]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[m4,6]' in MIP start 0 - ignored
+Read MIP start from file WarmStarts/biomed_7.mst
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 2225 rows, 744 columns and 25502 nonzeros
+Model fingerprint: 0xf038e60b
+Variable types: 3 continuous, 741 integer (725 binary)
+Coefficient statistics:
+  Matrix range     [3e-05, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+
+User MIP start produced solution with objective 46 (0.01s)
+Loaded user MIP start with objective 46
+
+Presolve removed 6 rows and 4 columns
+Presolve time: 0.01s
+Presolved: 2219 rows, 740 columns, 24158 nonzeros
+Variable types: 3 continuous, 737 integer (725 binary)
+
+Root relaxation: objective 0.000000e+00, 384 iterations, 0.00 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0  147   46.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   26   46.00000    0.00000   100%     -    0s
+     0     0    0.00000    0  254   46.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   62   46.00000    0.00000   100%     -    0s
+H    0     0                      43.0000000    0.00000   100%     -    0s
+     0     0    0.00000    0   89   43.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   52   43.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   39   43.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   50   43.00000    0.00000   100%     -    0s
+H    0     0                      42.0000000    0.00000   100%     -    0s
+     0     0    0.00000    0   96   42.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   53   42.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   20   42.00000    0.00000   100%     -    0s
+     0     0    0.00000    0  241   42.00000    0.00000   100%     -    0s
+     0     0    0.00000    0   31   42.00000    0.00000   100%     -    0s
+     0     2    0.00000    0   31   42.00000    0.00000   100%     -    0s
+H   97    77                      41.0000000    0.00000   100%   104    0s
+H  140   117                      36.0000000    0.00000   100%  95.9    0s
+H  299   179                      26.0000000    0.00000   100%  74.2    0s
+H  303   191                      22.0000000    0.00000   100%  74.7    0s
+H  895   460                      20.0000000    0.00000   100%  60.7    0s
+  4560  1399 infeasible   30        20.00000    0.00000   100%  54.5    5s
+H 4871  1277                      19.0000000    0.00000   100%  58.5    6s
+  6029  1174     cutoff   23        19.00000    0.00000   100%  60.9   10s
+ 15463  2542     cutoff   47        19.00000    0.00272   100%  50.3   15s
+ 19326  2247    1.92961   32  273   19.00000    0.03291   100%  47.7   20s
+
+Cutting planes:
+  Cover: 3
+  Implied bound: 1
+  MIR: 3
+  StrongCG: 1
+  Flow cover: 12
+  RLT: 1
+  Relax-and-lift: 2
+
+Explored 36355 nodes (1492861 simplex iterations) in 24.30 seconds (59.12 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 9: 19 20 22 ... 46
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.900000000000e+01, best bound 1.900000000000e+01, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Tue Apr 23 10:08:02 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_7.txt"
+Set parameter TimeLimit to value 3600
+Unknown variable 'a[Observation_number_1,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_1,1]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_1,2]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_2,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_2,1]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_2,2]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_3,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_3,1]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_3,2]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_4,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_4,1]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_4,2]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_5,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_5,1]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_5,2]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_6,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_6,1]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_6,2]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_7,0]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_7,1]' in MIP start 0 - ignored
+Unknown variable 'a[Observation_number_7,2]' in MIP start 0 - ignored
+Unknown variable 'c[-1.0,3]' in MIP start 0 - ignored
+Unknown variable 'c[-1.0,4]' in MIP start 0 - ignored
+Unknown variable 'c[-1.0,5]' in MIP start 0 - ignored
+Unknown variable 'c[-1.0,6]' in MIP start 0 - ignored
+Unknown variable 'c[1.0,3]' in MIP start 0 - ignored
+Unknown variable 'c[1.0,4]' in MIP start 0 - ignored
+Unknown variable 'c[1.0,5]' in MIP start 0 - ignored
+Unknown variable 'c[1.0,6]' in MIP start 0 - ignored
+Unknown variable 'n_k[-1.0,3]' in MIP start 0 - ignored
+Unknown variable 'n_k[-1.0,4]' in MIP start 0 - ignored
+Unknown variable 'n_k[-1.0,5]' in MIP start 0 - ignored
+Unknown variable 'n_k[-1.0,6]' in MIP start 0 - ignored
+Unknown variable 'n_k[1.0,3]' in MIP start 0 - ignored
+Unknown variable 'n_k[1.0,4]' in MIP start 0 - ignored
+Unknown variable 'n_k[1.0,5]' in MIP start 0 - ignored
+Unknown variable 'n_k[1.0,6]' in MIP start 0 - ignored
+Unknown variable 'N[3]' in MIP start 0 - ignored
+Unknown variable 'N[4]' in MIP start 0 - ignored
+Unknown variable 'N[5]' in MIP start 0 - ignored
+Unknown variable 'N[6]' in MIP start 0 - ignored
+Unknown variable 'L[3]' in MIP start 0 - ignored
+Unknown variable 'L[4]' in MIP start 0 - ignored
+Unknown variable 'L[5]' in MIP start 0 - ignored
+Unknown variable 'L[6]' in MIP start 0 - ignored
+Read MIP start from file WarmStarts/biomed_7.mst
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 2861 rows, 1462 columns and 23340 nonzeros
+Model fingerprint: 0xfad33c8f
+Model has 56 general constraints
+Variable types: 787 continuous, 675 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-05, 1e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+01]
+
+User MIP start produced solution with objective 28.5511 (0.01s)
+Loaded user MIP start with objective 28.5511
+
+Presolve added 156 rows and 70 columns
+Presolve time: 0.03s
+Presolved: 3017 rows, 1532 columns, 25372 nonzeros
+Variable types: 835 continuous, 697 integer (697 binary)
+
+Root relaxation: objective 0.000000e+00, 661 iterations, 0.02 seconds (0.05 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0    2   28.55113    0.00000   100%     -    0s
+H    0     0                      16.0000000    0.00000   100%     -    0s
+H    0     0                      10.0000000    0.00000   100%     -    0s
+     0     0    0.00000    0    2   10.00000    0.00000   100%     -    0s
+     0     2    0.00000    0    2   10.00000    0.00000   100%     -    0s
+*  142   190              20       0.0000000    0.00000  0.00%  75.3    0s
+
+Explored 191 nodes (14490 simplex iterations) in 0.62 seconds (1.00 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 4: 0 10 16 28.5511 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Tue Apr 23 10:18:10 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_7.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/biomed_7.mst
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 2861 rows, 1462 columns and 23340 nonzeros
+Model fingerprint: 0xbeac371f
+Model has 56 general constraints
+Variable types: 787 continuous, 675 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-05, 1e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+01]
+
+User MIP start produced solution with objective 0 (0.00s)
+Loaded user MIP start with objective 0
+
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Tue Apr 23 10:19:43 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_7.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/biomed_7.mst
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 2861 rows, 1462 columns and 23340 nonzeros
+Model fingerprint: 0xbeac371f
+Model has 56 general constraints
+Variable types: 787 continuous, 675 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-05, 1e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+01]
+
+User MIP start produced solution with objective 0 (0.01s)
+Loaded user MIP start with objective 0
+
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Tue Apr 23 10:32:44 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_7.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/biomed_7.mst
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 2861 rows, 1462 columns and 23340 nonzeros
+Model fingerprint: 0xbeac371f
+Model has 56 general constraints
+Variable types: 787 continuous, 675 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-05, 1e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+01]
+
+User MIP start produced solution with objective 0 (0.02s)
+Loaded user MIP start with objective 0
+
+
+Explored 0 nodes (0 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Tue Apr 23 10:33:19 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_7.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/biomed_7.mst
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 2861 rows, 1462 columns and 23340 nonzeros
+Model fingerprint: 0xbeac371f
+Model has 56 general constraints
+Variable types: 787 continuous, 675 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-05, 1e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+01]
+
+User MIP start produced solution with objective 0 (0.01s)
+Loaded user MIP start with objective 0
+
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Tue Apr 23 12:53:46 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_7.txt"
+Set parameter TimeLimit to value 3600
+Unknown variable 'a_abs[Observation_number,0]' in MIP start 0 - ignored
+Unknown variable 'a_abs[Observation_number,1]' in MIP start 0 - ignored
+Unknown variable 'a_abs[Observation_number,2]' in MIP start 0 - ignored
+Unknown variable 'a_abs[Hospital_identification_number_for_blood_sample,0]' in MIP start 0 - ignored
+Unknown variable 'a_abs[Hospital_identification_number_for_blood_sample,1]' in MIP start 0 - ignored
+Unknown variable 'a_abs[Hospital_identification_number_for_blood_sample,2]' in MIP start 0 - ignored
+Unknown variable 'a_abs[Age_of_patient,0]' in MIP start 0 - ignored
+Unknown variable 'a_abs[Age_of_patient,1]' in MIP start 0 - ignored
+Unknown variable 'a_abs[Age_of_patient,2]' in MIP start 0 - ignored
+Unknown variable 'a_abs[Date_that_blood_sample_was_taken,0]' in MIP start 0 - ignored
+Unknown variable 'a_abs[Date_that_blood_sample_was_taken,1]' in MIP start 0 - ignored
+Unknown variable 'a_abs[Date_that_blood_sample_was_taken,2]' in MIP start 0 - ignored
+Unknown variable 'a_abs[ml,0]' in MIP start 0 - ignored
+Unknown variable 'a_abs[ml,1]' in MIP start 0 - ignored
+Unknown variable 'a_abs[ml,2]' in MIP start 0 - ignored
+Unknown variable 'a_abs[m2,0]' in MIP start 0 - ignored
+Unknown variable 'a_abs[m2,1]' in MIP start 0 - ignored
+Unknown variable 'a_abs[m2,2]' in MIP start 0 - ignored
+Unknown variable 'a_abs[m3,0]' in MIP start 0 - ignored
+Unknown variable 'a_abs[m3,1]' in MIP start 0 - ignored
+Unknown variable 'a_abs[m3,2]' in MIP start 0 - ignored
+Unknown variable 'a_abs[m4,0]' in MIP start 0 - ignored
+Unknown variable 'a_abs[m4,1]' in MIP start 0 - ignored
+Unknown variable 'a_abs[m4,2]' in MIP start 0 - ignored
+Read MIP start from file WarmStarts/biomed_7.mst
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 2861 rows, 1438 columns and 23340 nonzeros
+Model fingerprint: 0x12fe78ba
+Model has 32 general constraints
+Variable types: 739 continuous, 699 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-05, 1e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+01]
+
+User MIP start did not produce a new incumbent solution
+User MIP start violates constraint R0 by 1.000000000
+
+Presolve added 60 rows and 0 columns
+Presolve removed 0 rows and 2 columns
+Presolve time: 0.03s
+Presolved: 2921 rows, 1436 columns, 24967 nonzeros
+Variable types: 739 continuous, 697 integer (697 binary)
+Found heuristic solution: objective 39.9682332
+
+Root relaxation: objective 0.000000e+00, 937 iterations, 0.03 seconds (0.09 work units)
+Another try with MIP start
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0   54   39.96823    0.00000   100%     -    0s
+H    0     0                      37.9100243    0.00000   100%     -    0s
+     0     0    0.00000    0  127   37.91002    0.00000   100%     -    0s
+H    0     0                      30.3104444    0.00000   100%     -    0s
+     0     0    0.00000    0   74   30.31044    0.00000   100%     -    0s
+     0     0    0.00000    0  139   30.31044    0.00000   100%     -    0s
+H    0     0                      29.5013590    0.00000   100%     -    0s
+     0     0    0.00000    0   76   29.50136    0.00000   100%     -    0s
+     0     0    0.00000    0  150   29.50136    0.00000   100%     -    0s
+     0     0    0.00000    0   53   29.50136    0.00000   100%     -    0s
+     0     0    0.00000    0  121   29.50136    0.00000   100%     -    0s
+     0     0    0.00000    0   62   29.50136    0.00000   100%     -    0s
+     0     0    0.00000    0   60   29.50136    0.00000   100%     -    0s
+     0     2    0.00000    0   58   29.50136    0.00000   100%     -    0s
+H  149   149                      26.9064457    0.00000   100%   142    1s
+H  796   525                      25.1470940    0.00000   100%  80.3    1s
+  2432  1112 infeasible   15        25.14709    0.00000   100%  85.5    7s
+H 2436  1094                      18.4227550    0.00000   100%  85.8    7s
+  3593  1448    3.69712   13   33   18.42275    0.00000   100%  88.4   10s
+  4797  1435    3.44699   17  215   18.42275    0.00000   100%   104   18s
+  4831  1433 infeasible   18        18.42275    0.00000   100%   104   20s
+  8083   816     cutoff   30        18.42275    2.16614  88.2%   114   25s
+ 15517   988   14.36070   33  106   18.42275    9.26959  49.7%  98.7   30s
+
+Cutting planes:
+  Gomory: 13
+  Cover: 23
+  MIR: 13
+  StrongCG: 1
+  Flow cover: 70
+  GUB cover: 7
+
+Explored 23113 nodes (1944064 simplex iterations) in 32.69 seconds (78.37 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 7: 18.4228 25.1471 26.9064 ... 39.9682
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.842275495785e+01, best bound 1.842275495785e+01, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Tue Apr 23 12:55:14 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_7.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/biomed_7.mst
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 2861 rows, 1462 columns and 23340 nonzeros
+Model fingerprint: 0x25383856
+Model has 56 general constraints
+Variable types: 787 continuous, 675 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-05, 1e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+01]
+
+User MIP start produced solution with objective 18.4228 (0.01s)
+Loaded user MIP start with objective 18.4228
+
+Presolve added 156 rows and 70 columns
+Presolve time: 0.03s
+Presolved: 3017 rows, 1532 columns, 25372 nonzeros
+Variable types: 835 continuous, 697 integer (697 binary)
+
+Root relaxation: objective 0.000000e+00, 810 iterations, 0.03 seconds (0.10 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0       0.0000000    0.00000  0.00%     -    0s
+
+Explored 1 nodes (1909 simplex iterations) in 0.14 seconds (0.30 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 2: 0 18.4228 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%

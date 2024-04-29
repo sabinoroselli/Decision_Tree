@@ -1,0 +1,144 @@
+
+Gurobi 11.0.0 (mac64[arm]) logging started Tue Apr 23 11:56:36 2024
+
+Set parameter LogFile to value "GurobiLogs/boxing_0.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/boxing_0.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 154 rows, 79 columns and 455 nonzeros
+Model fingerprint: 0x0346e38c
+Variable types: 0 continuous, 79 integer (75 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 7e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 7e+01]
+Found heuristic solution: objective 25.0000000
+Presolve removed 154 rows and 79 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 25 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.500000000000e+01, best bound 2.500000000000e+01, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Tue Apr 23 11:56:36 2024
+
+Set parameter LogFile to value "GurobiLogs/boxing_0.txt"
+Set parameter TimeLimit to value 3600
+Unknown variable 'z[62,0]' in MIP start 0 - ignored
+Unknown variable 'z[71,0]' in MIP start 0 - ignored
+Unknown variable 'z[56,0]' in MIP start 0 - ignored
+Unknown variable 'z[98,0]' in MIP start 0 - ignored
+Unknown variable 'z[86,0]' in MIP start 0 - ignored
+Unknown variable 'z[1,0]' in MIP start 0 - ignored
+Unknown variable 'z[73,0]' in MIP start 0 - ignored
+Unknown variable 'z[42,0]' in MIP start 0 - ignored
+Unknown variable 'z[41,0]' in MIP start 0 - ignored
+Unknown variable 'z[4,0]' in MIP start 0 - ignored
+Unknown variable 'z[15,0]' in MIP start 0 - ignored
+Unknown variable 'z[17,0]' in MIP start 0 - ignored
+Unknown variable 'z[52,0]' in MIP start 0 - ignored
+Unknown variable 'z[40,0]' in MIP start 0 - ignored
+Unknown variable 'z[38,0]' in MIP start 0 - ignored
+Unknown variable 'z[5,0]' in MIP start 0 - ignored
+Unknown variable 'z[53,0]' in MIP start 0 - ignored
+Unknown variable 'z[109,0]' in MIP start 0 - ignored
+Unknown variable 'z[114,0]' in MIP start 0 - ignored
+Unknown variable 'z[0,0]' in MIP start 0 - ignored
+Unknown variable 'z[34,0]' in MIP start 0 - ignored
+Unknown variable 'z[28,0]' in MIP start 0 - ignored
+Unknown variable 'z[55,0]' in MIP start 0 - ignored
+Unknown variable 'z[35,0]' in MIP start 0 - ignored
+Unknown variable 'z[23,0]' in MIP start 0 - ignored
+Unknown variable 'z[31,0]' in MIP start 0 - ignored
+Unknown variable 'z[78,0]' in MIP start 0 - ignored
+Unknown variable 'z[57,0]' in MIP start 0 - ignored
+Unknown variable 'z[92,0]' in MIP start 0 - ignored
+Unknown variable 'z[102,0]' in MIP start 0 - ignored
+Unknown variable 'z[32,0]' in MIP start 0 - ignored
+Unknown variable 'z[101,0]' in MIP start 0 - ignored
+Unknown variable 'z[14,0]' in MIP start 0 - ignored
+Unknown variable 'z[85,0]' in MIP start 0 - ignored
+Unknown variable 'z[19,0]' in MIP start 0 - ignored
+Unknown variable 'z[29,0]' in MIP start 0 - ignored
+Unknown variable 'z[49,0]' in MIP start 0 - ignored
+Unknown variable 'z[82,0]' in MIP start 0 - ignored
+Unknown variable 'z[116,0]' in MIP start 0 - ignored
+Unknown variable 'z[118,0]' in MIP start 0 - ignored
+Unknown variable 'z[79,0]' in MIP start 0 - ignored
+Unknown variable 'z[69,0]' in MIP start 0 - ignored
+Unknown variable 'z[80,0]' in MIP start 0 - ignored
+Unknown variable 'z[20,0]' in MIP start 0 - ignored
+Unknown variable 'z[112,0]' in MIP start 0 - ignored
+Unknown variable 'z[72,0]' in MIP start 0 - ignored
+Unknown variable 'z[77,0]' in MIP start 0 - ignored
+Unknown variable 'z[25,0]' in MIP start 0 - ignored
+Unknown variable 'z[37,0]' in MIP start 0 - ignored
+Unknown variable 'z[81,0]' in MIP start 0 - ignored
+Unknown variable 'z[105,0]' in MIP start 0 - ignored
+Unknown variable 'z[46,0]' in MIP start 0 - ignored
+Unknown variable 'z[108,0]' in MIP start 0 - ignored
+Unknown variable 'z[39,0]' in MIP start 0 - ignored
+Unknown variable 'z[65,0]' in MIP start 0 - ignored
+Unknown variable 'z[58,0]' in MIP start 0 - ignored
+Unknown variable 'z[12,0]' in MIP start 0 - ignored
+Unknown variable 'z[106,0]' in MIP start 0 - ignored
+Unknown variable 'z[88,0]' in MIP start 0 - ignored
+Unknown variable 'z[70,0]' in MIP start 0 - ignored
+Unknown variable 'z[87,0]' in MIP start 0 - ignored
+Unknown variable 'z[36,0]' in MIP start 0 - ignored
+Unknown variable 'z[21,0]' in MIP start 0 - ignored
+Unknown variable 'z[83,0]' in MIP start 0 - ignored
+Unknown variable 'z[9,0]' in MIP start 0 - ignored
+Unknown variable 'z[103,0]' in MIP start 0 - ignored
+Unknown variable 'z[115,0]' in MIP start 0 - ignored
+Unknown variable 'z[67,0]' in MIP start 0 - ignored
+Unknown variable 'z[64,0]' in MIP start 0 - ignored
+Unknown variable 'z[117,0]' in MIP start 0 - ignored
+Unknown variable 'z[47,0]' in MIP start 0 - ignored
+Unknown variable 'z[44,0]' in MIP start 0 - ignored
+Unknown variable 'l[0]' in MIP start 0 - ignored
+Unknown variable 'c[-1.0,0]' in MIP start 0 - ignored
+Unknown variable 'c[1.0,0]' in MIP start 0 - ignored
+Unknown variable 'n_k[-1.0,0]' in MIP start 0 - ignored
+Unknown variable 'n_k[1.0,0]' in MIP start 0 - ignored
+Unknown variable 'N[0]' in MIP start 0 - ignored
+Unknown variable 'L[0]' in MIP start 0 - ignored
+Read MIP start from file WarmStarts/boxing_0.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 384 rows, 183 columns and 4543 nonzeros
+Model fingerprint: 0xd6e7031e
+Variable types: 1 continuous, 182 integer (151 binary)
+Coefficient statistics:
+  Matrix range     [3e-01, 7e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 7e+01]
+
+No start values specified in MIP start
+
+Found heuristic solution: objective 25.0000000
+Presolve removed 384 rows and 183 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.01 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 25 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.500000000000e+01, best bound 2.500000000000e+01, gap 0.0000%

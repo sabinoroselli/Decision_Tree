@@ -1,0 +1,3428 @@
+
+Gurobi 11.0.0 (mac64[arm]) logging started Wed Apr 24 23:25:15 2024
+
+Set parameter LogFile to value "GurobiLogs/auto93_6.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/auto93_6.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 222 rows, 281 columns and 6799 nonzeros
+Model fingerprint: 0x2d668804
+Model has 112 general constraints
+Variable types: 225 continuous, 56 integer (56 binary)
+Coefficient statistics:
+  Matrix range     [4e-03, 1e+03]
+  Objective range  [1e-01, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+03]
+Presolve added 57 rows and 0 columns
+Presolve removed 0 rows and 56 columns
+Presolve time: 0.00s
+Presolved: 279 rows, 225 columns, 3682 nonzeros
+Variable types: 225 continuous, 0 integer (0 binary)
+
+Root relaxation: objective 2.482032e+01, 213 iterations, 0.00 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      24.8203182   24.82032  0.00%     -    0s
+
+Explored 1 nodes (213 simplex iterations) in 0.05 seconds (0.02 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 1: 24.8203 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.482031817924e+01, best bound 2.482031817924e+01, gap 0.0000%
+Warning: variables 56 and 113 have the same name "Beta[City_MPG,0]"
+Warning: default variable names used to write MIP start file
+
+Gurobi 11.0.0 (mac64[arm]) logging started Wed Apr 24 23:25:15 2024
+
+Set parameter LogFile to value "GurobiLogs/auto93_6.txt"
+Set parameter TimeLimit to value 3600
+Unknown variable 'B0(5)' in MIP start 0 - ignored
+Unknown variable 'B1(5)' in MIP start 0 - ignored
+Unknown variable 'B2(5)' in MIP start 0 - ignored
+Unknown variable 'B3(5)' in MIP start 0 - ignored
+Unknown variable 'B4(5)' in MIP start 0 - ignored
+Unknown variable 'B5(5)' in MIP start 0 - ignored
+Unknown variable 'B6(5)' in MIP start 0 - ignored
+Unknown variable 'B7(5)' in MIP start 0 - ignored
+Unknown variable 'B8(5)' in MIP start 0 - ignored
+Unknown variable 'B9(5)' in MIP start 0 - ignored
+Unknown variable 'B10(5)' in MIP start 0 - ignored
+Unknown variable 'B11(5)' in MIP start 0 - ignored
+Unknown variable 'B12(5)' in MIP start 0 - ignored
+Unknown variable 'B13(5)' in MIP start 0 - ignored
+Unknown variable 'B14(5)' in MIP start 0 - ignored
+Unknown variable 'B15(5)' in MIP start 0 - ignored
+Unknown variable 'B16(5)' in MIP start 0 - ignored
+Unknown variable 'B17(5)' in MIP start 0 - ignored
+Unknown variable 'B18(5)' in MIP start 0 - ignored
+Unknown variable 'B19(5)' in MIP start 0 - ignored
+Unknown variable 'B20(5)' in MIP start 0 - ignored
+Unknown variable 'B21(5)' in MIP start 0 - ignored
+Unknown variable 'B22(5)' in MIP start 0 - ignored
+Unknown variable 'B23(5)' in MIP start 0 - ignored
+Unknown variable 'B24(5)' in MIP start 0 - ignored
+Unknown variable 'B25(5)' in MIP start 0 - ignored
+Unknown variable 'B26(5)' in MIP start 0 - ignored
+Unknown variable 'B27(5)' in MIP start 0 - ignored
+Unknown variable 'B28(5)' in MIP start 0 - ignored
+Unknown variable 'B29(5)' in MIP start 0 - ignored
+Unknown variable 'B30(5)' in MIP start 0 - ignored
+Unknown variable 'B31(5)' in MIP start 0 - ignored
+Unknown variable 'B32(5)' in MIP start 0 - ignored
+Unknown variable 'B33(5)' in MIP start 0 - ignored
+Unknown variable 'B34(5)' in MIP start 0 - ignored
+Unknown variable 'B35(5)' in MIP start 0 - ignored
+Unknown variable 'B36(5)' in MIP start 0 - ignored
+Unknown variable 'B37(5)' in MIP start 0 - ignored
+Unknown variable 'B38(5)' in MIP start 0 - ignored
+Unknown variable 'B39(5)' in MIP start 0 - ignored
+Unknown variable 'B40(5)' in MIP start 0 - ignored
+Unknown variable 'B41(5)' in MIP start 0 - ignored
+Unknown variable 'B42(5)' in MIP start 0 - ignored
+Unknown variable 'B43(5)' in MIP start 0 - ignored
+Unknown variable 'B44(5)' in MIP start 0 - ignored
+Unknown variable 'B45(5)' in MIP start 0 - ignored
+Unknown variable 'B46(5)' in MIP start 0 - ignored
+Unknown variable 'B47(5)' in MIP start 0 - ignored
+Unknown variable 'B48(5)' in MIP start 0 - ignored
+Unknown variable 'B49(5)' in MIP start 0 - ignored
+Unknown variable 'B50(5)' in MIP start 0 - ignored
+Unknown variable 'B51(5)' in MIP start 0 - ignored
+Unknown variable 'B52(5)' in MIP start 0 - ignored
+Unknown variable 'B53(5)' in MIP start 0 - ignored
+Unknown variable 'B54(5)' in MIP start 0 - ignored
+Unknown variable 'B55(56)' in MIP start 0 - ignored
+Unknown variable 'C56(110)' in MIP start 0 - ignored
+Unknown variable 'C57(110)' in MIP start 0 - ignored
+Unknown variable 'C58(108)' in MIP start 0 - ignored
+Unknown variable 'C59(110)' in MIP start 0 - ignored
+Unknown variable 'C60(110)' in MIP start 0 - ignored
+Unknown variable 'C61(110)' in MIP start 0 - ignored
+Unknown variable 'C62(110)' in MIP start 0 - ignored
+Unknown variable 'C63(110)' in MIP start 0 - ignored
+Unknown variable 'C64(110)' in MIP start 0 - ignored
+Unknown variable 'C65(110)' in MIP start 0 - ignored
+Unknown variable 'C66(110)' in MIP start 0 - ignored
+Unknown variable 'C67(110)' in MIP start 0 - ignored
+Unknown variable 'C68(110)' in MIP start 0 - ignored
+Unknown variable 'C69(106)' in MIP start 0 - ignored
+Unknown variable 'C70(94)' in MIP start 0 - ignored
+Unknown variable 'C71(110)' in MIP start 0 - ignored
+Unknown variable 'C72(110)' in MIP start 0 - ignored
+Unknown variable 'C73(110)' in MIP start 0 - ignored
+Unknown variable 'C74(110)' in MIP start 0 - ignored
+Unknown variable 'C75(110)' in MIP start 0 - ignored
+Unknown variable 'C76(110)' in MIP start 0 - ignored
+Unknown variable 'C77(110)' in MIP start 0 - ignored
+Unknown variable 'C78(110)' in MIP start 0 - ignored
+Unknown variable 'C79(110)' in MIP start 0 - ignored
+Unknown variable 'C80(110)' in MIP start 0 - ignored
+Unknown variable 'C81(110)' in MIP start 0 - ignored
+Unknown variable 'C82(110)' in MIP start 0 - ignored
+Unknown variable 'C83(110)' in MIP start 0 - ignored
+Unknown variable 'C84(110)' in MIP start 0 - ignored
+Unknown variable 'C85(110)' in MIP start 0 - ignored
+Unknown variable 'C86(110)' in MIP start 0 - ignored
+Unknown variable 'C87(110)' in MIP start 0 - ignored
+Unknown variable 'C88(110)' in MIP start 0 - ignored
+Unknown variable 'C89(110)' in MIP start 0 - ignored
+Unknown variable 'C90(110)' in MIP start 0 - ignored
+Unknown variable 'C91(110)' in MIP start 0 - ignored
+Unknown variable 'C92(110)' in MIP start 0 - ignored
+Unknown variable 'C93(110)' in MIP start 0 - ignored
+Unknown variable 'C94(110)' in MIP start 0 - ignored
+Unknown variable 'C95(110)' in MIP start 0 - ignored
+Unknown variable 'C96(110)' in MIP start 0 - ignored
+Unknown variable 'C97(110)' in MIP start 0 - ignored
+Unknown variable 'C98(110)' in MIP start 0 - ignored
+Unknown variable 'C99(110)' in MIP start 0 - ignored
+Unknown variable 'C100(110)' in MIP start 0 - ignored
+Unknown variable 'C101(110)' in MIP start 0 - ignored
+Unknown variable 'C102(110)' in MIP start 0 - ignored
+Unknown variable 'C103(110)' in MIP start 0 - ignored
+Unknown variable 'C104(110)' in MIP start 0 - ignored
+Unknown variable 'C105(110)' in MIP start 0 - ignored
+Unknown variable 'C106(110)' in MIP start 0 - ignored
+Unknown variable 'C107(110)' in MIP start 0 - ignored
+Unknown variable 'C108(110)' in MIP start 0 - ignored
+Unknown variable 'C109(110)' in MIP start 0 - ignored
+Unknown variable 'C110(110)' in MIP start 0 - ignored
+Unknown variable 'C111(110)' in MIP start 0 - ignored
+Unknown variable 'C112(110)' in MIP start 0 - ignored
+Unknown variable 'C113(0)' in MIP start 0 - ignored
+Unknown variable 'C114(0)' in MIP start 0 - ignored
+Unknown variable 'C115(0)' in MIP start 0 - ignored
+Unknown variable 'C116(0)' in MIP start 0 - ignored
+Unknown variable 'C117(0)' in MIP start 0 - ignored
+Unknown variable 'C118(0)' in MIP start 0 - ignored
+Unknown variable 'C119(0)' in MIP start 0 - ignored
+Unknown variable 'C120(0)' in MIP start 0 - ignored
+Unknown variable 'C121(0)' in MIP start 0 - ignored
+Unknown variable 'C122(0)' in MIP start 0 - ignored
+Unknown variable 'C123(0)' in MIP start 0 - ignored
+Unknown variable 'C124(0)' in MIP start 0 - ignored
+Unknown variable 'C125(0)' in MIP start 0 - ignored
+Unknown variable 'C126(0)' in MIP start 0 - ignored
+Unknown variable 'C127(0)' in MIP start 0 - ignored
+Unknown variable 'C128(0)' in MIP start 0 - ignored
+Unknown variable 'C129(0)' in MIP start 0 - ignored
+Unknown variable 'C130(0)' in MIP start 0 - ignored
+Unknown variable 'C131(0)' in MIP start 0 - ignored
+Unknown variable 'C132(0)' in MIP start 0 - ignored
+Unknown variable 'C133(0)' in MIP start 0 - ignored
+Unknown variable 'C134(0)' in MIP start 0 - ignored
+Unknown variable 'C135(0)' in MIP start 0 - ignored
+Unknown variable 'C136(0)' in MIP start 0 - ignored
+Unknown variable 'C137(0)' in MIP start 0 - ignored
+Unknown variable 'C138(0)' in MIP start 0 - ignored
+Unknown variable 'C139(0)' in MIP start 0 - ignored
+Unknown variable 'C140(0)' in MIP start 0 - ignored
+Unknown variable 'C141(0)' in MIP start 0 - ignored
+Unknown variable 'C142(0)' in MIP start 0 - ignored
+Unknown variable 'C143(0)' in MIP start 0 - ignored
+Unknown variable 'C144(0)' in MIP start 0 - ignored
+Unknown variable 'C145(0)' in MIP start 0 - ignored
+Unknown variable 'C146(0)' in MIP start 0 - ignored
+Unknown variable 'C147(0)' in MIP start 0 - ignored
+Unknown variable 'C148(0)' in MIP start 0 - ignored
+Unknown variable 'C149(0)' in MIP start 0 - ignored
+Unknown variable 'C150(0)' in MIP start 0 - ignored
+Unknown variable 'C151(0)' in MIP start 0 - ignored
+Unknown variable 'C152(0)' in MIP start 0 - ignored
+Unknown variable 'C153(0)' in MIP start 0 - ignored
+Unknown variable 'C154(0)' in MIP start 0 - ignored
+Unknown variable 'C155(0)' in MIP start 0 - ignored
+Unknown variable 'C156(0)' in MIP start 0 - ignored
+Unknown variable 'C157(0)' in MIP start 0 - ignored
+Unknown variable 'C158(0)' in MIP start 0 - ignored
+Unknown variable 'C159(0)' in MIP start 0 - ignored
+Unknown variable 'C160(0)' in MIP start 0 - ignored
+Unknown variable 'C161(0)' in MIP start 0 - ignored
+Unknown variable 'C162(0)' in MIP start 0 - ignored
+Unknown variable 'C163(0)' in MIP start 0 - ignored
+Unknown variable 'C164(0)' in MIP start 0 - ignored
+Unknown variable 'C165(0)' in MIP start 0 - ignored
+Unknown variable 'C166(0)' in MIP start 0 - ignored
+Unknown variable 'C167(0)' in MIP start 0 - ignored
+Unknown variable 'C168(0)' in MIP start 0 - ignored
+Unknown variable 'C169(0)' in MIP start 0 - ignored
+Unknown variable 'C171(2)' in MIP start 0 - ignored
+Unknown variable 'C172(2)' in MIP start 0 - ignored
+Unknown variable 'C173(2)' in MIP start 0 - ignored
+Unknown variable 'C174(2)' in MIP start 0 - ignored
+Unknown variable 'C175(2)' in MIP start 0 - ignored
+Unknown variable 'C176(2)' in MIP start 0 - ignored
+Unknown variable 'C177(2)' in MIP start 0 - ignored
+Unknown variable 'C178(2)' in MIP start 0 - ignored
+Unknown variable 'C179(2)' in MIP start 0 - ignored
+Unknown variable 'C180(2)' in MIP start 0 - ignored
+Unknown variable 'C181(2)' in MIP start 0 - ignored
+Unknown variable 'C182(2)' in MIP start 0 - ignored
+Unknown variable 'C183(2)' in MIP start 0 - ignored
+Unknown variable 'C184(2)' in MIP start 0 - ignored
+Unknown variable 'C185(2)' in MIP start 0 - ignored
+Unknown variable 'C186(2)' in MIP start 0 - ignored
+Unknown variable 'C187(2)' in MIP start 0 - ignored
+Unknown variable 'C188(2)' in MIP start 0 - ignored
+Unknown variable 'C189(2)' in MIP start 0 - ignored
+Unknown variable 'C190(2)' in MIP start 0 - ignored
+Unknown variable 'C191(2)' in MIP start 0 - ignored
+Unknown variable 'C192(2)' in MIP start 0 - ignored
+Unknown variable 'C193(2)' in MIP start 0 - ignored
+Unknown variable 'C194(2)' in MIP start 0 - ignored
+Unknown variable 'C195(2)' in MIP start 0 - ignored
+Unknown variable 'C196(2)' in MIP start 0 - ignored
+Unknown variable 'C197(2)' in MIP start 0 - ignored
+Unknown variable 'C198(2)' in MIP start 0 - ignored
+Unknown variable 'C199(2)' in MIP start 0 - ignored
+Unknown variable 'C200(2)' in MIP start 0 - ignored
+Unknown variable 'C201(2)' in MIP start 0 - ignored
+Unknown variable 'C202(2)' in MIP start 0 - ignored
+Unknown variable 'C203(2)' in MIP start 0 - ignored
+Unknown variable 'C204(2)' in MIP start 0 - ignored
+Unknown variable 'C205(2)' in MIP start 0 - ignored
+Unknown variable 'C206(2)' in MIP start 0 - ignored
+Unknown variable 'C207(2)' in MIP start 0 - ignored
+Unknown variable 'C208(2)' in MIP start 0 - ignored
+Unknown variable 'C209(2)' in MIP start 0 - ignored
+Unknown variable 'C210(2)' in MIP start 0 - ignored
+Unknown variable 'C211(2)' in MIP start 0 - ignored
+Unknown variable 'C212(2)' in MIP start 0 - ignored
+Unknown variable 'C213(2)' in MIP start 0 - ignored
+Unknown variable 'C214(2)' in MIP start 0 - ignored
+Unknown variable 'C215(2)' in MIP start 0 - ignored
+Unknown variable 'C216(2)' in MIP start 0 - ignored
+Unknown variable 'C217(2)' in MIP start 0 - ignored
+Unknown variable 'C218(2)' in MIP start 0 - ignored
+Unknown variable 'C219(2)' in MIP start 0 - ignored
+Unknown variable 'C220(2)' in MIP start 0 - ignored
+Unknown variable 'C221(2)' in MIP start 0 - ignored
+Unknown variable 'C222(2)' in MIP start 0 - ignored
+Unknown variable 'C223(2)' in MIP start 0 - ignored
+Unknown variable 'C224(2)' in MIP start 0 - ignored
+Unknown variable 'C225(2)' in MIP start 0 - ignored
+Unknown variable 'C226(0)' in MIP start 0 - ignored
+Unknown variable 'C227(0)' in MIP start 0 - ignored
+Unknown variable 'C228(0)' in MIP start 0 - ignored
+Unknown variable 'C229(0)' in MIP start 0 - ignored
+Unknown variable 'C230(0)' in MIP start 0 - ignored
+Unknown variable 'C231(0)' in MIP start 0 - ignored
+Unknown variable 'C232(0)' in MIP start 0 - ignored
+Unknown variable 'C233(0)' in MIP start 0 - ignored
+Unknown variable 'C234(0)' in MIP start 0 - ignored
+Unknown variable 'C235(0)' in MIP start 0 - ignored
+Unknown variable 'C236(0)' in MIP start 0 - ignored
+Unknown variable 'C237(0)' in MIP start 0 - ignored
+Unknown variable 'C238(0)' in MIP start 0 - ignored
+Unknown variable 'C239(0)' in MIP start 0 - ignored
+Unknown variable 'C240(0)' in MIP start 0 - ignored
+Unknown variable 'C241(0)' in MIP start 0 - ignored
+Unknown variable 'C242(0)' in MIP start 0 - ignored
+Unknown variable 'C243(0)' in MIP start 0 - ignored
+Unknown variable 'C244(0)' in MIP start 0 - ignored
+Unknown variable 'C245(0)' in MIP start 0 - ignored
+Unknown variable 'C246(0)' in MIP start 0 - ignored
+Unknown variable 'C247(0)' in MIP start 0 - ignored
+Unknown variable 'C248(0)' in MIP start 0 - ignored
+Unknown variable 'C249(0)' in MIP start 0 - ignored
+Unknown variable 'C250(0)' in MIP start 0 - ignored
+Unknown variable 'C251(0)' in MIP start 0 - ignored
+Unknown variable 'C252(0)' in MIP start 0 - ignored
+Unknown variable 'C253(0)' in MIP start 0 - ignored
+Unknown variable 'C254(0)' in MIP start 0 - ignored
+Unknown variable 'C255(0)' in MIP start 0 - ignored
+Unknown variable 'C256(0)' in MIP start 0 - ignored
+Unknown variable 'C257(0)' in MIP start 0 - ignored
+Unknown variable 'C258(0)' in MIP start 0 - ignored
+Unknown variable 'C259(0)' in MIP start 0 - ignored
+Unknown variable 'C260(0)' in MIP start 0 - ignored
+Unknown variable 'C261(0)' in MIP start 0 - ignored
+Unknown variable 'C262(0)' in MIP start 0 - ignored
+Unknown variable 'C263(0)' in MIP start 0 - ignored
+Unknown variable 'C264(0)' in MIP start 0 - ignored
+Unknown variable 'C265(0)' in MIP start 0 - ignored
+Unknown variable 'C266(0)' in MIP start 0 - ignored
+Unknown variable 'C267(0)' in MIP start 0 - ignored
+Unknown variable 'C268(0)' in MIP start 0 - ignored
+Unknown variable 'C269(0)' in MIP start 0 - ignored
+Unknown variable 'C270(0)' in MIP start 0 - ignored
+Unknown variable 'C271(0)' in MIP start 0 - ignored
+Unknown variable 'C272(0)' in MIP start 0 - ignored
+Unknown variable 'C273(0)' in MIP start 0 - ignored
+Unknown variable 'C274(0)' in MIP start 0 - ignored
+Unknown variable 'C275(0)' in MIP start 0 - ignored
+Unknown variable 'C276(0)' in MIP start 0 - ignored
+Unknown variable 'C277(0)' in MIP start 0 - ignored
+Unknown variable 'C278(0)' in MIP start 0 - ignored
+Unknown variable 'C279(0)' in MIP start 0 - ignored
+Unknown variable 'C280(0)' in MIP start 0 - ignored
+Read MIP start from file WarmStarts/auto93_6.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 222 rows, 281 columns and 6799 nonzeros
+Model fingerprint: 0x273f7dab
+Model has 112 general constraints
+Variable types: 225 continuous, 56 integer (56 binary)
+Coefficient statistics:
+  Matrix range     [4e-03, 1e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+03]
+
+No start values specified in MIP start
+
+Presolve added 57 rows and 0 columns
+Presolve removed 0 rows and 56 columns
+Presolve time: 0.01s
+Presolved: 279 rows, 225 columns, 3682 nonzeros
+Variable types: 225 continuous, 0 integer (0 binary)
+
+Root relaxation: objective 8.088233e+01, 254 iterations, 0.00 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      80.8823321   80.88233  0.00%     -    0s
+
+Explored 1 nodes (254 simplex iterations) in 0.05 seconds (0.02 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 1: 80.8823 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.088233210183e+01, best bound 8.088233210183e+01, gap 0.0000%
+Warning: variables 56 and 113 have the same name "Beta[City_MPG,0]"
+Warning: default variable names used to write MIP start file
+
+Gurobi 11.0.0 (mac64[arm]) logging started Wed Apr 24 23:25:15 2024
+
+Set parameter LogFile to value "GurobiLogs/auto93_6.txt"
+Set parameter TimeLimit to value 3600
+Unknown variable 'B0(5)' in MIP start 0 - ignored
+Unknown variable 'B1(5)' in MIP start 0 - ignored
+Unknown variable 'B2(5)' in MIP start 0 - ignored
+Unknown variable 'B3(5)' in MIP start 0 - ignored
+Unknown variable 'B4(5)' in MIP start 0 - ignored
+Unknown variable 'B5(5)' in MIP start 0 - ignored
+Unknown variable 'B6(5)' in MIP start 0 - ignored
+Unknown variable 'B7(5)' in MIP start 0 - ignored
+Unknown variable 'B8(5)' in MIP start 0 - ignored
+Unknown variable 'B9(5)' in MIP start 0 - ignored
+Unknown variable 'B10(5)' in MIP start 0 - ignored
+Unknown variable 'B11(5)' in MIP start 0 - ignored
+Unknown variable 'B12(5)' in MIP start 0 - ignored
+Unknown variable 'B13(5)' in MIP start 0 - ignored
+Unknown variable 'B14(5)' in MIP start 0 - ignored
+Unknown variable 'B15(5)' in MIP start 0 - ignored
+Unknown variable 'B16(5)' in MIP start 0 - ignored
+Unknown variable 'B17(5)' in MIP start 0 - ignored
+Unknown variable 'B18(5)' in MIP start 0 - ignored
+Unknown variable 'B19(5)' in MIP start 0 - ignored
+Unknown variable 'B20(5)' in MIP start 0 - ignored
+Unknown variable 'B21(5)' in MIP start 0 - ignored
+Unknown variable 'B22(5)' in MIP start 0 - ignored
+Unknown variable 'B23(5)' in MIP start 0 - ignored
+Unknown variable 'B24(5)' in MIP start 0 - ignored
+Unknown variable 'B25(5)' in MIP start 0 - ignored
+Unknown variable 'B26(5)' in MIP start 0 - ignored
+Unknown variable 'B27(5)' in MIP start 0 - ignored
+Unknown variable 'B28(5)' in MIP start 0 - ignored
+Unknown variable 'B29(5)' in MIP start 0 - ignored
+Unknown variable 'B30(5)' in MIP start 0 - ignored
+Unknown variable 'B31(5)' in MIP start 0 - ignored
+Unknown variable 'B32(5)' in MIP start 0 - ignored
+Unknown variable 'B33(5)' in MIP start 0 - ignored
+Unknown variable 'B34(5)' in MIP start 0 - ignored
+Unknown variable 'B35(5)' in MIP start 0 - ignored
+Unknown variable 'B36(5)' in MIP start 0 - ignored
+Unknown variable 'B37(5)' in MIP start 0 - ignored
+Unknown variable 'B38(5)' in MIP start 0 - ignored
+Unknown variable 'B39(5)' in MIP start 0 - ignored
+Unknown variable 'B40(5)' in MIP start 0 - ignored
+Unknown variable 'B41(5)' in MIP start 0 - ignored
+Unknown variable 'B42(5)' in MIP start 0 - ignored
+Unknown variable 'B43(5)' in MIP start 0 - ignored
+Unknown variable 'B44(5)' in MIP start 0 - ignored
+Unknown variable 'B45(5)' in MIP start 0 - ignored
+Unknown variable 'B46(5)' in MIP start 0 - ignored
+Unknown variable 'B47(5)' in MIP start 0 - ignored
+Unknown variable 'B48(5)' in MIP start 0 - ignored
+Unknown variable 'B49(5)' in MIP start 0 - ignored
+Unknown variable 'B50(5)' in MIP start 0 - ignored
+Unknown variable 'B51(5)' in MIP start 0 - ignored
+Unknown variable 'B52(5)' in MIP start 0 - ignored
+Unknown variable 'B53(5)' in MIP start 0 - ignored
+Unknown variable 'B54(5)' in MIP start 0 - ignored
+Unknown variable 'B55(56)' in MIP start 0 - ignored
+Unknown variable 'C56(110)' in MIP start 0 - ignored
+Unknown variable 'C57(110)' in MIP start 0 - ignored
+Unknown variable 'C58(108)' in MIP start 0 - ignored
+Unknown variable 'C59(110)' in MIP start 0 - ignored
+Unknown variable 'C60(110)' in MIP start 0 - ignored
+Unknown variable 'C61(110)' in MIP start 0 - ignored
+Unknown variable 'C62(110)' in MIP start 0 - ignored
+Unknown variable 'C63(110)' in MIP start 0 - ignored
+Unknown variable 'C64(110)' in MIP start 0 - ignored
+Unknown variable 'C65(110)' in MIP start 0 - ignored
+Unknown variable 'C66(110)' in MIP start 0 - ignored
+Unknown variable 'C67(110)' in MIP start 0 - ignored
+Unknown variable 'C68(110)' in MIP start 0 - ignored
+Unknown variable 'C69(106)' in MIP start 0 - ignored
+Unknown variable 'C70(94)' in MIP start 0 - ignored
+Unknown variable 'C71(110)' in MIP start 0 - ignored
+Unknown variable 'C72(110)' in MIP start 0 - ignored
+Unknown variable 'C73(110)' in MIP start 0 - ignored
+Unknown variable 'C74(110)' in MIP start 0 - ignored
+Unknown variable 'C75(110)' in MIP start 0 - ignored
+Unknown variable 'C76(110)' in MIP start 0 - ignored
+Unknown variable 'C77(110)' in MIP start 0 - ignored
+Unknown variable 'C78(110)' in MIP start 0 - ignored
+Unknown variable 'C79(110)' in MIP start 0 - ignored
+Unknown variable 'C80(110)' in MIP start 0 - ignored
+Unknown variable 'C81(110)' in MIP start 0 - ignored
+Unknown variable 'C82(110)' in MIP start 0 - ignored
+Unknown variable 'C83(110)' in MIP start 0 - ignored
+Unknown variable 'C84(110)' in MIP start 0 - ignored
+Unknown variable 'C85(110)' in MIP start 0 - ignored
+Unknown variable 'C86(110)' in MIP start 0 - ignored
+Unknown variable 'C87(110)' in MIP start 0 - ignored
+Unknown variable 'C88(110)' in MIP start 0 - ignored
+Unknown variable 'C89(110)' in MIP start 0 - ignored
+Unknown variable 'C90(110)' in MIP start 0 - ignored
+Unknown variable 'C91(110)' in MIP start 0 - ignored
+Unknown variable 'C92(110)' in MIP start 0 - ignored
+Unknown variable 'C93(110)' in MIP start 0 - ignored
+Unknown variable 'C94(110)' in MIP start 0 - ignored
+Unknown variable 'C95(110)' in MIP start 0 - ignored
+Unknown variable 'C96(110)' in MIP start 0 - ignored
+Unknown variable 'C97(110)' in MIP start 0 - ignored
+Unknown variable 'C98(110)' in MIP start 0 - ignored
+Unknown variable 'C99(110)' in MIP start 0 - ignored
+Unknown variable 'C100(110)' in MIP start 0 - ignored
+Unknown variable 'C101(110)' in MIP start 0 - ignored
+Unknown variable 'C102(110)' in MIP start 0 - ignored
+Unknown variable 'C103(110)' in MIP start 0 - ignored
+Unknown variable 'C104(110)' in MIP start 0 - ignored
+Unknown variable 'C105(110)' in MIP start 0 - ignored
+Unknown variable 'C106(110)' in MIP start 0 - ignored
+Unknown variable 'C107(110)' in MIP start 0 - ignored
+Unknown variable 'C108(110)' in MIP start 0 - ignored
+Unknown variable 'C109(110)' in MIP start 0 - ignored
+Unknown variable 'C110(110)' in MIP start 0 - ignored
+Unknown variable 'C111(110)' in MIP start 0 - ignored
+Unknown variable 'C112(110)' in MIP start 0 - ignored
+Unknown variable 'C113(0)' in MIP start 0 - ignored
+Unknown variable 'C114(0)' in MIP start 0 - ignored
+Unknown variable 'C115(0)' in MIP start 0 - ignored
+Unknown variable 'C116(0)' in MIP start 0 - ignored
+Unknown variable 'C117(0)' in MIP start 0 - ignored
+Unknown variable 'C118(0)' in MIP start 0 - ignored
+Unknown variable 'C119(0)' in MIP start 0 - ignored
+Unknown variable 'C120(0)' in MIP start 0 - ignored
+Unknown variable 'C121(0)' in MIP start 0 - ignored
+Unknown variable 'C122(0)' in MIP start 0 - ignored
+Unknown variable 'C123(0)' in MIP start 0 - ignored
+Unknown variable 'C124(0)' in MIP start 0 - ignored
+Unknown variable 'C125(0)' in MIP start 0 - ignored
+Unknown variable 'C126(0)' in MIP start 0 - ignored
+Unknown variable 'C127(0)' in MIP start 0 - ignored
+Unknown variable 'C128(0)' in MIP start 0 - ignored
+Unknown variable 'C129(0)' in MIP start 0 - ignored
+Unknown variable 'C130(0)' in MIP start 0 - ignored
+Unknown variable 'C131(0)' in MIP start 0 - ignored
+Unknown variable 'C132(0)' in MIP start 0 - ignored
+Unknown variable 'C133(0)' in MIP start 0 - ignored
+Unknown variable 'C134(0)' in MIP start 0 - ignored
+Unknown variable 'C135(0)' in MIP start 0 - ignored
+Unknown variable 'C136(0)' in MIP start 0 - ignored
+Unknown variable 'C137(0)' in MIP start 0 - ignored
+Unknown variable 'C138(0)' in MIP start 0 - ignored
+Unknown variable 'C139(0)' in MIP start 0 - ignored
+Unknown variable 'C140(0)' in MIP start 0 - ignored
+Unknown variable 'C141(0)' in MIP start 0 - ignored
+Unknown variable 'C142(0)' in MIP start 0 - ignored
+Unknown variable 'C143(0)' in MIP start 0 - ignored
+Unknown variable 'C144(0)' in MIP start 0 - ignored
+Unknown variable 'C145(0)' in MIP start 0 - ignored
+Unknown variable 'C146(0)' in MIP start 0 - ignored
+Unknown variable 'C147(0)' in MIP start 0 - ignored
+Unknown variable 'C148(0)' in MIP start 0 - ignored
+Unknown variable 'C149(0)' in MIP start 0 - ignored
+Unknown variable 'C150(0)' in MIP start 0 - ignored
+Unknown variable 'C151(0)' in MIP start 0 - ignored
+Unknown variable 'C152(0)' in MIP start 0 - ignored
+Unknown variable 'C153(0)' in MIP start 0 - ignored
+Unknown variable 'C154(0)' in MIP start 0 - ignored
+Unknown variable 'C155(0)' in MIP start 0 - ignored
+Unknown variable 'C156(0)' in MIP start 0 - ignored
+Unknown variable 'C157(0)' in MIP start 0 - ignored
+Unknown variable 'C158(0)' in MIP start 0 - ignored
+Unknown variable 'C159(0)' in MIP start 0 - ignored
+Unknown variable 'C160(0)' in MIP start 0 - ignored
+Unknown variable 'C161(0)' in MIP start 0 - ignored
+Unknown variable 'C162(0)' in MIP start 0 - ignored
+Unknown variable 'C163(0)' in MIP start 0 - ignored
+Unknown variable 'C164(0)' in MIP start 0 - ignored
+Unknown variable 'C165(0)' in MIP start 0 - ignored
+Unknown variable 'C166(0)' in MIP start 0 - ignored
+Unknown variable 'C167(0)' in MIP start 0 - ignored
+Unknown variable 'C168(0)' in MIP start 0 - ignored
+Unknown variable 'C169(0)' in MIP start 0 - ignored
+Unknown variable 'C171(2)' in MIP start 0 - ignored
+Unknown variable 'C172(2)' in MIP start 0 - ignored
+Unknown variable 'C173(2)' in MIP start 0 - ignored
+Unknown variable 'C174(2)' in MIP start 0 - ignored
+Unknown variable 'C175(2)' in MIP start 0 - ignored
+Unknown variable 'C176(2)' in MIP start 0 - ignored
+Unknown variable 'C177(2)' in MIP start 0 - ignored
+Unknown variable 'C178(2)' in MIP start 0 - ignored
+Unknown variable 'C179(2)' in MIP start 0 - ignored
+Unknown variable 'C180(2)' in MIP start 0 - ignored
+Unknown variable 'C181(2)' in MIP start 0 - ignored
+Unknown variable 'C182(2)' in MIP start 0 - ignored
+Unknown variable 'C183(2)' in MIP start 0 - ignored
+Unknown variable 'C184(2)' in MIP start 0 - ignored
+Unknown variable 'C185(2)' in MIP start 0 - ignored
+Unknown variable 'C186(2)' in MIP start 0 - ignored
+Unknown variable 'C187(2)' in MIP start 0 - ignored
+Unknown variable 'C188(2)' in MIP start 0 - ignored
+Unknown variable 'C189(2)' in MIP start 0 - ignored
+Unknown variable 'C190(2)' in MIP start 0 - ignored
+Unknown variable 'C191(2)' in MIP start 0 - ignored
+Unknown variable 'C192(2)' in MIP start 0 - ignored
+Unknown variable 'C193(2)' in MIP start 0 - ignored
+Unknown variable 'C194(2)' in MIP start 0 - ignored
+Unknown variable 'C195(2)' in MIP start 0 - ignored
+Unknown variable 'C196(2)' in MIP start 0 - ignored
+Unknown variable 'C197(2)' in MIP start 0 - ignored
+Unknown variable 'C198(2)' in MIP start 0 - ignored
+Unknown variable 'C199(2)' in MIP start 0 - ignored
+Unknown variable 'C200(2)' in MIP start 0 - ignored
+Unknown variable 'C201(2)' in MIP start 0 - ignored
+Unknown variable 'C202(2)' in MIP start 0 - ignored
+Unknown variable 'C203(2)' in MIP start 0 - ignored
+Unknown variable 'C204(2)' in MIP start 0 - ignored
+Unknown variable 'C205(2)' in MIP start 0 - ignored
+Unknown variable 'C206(2)' in MIP start 0 - ignored
+Unknown variable 'C207(2)' in MIP start 0 - ignored
+Unknown variable 'C208(2)' in MIP start 0 - ignored
+Unknown variable 'C209(2)' in MIP start 0 - ignored
+Unknown variable 'C210(2)' in MIP start 0 - ignored
+Unknown variable 'C211(2)' in MIP start 0 - ignored
+Unknown variable 'C212(2)' in MIP start 0 - ignored
+Unknown variable 'C213(2)' in MIP start 0 - ignored
+Unknown variable 'C214(2)' in MIP start 0 - ignored
+Unknown variable 'C215(2)' in MIP start 0 - ignored
+Unknown variable 'C216(2)' in MIP start 0 - ignored
+Unknown variable 'C217(2)' in MIP start 0 - ignored
+Unknown variable 'C218(2)' in MIP start 0 - ignored
+Unknown variable 'C219(2)' in MIP start 0 - ignored
+Unknown variable 'C220(2)' in MIP start 0 - ignored
+Unknown variable 'C221(2)' in MIP start 0 - ignored
+Unknown variable 'C222(2)' in MIP start 0 - ignored
+Unknown variable 'C223(2)' in MIP start 0 - ignored
+Unknown variable 'C224(2)' in MIP start 0 - ignored
+Unknown variable 'C225(2)' in MIP start 0 - ignored
+Unknown variable 'C226(0)' in MIP start 0 - ignored
+Unknown variable 'C227(0)' in MIP start 0 - ignored
+Unknown variable 'C228(0)' in MIP start 0 - ignored
+Unknown variable 'C229(0)' in MIP start 0 - ignored
+Unknown variable 'C230(0)' in MIP start 0 - ignored
+Unknown variable 'C231(0)' in MIP start 0 - ignored
+Unknown variable 'C232(0)' in MIP start 0 - ignored
+Unknown variable 'C233(0)' in MIP start 0 - ignored
+Unknown variable 'C234(0)' in MIP start 0 - ignored
+Unknown variable 'C235(0)' in MIP start 0 - ignored
+Unknown variable 'C236(0)' in MIP start 0 - ignored
+Unknown variable 'C237(0)' in MIP start 0 - ignored
+Unknown variable 'C238(0)' in MIP start 0 - ignored
+Unknown variable 'C239(0)' in MIP start 0 - ignored
+Unknown variable 'C240(0)' in MIP start 0 - ignored
+Unknown variable 'C241(0)' in MIP start 0 - ignored
+Unknown variable 'C242(0)' in MIP start 0 - ignored
+Unknown variable 'C243(0)' in MIP start 0 - ignored
+Unknown variable 'C244(0)' in MIP start 0 - ignored
+Unknown variable 'C245(0)' in MIP start 0 - ignored
+Unknown variable 'C246(0)' in MIP start 0 - ignored
+Unknown variable 'C247(0)' in MIP start 0 - ignored
+Unknown variable 'C248(0)' in MIP start 0 - ignored
+Unknown variable 'C249(0)' in MIP start 0 - ignored
+Unknown variable 'C250(0)' in MIP start 0 - ignored
+Unknown variable 'C251(0)' in MIP start 0 - ignored
+Unknown variable 'C252(0)' in MIP start 0 - ignored
+Unknown variable 'C253(0)' in MIP start 0 - ignored
+Unknown variable 'C254(0)' in MIP start 0 - ignored
+Unknown variable 'C255(0)' in MIP start 0 - ignored
+Unknown variable 'C256(0)' in MIP start 0 - ignored
+Unknown variable 'C257(0)' in MIP start 0 - ignored
+Unknown variable 'C258(0)' in MIP start 0 - ignored
+Unknown variable 'C259(0)' in MIP start 0 - ignored
+Unknown variable 'C260(0)' in MIP start 0 - ignored
+Unknown variable 'C261(0)' in MIP start 0 - ignored
+Unknown variable 'C262(0)' in MIP start 0 - ignored
+Unknown variable 'C263(0)' in MIP start 0 - ignored
+Unknown variable 'C264(0)' in MIP start 0 - ignored
+Unknown variable 'C265(0)' in MIP start 0 - ignored
+Unknown variable 'C266(0)' in MIP start 0 - ignored
+Unknown variable 'C267(0)' in MIP start 0 - ignored
+Unknown variable 'C268(0)' in MIP start 0 - ignored
+Unknown variable 'C269(0)' in MIP start 0 - ignored
+Unknown variable 'C270(0)' in MIP start 0 - ignored
+Unknown variable 'C271(0)' in MIP start 0 - ignored
+Unknown variable 'C272(0)' in MIP start 0 - ignored
+Unknown variable 'C273(0)' in MIP start 0 - ignored
+Unknown variable 'C274(0)' in MIP start 0 - ignored
+Unknown variable 'C275(0)' in MIP start 0 - ignored
+Unknown variable 'C276(0)' in MIP start 0 - ignored
+Unknown variable 'C277(0)' in MIP start 0 - ignored
+Unknown variable 'C278(0)' in MIP start 0 - ignored
+Unknown variable 'C279(0)' in MIP start 0 - ignored
+Unknown variable 'C280(0)' in MIP start 0 - ignored
+Read MIP start from file WarmStarts/auto93_6.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 222 rows, 281 columns and 6799 nonzeros
+Model fingerprint: 0x1c99e192
+Model has 112 general constraints
+Variable types: 225 continuous, 56 integer (56 binary)
+Coefficient statistics:
+  Matrix range     [4e-03, 1e+03]
+  Objective range  [1e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+03]
+
+No start values specified in MIP start
+
+Presolve added 57 rows and 0 columns
+Presolve removed 0 rows and 56 columns
+Presolve time: 0.01s
+Presolved: 279 rows, 225 columns, 3682 nonzeros
+Variable types: 225 continuous, 0 integer (0 binary)
+
+Root relaxation: objective 4.210333e+02, 232 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     421.0333209  421.03332  0.00%     -    0s
+
+Explored 1 nodes (232 simplex iterations) in 0.05 seconds (0.02 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 1: 421.033 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.210333209087e+02, best bound 4.210333209087e+02, gap 0.0000%
+Warning: variables 56 and 113 have the same name "Beta[City_MPG,0]"
+Warning: default variable names used to write MIP start file
+
+Gurobi 11.0.0 (mac64[arm]) logging started Wed Apr 24 23:25:15 2024
+
+Set parameter LogFile to value "GurobiLogs/auto93_6.txt"
+Set parameter TimeLimit to value 3600
+Unknown variable 'B0(5)' in MIP start 0 - ignored
+Unknown variable 'B1(5)' in MIP start 0 - ignored
+Unknown variable 'B2(5)' in MIP start 0 - ignored
+Unknown variable 'B3(5)' in MIP start 0 - ignored
+Unknown variable 'B4(5)' in MIP start 0 - ignored
+Unknown variable 'B5(5)' in MIP start 0 - ignored
+Unknown variable 'B6(5)' in MIP start 0 - ignored
+Unknown variable 'B7(5)' in MIP start 0 - ignored
+Unknown variable 'B8(5)' in MIP start 0 - ignored
+Unknown variable 'B9(5)' in MIP start 0 - ignored
+Unknown variable 'B10(5)' in MIP start 0 - ignored
+Unknown variable 'B11(5)' in MIP start 0 - ignored
+Unknown variable 'B12(5)' in MIP start 0 - ignored
+Unknown variable 'B13(5)' in MIP start 0 - ignored
+Unknown variable 'B14(5)' in MIP start 0 - ignored
+Unknown variable 'B15(5)' in MIP start 0 - ignored
+Unknown variable 'B16(5)' in MIP start 0 - ignored
+Unknown variable 'B17(5)' in MIP start 0 - ignored
+Unknown variable 'B18(5)' in MIP start 0 - ignored
+Unknown variable 'B19(5)' in MIP start 0 - ignored
+Unknown variable 'B20(5)' in MIP start 0 - ignored
+Unknown variable 'B21(5)' in MIP start 0 - ignored
+Unknown variable 'B22(5)' in MIP start 0 - ignored
+Unknown variable 'B23(5)' in MIP start 0 - ignored
+Unknown variable 'B24(5)' in MIP start 0 - ignored
+Unknown variable 'B25(5)' in MIP start 0 - ignored
+Unknown variable 'B26(5)' in MIP start 0 - ignored
+Unknown variable 'B27(5)' in MIP start 0 - ignored
+Unknown variable 'B28(5)' in MIP start 0 - ignored
+Unknown variable 'B29(5)' in MIP start 0 - ignored
+Unknown variable 'B30(5)' in MIP start 0 - ignored
+Unknown variable 'B31(5)' in MIP start 0 - ignored
+Unknown variable 'B32(5)' in MIP start 0 - ignored
+Unknown variable 'B33(5)' in MIP start 0 - ignored
+Unknown variable 'B34(5)' in MIP start 0 - ignored
+Unknown variable 'B35(5)' in MIP start 0 - ignored
+Unknown variable 'B36(5)' in MIP start 0 - ignored
+Unknown variable 'B37(5)' in MIP start 0 - ignored
+Unknown variable 'B38(5)' in MIP start 0 - ignored
+Unknown variable 'B39(5)' in MIP start 0 - ignored
+Unknown variable 'B40(5)' in MIP start 0 - ignored
+Unknown variable 'B41(5)' in MIP start 0 - ignored
+Unknown variable 'B42(5)' in MIP start 0 - ignored
+Unknown variable 'B43(5)' in MIP start 0 - ignored
+Unknown variable 'B44(5)' in MIP start 0 - ignored
+Unknown variable 'B45(5)' in MIP start 0 - ignored
+Unknown variable 'B46(5)' in MIP start 0 - ignored
+Unknown variable 'B47(5)' in MIP start 0 - ignored
+Unknown variable 'B48(5)' in MIP start 0 - ignored
+Unknown variable 'B49(5)' in MIP start 0 - ignored
+Unknown variable 'B50(5)' in MIP start 0 - ignored
+Unknown variable 'B51(5)' in MIP start 0 - ignored
+Unknown variable 'B52(5)' in MIP start 0 - ignored
+Unknown variable 'B53(5)' in MIP start 0 - ignored
+Unknown variable 'B54(5)' in MIP start 0 - ignored
+Unknown variable 'B55(56)' in MIP start 0 - ignored
+Unknown variable 'C56(110)' in MIP start 0 - ignored
+Unknown variable 'C57(110)' in MIP start 0 - ignored
+Unknown variable 'C58(108)' in MIP start 0 - ignored
+Unknown variable 'C59(110)' in MIP start 0 - ignored
+Unknown variable 'C60(110)' in MIP start 0 - ignored
+Unknown variable 'C61(110)' in MIP start 0 - ignored
+Unknown variable 'C62(110)' in MIP start 0 - ignored
+Unknown variable 'C63(110)' in MIP start 0 - ignored
+Unknown variable 'C64(110)' in MIP start 0 - ignored
+Unknown variable 'C65(110)' in MIP start 0 - ignored
+Unknown variable 'C66(110)' in MIP start 0 - ignored
+Unknown variable 'C67(110)' in MIP start 0 - ignored
+Unknown variable 'C68(110)' in MIP start 0 - ignored
+Unknown variable 'C69(106)' in MIP start 0 - ignored
+Unknown variable 'C70(94)' in MIP start 0 - ignored
+Unknown variable 'C71(110)' in MIP start 0 - ignored
+Unknown variable 'C72(110)' in MIP start 0 - ignored
+Unknown variable 'C73(110)' in MIP start 0 - ignored
+Unknown variable 'C74(110)' in MIP start 0 - ignored
+Unknown variable 'C75(110)' in MIP start 0 - ignored
+Unknown variable 'C76(110)' in MIP start 0 - ignored
+Unknown variable 'C77(110)' in MIP start 0 - ignored
+Unknown variable 'C78(110)' in MIP start 0 - ignored
+Unknown variable 'C79(110)' in MIP start 0 - ignored
+Unknown variable 'C80(110)' in MIP start 0 - ignored
+Unknown variable 'C81(110)' in MIP start 0 - ignored
+Unknown variable 'C82(110)' in MIP start 0 - ignored
+Unknown variable 'C83(110)' in MIP start 0 - ignored
+Unknown variable 'C84(110)' in MIP start 0 - ignored
+Unknown variable 'C85(110)' in MIP start 0 - ignored
+Unknown variable 'C86(110)' in MIP start 0 - ignored
+Unknown variable 'C87(110)' in MIP start 0 - ignored
+Unknown variable 'C88(110)' in MIP start 0 - ignored
+Unknown variable 'C89(110)' in MIP start 0 - ignored
+Unknown variable 'C90(110)' in MIP start 0 - ignored
+Unknown variable 'C91(110)' in MIP start 0 - ignored
+Unknown variable 'C92(110)' in MIP start 0 - ignored
+Unknown variable 'C93(110)' in MIP start 0 - ignored
+Unknown variable 'C94(110)' in MIP start 0 - ignored
+Unknown variable 'C95(110)' in MIP start 0 - ignored
+Unknown variable 'C96(110)' in MIP start 0 - ignored
+Unknown variable 'C97(110)' in MIP start 0 - ignored
+Unknown variable 'C98(110)' in MIP start 0 - ignored
+Unknown variable 'C99(110)' in MIP start 0 - ignored
+Unknown variable 'C100(110)' in MIP start 0 - ignored
+Unknown variable 'C101(110)' in MIP start 0 - ignored
+Unknown variable 'C102(110)' in MIP start 0 - ignored
+Unknown variable 'C103(110)' in MIP start 0 - ignored
+Unknown variable 'C104(110)' in MIP start 0 - ignored
+Unknown variable 'C105(110)' in MIP start 0 - ignored
+Unknown variable 'C106(110)' in MIP start 0 - ignored
+Unknown variable 'C107(110)' in MIP start 0 - ignored
+Unknown variable 'C108(110)' in MIP start 0 - ignored
+Unknown variable 'C109(110)' in MIP start 0 - ignored
+Unknown variable 'C110(110)' in MIP start 0 - ignored
+Unknown variable 'C111(110)' in MIP start 0 - ignored
+Unknown variable 'C112(110)' in MIP start 0 - ignored
+Unknown variable 'C113(0)' in MIP start 0 - ignored
+Unknown variable 'C114(0)' in MIP start 0 - ignored
+Unknown variable 'C115(0)' in MIP start 0 - ignored
+Unknown variable 'C116(0)' in MIP start 0 - ignored
+Unknown variable 'C117(0)' in MIP start 0 - ignored
+Unknown variable 'C118(0)' in MIP start 0 - ignored
+Unknown variable 'C119(0)' in MIP start 0 - ignored
+Unknown variable 'C120(0)' in MIP start 0 - ignored
+Unknown variable 'C121(0)' in MIP start 0 - ignored
+Unknown variable 'C122(0)' in MIP start 0 - ignored
+Unknown variable 'C123(0)' in MIP start 0 - ignored
+Unknown variable 'C124(0)' in MIP start 0 - ignored
+Unknown variable 'C125(0)' in MIP start 0 - ignored
+Unknown variable 'C126(0)' in MIP start 0 - ignored
+Unknown variable 'C127(0)' in MIP start 0 - ignored
+Unknown variable 'C128(0)' in MIP start 0 - ignored
+Unknown variable 'C129(0)' in MIP start 0 - ignored
+Unknown variable 'C130(0)' in MIP start 0 - ignored
+Unknown variable 'C131(0)' in MIP start 0 - ignored
+Unknown variable 'C132(0)' in MIP start 0 - ignored
+Unknown variable 'C133(0)' in MIP start 0 - ignored
+Unknown variable 'C134(0)' in MIP start 0 - ignored
+Unknown variable 'C135(0)' in MIP start 0 - ignored
+Unknown variable 'C136(0)' in MIP start 0 - ignored
+Unknown variable 'C137(0)' in MIP start 0 - ignored
+Unknown variable 'C138(0)' in MIP start 0 - ignored
+Unknown variable 'C139(0)' in MIP start 0 - ignored
+Unknown variable 'C140(0)' in MIP start 0 - ignored
+Unknown variable 'C141(0)' in MIP start 0 - ignored
+Unknown variable 'C142(0)' in MIP start 0 - ignored
+Unknown variable 'C143(0)' in MIP start 0 - ignored
+Unknown variable 'C144(0)' in MIP start 0 - ignored
+Unknown variable 'C145(0)' in MIP start 0 - ignored
+Unknown variable 'C146(0)' in MIP start 0 - ignored
+Unknown variable 'C147(0)' in MIP start 0 - ignored
+Unknown variable 'C148(0)' in MIP start 0 - ignored
+Unknown variable 'C149(0)' in MIP start 0 - ignored
+Unknown variable 'C150(0)' in MIP start 0 - ignored
+Unknown variable 'C151(0)' in MIP start 0 - ignored
+Unknown variable 'C152(0)' in MIP start 0 - ignored
+Unknown variable 'C153(0)' in MIP start 0 - ignored
+Unknown variable 'C154(0)' in MIP start 0 - ignored
+Unknown variable 'C155(0)' in MIP start 0 - ignored
+Unknown variable 'C156(0)' in MIP start 0 - ignored
+Unknown variable 'C157(0)' in MIP start 0 - ignored
+Unknown variable 'C158(0)' in MIP start 0 - ignored
+Unknown variable 'C159(0)' in MIP start 0 - ignored
+Unknown variable 'C160(0)' in MIP start 0 - ignored
+Unknown variable 'C161(0)' in MIP start 0 - ignored
+Unknown variable 'C162(0)' in MIP start 0 - ignored
+Unknown variable 'C163(0)' in MIP start 0 - ignored
+Unknown variable 'C164(0)' in MIP start 0 - ignored
+Unknown variable 'C165(0)' in MIP start 0 - ignored
+Unknown variable 'C166(0)' in MIP start 0 - ignored
+Unknown variable 'C167(0)' in MIP start 0 - ignored
+Unknown variable 'C168(0)' in MIP start 0 - ignored
+Unknown variable 'C169(0)' in MIP start 0 - ignored
+Unknown variable 'C171(2)' in MIP start 0 - ignored
+Unknown variable 'C172(2)' in MIP start 0 - ignored
+Unknown variable 'C173(2)' in MIP start 0 - ignored
+Unknown variable 'C174(2)' in MIP start 0 - ignored
+Unknown variable 'C175(2)' in MIP start 0 - ignored
+Unknown variable 'C176(2)' in MIP start 0 - ignored
+Unknown variable 'C177(2)' in MIP start 0 - ignored
+Unknown variable 'C178(2)' in MIP start 0 - ignored
+Unknown variable 'C179(2)' in MIP start 0 - ignored
+Unknown variable 'C180(2)' in MIP start 0 - ignored
+Unknown variable 'C181(2)' in MIP start 0 - ignored
+Unknown variable 'C182(2)' in MIP start 0 - ignored
+Unknown variable 'C183(2)' in MIP start 0 - ignored
+Unknown variable 'C184(2)' in MIP start 0 - ignored
+Unknown variable 'C185(2)' in MIP start 0 - ignored
+Unknown variable 'C186(2)' in MIP start 0 - ignored
+Unknown variable 'C187(2)' in MIP start 0 - ignored
+Unknown variable 'C188(2)' in MIP start 0 - ignored
+Unknown variable 'C189(2)' in MIP start 0 - ignored
+Unknown variable 'C190(2)' in MIP start 0 - ignored
+Unknown variable 'C191(2)' in MIP start 0 - ignored
+Unknown variable 'C192(2)' in MIP start 0 - ignored
+Unknown variable 'C193(2)' in MIP start 0 - ignored
+Unknown variable 'C194(2)' in MIP start 0 - ignored
+Unknown variable 'C195(2)' in MIP start 0 - ignored
+Unknown variable 'C196(2)' in MIP start 0 - ignored
+Unknown variable 'C197(2)' in MIP start 0 - ignored
+Unknown variable 'C198(2)' in MIP start 0 - ignored
+Unknown variable 'C199(2)' in MIP start 0 - ignored
+Unknown variable 'C200(2)' in MIP start 0 - ignored
+Unknown variable 'C201(2)' in MIP start 0 - ignored
+Unknown variable 'C202(2)' in MIP start 0 - ignored
+Unknown variable 'C203(2)' in MIP start 0 - ignored
+Unknown variable 'C204(2)' in MIP start 0 - ignored
+Unknown variable 'C205(2)' in MIP start 0 - ignored
+Unknown variable 'C206(2)' in MIP start 0 - ignored
+Unknown variable 'C207(2)' in MIP start 0 - ignored
+Unknown variable 'C208(2)' in MIP start 0 - ignored
+Unknown variable 'C209(2)' in MIP start 0 - ignored
+Unknown variable 'C210(2)' in MIP start 0 - ignored
+Unknown variable 'C211(2)' in MIP start 0 - ignored
+Unknown variable 'C212(2)' in MIP start 0 - ignored
+Unknown variable 'C213(2)' in MIP start 0 - ignored
+Unknown variable 'C214(2)' in MIP start 0 - ignored
+Unknown variable 'C215(2)' in MIP start 0 - ignored
+Unknown variable 'C216(2)' in MIP start 0 - ignored
+Unknown variable 'C217(2)' in MIP start 0 - ignored
+Unknown variable 'C218(2)' in MIP start 0 - ignored
+Unknown variable 'C219(2)' in MIP start 0 - ignored
+Unknown variable 'C220(2)' in MIP start 0 - ignored
+Unknown variable 'C221(2)' in MIP start 0 - ignored
+Unknown variable 'C222(2)' in MIP start 0 - ignored
+Unknown variable 'C223(2)' in MIP start 0 - ignored
+Unknown variable 'C224(2)' in MIP start 0 - ignored
+Unknown variable 'C225(2)' in MIP start 0 - ignored
+Unknown variable 'C226(0)' in MIP start 0 - ignored
+Unknown variable 'C227(0)' in MIP start 0 - ignored
+Unknown variable 'C228(0)' in MIP start 0 - ignored
+Unknown variable 'C229(0)' in MIP start 0 - ignored
+Unknown variable 'C230(0)' in MIP start 0 - ignored
+Unknown variable 'C231(0)' in MIP start 0 - ignored
+Unknown variable 'C232(0)' in MIP start 0 - ignored
+Unknown variable 'C233(0)' in MIP start 0 - ignored
+Unknown variable 'C234(0)' in MIP start 0 - ignored
+Unknown variable 'C235(0)' in MIP start 0 - ignored
+Unknown variable 'C236(0)' in MIP start 0 - ignored
+Unknown variable 'C237(0)' in MIP start 0 - ignored
+Unknown variable 'C238(0)' in MIP start 0 - ignored
+Unknown variable 'C239(0)' in MIP start 0 - ignored
+Unknown variable 'C240(0)' in MIP start 0 - ignored
+Unknown variable 'C241(0)' in MIP start 0 - ignored
+Unknown variable 'C242(0)' in MIP start 0 - ignored
+Unknown variable 'C243(0)' in MIP start 0 - ignored
+Unknown variable 'C244(0)' in MIP start 0 - ignored
+Unknown variable 'C245(0)' in MIP start 0 - ignored
+Unknown variable 'C246(0)' in MIP start 0 - ignored
+Unknown variable 'C247(0)' in MIP start 0 - ignored
+Unknown variable 'C248(0)' in MIP start 0 - ignored
+Unknown variable 'C249(0)' in MIP start 0 - ignored
+Unknown variable 'C250(0)' in MIP start 0 - ignored
+Unknown variable 'C251(0)' in MIP start 0 - ignored
+Unknown variable 'C252(0)' in MIP start 0 - ignored
+Unknown variable 'C253(0)' in MIP start 0 - ignored
+Unknown variable 'C254(0)' in MIP start 0 - ignored
+Unknown variable 'C255(0)' in MIP start 0 - ignored
+Unknown variable 'C256(0)' in MIP start 0 - ignored
+Unknown variable 'C257(0)' in MIP start 0 - ignored
+Unknown variable 'C258(0)' in MIP start 0 - ignored
+Unknown variable 'C259(0)' in MIP start 0 - ignored
+Unknown variable 'C260(0)' in MIP start 0 - ignored
+Unknown variable 'C261(0)' in MIP start 0 - ignored
+Unknown variable 'C262(0)' in MIP start 0 - ignored
+Unknown variable 'C263(0)' in MIP start 0 - ignored
+Unknown variable 'C264(0)' in MIP start 0 - ignored
+Unknown variable 'C265(0)' in MIP start 0 - ignored
+Unknown variable 'C266(0)' in MIP start 0 - ignored
+Unknown variable 'C267(0)' in MIP start 0 - ignored
+Unknown variable 'C268(0)' in MIP start 0 - ignored
+Unknown variable 'C269(0)' in MIP start 0 - ignored
+Unknown variable 'C270(0)' in MIP start 0 - ignored
+Unknown variable 'C271(0)' in MIP start 0 - ignored
+Unknown variable 'C272(0)' in MIP start 0 - ignored
+Unknown variable 'C273(0)' in MIP start 0 - ignored
+Unknown variable 'C274(0)' in MIP start 0 - ignored
+Unknown variable 'C275(0)' in MIP start 0 - ignored
+Unknown variable 'C276(0)' in MIP start 0 - ignored
+Unknown variable 'C277(0)' in MIP start 0 - ignored
+Unknown variable 'C278(0)' in MIP start 0 - ignored
+Unknown variable 'C279(0)' in MIP start 0 - ignored
+Unknown variable 'C280(0)' in MIP start 0 - ignored
+Read MIP start from file WarmStarts/auto93_6.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 222 rows, 281 columns and 6799 nonzeros
+Model fingerprint: 0x75bbe2fa
+Model has 112 general constraints
+Variable types: 225 continuous, 56 integer (56 binary)
+Coefficient statistics:
+  Matrix range     [4e-03, 1e+03]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+03]
+
+No start values specified in MIP start
+
+Presolve added 57 rows and 0 columns
+Presolve removed 0 rows and 56 columns
+Presolve time: 0.00s
+Presolved: 279 rows, 225 columns, 3682 nonzeros
+Variable types: 225 continuous, 0 integer (0 binary)
+
+Root relaxation: objective 2.658572e+03, 236 iterations, 0.00 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    2658.5717192 2658.57172  0.00%     -    0s
+
+Explored 1 nodes (236 simplex iterations) in 0.05 seconds (0.02 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 1: 2658.57 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.658571719182e+03, best bound 2.658571719182e+03, gap 0.0000%
+Warning: variables 56 and 113 have the same name "Beta[City_MPG,0]"
+Warning: default variable names used to write MIP start file
+
+Gurobi 11.0.0 (mac64[arm]) logging started Wed Apr 24 23:25:15 2024
+
+Set parameter LogFile to value "GurobiLogs/auto93_6.txt"
+Set parameter TimeLimit to value 3600
+Unknown variable 'B0(5)' in MIP start 0 - ignored
+Unknown variable 'B1(5)' in MIP start 0 - ignored
+Unknown variable 'B2(5)' in MIP start 0 - ignored
+Unknown variable 'B3(5)' in MIP start 0 - ignored
+Unknown variable 'B4(5)' in MIP start 0 - ignored
+Unknown variable 'B5(5)' in MIP start 0 - ignored
+Unknown variable 'B6(5)' in MIP start 0 - ignored
+Unknown variable 'B7(5)' in MIP start 0 - ignored
+Unknown variable 'B8(5)' in MIP start 0 - ignored
+Unknown variable 'B9(5)' in MIP start 0 - ignored
+Unknown variable 'B10(5)' in MIP start 0 - ignored
+Unknown variable 'B11(5)' in MIP start 0 - ignored
+Unknown variable 'B12(5)' in MIP start 0 - ignored
+Unknown variable 'B13(5)' in MIP start 0 - ignored
+Unknown variable 'B14(5)' in MIP start 0 - ignored
+Unknown variable 'B15(5)' in MIP start 0 - ignored
+Unknown variable 'B16(5)' in MIP start 0 - ignored
+Unknown variable 'B17(5)' in MIP start 0 - ignored
+Unknown variable 'B18(5)' in MIP start 0 - ignored
+Unknown variable 'B19(5)' in MIP start 0 - ignored
+Unknown variable 'B20(5)' in MIP start 0 - ignored
+Unknown variable 'B21(5)' in MIP start 0 - ignored
+Unknown variable 'B22(5)' in MIP start 0 - ignored
+Unknown variable 'B23(5)' in MIP start 0 - ignored
+Unknown variable 'B24(5)' in MIP start 0 - ignored
+Unknown variable 'B25(5)' in MIP start 0 - ignored
+Unknown variable 'B26(5)' in MIP start 0 - ignored
+Unknown variable 'B27(5)' in MIP start 0 - ignored
+Unknown variable 'B28(5)' in MIP start 0 - ignored
+Unknown variable 'B29(5)' in MIP start 0 - ignored
+Unknown variable 'B30(5)' in MIP start 0 - ignored
+Unknown variable 'B31(5)' in MIP start 0 - ignored
+Unknown variable 'B32(5)' in MIP start 0 - ignored
+Unknown variable 'B33(5)' in MIP start 0 - ignored
+Unknown variable 'B34(5)' in MIP start 0 - ignored
+Unknown variable 'B35(5)' in MIP start 0 - ignored
+Unknown variable 'B36(5)' in MIP start 0 - ignored
+Unknown variable 'B37(5)' in MIP start 0 - ignored
+Unknown variable 'B38(5)' in MIP start 0 - ignored
+Unknown variable 'B39(5)' in MIP start 0 - ignored
+Unknown variable 'B40(5)' in MIP start 0 - ignored
+Unknown variable 'B41(5)' in MIP start 0 - ignored
+Unknown variable 'B42(5)' in MIP start 0 - ignored
+Unknown variable 'B43(5)' in MIP start 0 - ignored
+Unknown variable 'B44(5)' in MIP start 0 - ignored
+Unknown variable 'B45(5)' in MIP start 0 - ignored
+Unknown variable 'B46(5)' in MIP start 0 - ignored
+Unknown variable 'B47(5)' in MIP start 0 - ignored
+Unknown variable 'B48(5)' in MIP start 0 - ignored
+Unknown variable 'B49(5)' in MIP start 0 - ignored
+Unknown variable 'B50(5)' in MIP start 0 - ignored
+Unknown variable 'B51(5)' in MIP start 0 - ignored
+Unknown variable 'B52(5)' in MIP start 0 - ignored
+Unknown variable 'B53(5)' in MIP start 0 - ignored
+Unknown variable 'B54(5)' in MIP start 0 - ignored
+Unknown variable 'B55(56)' in MIP start 0 - ignored
+Unknown variable 'C56(110)' in MIP start 0 - ignored
+Unknown variable 'C57(110)' in MIP start 0 - ignored
+Unknown variable 'C58(108)' in MIP start 0 - ignored
+Unknown variable 'C59(110)' in MIP start 0 - ignored
+Unknown variable 'C60(110)' in MIP start 0 - ignored
+Unknown variable 'C61(110)' in MIP start 0 - ignored
+Unknown variable 'C62(110)' in MIP start 0 - ignored
+Unknown variable 'C63(110)' in MIP start 0 - ignored
+Unknown variable 'C64(110)' in MIP start 0 - ignored
+Unknown variable 'C65(110)' in MIP start 0 - ignored
+Unknown variable 'C66(110)' in MIP start 0 - ignored
+Unknown variable 'C67(110)' in MIP start 0 - ignored
+Unknown variable 'C68(110)' in MIP start 0 - ignored
+Unknown variable 'C69(106)' in MIP start 0 - ignored
+Unknown variable 'C70(94)' in MIP start 0 - ignored
+Unknown variable 'C71(110)' in MIP start 0 - ignored
+Unknown variable 'C72(110)' in MIP start 0 - ignored
+Unknown variable 'C73(110)' in MIP start 0 - ignored
+Unknown variable 'C74(110)' in MIP start 0 - ignored
+Unknown variable 'C75(110)' in MIP start 0 - ignored
+Unknown variable 'C76(110)' in MIP start 0 - ignored
+Unknown variable 'C77(110)' in MIP start 0 - ignored
+Unknown variable 'C78(110)' in MIP start 0 - ignored
+Unknown variable 'C79(110)' in MIP start 0 - ignored
+Unknown variable 'C80(110)' in MIP start 0 - ignored
+Unknown variable 'C81(110)' in MIP start 0 - ignored
+Unknown variable 'C82(110)' in MIP start 0 - ignored
+Unknown variable 'C83(110)' in MIP start 0 - ignored
+Unknown variable 'C84(110)' in MIP start 0 - ignored
+Unknown variable 'C85(110)' in MIP start 0 - ignored
+Unknown variable 'C86(110)' in MIP start 0 - ignored
+Unknown variable 'C87(110)' in MIP start 0 - ignored
+Unknown variable 'C88(110)' in MIP start 0 - ignored
+Unknown variable 'C89(110)' in MIP start 0 - ignored
+Unknown variable 'C90(110)' in MIP start 0 - ignored
+Unknown variable 'C91(110)' in MIP start 0 - ignored
+Unknown variable 'C92(110)' in MIP start 0 - ignored
+Unknown variable 'C93(110)' in MIP start 0 - ignored
+Unknown variable 'C94(110)' in MIP start 0 - ignored
+Unknown variable 'C95(110)' in MIP start 0 - ignored
+Unknown variable 'C96(110)' in MIP start 0 - ignored
+Unknown variable 'C97(110)' in MIP start 0 - ignored
+Unknown variable 'C98(110)' in MIP start 0 - ignored
+Unknown variable 'C99(110)' in MIP start 0 - ignored
+Unknown variable 'C100(110)' in MIP start 0 - ignored
+Unknown variable 'C101(110)' in MIP start 0 - ignored
+Unknown variable 'C102(110)' in MIP start 0 - ignored
+Unknown variable 'C103(110)' in MIP start 0 - ignored
+Unknown variable 'C104(110)' in MIP start 0 - ignored
+Unknown variable 'C105(110)' in MIP start 0 - ignored
+Unknown variable 'C106(110)' in MIP start 0 - ignored
+Unknown variable 'C107(110)' in MIP start 0 - ignored
+Unknown variable 'C108(110)' in MIP start 0 - ignored
+Unknown variable 'C109(110)' in MIP start 0 - ignored
+Unknown variable 'C110(110)' in MIP start 0 - ignored
+Unknown variable 'C111(110)' in MIP start 0 - ignored
+Unknown variable 'C112(110)' in MIP start 0 - ignored
+Unknown variable 'C113(0)' in MIP start 0 - ignored
+Unknown variable 'C114(0)' in MIP start 0 - ignored
+Unknown variable 'C115(0)' in MIP start 0 - ignored
+Unknown variable 'C116(0)' in MIP start 0 - ignored
+Unknown variable 'C117(0)' in MIP start 0 - ignored
+Unknown variable 'C118(0)' in MIP start 0 - ignored
+Unknown variable 'C119(0)' in MIP start 0 - ignored
+Unknown variable 'C120(0)' in MIP start 0 - ignored
+Unknown variable 'C121(0)' in MIP start 0 - ignored
+Unknown variable 'C122(0)' in MIP start 0 - ignored
+Unknown variable 'C123(0)' in MIP start 0 - ignored
+Unknown variable 'C124(0)' in MIP start 0 - ignored
+Unknown variable 'C125(0)' in MIP start 0 - ignored
+Unknown variable 'C126(0)' in MIP start 0 - ignored
+Unknown variable 'C127(0)' in MIP start 0 - ignored
+Unknown variable 'C128(0)' in MIP start 0 - ignored
+Unknown variable 'C129(0)' in MIP start 0 - ignored
+Unknown variable 'C130(0)' in MIP start 0 - ignored
+Unknown variable 'C131(0)' in MIP start 0 - ignored
+Unknown variable 'C132(0)' in MIP start 0 - ignored
+Unknown variable 'C133(0)' in MIP start 0 - ignored
+Unknown variable 'C134(0)' in MIP start 0 - ignored
+Unknown variable 'C135(0)' in MIP start 0 - ignored
+Unknown variable 'C136(0)' in MIP start 0 - ignored
+Unknown variable 'C137(0)' in MIP start 0 - ignored
+Unknown variable 'C138(0)' in MIP start 0 - ignored
+Unknown variable 'C139(0)' in MIP start 0 - ignored
+Unknown variable 'C140(0)' in MIP start 0 - ignored
+Unknown variable 'C141(0)' in MIP start 0 - ignored
+Unknown variable 'C142(0)' in MIP start 0 - ignored
+Unknown variable 'C143(0)' in MIP start 0 - ignored
+Unknown variable 'C144(0)' in MIP start 0 - ignored
+Unknown variable 'C145(0)' in MIP start 0 - ignored
+Unknown variable 'C146(0)' in MIP start 0 - ignored
+Unknown variable 'C147(0)' in MIP start 0 - ignored
+Unknown variable 'C148(0)' in MIP start 0 - ignored
+Unknown variable 'C149(0)' in MIP start 0 - ignored
+Unknown variable 'C150(0)' in MIP start 0 - ignored
+Unknown variable 'C151(0)' in MIP start 0 - ignored
+Unknown variable 'C152(0)' in MIP start 0 - ignored
+Unknown variable 'C153(0)' in MIP start 0 - ignored
+Unknown variable 'C154(0)' in MIP start 0 - ignored
+Unknown variable 'C155(0)' in MIP start 0 - ignored
+Unknown variable 'C156(0)' in MIP start 0 - ignored
+Unknown variable 'C157(0)' in MIP start 0 - ignored
+Unknown variable 'C158(0)' in MIP start 0 - ignored
+Unknown variable 'C159(0)' in MIP start 0 - ignored
+Unknown variable 'C160(0)' in MIP start 0 - ignored
+Unknown variable 'C161(0)' in MIP start 0 - ignored
+Unknown variable 'C162(0)' in MIP start 0 - ignored
+Unknown variable 'C163(0)' in MIP start 0 - ignored
+Unknown variable 'C164(0)' in MIP start 0 - ignored
+Unknown variable 'C165(0)' in MIP start 0 - ignored
+Unknown variable 'C166(0)' in MIP start 0 - ignored
+Unknown variable 'C167(0)' in MIP start 0 - ignored
+Unknown variable 'C168(0)' in MIP start 0 - ignored
+Unknown variable 'C169(0)' in MIP start 0 - ignored
+Unknown variable 'C171(2)' in MIP start 0 - ignored
+Unknown variable 'C172(2)' in MIP start 0 - ignored
+Unknown variable 'C173(2)' in MIP start 0 - ignored
+Unknown variable 'C174(2)' in MIP start 0 - ignored
+Unknown variable 'C175(2)' in MIP start 0 - ignored
+Unknown variable 'C176(2)' in MIP start 0 - ignored
+Unknown variable 'C177(2)' in MIP start 0 - ignored
+Unknown variable 'C178(2)' in MIP start 0 - ignored
+Unknown variable 'C179(2)' in MIP start 0 - ignored
+Unknown variable 'C180(2)' in MIP start 0 - ignored
+Unknown variable 'C181(2)' in MIP start 0 - ignored
+Unknown variable 'C182(2)' in MIP start 0 - ignored
+Unknown variable 'C183(2)' in MIP start 0 - ignored
+Unknown variable 'C184(2)' in MIP start 0 - ignored
+Unknown variable 'C185(2)' in MIP start 0 - ignored
+Unknown variable 'C186(2)' in MIP start 0 - ignored
+Unknown variable 'C187(2)' in MIP start 0 - ignored
+Unknown variable 'C188(2)' in MIP start 0 - ignored
+Unknown variable 'C189(2)' in MIP start 0 - ignored
+Unknown variable 'C190(2)' in MIP start 0 - ignored
+Unknown variable 'C191(2)' in MIP start 0 - ignored
+Unknown variable 'C192(2)' in MIP start 0 - ignored
+Unknown variable 'C193(2)' in MIP start 0 - ignored
+Unknown variable 'C194(2)' in MIP start 0 - ignored
+Unknown variable 'C195(2)' in MIP start 0 - ignored
+Unknown variable 'C196(2)' in MIP start 0 - ignored
+Unknown variable 'C197(2)' in MIP start 0 - ignored
+Unknown variable 'C198(2)' in MIP start 0 - ignored
+Unknown variable 'C199(2)' in MIP start 0 - ignored
+Unknown variable 'C200(2)' in MIP start 0 - ignored
+Unknown variable 'C201(2)' in MIP start 0 - ignored
+Unknown variable 'C202(2)' in MIP start 0 - ignored
+Unknown variable 'C203(2)' in MIP start 0 - ignored
+Unknown variable 'C204(2)' in MIP start 0 - ignored
+Unknown variable 'C205(2)' in MIP start 0 - ignored
+Unknown variable 'C206(2)' in MIP start 0 - ignored
+Unknown variable 'C207(2)' in MIP start 0 - ignored
+Unknown variable 'C208(2)' in MIP start 0 - ignored
+Unknown variable 'C209(2)' in MIP start 0 - ignored
+Unknown variable 'C210(2)' in MIP start 0 - ignored
+Unknown variable 'C211(2)' in MIP start 0 - ignored
+Unknown variable 'C212(2)' in MIP start 0 - ignored
+Unknown variable 'C213(2)' in MIP start 0 - ignored
+Unknown variable 'C214(2)' in MIP start 0 - ignored
+Unknown variable 'C215(2)' in MIP start 0 - ignored
+Unknown variable 'C216(2)' in MIP start 0 - ignored
+Unknown variable 'C217(2)' in MIP start 0 - ignored
+Unknown variable 'C218(2)' in MIP start 0 - ignored
+Unknown variable 'C219(2)' in MIP start 0 - ignored
+Unknown variable 'C220(2)' in MIP start 0 - ignored
+Unknown variable 'C221(2)' in MIP start 0 - ignored
+Unknown variable 'C222(2)' in MIP start 0 - ignored
+Unknown variable 'C223(2)' in MIP start 0 - ignored
+Unknown variable 'C224(2)' in MIP start 0 - ignored
+Unknown variable 'C225(2)' in MIP start 0 - ignored
+Unknown variable 'C226(0)' in MIP start 0 - ignored
+Unknown variable 'C227(0)' in MIP start 0 - ignored
+Unknown variable 'C228(0)' in MIP start 0 - ignored
+Unknown variable 'C229(0)' in MIP start 0 - ignored
+Unknown variable 'C230(0)' in MIP start 0 - ignored
+Unknown variable 'C231(0)' in MIP start 0 - ignored
+Unknown variable 'C232(0)' in MIP start 0 - ignored
+Unknown variable 'C233(0)' in MIP start 0 - ignored
+Unknown variable 'C234(0)' in MIP start 0 - ignored
+Unknown variable 'C235(0)' in MIP start 0 - ignored
+Unknown variable 'C236(0)' in MIP start 0 - ignored
+Unknown variable 'C237(0)' in MIP start 0 - ignored
+Unknown variable 'C238(0)' in MIP start 0 - ignored
+Unknown variable 'C239(0)' in MIP start 0 - ignored
+Unknown variable 'C240(0)' in MIP start 0 - ignored
+Unknown variable 'C241(0)' in MIP start 0 - ignored
+Unknown variable 'C242(0)' in MIP start 0 - ignored
+Unknown variable 'C243(0)' in MIP start 0 - ignored
+Unknown variable 'C244(0)' in MIP start 0 - ignored
+Unknown variable 'C245(0)' in MIP start 0 - ignored
+Unknown variable 'C246(0)' in MIP start 0 - ignored
+Unknown variable 'C247(0)' in MIP start 0 - ignored
+Unknown variable 'C248(0)' in MIP start 0 - ignored
+Unknown variable 'C249(0)' in MIP start 0 - ignored
+Unknown variable 'C250(0)' in MIP start 0 - ignored
+Unknown variable 'C251(0)' in MIP start 0 - ignored
+Unknown variable 'C252(0)' in MIP start 0 - ignored
+Unknown variable 'C253(0)' in MIP start 0 - ignored
+Unknown variable 'C254(0)' in MIP start 0 - ignored
+Unknown variable 'C255(0)' in MIP start 0 - ignored
+Unknown variable 'C256(0)' in MIP start 0 - ignored
+Unknown variable 'C257(0)' in MIP start 0 - ignored
+Unknown variable 'C258(0)' in MIP start 0 - ignored
+Unknown variable 'C259(0)' in MIP start 0 - ignored
+Unknown variable 'C260(0)' in MIP start 0 - ignored
+Unknown variable 'C261(0)' in MIP start 0 - ignored
+Unknown variable 'C262(0)' in MIP start 0 - ignored
+Unknown variable 'C263(0)' in MIP start 0 - ignored
+Unknown variable 'C264(0)' in MIP start 0 - ignored
+Unknown variable 'C265(0)' in MIP start 0 - ignored
+Unknown variable 'C266(0)' in MIP start 0 - ignored
+Unknown variable 'C267(0)' in MIP start 0 - ignored
+Unknown variable 'C268(0)' in MIP start 0 - ignored
+Unknown variable 'C269(0)' in MIP start 0 - ignored
+Unknown variable 'C270(0)' in MIP start 0 - ignored
+Unknown variable 'C271(0)' in MIP start 0 - ignored
+Unknown variable 'C272(0)' in MIP start 0 - ignored
+Unknown variable 'C273(0)' in MIP start 0 - ignored
+Unknown variable 'C274(0)' in MIP start 0 - ignored
+Unknown variable 'C275(0)' in MIP start 0 - ignored
+Unknown variable 'C276(0)' in MIP start 0 - ignored
+Unknown variable 'C277(0)' in MIP start 0 - ignored
+Unknown variable 'C278(0)' in MIP start 0 - ignored
+Unknown variable 'C279(0)' in MIP start 0 - ignored
+Unknown variable 'C280(0)' in MIP start 0 - ignored
+Read MIP start from file WarmStarts/auto93_6.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 503 rows, 621 columns and 20252 nonzeros
+Model fingerprint: 0x0c2d65a2
+Model has 224 general constraints
+Variable types: 451 continuous, 170 integer (113 binary)
+Coefficient statistics:
+  Matrix range     [2e-03, 1e+03]
+  Objective range  [1e-01, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+03]
+
+No start values specified in MIP start
+
+Presolve added 395 rows and 0 columns
+Presolve removed 0 rows and 51 columns
+Presolve time: 0.04s
+Presolved: 898 rows, 570 columns, 21368 nonzeros
+Variable types: 451 continuous, 119 integer (118 binary)
+Found heuristic solution: objective 24.4737483
+
+Root relaxation: objective 0.000000e+00, 398 iterations, 0.00 seconds (0.01 work units)
+Another try with MIP start
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0   64   24.47375    0.00000   100%     -    0s
+     0     0    0.00000    0   65   24.47375    0.00000   100%     -    0s
+H    0     0                      24.0167454    0.00000   100%     -    0s
+     0     0    2.39000    0   62   24.01675    2.39000  90.0%     -    0s
+     0     0    4.68000    0   64   24.01675    4.68000  80.5%     -    0s
+     0     0    5.39000    0   62   24.01675    5.39000  77.6%     -    0s
+     0     0    6.17000    0   65   24.01675    6.17000  74.3%     -    0s
+     0     0    6.95945    0   59   24.01675    6.95945  71.0%     -    0s
+     0     0    8.16004    0   57   24.01675    8.16004  66.0%     -    0s
+     0     0    8.79000    0   68   24.01675    8.79000  63.4%     -    0s
+     0     0    9.87706    0   61   24.01675    9.87706  58.9%     -    0s
+     0     0   10.08000    0   66   24.01675   10.08000  58.0%     -    0s
+     0     0   10.56000    0   59   24.01675   10.56000  56.0%     -    1s
+     0     0   10.56000    0   59   24.01675   10.56000  56.0%     -    1s
+     0     2   10.56000    0   59   24.01675   10.56000  56.0%     -    1s
+H   79    28                      23.8667947   10.56000  55.8%  95.2    1s
+*  215    56              17      23.8026792   10.56000  55.6%  74.4    2s
+H  687    68                      23.6781224   10.56000  55.4%  51.9    2s
+
+Cutting planes:
+  Cover: 138
+  Implied bound: 1
+  Clique: 1
+  MIR: 141
+  StrongCG: 1
+  Flow cover: 1
+  Inf proof: 1
+  RLT: 11
+
+Explored 1059 nodes (55617 simplex iterations) in 4.02 seconds (2.78 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 5: 23.6781 23.8027 23.8668 ... 24.4737
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.367812239206e+01, best bound 2.367812239206e+01, gap 0.0000%
+Warning: variables 171 and 285 have the same name "Beta[City_MPG,1]"
+Warning: default variable names used to write MIP start file
+
+Gurobi 11.0.0 (mac64[arm]) logging started Wed Apr 24 23:25:19 2024
+
+Set parameter LogFile to value "GurobiLogs/auto93_6.txt"
+Set parameter TimeLimit to value 3600
+Unknown variable 'B0(6)' in MIP start 0 - ignored
+Unknown variable 'I1(111)' in MIP start 0 - ignored
+Unknown variable 'I2(111)' in MIP start 0 - ignored
+Unknown variable 'I3(110)' in MIP start 0 - ignored
+Unknown variable 'I4(111)' in MIP start 0 - ignored
+Unknown variable 'I5(111)' in MIP start 0 - ignored
+Unknown variable 'I6(111)' in MIP start 0 - ignored
+Unknown variable 'I7(111)' in MIP start 0 - ignored
+Unknown variable 'I8(111)' in MIP start 0 - ignored
+Unknown variable 'I9(111)' in MIP start 0 - ignored
+Unknown variable 'I10(111)' in MIP start 0 - ignored
+Unknown variable 'I11(111)' in MIP start 0 - ignored
+Unknown variable 'I12(111)' in MIP start 0 - ignored
+Unknown variable 'I13(111)' in MIP start 0 - ignored
+Unknown variable 'I14(109)' in MIP start 0 - ignored
+Unknown variable 'I15(103)' in MIP start 0 - ignored
+Unknown variable 'I16(111)' in MIP start 0 - ignored
+Unknown variable 'I17(111)' in MIP start 0 - ignored
+Unknown variable 'I18(111)' in MIP start 0 - ignored
+Unknown variable 'I19(111)' in MIP start 0 - ignored
+Unknown variable 'I20(111)' in MIP start 0 - ignored
+Unknown variable 'I21(111)' in MIP start 0 - ignored
+Unknown variable 'I22(111)' in MIP start 0 - ignored
+Unknown variable 'I23(111)' in MIP start 0 - ignored
+Unknown variable 'I24(111)' in MIP start 0 - ignored
+Unknown variable 'I25(111)' in MIP start 0 - ignored
+Unknown variable 'I26(111)' in MIP start 0 - ignored
+Unknown variable 'I27(111)' in MIP start 0 - ignored
+Unknown variable 'I28(111)' in MIP start 0 - ignored
+Unknown variable 'I29(111)' in MIP start 0 - ignored
+Unknown variable 'I30(111)' in MIP start 0 - ignored
+Unknown variable 'I31(111)' in MIP start 0 - ignored
+Unknown variable 'I32(111)' in MIP start 0 - ignored
+Unknown variable 'I33(111)' in MIP start 0 - ignored
+Unknown variable 'I34(111)' in MIP start 0 - ignored
+Unknown variable 'I35(111)' in MIP start 0 - ignored
+Unknown variable 'I36(111)' in MIP start 0 - ignored
+Unknown variable 'I37(111)' in MIP start 0 - ignored
+Unknown variable 'I38(111)' in MIP start 0 - ignored
+Unknown variable 'I39(111)' in MIP start 0 - ignored
+Unknown variable 'I40(111)' in MIP start 0 - ignored
+Unknown variable 'I41(111)' in MIP start 0 - ignored
+Unknown variable 'I42(111)' in MIP start 0 - ignored
+Unknown variable 'I43(111)' in MIP start 0 - ignored
+Unknown variable 'I44(111)' in MIP start 0 - ignored
+Unknown variable 'I45(111)' in MIP start 0 - ignored
+Unknown variable 'I46(111)' in MIP start 0 - ignored
+Unknown variable 'I47(111)' in MIP start 0 - ignored
+Unknown variable 'I48(111)' in MIP start 0 - ignored
+Unknown variable 'I49(111)' in MIP start 0 - ignored
+Unknown variable 'I50(111)' in MIP start 0 - ignored
+Unknown variable 'I51(111)' in MIP start 0 - ignored
+Unknown variable 'I52(111)' in MIP start 0 - ignored
+Unknown variable 'I53(111)' in MIP start 0 - ignored
+Unknown variable 'I54(111)' in MIP start 0 - ignored
+Unknown variable 'I55(111)' in MIP start 0 - ignored
+Unknown variable 'I56(111)' in MIP start 0 - ignored
+Unknown variable 'I57(111)' in MIP start 0 - ignored
+Unknown variable 'B59(7)' in MIP start 0 - ignored
+Unknown variable 'B60(7)' in MIP start 0 - ignored
+Unknown variable 'B61(7)' in MIP start 0 - ignored
+Unknown variable 'B62(7)' in MIP start 0 - ignored
+Unknown variable 'B63(7)' in MIP start 0 - ignored
+Unknown variable 'B64(7)' in MIP start 0 - ignored
+Unknown variable 'B65(7)' in MIP start 0 - ignored
+Unknown variable 'B66(7)' in MIP start 0 - ignored
+Unknown variable 'B67(7)' in MIP start 0 - ignored
+Unknown variable 'B68(7)' in MIP start 0 - ignored
+Unknown variable 'B69(7)' in MIP start 0 - ignored
+Unknown variable 'B70(7)' in MIP start 0 - ignored
+Unknown variable 'B71(7)' in MIP start 0 - ignored
+Unknown variable 'B72(7)' in MIP start 0 - ignored
+Unknown variable 'B73(7)' in MIP start 0 - ignored
+Unknown variable 'B74(7)' in MIP start 0 - ignored
+Unknown variable 'B75(7)' in MIP start 0 - ignored
+Unknown variable 'B76(7)' in MIP start 0 - ignored
+Unknown variable 'B77(7)' in MIP start 0 - ignored
+Unknown variable 'B78(7)' in MIP start 0 - ignored
+Unknown variable 'B79(7)' in MIP start 0 - ignored
+Unknown variable 'B80(7)' in MIP start 0 - ignored
+Unknown variable 'B81(7)' in MIP start 0 - ignored
+Unknown variable 'B82(7)' in MIP start 0 - ignored
+Unknown variable 'B83(7)' in MIP start 0 - ignored
+Unknown variable 'B84(7)' in MIP start 0 - ignored
+Unknown variable 'B85(7)' in MIP start 0 - ignored
+Unknown variable 'B86(7)' in MIP start 0 - ignored
+Unknown variable 'B87(7)' in MIP start 0 - ignored
+Unknown variable 'B88(7)' in MIP start 0 - ignored
+Unknown variable 'B89(7)' in MIP start 0 - ignored
+Unknown variable 'B90(7)' in MIP start 0 - ignored
+Unknown variable 'B91(7)' in MIP start 0 - ignored
+Unknown variable 'B92(7)' in MIP start 0 - ignored
+Unknown variable 'B93(7)' in MIP start 0 - ignored
+Unknown variable 'B94(7)' in MIP start 0 - ignored
+Unknown variable 'B95(7)' in MIP start 0 - ignored
+Unknown variable 'B96(7)' in MIP start 0 - ignored
+Unknown variable 'B97(7)' in MIP start 0 - ignored
+Unknown variable 'B98(7)' in MIP start 0 - ignored
+Unknown variable 'B99(7)' in MIP start 0 - ignored
+Unknown variable 'B100(7)' in MIP start 0 - ignored
+Unknown variable 'B101(7)' in MIP start 0 - ignored
+Unknown variable 'B102(7)' in MIP start 0 - ignored
+Unknown variable 'B103(7)' in MIP start 0 - ignored
+Unknown variable 'B104(7)' in MIP start 0 - ignored
+Unknown variable 'B105(7)' in MIP start 0 - ignored
+Unknown variable 'B106(7)' in MIP start 0 - ignored
+Unknown variable 'B107(7)' in MIP start 0 - ignored
+Unknown variable 'B108(7)' in MIP start 0 - ignored
+Unknown variable 'B109(7)' in MIP start 0 - ignored
+Unknown variable 'B110(7)' in MIP start 0 - ignored
+Unknown variable 'B111(7)' in MIP start 0 - ignored
+Unknown variable 'B112(7)' in MIP start 0 - ignored
+Unknown variable 'B113(7)' in MIP start 0 - ignored
+Unknown variable 'B114(7)' in MIP start 0 - ignored
+Unknown variable 'B115(7)' in MIP start 0 - ignored
+Unknown variable 'B116(7)' in MIP start 0 - ignored
+Unknown variable 'B117(7)' in MIP start 0 - ignored
+Unknown variable 'B118(7)' in MIP start 0 - ignored
+Unknown variable 'B119(7)' in MIP start 0 - ignored
+Unknown variable 'B120(7)' in MIP start 0 - ignored
+Unknown variable 'B121(7)' in MIP start 0 - ignored
+Unknown variable 'B122(7)' in MIP start 0 - ignored
+Unknown variable 'B123(7)' in MIP start 0 - ignored
+Unknown variable 'B124(7)' in MIP start 0 - ignored
+Unknown variable 'B125(7)' in MIP start 0 - ignored
+Unknown variable 'B126(7)' in MIP start 0 - ignored
+Unknown variable 'B127(7)' in MIP start 0 - ignored
+Unknown variable 'B128(7)' in MIP start 0 - ignored
+Unknown variable 'B129(7)' in MIP start 0 - ignored
+Unknown variable 'B130(7)' in MIP start 0 - ignored
+Unknown variable 'B131(7)' in MIP start 0 - ignored
+Unknown variable 'B132(7)' in MIP start 0 - ignored
+Unknown variable 'B133(7)' in MIP start 0 - ignored
+Unknown variable 'B134(7)' in MIP start 0 - ignored
+Unknown variable 'B135(7)' in MIP start 0 - ignored
+Unknown variable 'B136(7)' in MIP start 0 - ignored
+Unknown variable 'B137(7)' in MIP start 0 - ignored
+Unknown variable 'B138(7)' in MIP start 0 - ignored
+Unknown variable 'B139(7)' in MIP start 0 - ignored
+Unknown variable 'B140(7)' in MIP start 0 - ignored
+Unknown variable 'B141(7)' in MIP start 0 - ignored
+Unknown variable 'B142(7)' in MIP start 0 - ignored
+Unknown variable 'B143(7)' in MIP start 0 - ignored
+Unknown variable 'B144(7)' in MIP start 0 - ignored
+Unknown variable 'B145(7)' in MIP start 0 - ignored
+Unknown variable 'B146(7)' in MIP start 0 - ignored
+Unknown variable 'B147(7)' in MIP start 0 - ignored
+Unknown variable 'B148(7)' in MIP start 0 - ignored
+Unknown variable 'B149(7)' in MIP start 0 - ignored
+Unknown variable 'B150(7)' in MIP start 0 - ignored
+Unknown variable 'B151(7)' in MIP start 0 - ignored
+Unknown variable 'B152(7)' in MIP start 0 - ignored
+Unknown variable 'B153(7)' in MIP start 0 - ignored
+Unknown variable 'B154(7)' in MIP start 0 - ignored
+Unknown variable 'B155(7)' in MIP start 0 - ignored
+Unknown variable 'B156(7)' in MIP start 0 - ignored
+Unknown variable 'B157(7)' in MIP start 0 - ignored
+Unknown variable 'B158(7)' in MIP start 0 - ignored
+Unknown variable 'B159(7)' in MIP start 0 - ignored
+Unknown variable 'B160(7)' in MIP start 0 - ignored
+Unknown variable 'B161(7)' in MIP start 0 - ignored
+Unknown variable 'B162(7)' in MIP start 0 - ignored
+Unknown variable 'B163(7)' in MIP start 0 - ignored
+Unknown variable 'B164(7)' in MIP start 0 - ignored
+Unknown variable 'B165(7)' in MIP start 0 - ignored
+Unknown variable 'B166(7)' in MIP start 0 - ignored
+Unknown variable 'B167(7)' in MIP start 0 - ignored
+Unknown variable 'B168(7)' in MIP start 0 - ignored
+Unknown variable 'B169(56)' in MIP start 0 - ignored
+Unknown variable 'B170(56)' in MIP start 0 - ignored
+Unknown variable 'C171(110)' in MIP start 0 - ignored
+Unknown variable 'C172(110)' in MIP start 0 - ignored
+Unknown variable 'C173(110)' in MIP start 0 - ignored
+Unknown variable 'C174(110)' in MIP start 0 - ignored
+Unknown variable 'C175(108)' in MIP start 0 - ignored
+Unknown variable 'C176(108)' in MIP start 0 - ignored
+Unknown variable 'C177(110)' in MIP start 0 - ignored
+Unknown variable 'C178(110)' in MIP start 0 - ignored
+Unknown variable 'C179(110)' in MIP start 0 - ignored
+Unknown variable 'C180(110)' in MIP start 0 - ignored
+Unknown variable 'C181(110)' in MIP start 0 - ignored
+Unknown variable 'C182(110)' in MIP start 0 - ignored
+Unknown variable 'C183(110)' in MIP start 0 - ignored
+Unknown variable 'C184(110)' in MIP start 0 - ignored
+Unknown variable 'C185(110)' in MIP start 0 - ignored
+Unknown variable 'C186(110)' in MIP start 0 - ignored
+Unknown variable 'C187(110)' in MIP start 0 - ignored
+Unknown variable 'C188(110)' in MIP start 0 - ignored
+Unknown variable 'C189(110)' in MIP start 0 - ignored
+Unknown variable 'C190(110)' in MIP start 0 - ignored
+Unknown variable 'C191(110)' in MIP start 0 - ignored
+Unknown variable 'C192(110)' in MIP start 0 - ignored
+Unknown variable 'C193(110)' in MIP start 0 - ignored
+Unknown variable 'C194(110)' in MIP start 0 - ignored
+Unknown variable 'C195(110)' in MIP start 0 - ignored
+Unknown variable 'C196(110)' in MIP start 0 - ignored
+Unknown variable 'C197(106)' in MIP start 0 - ignored
+Unknown variable 'C198(106)' in MIP start 0 - ignored
+Unknown variable 'C199(94)' in MIP start 0 - ignored
+Unknown variable 'C200(94)' in MIP start 0 - ignored
+Unknown variable 'C201(110)' in MIP start 0 - ignored
+Unknown variable 'C202(110)' in MIP start 0 - ignored
+Unknown variable 'C203(110)' in MIP start 0 - ignored
+Unknown variable 'C204(110)' in MIP start 0 - ignored
+Unknown variable 'C205(110)' in MIP start 0 - ignored
+Unknown variable 'C206(110)' in MIP start 0 - ignored
+Unknown variable 'C207(110)' in MIP start 0 - ignored
+Unknown variable 'C208(110)' in MIP start 0 - ignored
+Unknown variable 'C209(110)' in MIP start 0 - ignored
+Unknown variable 'C210(110)' in MIP start 0 - ignored
+Unknown variable 'C211(110)' in MIP start 0 - ignored
+Unknown variable 'C212(110)' in MIP start 0 - ignored
+Unknown variable 'C213(110)' in MIP start 0 - ignored
+Unknown variable 'C214(110)' in MIP start 0 - ignored
+Unknown variable 'C215(110)' in MIP start 0 - ignored
+Unknown variable 'C216(110)' in MIP start 0 - ignored
+Unknown variable 'C217(110)' in MIP start 0 - ignored
+Unknown variable 'C218(110)' in MIP start 0 - ignored
+Unknown variable 'C219(110)' in MIP start 0 - ignored
+Unknown variable 'C220(110)' in MIP start 0 - ignored
+Unknown variable 'C221(110)' in MIP start 0 - ignored
+Unknown variable 'C222(110)' in MIP start 0 - ignored
+Unknown variable 'C223(110)' in MIP start 0 - ignored
+Unknown variable 'C224(110)' in MIP start 0 - ignored
+Unknown variable 'C225(110)' in MIP start 0 - ignored
+Unknown variable 'C226(110)' in MIP start 0 - ignored
+Unknown variable 'C227(110)' in MIP start 0 - ignored
+Unknown variable 'C228(110)' in MIP start 0 - ignored
+Unknown variable 'C229(110)' in MIP start 0 - ignored
+Unknown variable 'C230(110)' in MIP start 0 - ignored
+Unknown variable 'C231(110)' in MIP start 0 - ignored
+Unknown variable 'C232(110)' in MIP start 0 - ignored
+Unknown variable 'C233(110)' in MIP start 0 - ignored
+Unknown variable 'C234(110)' in MIP start 0 - ignored
+Unknown variable 'C235(110)' in MIP start 0 - ignored
+Unknown variable 'C236(110)' in MIP start 0 - ignored
+Unknown variable 'C237(110)' in MIP start 0 - ignored
+Unknown variable 'C238(110)' in MIP start 0 - ignored
+Unknown variable 'C239(110)' in MIP start 0 - ignored
+Unknown variable 'C240(110)' in MIP start 0 - ignored
+Unknown variable 'C241(110)' in MIP start 0 - ignored
+Unknown variable 'C242(110)' in MIP start 0 - ignored
+Unknown variable 'C243(110)' in MIP start 0 - ignored
+Unknown variable 'C244(110)' in MIP start 0 - ignored
+Unknown variable 'C245(110)' in MIP start 0 - ignored
+Unknown variable 'C246(110)' in MIP start 0 - ignored
+Unknown variable 'C247(110)' in MIP start 0 - ignored
+Unknown variable 'C248(110)' in MIP start 0 - ignored
+Unknown variable 'C249(110)' in MIP start 0 - ignored
+Unknown variable 'C250(110)' in MIP start 0 - ignored
+Unknown variable 'C251(110)' in MIP start 0 - ignored
+Unknown variable 'C252(110)' in MIP start 0 - ignored
+Unknown variable 'C253(110)' in MIP start 0 - ignored
+Unknown variable 'C254(110)' in MIP start 0 - ignored
+Unknown variable 'C255(110)' in MIP start 0 - ignored
+Unknown variable 'C256(110)' in MIP start 0 - ignored
+Unknown variable 'C257(110)' in MIP start 0 - ignored
+Unknown variable 'C258(110)' in MIP start 0 - ignored
+Unknown variable 'C259(110)' in MIP start 0 - ignored
+Unknown variable 'C260(110)' in MIP start 0 - ignored
+Unknown variable 'C261(110)' in MIP start 0 - ignored
+Unknown variable 'C262(110)' in MIP start 0 - ignored
+Unknown variable 'C263(110)' in MIP start 0 - ignored
+Unknown variable 'C264(110)' in MIP start 0 - ignored
+Unknown variable 'C265(110)' in MIP start 0 - ignored
+Unknown variable 'C266(110)' in MIP start 0 - ignored
+Unknown variable 'C267(110)' in MIP start 0 - ignored
+Unknown variable 'C268(110)' in MIP start 0 - ignored
+Unknown variable 'C269(110)' in MIP start 0 - ignored
+Unknown variable 'C270(110)' in MIP start 0 - ignored
+Unknown variable 'C271(110)' in MIP start 0 - ignored
+Unknown variable 'C272(110)' in MIP start 0 - ignored
+Unknown variable 'C273(110)' in MIP start 0 - ignored
+Unknown variable 'C274(110)' in MIP start 0 - ignored
+Unknown variable 'C275(110)' in MIP start 0 - ignored
+Unknown variable 'C276(110)' in MIP start 0 - ignored
+Unknown variable 'C277(110)' in MIP start 0 - ignored
+Unknown variable 'C278(110)' in MIP start 0 - ignored
+Unknown variable 'C279(110)' in MIP start 0 - ignored
+Unknown variable 'C280(110)' in MIP start 0 - ignored
+Unknown variable 'C281(110)' in MIP start 0 - ignored
+Unknown variable 'C282(110)' in MIP start 0 - ignored
+Unknown variable 'C283(110)' in MIP start 0 - ignored
+Unknown variable 'C284(110)' in MIP start 0 - ignored
+Unknown variable 'C285(0)' in MIP start 0 - ignored
+Unknown variable 'C286(0)' in MIP start 0 - ignored
+Unknown variable 'C287(0)' in MIP start 0 - ignored
+Unknown variable 'C288(0)' in MIP start 0 - ignored
+Unknown variable 'C289(0)' in MIP start 0 - ignored
+Unknown variable 'C290(0)' in MIP start 0 - ignored
+Unknown variable 'C291(0)' in MIP start 0 - ignored
+Unknown variable 'C292(0)' in MIP start 0 - ignored
+Unknown variable 'C293(0)' in MIP start 0 - ignored
+Unknown variable 'C294(0)' in MIP start 0 - ignored
+Unknown variable 'C295(0)' in MIP start 0 - ignored
+Unknown variable 'C296(0)' in MIP start 0 - ignored
+Unknown variable 'C297(0)' in MIP start 0 - ignored
+Unknown variable 'C298(0)' in MIP start 0 - ignored
+Unknown variable 'C299(0)' in MIP start 0 - ignored
+Unknown variable 'C300(0)' in MIP start 0 - ignored
+Unknown variable 'C301(0)' in MIP start 0 - ignored
+Unknown variable 'C302(0)' in MIP start 0 - ignored
+Unknown variable 'C303(0)' in MIP start 0 - ignored
+Unknown variable 'C304(0)' in MIP start 0 - ignored
+Unknown variable 'C305(0)' in MIP start 0 - ignored
+Unknown variable 'C306(0)' in MIP start 0 - ignored
+Unknown variable 'C307(0)' in MIP start 0 - ignored
+Unknown variable 'C308(0)' in MIP start 0 - ignored
+Unknown variable 'C309(0)' in MIP start 0 - ignored
+Unknown variable 'C310(0)' in MIP start 0 - ignored
+Unknown variable 'C311(0)' in MIP start 0 - ignored
+Unknown variable 'C312(0)' in MIP start 0 - ignored
+Unknown variable 'C313(0)' in MIP start 0 - ignored
+Unknown variable 'C314(0)' in MIP start 0 - ignored
+Unknown variable 'C315(0)' in MIP start 0 - ignored
+Unknown variable 'C316(0)' in MIP start 0 - ignored
+Unknown variable 'C317(0)' in MIP start 0 - ignored
+Unknown variable 'C318(0)' in MIP start 0 - ignored
+Unknown variable 'C319(0)' in MIP start 0 - ignored
+Unknown variable 'C320(0)' in MIP start 0 - ignored
+Unknown variable 'C321(0)' in MIP start 0 - ignored
+Unknown variable 'C322(0)' in MIP start 0 - ignored
+Unknown variable 'C323(0)' in MIP start 0 - ignored
+Unknown variable 'C324(0)' in MIP start 0 - ignored
+Unknown variable 'C325(0)' in MIP start 0 - ignored
+Unknown variable 'C326(0)' in MIP start 0 - ignored
+Unknown variable 'C327(0)' in MIP start 0 - ignored
+Unknown variable 'C328(0)' in MIP start 0 - ignored
+Unknown variable 'C329(0)' in MIP start 0 - ignored
+Unknown variable 'C330(0)' in MIP start 0 - ignored
+Unknown variable 'C331(0)' in MIP start 0 - ignored
+Unknown variable 'C332(0)' in MIP start 0 - ignored
+Unknown variable 'C333(0)' in MIP start 0 - ignored
+Unknown variable 'C334(0)' in MIP start 0 - ignored
+Unknown variable 'C335(0)' in MIP start 0 - ignored
+Unknown variable 'C336(0)' in MIP start 0 - ignored
+Unknown variable 'C337(0)' in MIP start 0 - ignored
+Unknown variable 'C338(0)' in MIP start 0 - ignored
+Unknown variable 'C339(0)' in MIP start 0 - ignored
+Unknown variable 'C340(0)' in MIP start 0 - ignored
+Unknown variable 'C341(0)' in MIP start 0 - ignored
+Unknown variable 'C342(0)' in MIP start 0 - ignored
+Unknown variable 'C343(0)' in MIP start 0 - ignored
+Unknown variable 'C344(0)' in MIP start 0 - ignored
+Unknown variable 'C345(0)' in MIP start 0 - ignored
+Unknown variable 'C346(0)' in MIP start 0 - ignored
+Unknown variable 'C347(0)' in MIP start 0 - ignored
+Unknown variable 'C348(0)' in MIP start 0 - ignored
+Unknown variable 'C349(0)' in MIP start 0 - ignored
+Unknown variable 'C350(0)' in MIP start 0 - ignored
+Unknown variable 'C351(0)' in MIP start 0 - ignored
+Unknown variable 'C352(0)' in MIP start 0 - ignored
+Unknown variable 'C353(0)' in MIP start 0 - ignored
+Unknown variable 'C354(0)' in MIP start 0 - ignored
+Unknown variable 'C355(0)' in MIP start 0 - ignored
+Unknown variable 'C356(0)' in MIP start 0 - ignored
+Unknown variable 'C357(0)' in MIP start 0 - ignored
+Unknown variable 'C358(0)' in MIP start 0 - ignored
+Unknown variable 'C359(0)' in MIP start 0 - ignored
+Unknown variable 'C360(0)' in MIP start 0 - ignored
+Unknown variable 'C361(0)' in MIP start 0 - ignored
+Unknown variable 'C362(0)' in MIP start 0 - ignored
+Unknown variable 'C363(0)' in MIP start 0 - ignored
+Unknown variable 'C364(0)' in MIP start 0 - ignored
+Unknown variable 'C365(0)' in MIP start 0 - ignored
+Unknown variable 'C366(0)' in MIP start 0 - ignored
+Unknown variable 'C367(0)' in MIP start 0 - ignored
+Unknown variable 'C368(0)' in MIP start 0 - ignored
+Unknown variable 'C369(0)' in MIP start 0 - ignored
+Unknown variable 'C370(0)' in MIP start 0 - ignored
+Unknown variable 'C371(0)' in MIP start 0 - ignored
+Unknown variable 'C372(0)' in MIP start 0 - ignored
+Unknown variable 'C373(0)' in MIP start 0 - ignored
+Unknown variable 'C374(0)' in MIP start 0 - ignored
+Unknown variable 'C375(0)' in MIP start 0 - ignored
+Unknown variable 'C376(0)' in MIP start 0 - ignored
+Unknown variable 'C377(0)' in MIP start 0 - ignored
+Unknown variable 'C378(0)' in MIP start 0 - ignored
+Unknown variable 'C379(0)' in MIP start 0 - ignored
+Unknown variable 'C380(0)' in MIP start 0 - ignored
+Unknown variable 'C381(0)' in MIP start 0 - ignored
+Unknown variable 'C382(0)' in MIP start 0 - ignored
+Unknown variable 'C383(0)' in MIP start 0 - ignored
+Unknown variable 'C384(0)' in MIP start 0 - ignored
+Unknown variable 'C385(0)' in MIP start 0 - ignored
+Unknown variable 'C386(0)' in MIP start 0 - ignored
+Unknown variable 'C387(0)' in MIP start 0 - ignored
+Unknown variable 'C388(0)' in MIP start 0 - ignored
+Unknown variable 'C389(0)' in MIP start 0 - ignored
+Unknown variable 'C390(0)' in MIP start 0 - ignored
+Unknown variable 'C391(0)' in MIP start 0 - ignored
+Unknown variable 'C392(0)' in MIP start 0 - ignored
+Unknown variable 'C393(0)' in MIP start 0 - ignored
+Unknown variable 'C394(0)' in MIP start 0 - ignored
+Unknown variable 'C395(0)' in MIP start 0 - ignored
+Unknown variable 'C396(0)' in MIP start 0 - ignored
+Unknown variable 'C397(0)' in MIP start 0 - ignored
+Unknown variable 'C398(0)' in MIP start 0 - ignored
+Unknown variable 'C401(2)' in MIP start 0 - ignored
+Unknown variable 'C402(2)' in MIP start 0 - ignored
+Unknown variable 'C403(2)' in MIP start 0 - ignored
+Unknown variable 'C404(2)' in MIP start 0 - ignored
+Unknown variable 'C405(2)' in MIP start 0 - ignored
+Unknown variable 'C406(2)' in MIP start 0 - ignored
+Unknown variable 'C407(2)' in MIP start 0 - ignored
+Unknown variable 'C408(2)' in MIP start 0 - ignored
+Unknown variable 'C409(2)' in MIP start 0 - ignored
+Unknown variable 'C410(2)' in MIP start 0 - ignored
+Unknown variable 'C411(2)' in MIP start 0 - ignored
+Unknown variable 'C412(2)' in MIP start 0 - ignored
+Unknown variable 'C413(2)' in MIP start 0 - ignored
+Unknown variable 'C414(2)' in MIP start 0 - ignored
+Unknown variable 'C415(2)' in MIP start 0 - ignored
+Unknown variable 'C416(2)' in MIP start 0 - ignored
+Unknown variable 'C417(2)' in MIP start 0 - ignored
+Unknown variable 'C418(2)' in MIP start 0 - ignored
+Unknown variable 'C419(2)' in MIP start 0 - ignored
+Unknown variable 'C420(2)' in MIP start 0 - ignored
+Unknown variable 'C421(2)' in MIP start 0 - ignored
+Unknown variable 'C422(2)' in MIP start 0 - ignored
+Unknown variable 'C423(2)' in MIP start 0 - ignored
+Unknown variable 'C424(2)' in MIP start 0 - ignored
+Unknown variable 'C425(2)' in MIP start 0 - ignored
+Unknown variable 'C426(2)' in MIP start 0 - ignored
+Unknown variable 'C427(2)' in MIP start 0 - ignored
+Unknown variable 'C428(2)' in MIP start 0 - ignored
+Unknown variable 'C429(2)' in MIP start 0 - ignored
+Unknown variable 'C430(2)' in MIP start 0 - ignored
+Unknown variable 'C431(2)' in MIP start 0 - ignored
+Unknown variable 'C432(2)' in MIP start 0 - ignored
+Unknown variable 'C433(2)' in MIP start 0 - ignored
+Unknown variable 'C434(2)' in MIP start 0 - ignored
+Unknown variable 'C435(2)' in MIP start 0 - ignored
+Unknown variable 'C436(2)' in MIP start 0 - ignored
+Unknown variable 'C437(2)' in MIP start 0 - ignored
+Unknown variable 'C438(2)' in MIP start 0 - ignored
+Unknown variable 'C439(2)' in MIP start 0 - ignored
+Unknown variable 'C440(2)' in MIP start 0 - ignored
+Unknown variable 'C441(2)' in MIP start 0 - ignored
+Unknown variable 'C442(2)' in MIP start 0 - ignored
+Unknown variable 'C443(2)' in MIP start 0 - ignored
+Unknown variable 'C444(2)' in MIP start 0 - ignored
+Unknown variable 'C445(2)' in MIP start 0 - ignored
+Unknown variable 'C446(2)' in MIP start 0 - ignored
+Unknown variable 'C447(2)' in MIP start 0 - ignored
+Unknown variable 'C448(2)' in MIP start 0 - ignored
+Unknown variable 'C449(2)' in MIP start 0 - ignored
+Unknown variable 'C450(2)' in MIP start 0 - ignored
+Unknown variable 'C451(2)' in MIP start 0 - ignored
+Unknown variable 'C452(2)' in MIP start 0 - ignored
+Unknown variable 'C453(2)' in MIP start 0 - ignored
+Unknown variable 'C454(2)' in MIP start 0 - ignored
+Unknown variable 'C455(2)' in MIP start 0 - ignored
+Unknown variable 'C456(2)' in MIP start 0 - ignored
+Unknown variable 'C457(2)' in MIP start 0 - ignored
+Unknown variable 'C458(2)' in MIP start 0 - ignored
+Unknown variable 'C459(2)' in MIP start 0 - ignored
+Unknown variable 'C460(2)' in MIP start 0 - ignored
+Unknown variable 'C461(2)' in MIP start 0 - ignored
+Unknown variable 'C462(2)' in MIP start 0 - ignored
+Unknown variable 'C463(2)' in MIP start 0 - ignored
+Unknown variable 'C464(2)' in MIP start 0 - ignored
+Unknown variable 'C465(2)' in MIP start 0 - ignored
+Unknown variable 'C466(2)' in MIP start 0 - ignored
+Unknown variable 'C467(2)' in MIP start 0 - ignored
+Unknown variable 'C468(2)' in MIP start 0 - ignored
+Unknown variable 'C469(2)' in MIP start 0 - ignored
+Unknown variable 'C470(2)' in MIP start 0 - ignored
+Unknown variable 'C471(2)' in MIP start 0 - ignored
+Unknown variable 'C472(2)' in MIP start 0 - ignored
+Unknown variable 'C473(2)' in MIP start 0 - ignored
+Unknown variable 'C474(2)' in MIP start 0 - ignored
+Unknown variable 'C475(2)' in MIP start 0 - ignored
+Unknown variable 'C476(2)' in MIP start 0 - ignored
+Unknown variable 'C477(2)' in MIP start 0 - ignored
+Unknown variable 'C478(2)' in MIP start 0 - ignored
+Unknown variable 'C479(2)' in MIP start 0 - ignored
+Unknown variable 'C480(2)' in MIP start 0 - ignored
+Unknown variable 'C481(2)' in MIP start 0 - ignored
+Unknown variable 'C482(2)' in MIP start 0 - ignored
+Unknown variable 'C483(2)' in MIP start 0 - ignored
+Unknown variable 'C484(2)' in MIP start 0 - ignored
+Unknown variable 'C485(2)' in MIP start 0 - ignored
+Unknown variable 'C486(2)' in MIP start 0 - ignored
+Unknown variable 'C487(2)' in MIP start 0 - ignored
+Unknown variable 'C488(2)' in MIP start 0 - ignored
+Unknown variable 'C489(2)' in MIP start 0 - ignored
+Unknown variable 'C490(2)' in MIP start 0 - ignored
+Unknown variable 'C491(2)' in MIP start 0 - ignored
+Unknown variable 'C492(2)' in MIP start 0 - ignored
+Unknown variable 'C493(2)' in MIP start 0 - ignored
+Unknown variable 'C494(2)' in MIP start 0 - ignored
+Unknown variable 'C495(2)' in MIP start 0 - ignored
+Unknown variable 'C496(2)' in MIP start 0 - ignored
+Unknown variable 'C497(2)' in MIP start 0 - ignored
+Unknown variable 'C498(2)' in MIP start 0 - ignored
+Unknown variable 'C499(2)' in MIP start 0 - ignored
+Unknown variable 'C500(2)' in MIP start 0 - ignored
+Unknown variable 'C501(2)' in MIP start 0 - ignored
+Unknown variable 'C502(2)' in MIP start 0 - ignored
+Unknown variable 'C503(2)' in MIP start 0 - ignored
+Unknown variable 'C504(2)' in MIP start 0 - ignored
+Unknown variable 'C505(2)' in MIP start 0 - ignored
+Unknown variable 'C506(2)' in MIP start 0 - ignored
+Unknown variable 'C507(2)' in MIP start 0 - ignored
+Unknown variable 'C508(2)' in MIP start 0 - ignored
+Unknown variable 'C509(2)' in MIP start 0 - ignored
+Unknown variable 'C510(2)' in MIP start 0 - ignored
+Unknown variable 'C511(0)' in MIP start 0 - ignored
+Unknown variable 'C512(0)' in MIP start 0 - ignored
+Unknown variable 'C513(0)' in MIP start 0 - ignored
+Unknown variable 'C514(0)' in MIP start 0 - ignored
+Unknown variable 'C515(0)' in MIP start 0 - ignored
+Unknown variable 'C516(0)' in MIP start 0 - ignored
+Unknown variable 'C517(0)' in MIP start 0 - ignored
+Unknown variable 'C518(0)' in MIP start 0 - ignored
+Unknown variable 'C519(0)' in MIP start 0 - ignored
+Unknown variable 'C520(0)' in MIP start 0 - ignored
+Unknown variable 'C521(0)' in MIP start 0 - ignored
+Unknown variable 'C522(0)' in MIP start 0 - ignored
+Unknown variable 'C523(0)' in MIP start 0 - ignored
+Unknown variable 'C524(0)' in MIP start 0 - ignored
+Unknown variable 'C525(0)' in MIP start 0 - ignored
+Unknown variable 'C526(0)' in MIP start 0 - ignored
+Unknown variable 'C527(0)' in MIP start 0 - ignored
+Unknown variable 'C528(0)' in MIP start 0 - ignored
+Unknown variable 'C529(0)' in MIP start 0 - ignored
+Unknown variable 'C530(0)' in MIP start 0 - ignored
+Unknown variable 'C531(0)' in MIP start 0 - ignored
+Unknown variable 'C532(0)' in MIP start 0 - ignored
+Unknown variable 'C533(0)' in MIP start 0 - ignored
+Unknown variable 'C534(0)' in MIP start 0 - ignored
+Unknown variable 'C535(0)' in MIP start 0 - ignored
+Unknown variable 'C536(0)' in MIP start 0 - ignored
+Unknown variable 'C537(0)' in MIP start 0 - ignored
+Unknown variable 'C538(0)' in MIP start 0 - ignored
+Unknown variable 'C539(0)' in MIP start 0 - ignored
+Unknown variable 'C540(0)' in MIP start 0 - ignored
+Unknown variable 'C541(0)' in MIP start 0 - ignored
+Unknown variable 'C542(0)' in MIP start 0 - ignored
+Unknown variable 'C543(0)' in MIP start 0 - ignored
+Unknown variable 'C544(0)' in MIP start 0 - ignored
+Unknown variable 'C545(0)' in MIP start 0 - ignored
+Unknown variable 'C546(0)' in MIP start 0 - ignored
+Unknown variable 'C547(0)' in MIP start 0 - ignored
+Unknown variable 'C548(0)' in MIP start 0 - ignored
+Unknown variable 'C549(0)' in MIP start 0 - ignored
+Unknown variable 'C550(0)' in MIP start 0 - ignored
+Unknown variable 'C551(0)' in MIP start 0 - ignored
+Unknown variable 'C552(0)' in MIP start 0 - ignored
+Unknown variable 'C553(0)' in MIP start 0 - ignored
+Unknown variable 'C554(0)' in MIP start 0 - ignored
+Unknown variable 'C555(0)' in MIP start 0 - ignored
+Unknown variable 'C556(0)' in MIP start 0 - ignored
+Unknown variable 'C557(0)' in MIP start 0 - ignored
+Unknown variable 'C558(0)' in MIP start 0 - ignored
+Unknown variable 'C559(0)' in MIP start 0 - ignored
+Unknown variable 'C560(0)' in MIP start 0 - ignored
+Unknown variable 'C561(0)' in MIP start 0 - ignored
+Unknown variable 'C562(0)' in MIP start 0 - ignored
+Unknown variable 'C563(0)' in MIP start 0 - ignored
+Unknown variable 'C564(0)' in MIP start 0 - ignored
+Unknown variable 'C565(0)' in MIP start 0 - ignored
+Unknown variable 'C566(0)' in MIP start 0 - ignored
+Unknown variable 'C567(0)' in MIP start 0 - ignored
+Unknown variable 'C568(0)' in MIP start 0 - ignored
+Unknown variable 'C569(0)' in MIP start 0 - ignored
+Unknown variable 'C570(0)' in MIP start 0 - ignored
+Unknown variable 'C571(0)' in MIP start 0 - ignored
+Unknown variable 'C572(0)' in MIP start 0 - ignored
+Unknown variable 'C573(0)' in MIP start 0 - ignored
+Unknown variable 'C574(0)' in MIP start 0 - ignored
+Unknown variable 'C575(0)' in MIP start 0 - ignored
+Unknown variable 'C576(0)' in MIP start 0 - ignored
+Unknown variable 'C577(0)' in MIP start 0 - ignored
+Unknown variable 'C578(0)' in MIP start 0 - ignored
+Unknown variable 'C579(0)' in MIP start 0 - ignored
+Unknown variable 'C580(0)' in MIP start 0 - ignored
+Unknown variable 'C581(0)' in MIP start 0 - ignored
+Unknown variable 'C582(0)' in MIP start 0 - ignored
+Unknown variable 'C583(0)' in MIP start 0 - ignored
+Unknown variable 'C584(0)' in MIP start 0 - ignored
+Unknown variable 'C585(0)' in MIP start 0 - ignored
+Unknown variable 'C586(0)' in MIP start 0 - ignored
+Unknown variable 'C587(0)' in MIP start 0 - ignored
+Unknown variable 'C588(0)' in MIP start 0 - ignored
+Unknown variable 'C589(0)' in MIP start 0 - ignored
+Unknown variable 'C590(0)' in MIP start 0 - ignored
+Unknown variable 'C591(0)' in MIP start 0 - ignored
+Unknown variable 'C592(0)' in MIP start 0 - ignored
+Unknown variable 'C593(0)' in MIP start 0 - ignored
+Unknown variable 'C594(0)' in MIP start 0 - ignored
+Unknown variable 'C595(0)' in MIP start 0 - ignored
+Unknown variable 'C596(0)' in MIP start 0 - ignored
+Unknown variable 'C597(0)' in MIP start 0 - ignored
+Unknown variable 'C598(0)' in MIP start 0 - ignored
+Unknown variable 'C599(0)' in MIP start 0 - ignored
+Unknown variable 'C600(0)' in MIP start 0 - ignored
+Unknown variable 'C601(0)' in MIP start 0 - ignored
+Unknown variable 'C602(0)' in MIP start 0 - ignored
+Unknown variable 'C603(0)' in MIP start 0 - ignored
+Unknown variable 'C604(0)' in MIP start 0 - ignored
+Unknown variable 'C605(0)' in MIP start 0 - ignored
+Unknown variable 'C606(0)' in MIP start 0 - ignored
+Unknown variable 'C607(0)' in MIP start 0 - ignored
+Unknown variable 'C608(0)' in MIP start 0 - ignored
+Unknown variable 'C609(0)' in MIP start 0 - ignored
+Unknown variable 'C610(0)' in MIP start 0 - ignored
+Unknown variable 'C611(0)' in MIP start 0 - ignored
+Unknown variable 'C612(0)' in MIP start 0 - ignored
+Unknown variable 'C613(0)' in MIP start 0 - ignored
+Unknown variable 'C614(0)' in MIP start 0 - ignored
+Unknown variable 'C615(0)' in MIP start 0 - ignored
+Unknown variable 'C616(0)' in MIP start 0 - ignored
+Unknown variable 'C617(0)' in MIP start 0 - ignored
+Unknown variable 'C618(0)' in MIP start 0 - ignored
+Unknown variable 'C619(0)' in MIP start 0 - ignored
+Unknown variable 'C620(0)' in MIP start 0 - ignored
+Read MIP start from file WarmStarts/auto93_6.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 503 rows, 621 columns and 20252 nonzeros
+Model fingerprint: 0x5523493c
+Model has 224 general constraints
+Variable types: 451 continuous, 170 integer (113 binary)
+Coefficient statistics:
+  Matrix range     [2e-03, 1e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+03]
+
+No start values specified in MIP start
+
+Presolve added 395 rows and 0 columns
+Presolve removed 0 rows and 51 columns
+Presolve time: 0.07s
+Presolved: 898 rows, 570 columns, 21368 nonzeros
+Variable types: 451 continuous, 119 integer (118 binary)
+Found heuristic solution: objective 76.1615762
+Found heuristic solution: objective 58.2600411
+
+Root relaxation: objective 0.000000e+00, 428 iterations, 0.01 seconds (0.01 work units)
+Another try with MIP start
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0   54   58.26004    0.00000   100%     -    0s
+     0     0    0.00000    0   62   58.26004    0.00000   100%     -    0s
+     0     0    0.00000    0   60   58.26004    0.00000   100%     -    0s
+     0     0    0.00000    0   61   58.26004    0.00000   100%     -    0s
+     0     0    4.87886    0   60   58.26004    4.87886  91.6%     -    0s
+     0     0   12.85300    0   62   58.26004   12.85300  77.9%     -    0s
+H    0     0                      51.3503392   12.85300  75.0%     -    0s
+H    0     0                      43.9056643   14.48488  67.0%     -    0s
+     0     0   14.48488    0   67   43.90566   14.48488  67.0%     -    0s
+     0     0   17.90114    0   62   43.90566   17.90114  59.2%     -    0s
+     0     0   17.90114    0   62   43.90566   17.90114  59.2%     -    1s
+     0     2   17.90114    0   60   43.90566   17.90114  59.2%     -    1s
+
+Cutting planes:
+  Gomory: 57
+  Cover: 84
+  MIR: 104
+  Flow cover: 26
+
+Explored 491 nodes (42438 simplex iterations) in 2.57 seconds (2.28 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 4: 43.9057 51.3503 58.26 76.1616 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.390566427702e+01, best bound 4.390566427702e+01, gap 0.0000%
+Warning: variables 171 and 285 have the same name "Beta[City_MPG,1]"
+Warning: default variable names used to write MIP start file
+
+Gurobi 11.0.0 (mac64[arm]) logging started Wed Apr 24 23:25:22 2024
+
+Set parameter LogFile to value "GurobiLogs/auto93_6.txt"
+Set parameter TimeLimit to value 3600
+Unknown variable 'B0(6)' in MIP start 0 - ignored
+Unknown variable 'I1(111)' in MIP start 0 - ignored
+Unknown variable 'I2(111)' in MIP start 0 - ignored
+Unknown variable 'I3(110)' in MIP start 0 - ignored
+Unknown variable 'I4(111)' in MIP start 0 - ignored
+Unknown variable 'I5(111)' in MIP start 0 - ignored
+Unknown variable 'I6(111)' in MIP start 0 - ignored
+Unknown variable 'I7(111)' in MIP start 0 - ignored
+Unknown variable 'I8(111)' in MIP start 0 - ignored
+Unknown variable 'I9(111)' in MIP start 0 - ignored
+Unknown variable 'I10(111)' in MIP start 0 - ignored
+Unknown variable 'I11(111)' in MIP start 0 - ignored
+Unknown variable 'I12(111)' in MIP start 0 - ignored
+Unknown variable 'I13(111)' in MIP start 0 - ignored
+Unknown variable 'I14(109)' in MIP start 0 - ignored
+Unknown variable 'I15(103)' in MIP start 0 - ignored
+Unknown variable 'I16(111)' in MIP start 0 - ignored
+Unknown variable 'I17(111)' in MIP start 0 - ignored
+Unknown variable 'I18(111)' in MIP start 0 - ignored
+Unknown variable 'I19(111)' in MIP start 0 - ignored
+Unknown variable 'I20(111)' in MIP start 0 - ignored
+Unknown variable 'I21(111)' in MIP start 0 - ignored
+Unknown variable 'I22(111)' in MIP start 0 - ignored
+Unknown variable 'I23(111)' in MIP start 0 - ignored
+Unknown variable 'I24(111)' in MIP start 0 - ignored
+Unknown variable 'I25(111)' in MIP start 0 - ignored
+Unknown variable 'I26(111)' in MIP start 0 - ignored
+Unknown variable 'I27(111)' in MIP start 0 - ignored
+Unknown variable 'I28(111)' in MIP start 0 - ignored
+Unknown variable 'I29(111)' in MIP start 0 - ignored
+Unknown variable 'I30(111)' in MIP start 0 - ignored
+Unknown variable 'I31(111)' in MIP start 0 - ignored
+Unknown variable 'I32(111)' in MIP start 0 - ignored
+Unknown variable 'I33(111)' in MIP start 0 - ignored
+Unknown variable 'I34(111)' in MIP start 0 - ignored
+Unknown variable 'I35(111)' in MIP start 0 - ignored
+Unknown variable 'I36(111)' in MIP start 0 - ignored
+Unknown variable 'I37(111)' in MIP start 0 - ignored
+Unknown variable 'I38(111)' in MIP start 0 - ignored
+Unknown variable 'I39(111)' in MIP start 0 - ignored
+Unknown variable 'I40(111)' in MIP start 0 - ignored
+Unknown variable 'I41(111)' in MIP start 0 - ignored
+Unknown variable 'I42(111)' in MIP start 0 - ignored
+Unknown variable 'I43(111)' in MIP start 0 - ignored
+Unknown variable 'I44(111)' in MIP start 0 - ignored
+Unknown variable 'I45(111)' in MIP start 0 - ignored
+Unknown variable 'I46(111)' in MIP start 0 - ignored
+Unknown variable 'I47(111)' in MIP start 0 - ignored
+Unknown variable 'I48(111)' in MIP start 0 - ignored
+Unknown variable 'I49(111)' in MIP start 0 - ignored
+Unknown variable 'I50(111)' in MIP start 0 - ignored
+Unknown variable 'I51(111)' in MIP start 0 - ignored
+Unknown variable 'I52(111)' in MIP start 0 - ignored
+Unknown variable 'I53(111)' in MIP start 0 - ignored
+Unknown variable 'I54(111)' in MIP start 0 - ignored
+Unknown variable 'I55(111)' in MIP start 0 - ignored
+Unknown variable 'I56(111)' in MIP start 0 - ignored
+Unknown variable 'I57(111)' in MIP start 0 - ignored
+Unknown variable 'B59(7)' in MIP start 0 - ignored
+Unknown variable 'B60(7)' in MIP start 0 - ignored
+Unknown variable 'B61(7)' in MIP start 0 - ignored
+Unknown variable 'B62(7)' in MIP start 0 - ignored
+Unknown variable 'B63(7)' in MIP start 0 - ignored
+Unknown variable 'B64(7)' in MIP start 0 - ignored
+Unknown variable 'B65(7)' in MIP start 0 - ignored
+Unknown variable 'B66(7)' in MIP start 0 - ignored
+Unknown variable 'B67(7)' in MIP start 0 - ignored
+Unknown variable 'B68(7)' in MIP start 0 - ignored
+Unknown variable 'B69(7)' in MIP start 0 - ignored
+Unknown variable 'B70(7)' in MIP start 0 - ignored
+Unknown variable 'B71(7)' in MIP start 0 - ignored
+Unknown variable 'B72(7)' in MIP start 0 - ignored
+Unknown variable 'B73(7)' in MIP start 0 - ignored
+Unknown variable 'B74(7)' in MIP start 0 - ignored
+Unknown variable 'B75(7)' in MIP start 0 - ignored
+Unknown variable 'B76(7)' in MIP start 0 - ignored
+Unknown variable 'B77(7)' in MIP start 0 - ignored
+Unknown variable 'B78(7)' in MIP start 0 - ignored
+Unknown variable 'B79(7)' in MIP start 0 - ignored
+Unknown variable 'B80(7)' in MIP start 0 - ignored
+Unknown variable 'B81(7)' in MIP start 0 - ignored
+Unknown variable 'B82(7)' in MIP start 0 - ignored
+Unknown variable 'B83(7)' in MIP start 0 - ignored
+Unknown variable 'B84(7)' in MIP start 0 - ignored
+Unknown variable 'B85(7)' in MIP start 0 - ignored
+Unknown variable 'B86(7)' in MIP start 0 - ignored
+Unknown variable 'B87(7)' in MIP start 0 - ignored
+Unknown variable 'B88(7)' in MIP start 0 - ignored
+Unknown variable 'B89(7)' in MIP start 0 - ignored
+Unknown variable 'B90(7)' in MIP start 0 - ignored
+Unknown variable 'B91(7)' in MIP start 0 - ignored
+Unknown variable 'B92(7)' in MIP start 0 - ignored
+Unknown variable 'B93(7)' in MIP start 0 - ignored
+Unknown variable 'B94(7)' in MIP start 0 - ignored
+Unknown variable 'B95(7)' in MIP start 0 - ignored
+Unknown variable 'B96(7)' in MIP start 0 - ignored
+Unknown variable 'B97(7)' in MIP start 0 - ignored
+Unknown variable 'B98(7)' in MIP start 0 - ignored
+Unknown variable 'B99(7)' in MIP start 0 - ignored
+Unknown variable 'B100(7)' in MIP start 0 - ignored
+Unknown variable 'B101(7)' in MIP start 0 - ignored
+Unknown variable 'B102(7)' in MIP start 0 - ignored
+Unknown variable 'B103(7)' in MIP start 0 - ignored
+Unknown variable 'B104(7)' in MIP start 0 - ignored
+Unknown variable 'B105(7)' in MIP start 0 - ignored
+Unknown variable 'B106(7)' in MIP start 0 - ignored
+Unknown variable 'B107(7)' in MIP start 0 - ignored
+Unknown variable 'B108(7)' in MIP start 0 - ignored
+Unknown variable 'B109(7)' in MIP start 0 - ignored
+Unknown variable 'B110(7)' in MIP start 0 - ignored
+Unknown variable 'B111(7)' in MIP start 0 - ignored
+Unknown variable 'B112(7)' in MIP start 0 - ignored
+Unknown variable 'B113(7)' in MIP start 0 - ignored
+Unknown variable 'B114(7)' in MIP start 0 - ignored
+Unknown variable 'B115(7)' in MIP start 0 - ignored
+Unknown variable 'B116(7)' in MIP start 0 - ignored
+Unknown variable 'B117(7)' in MIP start 0 - ignored
+Unknown variable 'B118(7)' in MIP start 0 - ignored
+Unknown variable 'B119(7)' in MIP start 0 - ignored
+Unknown variable 'B120(7)' in MIP start 0 - ignored
+Unknown variable 'B121(7)' in MIP start 0 - ignored
+Unknown variable 'B122(7)' in MIP start 0 - ignored
+Unknown variable 'B123(7)' in MIP start 0 - ignored
+Unknown variable 'B124(7)' in MIP start 0 - ignored
+Unknown variable 'B125(7)' in MIP start 0 - ignored
+Unknown variable 'B126(7)' in MIP start 0 - ignored
+Unknown variable 'B127(7)' in MIP start 0 - ignored
+Unknown variable 'B128(7)' in MIP start 0 - ignored
+Unknown variable 'B129(7)' in MIP start 0 - ignored
+Unknown variable 'B130(7)' in MIP start 0 - ignored
+Unknown variable 'B131(7)' in MIP start 0 - ignored
+Unknown variable 'B132(7)' in MIP start 0 - ignored
+Unknown variable 'B133(7)' in MIP start 0 - ignored
+Unknown variable 'B134(7)' in MIP start 0 - ignored
+Unknown variable 'B135(7)' in MIP start 0 - ignored
+Unknown variable 'B136(7)' in MIP start 0 - ignored
+Unknown variable 'B137(7)' in MIP start 0 - ignored
+Unknown variable 'B138(7)' in MIP start 0 - ignored
+Unknown variable 'B139(7)' in MIP start 0 - ignored
+Unknown variable 'B140(7)' in MIP start 0 - ignored
+Unknown variable 'B141(7)' in MIP start 0 - ignored
+Unknown variable 'B142(7)' in MIP start 0 - ignored
+Unknown variable 'B143(7)' in MIP start 0 - ignored
+Unknown variable 'B144(7)' in MIP start 0 - ignored
+Unknown variable 'B145(7)' in MIP start 0 - ignored
+Unknown variable 'B146(7)' in MIP start 0 - ignored
+Unknown variable 'B147(7)' in MIP start 0 - ignored
+Unknown variable 'B148(7)' in MIP start 0 - ignored
+Unknown variable 'B149(7)' in MIP start 0 - ignored
+Unknown variable 'B150(7)' in MIP start 0 - ignored
+Unknown variable 'B151(7)' in MIP start 0 - ignored
+Unknown variable 'B152(7)' in MIP start 0 - ignored
+Unknown variable 'B153(7)' in MIP start 0 - ignored
+Unknown variable 'B154(7)' in MIP start 0 - ignored
+Unknown variable 'B155(7)' in MIP start 0 - ignored
+Unknown variable 'B156(7)' in MIP start 0 - ignored
+Unknown variable 'B157(7)' in MIP start 0 - ignored
+Unknown variable 'B158(7)' in MIP start 0 - ignored
+Unknown variable 'B159(7)' in MIP start 0 - ignored
+Unknown variable 'B160(7)' in MIP start 0 - ignored
+Unknown variable 'B161(7)' in MIP start 0 - ignored
+Unknown variable 'B162(7)' in MIP start 0 - ignored
+Unknown variable 'B163(7)' in MIP start 0 - ignored
+Unknown variable 'B164(7)' in MIP start 0 - ignored
+Unknown variable 'B165(7)' in MIP start 0 - ignored
+Unknown variable 'B166(7)' in MIP start 0 - ignored
+Unknown variable 'B167(7)' in MIP start 0 - ignored
+Unknown variable 'B168(7)' in MIP start 0 - ignored
+Unknown variable 'B169(56)' in MIP start 0 - ignored
+Unknown variable 'B170(56)' in MIP start 0 - ignored
+Unknown variable 'C171(110)' in MIP start 0 - ignored
+Unknown variable 'C172(110)' in MIP start 0 - ignored
+Unknown variable 'C173(110)' in MIP start 0 - ignored
+Unknown variable 'C174(110)' in MIP start 0 - ignored
+Unknown variable 'C175(108)' in MIP start 0 - ignored
+Unknown variable 'C176(108)' in MIP start 0 - ignored
+Unknown variable 'C177(110)' in MIP start 0 - ignored
+Unknown variable 'C178(110)' in MIP start 0 - ignored
+Unknown variable 'C179(110)' in MIP start 0 - ignored
+Unknown variable 'C180(110)' in MIP start 0 - ignored
+Unknown variable 'C181(110)' in MIP start 0 - ignored
+Unknown variable 'C182(110)' in MIP start 0 - ignored
+Unknown variable 'C183(110)' in MIP start 0 - ignored
+Unknown variable 'C184(110)' in MIP start 0 - ignored
+Unknown variable 'C185(110)' in MIP start 0 - ignored
+Unknown variable 'C186(110)' in MIP start 0 - ignored
+Unknown variable 'C187(110)' in MIP start 0 - ignored
+Unknown variable 'C188(110)' in MIP start 0 - ignored
+Unknown variable 'C189(110)' in MIP start 0 - ignored
+Unknown variable 'C190(110)' in MIP start 0 - ignored
+Unknown variable 'C191(110)' in MIP start 0 - ignored
+Unknown variable 'C192(110)' in MIP start 0 - ignored
+Unknown variable 'C193(110)' in MIP start 0 - ignored
+Unknown variable 'C194(110)' in MIP start 0 - ignored
+Unknown variable 'C195(110)' in MIP start 0 - ignored
+Unknown variable 'C196(110)' in MIP start 0 - ignored
+Unknown variable 'C197(106)' in MIP start 0 - ignored
+Unknown variable 'C198(106)' in MIP start 0 - ignored
+Unknown variable 'C199(94)' in MIP start 0 - ignored
+Unknown variable 'C200(94)' in MIP start 0 - ignored
+Unknown variable 'C201(110)' in MIP start 0 - ignored
+Unknown variable 'C202(110)' in MIP start 0 - ignored
+Unknown variable 'C203(110)' in MIP start 0 - ignored
+Unknown variable 'C204(110)' in MIP start 0 - ignored
+Unknown variable 'C205(110)' in MIP start 0 - ignored
+Unknown variable 'C206(110)' in MIP start 0 - ignored
+Unknown variable 'C207(110)' in MIP start 0 - ignored
+Unknown variable 'C208(110)' in MIP start 0 - ignored
+Unknown variable 'C209(110)' in MIP start 0 - ignored
+Unknown variable 'C210(110)' in MIP start 0 - ignored
+Unknown variable 'C211(110)' in MIP start 0 - ignored
+Unknown variable 'C212(110)' in MIP start 0 - ignored
+Unknown variable 'C213(110)' in MIP start 0 - ignored
+Unknown variable 'C214(110)' in MIP start 0 - ignored
+Unknown variable 'C215(110)' in MIP start 0 - ignored
+Unknown variable 'C216(110)' in MIP start 0 - ignored
+Unknown variable 'C217(110)' in MIP start 0 - ignored
+Unknown variable 'C218(110)' in MIP start 0 - ignored
+Unknown variable 'C219(110)' in MIP start 0 - ignored
+Unknown variable 'C220(110)' in MIP start 0 - ignored
+Unknown variable 'C221(110)' in MIP start 0 - ignored
+Unknown variable 'C222(110)' in MIP start 0 - ignored
+Unknown variable 'C223(110)' in MIP start 0 - ignored
+Unknown variable 'C224(110)' in MIP start 0 - ignored
+Unknown variable 'C225(110)' in MIP start 0 - ignored
+Unknown variable 'C226(110)' in MIP start 0 - ignored
+Unknown variable 'C227(110)' in MIP start 0 - ignored
+Unknown variable 'C228(110)' in MIP start 0 - ignored
+Unknown variable 'C229(110)' in MIP start 0 - ignored
+Unknown variable 'C230(110)' in MIP start 0 - ignored
+Unknown variable 'C231(110)' in MIP start 0 - ignored
+Unknown variable 'C232(110)' in MIP start 0 - ignored
+Unknown variable 'C233(110)' in MIP start 0 - ignored
+Unknown variable 'C234(110)' in MIP start 0 - ignored
+Unknown variable 'C235(110)' in MIP start 0 - ignored
+Unknown variable 'C236(110)' in MIP start 0 - ignored
+Unknown variable 'C237(110)' in MIP start 0 - ignored
+Unknown variable 'C238(110)' in MIP start 0 - ignored
+Unknown variable 'C239(110)' in MIP start 0 - ignored
+Unknown variable 'C240(110)' in MIP start 0 - ignored
+Unknown variable 'C241(110)' in MIP start 0 - ignored
+Unknown variable 'C242(110)' in MIP start 0 - ignored
+Unknown variable 'C243(110)' in MIP start 0 - ignored
+Unknown variable 'C244(110)' in MIP start 0 - ignored
+Unknown variable 'C245(110)' in MIP start 0 - ignored
+Unknown variable 'C246(110)' in MIP start 0 - ignored
+Unknown variable 'C247(110)' in MIP start 0 - ignored
+Unknown variable 'C248(110)' in MIP start 0 - ignored
+Unknown variable 'C249(110)' in MIP start 0 - ignored
+Unknown variable 'C250(110)' in MIP start 0 - ignored
+Unknown variable 'C251(110)' in MIP start 0 - ignored
+Unknown variable 'C252(110)' in MIP start 0 - ignored
+Unknown variable 'C253(110)' in MIP start 0 - ignored
+Unknown variable 'C254(110)' in MIP start 0 - ignored
+Unknown variable 'C255(110)' in MIP start 0 - ignored
+Unknown variable 'C256(110)' in MIP start 0 - ignored
+Unknown variable 'C257(110)' in MIP start 0 - ignored
+Unknown variable 'C258(110)' in MIP start 0 - ignored
+Unknown variable 'C259(110)' in MIP start 0 - ignored
+Unknown variable 'C260(110)' in MIP start 0 - ignored
+Unknown variable 'C261(110)' in MIP start 0 - ignored
+Unknown variable 'C262(110)' in MIP start 0 - ignored
+Unknown variable 'C263(110)' in MIP start 0 - ignored
+Unknown variable 'C264(110)' in MIP start 0 - ignored
+Unknown variable 'C265(110)' in MIP start 0 - ignored
+Unknown variable 'C266(110)' in MIP start 0 - ignored
+Unknown variable 'C267(110)' in MIP start 0 - ignored
+Unknown variable 'C268(110)' in MIP start 0 - ignored
+Unknown variable 'C269(110)' in MIP start 0 - ignored
+Unknown variable 'C270(110)' in MIP start 0 - ignored
+Unknown variable 'C271(110)' in MIP start 0 - ignored
+Unknown variable 'C272(110)' in MIP start 0 - ignored
+Unknown variable 'C273(110)' in MIP start 0 - ignored
+Unknown variable 'C274(110)' in MIP start 0 - ignored
+Unknown variable 'C275(110)' in MIP start 0 - ignored
+Unknown variable 'C276(110)' in MIP start 0 - ignored
+Unknown variable 'C277(110)' in MIP start 0 - ignored
+Unknown variable 'C278(110)' in MIP start 0 - ignored
+Unknown variable 'C279(110)' in MIP start 0 - ignored
+Unknown variable 'C280(110)' in MIP start 0 - ignored
+Unknown variable 'C281(110)' in MIP start 0 - ignored
+Unknown variable 'C282(110)' in MIP start 0 - ignored
+Unknown variable 'C283(110)' in MIP start 0 - ignored
+Unknown variable 'C284(110)' in MIP start 0 - ignored
+Unknown variable 'C285(0)' in MIP start 0 - ignored
+Unknown variable 'C286(0)' in MIP start 0 - ignored
+Unknown variable 'C287(0)' in MIP start 0 - ignored
+Unknown variable 'C288(0)' in MIP start 0 - ignored
+Unknown variable 'C289(0)' in MIP start 0 - ignored
+Unknown variable 'C290(0)' in MIP start 0 - ignored
+Unknown variable 'C291(0)' in MIP start 0 - ignored
+Unknown variable 'C292(0)' in MIP start 0 - ignored
+Unknown variable 'C293(0)' in MIP start 0 - ignored
+Unknown variable 'C294(0)' in MIP start 0 - ignored
+Unknown variable 'C295(0)' in MIP start 0 - ignored
+Unknown variable 'C296(0)' in MIP start 0 - ignored
+Unknown variable 'C297(0)' in MIP start 0 - ignored
+Unknown variable 'C298(0)' in MIP start 0 - ignored
+Unknown variable 'C299(0)' in MIP start 0 - ignored
+Unknown variable 'C300(0)' in MIP start 0 - ignored
+Unknown variable 'C301(0)' in MIP start 0 - ignored
+Unknown variable 'C302(0)' in MIP start 0 - ignored
+Unknown variable 'C303(0)' in MIP start 0 - ignored
+Unknown variable 'C304(0)' in MIP start 0 - ignored
+Unknown variable 'C305(0)' in MIP start 0 - ignored
+Unknown variable 'C306(0)' in MIP start 0 - ignored
+Unknown variable 'C307(0)' in MIP start 0 - ignored
+Unknown variable 'C308(0)' in MIP start 0 - ignored
+Unknown variable 'C309(0)' in MIP start 0 - ignored
+Unknown variable 'C310(0)' in MIP start 0 - ignored
+Unknown variable 'C311(0)' in MIP start 0 - ignored
+Unknown variable 'C312(0)' in MIP start 0 - ignored
+Unknown variable 'C313(0)' in MIP start 0 - ignored
+Unknown variable 'C314(0)' in MIP start 0 - ignored
+Unknown variable 'C315(0)' in MIP start 0 - ignored
+Unknown variable 'C316(0)' in MIP start 0 - ignored
+Unknown variable 'C317(0)' in MIP start 0 - ignored
+Unknown variable 'C318(0)' in MIP start 0 - ignored
+Unknown variable 'C319(0)' in MIP start 0 - ignored
+Unknown variable 'C320(0)' in MIP start 0 - ignored
+Unknown variable 'C321(0)' in MIP start 0 - ignored
+Unknown variable 'C322(0)' in MIP start 0 - ignored
+Unknown variable 'C323(0)' in MIP start 0 - ignored
+Unknown variable 'C324(0)' in MIP start 0 - ignored
+Unknown variable 'C325(0)' in MIP start 0 - ignored
+Unknown variable 'C326(0)' in MIP start 0 - ignored
+Unknown variable 'C327(0)' in MIP start 0 - ignored
+Unknown variable 'C328(0)' in MIP start 0 - ignored
+Unknown variable 'C329(0)' in MIP start 0 - ignored
+Unknown variable 'C330(0)' in MIP start 0 - ignored
+Unknown variable 'C331(0)' in MIP start 0 - ignored
+Unknown variable 'C332(0)' in MIP start 0 - ignored
+Unknown variable 'C333(0)' in MIP start 0 - ignored
+Unknown variable 'C334(0)' in MIP start 0 - ignored
+Unknown variable 'C335(0)' in MIP start 0 - ignored
+Unknown variable 'C336(0)' in MIP start 0 - ignored
+Unknown variable 'C337(0)' in MIP start 0 - ignored
+Unknown variable 'C338(0)' in MIP start 0 - ignored
+Unknown variable 'C339(0)' in MIP start 0 - ignored
+Unknown variable 'C340(0)' in MIP start 0 - ignored
+Unknown variable 'C341(0)' in MIP start 0 - ignored
+Unknown variable 'C342(0)' in MIP start 0 - ignored
+Unknown variable 'C343(0)' in MIP start 0 - ignored
+Unknown variable 'C344(0)' in MIP start 0 - ignored
+Unknown variable 'C345(0)' in MIP start 0 - ignored
+Unknown variable 'C346(0)' in MIP start 0 - ignored
+Unknown variable 'C347(0)' in MIP start 0 - ignored
+Unknown variable 'C348(0)' in MIP start 0 - ignored
+Unknown variable 'C349(0)' in MIP start 0 - ignored
+Unknown variable 'C350(0)' in MIP start 0 - ignored
+Unknown variable 'C351(0)' in MIP start 0 - ignored
+Unknown variable 'C352(0)' in MIP start 0 - ignored
+Unknown variable 'C353(0)' in MIP start 0 - ignored
+Unknown variable 'C354(0)' in MIP start 0 - ignored
+Unknown variable 'C355(0)' in MIP start 0 - ignored
+Unknown variable 'C356(0)' in MIP start 0 - ignored
+Unknown variable 'C357(0)' in MIP start 0 - ignored
+Unknown variable 'C358(0)' in MIP start 0 - ignored
+Unknown variable 'C359(0)' in MIP start 0 - ignored
+Unknown variable 'C360(0)' in MIP start 0 - ignored
+Unknown variable 'C361(0)' in MIP start 0 - ignored
+Unknown variable 'C362(0)' in MIP start 0 - ignored
+Unknown variable 'C363(0)' in MIP start 0 - ignored
+Unknown variable 'C364(0)' in MIP start 0 - ignored
+Unknown variable 'C365(0)' in MIP start 0 - ignored
+Unknown variable 'C366(0)' in MIP start 0 - ignored
+Unknown variable 'C367(0)' in MIP start 0 - ignored
+Unknown variable 'C368(0)' in MIP start 0 - ignored
+Unknown variable 'C369(0)' in MIP start 0 - ignored
+Unknown variable 'C370(0)' in MIP start 0 - ignored
+Unknown variable 'C371(0)' in MIP start 0 - ignored
+Unknown variable 'C372(0)' in MIP start 0 - ignored
+Unknown variable 'C373(0)' in MIP start 0 - ignored
+Unknown variable 'C374(0)' in MIP start 0 - ignored
+Unknown variable 'C375(0)' in MIP start 0 - ignored
+Unknown variable 'C376(0)' in MIP start 0 - ignored
+Unknown variable 'C377(0)' in MIP start 0 - ignored
+Unknown variable 'C378(0)' in MIP start 0 - ignored
+Unknown variable 'C379(0)' in MIP start 0 - ignored
+Unknown variable 'C380(0)' in MIP start 0 - ignored
+Unknown variable 'C381(0)' in MIP start 0 - ignored
+Unknown variable 'C382(0)' in MIP start 0 - ignored
+Unknown variable 'C383(0)' in MIP start 0 - ignored
+Unknown variable 'C384(0)' in MIP start 0 - ignored
+Unknown variable 'C385(0)' in MIP start 0 - ignored
+Unknown variable 'C386(0)' in MIP start 0 - ignored
+Unknown variable 'C387(0)' in MIP start 0 - ignored
+Unknown variable 'C388(0)' in MIP start 0 - ignored
+Unknown variable 'C389(0)' in MIP start 0 - ignored
+Unknown variable 'C390(0)' in MIP start 0 - ignored
+Unknown variable 'C391(0)' in MIP start 0 - ignored
+Unknown variable 'C392(0)' in MIP start 0 - ignored
+Unknown variable 'C393(0)' in MIP start 0 - ignored
+Unknown variable 'C394(0)' in MIP start 0 - ignored
+Unknown variable 'C395(0)' in MIP start 0 - ignored
+Unknown variable 'C396(0)' in MIP start 0 - ignored
+Unknown variable 'C397(0)' in MIP start 0 - ignored
+Unknown variable 'C398(0)' in MIP start 0 - ignored
+Unknown variable 'C401(2)' in MIP start 0 - ignored
+Unknown variable 'C402(2)' in MIP start 0 - ignored
+Unknown variable 'C403(2)' in MIP start 0 - ignored
+Unknown variable 'C404(2)' in MIP start 0 - ignored
+Unknown variable 'C405(2)' in MIP start 0 - ignored
+Unknown variable 'C406(2)' in MIP start 0 - ignored
+Unknown variable 'C407(2)' in MIP start 0 - ignored
+Unknown variable 'C408(2)' in MIP start 0 - ignored
+Unknown variable 'C409(2)' in MIP start 0 - ignored
+Unknown variable 'C410(2)' in MIP start 0 - ignored
+Unknown variable 'C411(2)' in MIP start 0 - ignored
+Unknown variable 'C412(2)' in MIP start 0 - ignored
+Unknown variable 'C413(2)' in MIP start 0 - ignored
+Unknown variable 'C414(2)' in MIP start 0 - ignored
+Unknown variable 'C415(2)' in MIP start 0 - ignored
+Unknown variable 'C416(2)' in MIP start 0 - ignored
+Unknown variable 'C417(2)' in MIP start 0 - ignored
+Unknown variable 'C418(2)' in MIP start 0 - ignored
+Unknown variable 'C419(2)' in MIP start 0 - ignored
+Unknown variable 'C420(2)' in MIP start 0 - ignored
+Unknown variable 'C421(2)' in MIP start 0 - ignored
+Unknown variable 'C422(2)' in MIP start 0 - ignored
+Unknown variable 'C423(2)' in MIP start 0 - ignored
+Unknown variable 'C424(2)' in MIP start 0 - ignored
+Unknown variable 'C425(2)' in MIP start 0 - ignored
+Unknown variable 'C426(2)' in MIP start 0 - ignored
+Unknown variable 'C427(2)' in MIP start 0 - ignored
+Unknown variable 'C428(2)' in MIP start 0 - ignored
+Unknown variable 'C429(2)' in MIP start 0 - ignored
+Unknown variable 'C430(2)' in MIP start 0 - ignored
+Unknown variable 'C431(2)' in MIP start 0 - ignored
+Unknown variable 'C432(2)' in MIP start 0 - ignored
+Unknown variable 'C433(2)' in MIP start 0 - ignored
+Unknown variable 'C434(2)' in MIP start 0 - ignored
+Unknown variable 'C435(2)' in MIP start 0 - ignored
+Unknown variable 'C436(2)' in MIP start 0 - ignored
+Unknown variable 'C437(2)' in MIP start 0 - ignored
+Unknown variable 'C438(2)' in MIP start 0 - ignored
+Unknown variable 'C439(2)' in MIP start 0 - ignored
+Unknown variable 'C440(2)' in MIP start 0 - ignored
+Unknown variable 'C441(2)' in MIP start 0 - ignored
+Unknown variable 'C442(2)' in MIP start 0 - ignored
+Unknown variable 'C443(2)' in MIP start 0 - ignored
+Unknown variable 'C444(2)' in MIP start 0 - ignored
+Unknown variable 'C445(2)' in MIP start 0 - ignored
+Unknown variable 'C446(2)' in MIP start 0 - ignored
+Unknown variable 'C447(2)' in MIP start 0 - ignored
+Unknown variable 'C448(2)' in MIP start 0 - ignored
+Unknown variable 'C449(2)' in MIP start 0 - ignored
+Unknown variable 'C450(2)' in MIP start 0 - ignored
+Unknown variable 'C451(2)' in MIP start 0 - ignored
+Unknown variable 'C452(2)' in MIP start 0 - ignored
+Unknown variable 'C453(2)' in MIP start 0 - ignored
+Unknown variable 'C454(2)' in MIP start 0 - ignored
+Unknown variable 'C455(2)' in MIP start 0 - ignored
+Unknown variable 'C456(2)' in MIP start 0 - ignored
+Unknown variable 'C457(2)' in MIP start 0 - ignored
+Unknown variable 'C458(2)' in MIP start 0 - ignored
+Unknown variable 'C459(2)' in MIP start 0 - ignored
+Unknown variable 'C460(2)' in MIP start 0 - ignored
+Unknown variable 'C461(2)' in MIP start 0 - ignored
+Unknown variable 'C462(2)' in MIP start 0 - ignored
+Unknown variable 'C463(2)' in MIP start 0 - ignored
+Unknown variable 'C464(2)' in MIP start 0 - ignored
+Unknown variable 'C465(2)' in MIP start 0 - ignored
+Unknown variable 'C466(2)' in MIP start 0 - ignored
+Unknown variable 'C467(2)' in MIP start 0 - ignored
+Unknown variable 'C468(2)' in MIP start 0 - ignored
+Unknown variable 'C469(2)' in MIP start 0 - ignored
+Unknown variable 'C470(2)' in MIP start 0 - ignored
+Unknown variable 'C471(2)' in MIP start 0 - ignored
+Unknown variable 'C472(2)' in MIP start 0 - ignored
+Unknown variable 'C473(2)' in MIP start 0 - ignored
+Unknown variable 'C474(2)' in MIP start 0 - ignored
+Unknown variable 'C475(2)' in MIP start 0 - ignored
+Unknown variable 'C476(2)' in MIP start 0 - ignored
+Unknown variable 'C477(2)' in MIP start 0 - ignored
+Unknown variable 'C478(2)' in MIP start 0 - ignored
+Unknown variable 'C479(2)' in MIP start 0 - ignored
+Unknown variable 'C480(2)' in MIP start 0 - ignored
+Unknown variable 'C481(2)' in MIP start 0 - ignored
+Unknown variable 'C482(2)' in MIP start 0 - ignored
+Unknown variable 'C483(2)' in MIP start 0 - ignored
+Unknown variable 'C484(2)' in MIP start 0 - ignored
+Unknown variable 'C485(2)' in MIP start 0 - ignored
+Unknown variable 'C486(2)' in MIP start 0 - ignored
+Unknown variable 'C487(2)' in MIP start 0 - ignored
+Unknown variable 'C488(2)' in MIP start 0 - ignored
+Unknown variable 'C489(2)' in MIP start 0 - ignored
+Unknown variable 'C490(2)' in MIP start 0 - ignored
+Unknown variable 'C491(2)' in MIP start 0 - ignored
+Unknown variable 'C492(2)' in MIP start 0 - ignored
+Unknown variable 'C493(2)' in MIP start 0 - ignored
+Unknown variable 'C494(2)' in MIP start 0 - ignored
+Unknown variable 'C495(2)' in MIP start 0 - ignored
+Unknown variable 'C496(2)' in MIP start 0 - ignored
+Unknown variable 'C497(2)' in MIP start 0 - ignored
+Unknown variable 'C498(2)' in MIP start 0 - ignored
+Unknown variable 'C499(2)' in MIP start 0 - ignored
+Unknown variable 'C500(2)' in MIP start 0 - ignored
+Unknown variable 'C501(2)' in MIP start 0 - ignored
+Unknown variable 'C502(2)' in MIP start 0 - ignored
+Unknown variable 'C503(2)' in MIP start 0 - ignored
+Unknown variable 'C504(2)' in MIP start 0 - ignored
+Unknown variable 'C505(2)' in MIP start 0 - ignored
+Unknown variable 'C506(2)' in MIP start 0 - ignored
+Unknown variable 'C507(2)' in MIP start 0 - ignored
+Unknown variable 'C508(2)' in MIP start 0 - ignored
+Unknown variable 'C509(2)' in MIP start 0 - ignored
+Unknown variable 'C510(2)' in MIP start 0 - ignored
+Unknown variable 'C511(0)' in MIP start 0 - ignored
+Unknown variable 'C512(0)' in MIP start 0 - ignored
+Unknown variable 'C513(0)' in MIP start 0 - ignored
+Unknown variable 'C514(0)' in MIP start 0 - ignored
+Unknown variable 'C515(0)' in MIP start 0 - ignored
+Unknown variable 'C516(0)' in MIP start 0 - ignored
+Unknown variable 'C517(0)' in MIP start 0 - ignored
+Unknown variable 'C518(0)' in MIP start 0 - ignored
+Unknown variable 'C519(0)' in MIP start 0 - ignored
+Unknown variable 'C520(0)' in MIP start 0 - ignored
+Unknown variable 'C521(0)' in MIP start 0 - ignored
+Unknown variable 'C522(0)' in MIP start 0 - ignored
+Unknown variable 'C523(0)' in MIP start 0 - ignored
+Unknown variable 'C524(0)' in MIP start 0 - ignored
+Unknown variable 'C525(0)' in MIP start 0 - ignored
+Unknown variable 'C526(0)' in MIP start 0 - ignored
+Unknown variable 'C527(0)' in MIP start 0 - ignored
+Unknown variable 'C528(0)' in MIP start 0 - ignored
+Unknown variable 'C529(0)' in MIP start 0 - ignored
+Unknown variable 'C530(0)' in MIP start 0 - ignored
+Unknown variable 'C531(0)' in MIP start 0 - ignored
+Unknown variable 'C532(0)' in MIP start 0 - ignored
+Unknown variable 'C533(0)' in MIP start 0 - ignored
+Unknown variable 'C534(0)' in MIP start 0 - ignored
+Unknown variable 'C535(0)' in MIP start 0 - ignored
+Unknown variable 'C536(0)' in MIP start 0 - ignored
+Unknown variable 'C537(0)' in MIP start 0 - ignored
+Unknown variable 'C538(0)' in MIP start 0 - ignored
+Unknown variable 'C539(0)' in MIP start 0 - ignored
+Unknown variable 'C540(0)' in MIP start 0 - ignored
+Unknown variable 'C541(0)' in MIP start 0 - ignored
+Unknown variable 'C542(0)' in MIP start 0 - ignored
+Unknown variable 'C543(0)' in MIP start 0 - ignored
+Unknown variable 'C544(0)' in MIP start 0 - ignored
+Unknown variable 'C545(0)' in MIP start 0 - ignored
+Unknown variable 'C546(0)' in MIP start 0 - ignored
+Unknown variable 'C547(0)' in MIP start 0 - ignored
+Unknown variable 'C548(0)' in MIP start 0 - ignored
+Unknown variable 'C549(0)' in MIP start 0 - ignored
+Unknown variable 'C550(0)' in MIP start 0 - ignored
+Unknown variable 'C551(0)' in MIP start 0 - ignored
+Unknown variable 'C552(0)' in MIP start 0 - ignored
+Unknown variable 'C553(0)' in MIP start 0 - ignored
+Unknown variable 'C554(0)' in MIP start 0 - ignored
+Unknown variable 'C555(0)' in MIP start 0 - ignored
+Unknown variable 'C556(0)' in MIP start 0 - ignored
+Unknown variable 'C557(0)' in MIP start 0 - ignored
+Unknown variable 'C558(0)' in MIP start 0 - ignored
+Unknown variable 'C559(0)' in MIP start 0 - ignored
+Unknown variable 'C560(0)' in MIP start 0 - ignored
+Unknown variable 'C561(0)' in MIP start 0 - ignored
+Unknown variable 'C562(0)' in MIP start 0 - ignored
+Unknown variable 'C563(0)' in MIP start 0 - ignored
+Unknown variable 'C564(0)' in MIP start 0 - ignored
+Unknown variable 'C565(0)' in MIP start 0 - ignored
+Unknown variable 'C566(0)' in MIP start 0 - ignored
+Unknown variable 'C567(0)' in MIP start 0 - ignored
+Unknown variable 'C568(0)' in MIP start 0 - ignored
+Unknown variable 'C569(0)' in MIP start 0 - ignored
+Unknown variable 'C570(0)' in MIP start 0 - ignored
+Unknown variable 'C571(0)' in MIP start 0 - ignored
+Unknown variable 'C572(0)' in MIP start 0 - ignored
+Unknown variable 'C573(0)' in MIP start 0 - ignored
+Unknown variable 'C574(0)' in MIP start 0 - ignored
+Unknown variable 'C575(0)' in MIP start 0 - ignored
+Unknown variable 'C576(0)' in MIP start 0 - ignored
+Unknown variable 'C577(0)' in MIP start 0 - ignored
+Unknown variable 'C578(0)' in MIP start 0 - ignored
+Unknown variable 'C579(0)' in MIP start 0 - ignored
+Unknown variable 'C580(0)' in MIP start 0 - ignored
+Unknown variable 'C581(0)' in MIP start 0 - ignored
+Unknown variable 'C582(0)' in MIP start 0 - ignored
+Unknown variable 'C583(0)' in MIP start 0 - ignored
+Unknown variable 'C584(0)' in MIP start 0 - ignored
+Unknown variable 'C585(0)' in MIP start 0 - ignored
+Unknown variable 'C586(0)' in MIP start 0 - ignored
+Unknown variable 'C587(0)' in MIP start 0 - ignored
+Unknown variable 'C588(0)' in MIP start 0 - ignored
+Unknown variable 'C589(0)' in MIP start 0 - ignored
+Unknown variable 'C590(0)' in MIP start 0 - ignored
+Unknown variable 'C591(0)' in MIP start 0 - ignored
+Unknown variable 'C592(0)' in MIP start 0 - ignored
+Unknown variable 'C593(0)' in MIP start 0 - ignored
+Unknown variable 'C594(0)' in MIP start 0 - ignored
+Unknown variable 'C595(0)' in MIP start 0 - ignored
+Unknown variable 'C596(0)' in MIP start 0 - ignored
+Unknown variable 'C597(0)' in MIP start 0 - ignored
+Unknown variable 'C598(0)' in MIP start 0 - ignored
+Unknown variable 'C599(0)' in MIP start 0 - ignored
+Unknown variable 'C600(0)' in MIP start 0 - ignored
+Unknown variable 'C601(0)' in MIP start 0 - ignored
+Unknown variable 'C602(0)' in MIP start 0 - ignored
+Unknown variable 'C603(0)' in MIP start 0 - ignored
+Unknown variable 'C604(0)' in MIP start 0 - ignored
+Unknown variable 'C605(0)' in MIP start 0 - ignored
+Unknown variable 'C606(0)' in MIP start 0 - ignored
+Unknown variable 'C607(0)' in MIP start 0 - ignored
+Unknown variable 'C608(0)' in MIP start 0 - ignored
+Unknown variable 'C609(0)' in MIP start 0 - ignored
+Unknown variable 'C610(0)' in MIP start 0 - ignored
+Unknown variable 'C611(0)' in MIP start 0 - ignored
+Unknown variable 'C612(0)' in MIP start 0 - ignored
+Unknown variable 'C613(0)' in MIP start 0 - ignored
+Unknown variable 'C614(0)' in MIP start 0 - ignored
+Unknown variable 'C615(0)' in MIP start 0 - ignored
+Unknown variable 'C616(0)' in MIP start 0 - ignored
+Unknown variable 'C617(0)' in MIP start 0 - ignored
+Unknown variable 'C618(0)' in MIP start 0 - ignored
+Unknown variable 'C619(0)' in MIP start 0 - ignored
+Unknown variable 'C620(0)' in MIP start 0 - ignored
+Read MIP start from file WarmStarts/auto93_6.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 503 rows, 621 columns and 20252 nonzeros
+Model fingerprint: 0xdd38f1ee
+Model has 224 general constraints
+Variable types: 451 continuous, 170 integer (113 binary)
+Coefficient statistics:
+  Matrix range     [2e-03, 1e+03]
+  Objective range  [1e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+03]
+
+No start values specified in MIP start
+
+Presolve added 395 rows and 0 columns
+Presolve removed 0 rows and 51 columns
+Presolve time: 0.04s
+Presolved: 898 rows, 570 columns, 21368 nonzeros
+Variable types: 451 continuous, 119 integer (118 binary)
+Found heuristic solution: objective 271.7681597
+Found heuristic solution: objective 61.7569741
+
+Root relaxation: objective 0.000000e+00, 370 iterations, 0.01 seconds (0.01 work units)
+Another try with MIP start
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0   63   61.75697    0.00000   100%     -    0s
+     0     0    0.00000    0   64   61.75697    0.00000   100%     -    0s
+     0     0    0.00000    0   64   61.75697    0.00000   100%     -    0s
+H    0     0                      59.8894522    3.94568  93.4%     -    0s
+     0     0    6.69601    0   60   59.88945    6.69601  88.8%     -    0s
+     0     0    7.12814    0   59   59.88945    7.12814  88.1%     -    0s
+     0     0    9.16236    0   63   59.88945    9.16236  84.7%     -    0s
+     0     0    9.23541    0   61   59.88945    9.23541  84.6%     -    0s
+     0     0    9.81473    0   65   59.88945    9.81473  83.6%     -    1s
+     0     0   12.07977    0   64   59.88945   12.07977  79.8%     -    1s
+     0     0   14.55541    0   62   59.88945   14.55541  75.7%     -    1s
+     0     0   14.55541    0   62   59.88945   14.55541  75.7%     -    1s
+     0     2   14.55541    0   62   59.88945   14.55541  75.7%     -    1s
+*   36    23               6      47.0014692   14.55541  69.0%   162    1s
+H   94    24                      45.8511163   14.55541  68.3%   115    1s
+
+Cutting planes:
+  Cover: 112
+  Clique: 10
+  MIR: 90
+  StrongCG: 1
+  Flow cover: 4
+  GUB cover: 3
+  Zero half: 1
+  RLT: 2
+
+Explored 396 nodes (30334 simplex iterations) in 2.87 seconds (1.81 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 5: 45.8511 47.0015 59.8895 ... 271.768
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.585111633719e+01, best bound 4.585111633719e+01, gap 0.0000%
+Warning: variables 171 and 285 have the same name "Beta[City_MPG,1]"
+Warning: default variable names used to write MIP start file
+
+Gurobi 11.0.0 (mac64[arm]) logging started Wed Apr 24 23:25:26 2024
+
+Set parameter LogFile to value "GurobiLogs/auto93_6.txt"
+Set parameter TimeLimit to value 3600
+Unknown variable 'B0(6)' in MIP start 0 - ignored
+Unknown variable 'I1(111)' in MIP start 0 - ignored
+Unknown variable 'I2(111)' in MIP start 0 - ignored
+Unknown variable 'I3(110)' in MIP start 0 - ignored
+Unknown variable 'I4(111)' in MIP start 0 - ignored
+Unknown variable 'I5(111)' in MIP start 0 - ignored
+Unknown variable 'I6(111)' in MIP start 0 - ignored
+Unknown variable 'I7(111)' in MIP start 0 - ignored
+Unknown variable 'I8(111)' in MIP start 0 - ignored
+Unknown variable 'I9(111)' in MIP start 0 - ignored
+Unknown variable 'I10(111)' in MIP start 0 - ignored
+Unknown variable 'I11(111)' in MIP start 0 - ignored
+Unknown variable 'I12(111)' in MIP start 0 - ignored
+Unknown variable 'I13(111)' in MIP start 0 - ignored
+Unknown variable 'I14(109)' in MIP start 0 - ignored
+Unknown variable 'I15(103)' in MIP start 0 - ignored
+Unknown variable 'I16(111)' in MIP start 0 - ignored
+Unknown variable 'I17(111)' in MIP start 0 - ignored
+Unknown variable 'I18(111)' in MIP start 0 - ignored
+Unknown variable 'I19(111)' in MIP start 0 - ignored
+Unknown variable 'I20(111)' in MIP start 0 - ignored
+Unknown variable 'I21(111)' in MIP start 0 - ignored
+Unknown variable 'I22(111)' in MIP start 0 - ignored
+Unknown variable 'I23(111)' in MIP start 0 - ignored
+Unknown variable 'I24(111)' in MIP start 0 - ignored
+Unknown variable 'I25(111)' in MIP start 0 - ignored
+Unknown variable 'I26(111)' in MIP start 0 - ignored
+Unknown variable 'I27(111)' in MIP start 0 - ignored
+Unknown variable 'I28(111)' in MIP start 0 - ignored
+Unknown variable 'I29(111)' in MIP start 0 - ignored
+Unknown variable 'I30(111)' in MIP start 0 - ignored
+Unknown variable 'I31(111)' in MIP start 0 - ignored
+Unknown variable 'I32(111)' in MIP start 0 - ignored
+Unknown variable 'I33(111)' in MIP start 0 - ignored
+Unknown variable 'I34(111)' in MIP start 0 - ignored
+Unknown variable 'I35(111)' in MIP start 0 - ignored
+Unknown variable 'I36(111)' in MIP start 0 - ignored
+Unknown variable 'I37(111)' in MIP start 0 - ignored
+Unknown variable 'I38(111)' in MIP start 0 - ignored
+Unknown variable 'I39(111)' in MIP start 0 - ignored
+Unknown variable 'I40(111)' in MIP start 0 - ignored
+Unknown variable 'I41(111)' in MIP start 0 - ignored
+Unknown variable 'I42(111)' in MIP start 0 - ignored
+Unknown variable 'I43(111)' in MIP start 0 - ignored
+Unknown variable 'I44(111)' in MIP start 0 - ignored
+Unknown variable 'I45(111)' in MIP start 0 - ignored
+Unknown variable 'I46(111)' in MIP start 0 - ignored
+Unknown variable 'I47(111)' in MIP start 0 - ignored
+Unknown variable 'I48(111)' in MIP start 0 - ignored
+Unknown variable 'I49(111)' in MIP start 0 - ignored
+Unknown variable 'I50(111)' in MIP start 0 - ignored
+Unknown variable 'I51(111)' in MIP start 0 - ignored
+Unknown variable 'I52(111)' in MIP start 0 - ignored
+Unknown variable 'I53(111)' in MIP start 0 - ignored
+Unknown variable 'I54(111)' in MIP start 0 - ignored
+Unknown variable 'I55(111)' in MIP start 0 - ignored
+Unknown variable 'I56(111)' in MIP start 0 - ignored
+Unknown variable 'I57(111)' in MIP start 0 - ignored
+Unknown variable 'B59(7)' in MIP start 0 - ignored
+Unknown variable 'B60(7)' in MIP start 0 - ignored
+Unknown variable 'B61(7)' in MIP start 0 - ignored
+Unknown variable 'B62(7)' in MIP start 0 - ignored
+Unknown variable 'B63(7)' in MIP start 0 - ignored
+Unknown variable 'B64(7)' in MIP start 0 - ignored
+Unknown variable 'B65(7)' in MIP start 0 - ignored
+Unknown variable 'B66(7)' in MIP start 0 - ignored
+Unknown variable 'B67(7)' in MIP start 0 - ignored
+Unknown variable 'B68(7)' in MIP start 0 - ignored
+Unknown variable 'B69(7)' in MIP start 0 - ignored
+Unknown variable 'B70(7)' in MIP start 0 - ignored
+Unknown variable 'B71(7)' in MIP start 0 - ignored
+Unknown variable 'B72(7)' in MIP start 0 - ignored
+Unknown variable 'B73(7)' in MIP start 0 - ignored
+Unknown variable 'B74(7)' in MIP start 0 - ignored
+Unknown variable 'B75(7)' in MIP start 0 - ignored
+Unknown variable 'B76(7)' in MIP start 0 - ignored
+Unknown variable 'B77(7)' in MIP start 0 - ignored
+Unknown variable 'B78(7)' in MIP start 0 - ignored
+Unknown variable 'B79(7)' in MIP start 0 - ignored
+Unknown variable 'B80(7)' in MIP start 0 - ignored
+Unknown variable 'B81(7)' in MIP start 0 - ignored
+Unknown variable 'B82(7)' in MIP start 0 - ignored
+Unknown variable 'B83(7)' in MIP start 0 - ignored
+Unknown variable 'B84(7)' in MIP start 0 - ignored
+Unknown variable 'B85(7)' in MIP start 0 - ignored
+Unknown variable 'B86(7)' in MIP start 0 - ignored
+Unknown variable 'B87(7)' in MIP start 0 - ignored
+Unknown variable 'B88(7)' in MIP start 0 - ignored
+Unknown variable 'B89(7)' in MIP start 0 - ignored
+Unknown variable 'B90(7)' in MIP start 0 - ignored
+Unknown variable 'B91(7)' in MIP start 0 - ignored
+Unknown variable 'B92(7)' in MIP start 0 - ignored
+Unknown variable 'B93(7)' in MIP start 0 - ignored
+Unknown variable 'B94(7)' in MIP start 0 - ignored
+Unknown variable 'B95(7)' in MIP start 0 - ignored
+Unknown variable 'B96(7)' in MIP start 0 - ignored
+Unknown variable 'B97(7)' in MIP start 0 - ignored
+Unknown variable 'B98(7)' in MIP start 0 - ignored
+Unknown variable 'B99(7)' in MIP start 0 - ignored
+Unknown variable 'B100(7)' in MIP start 0 - ignored
+Unknown variable 'B101(7)' in MIP start 0 - ignored
+Unknown variable 'B102(7)' in MIP start 0 - ignored
+Unknown variable 'B103(7)' in MIP start 0 - ignored
+Unknown variable 'B104(7)' in MIP start 0 - ignored
+Unknown variable 'B105(7)' in MIP start 0 - ignored
+Unknown variable 'B106(7)' in MIP start 0 - ignored
+Unknown variable 'B107(7)' in MIP start 0 - ignored
+Unknown variable 'B108(7)' in MIP start 0 - ignored
+Unknown variable 'B109(7)' in MIP start 0 - ignored
+Unknown variable 'B110(7)' in MIP start 0 - ignored
+Unknown variable 'B111(7)' in MIP start 0 - ignored
+Unknown variable 'B112(7)' in MIP start 0 - ignored
+Unknown variable 'B113(7)' in MIP start 0 - ignored
+Unknown variable 'B114(7)' in MIP start 0 - ignored
+Unknown variable 'B115(7)' in MIP start 0 - ignored
+Unknown variable 'B116(7)' in MIP start 0 - ignored
+Unknown variable 'B117(7)' in MIP start 0 - ignored
+Unknown variable 'B118(7)' in MIP start 0 - ignored
+Unknown variable 'B119(7)' in MIP start 0 - ignored
+Unknown variable 'B120(7)' in MIP start 0 - ignored
+Unknown variable 'B121(7)' in MIP start 0 - ignored
+Unknown variable 'B122(7)' in MIP start 0 - ignored
+Unknown variable 'B123(7)' in MIP start 0 - ignored
+Unknown variable 'B124(7)' in MIP start 0 - ignored
+Unknown variable 'B125(7)' in MIP start 0 - ignored
+Unknown variable 'B126(7)' in MIP start 0 - ignored
+Unknown variable 'B127(7)' in MIP start 0 - ignored
+Unknown variable 'B128(7)' in MIP start 0 - ignored
+Unknown variable 'B129(7)' in MIP start 0 - ignored
+Unknown variable 'B130(7)' in MIP start 0 - ignored
+Unknown variable 'B131(7)' in MIP start 0 - ignored
+Unknown variable 'B132(7)' in MIP start 0 - ignored
+Unknown variable 'B133(7)' in MIP start 0 - ignored
+Unknown variable 'B134(7)' in MIP start 0 - ignored
+Unknown variable 'B135(7)' in MIP start 0 - ignored
+Unknown variable 'B136(7)' in MIP start 0 - ignored
+Unknown variable 'B137(7)' in MIP start 0 - ignored
+Unknown variable 'B138(7)' in MIP start 0 - ignored
+Unknown variable 'B139(7)' in MIP start 0 - ignored
+Unknown variable 'B140(7)' in MIP start 0 - ignored
+Unknown variable 'B141(7)' in MIP start 0 - ignored
+Unknown variable 'B142(7)' in MIP start 0 - ignored
+Unknown variable 'B143(7)' in MIP start 0 - ignored
+Unknown variable 'B144(7)' in MIP start 0 - ignored
+Unknown variable 'B145(7)' in MIP start 0 - ignored
+Unknown variable 'B146(7)' in MIP start 0 - ignored
+Unknown variable 'B147(7)' in MIP start 0 - ignored
+Unknown variable 'B148(7)' in MIP start 0 - ignored
+Unknown variable 'B149(7)' in MIP start 0 - ignored
+Unknown variable 'B150(7)' in MIP start 0 - ignored
+Unknown variable 'B151(7)' in MIP start 0 - ignored
+Unknown variable 'B152(7)' in MIP start 0 - ignored
+Unknown variable 'B153(7)' in MIP start 0 - ignored
+Unknown variable 'B154(7)' in MIP start 0 - ignored
+Unknown variable 'B155(7)' in MIP start 0 - ignored
+Unknown variable 'B156(7)' in MIP start 0 - ignored
+Unknown variable 'B157(7)' in MIP start 0 - ignored
+Unknown variable 'B158(7)' in MIP start 0 - ignored
+Unknown variable 'B159(7)' in MIP start 0 - ignored
+Unknown variable 'B160(7)' in MIP start 0 - ignored
+Unknown variable 'B161(7)' in MIP start 0 - ignored
+Unknown variable 'B162(7)' in MIP start 0 - ignored
+Unknown variable 'B163(7)' in MIP start 0 - ignored
+Unknown variable 'B164(7)' in MIP start 0 - ignored
+Unknown variable 'B165(7)' in MIP start 0 - ignored
+Unknown variable 'B166(7)' in MIP start 0 - ignored
+Unknown variable 'B167(7)' in MIP start 0 - ignored
+Unknown variable 'B168(7)' in MIP start 0 - ignored
+Unknown variable 'B169(56)' in MIP start 0 - ignored
+Unknown variable 'B170(56)' in MIP start 0 - ignored
+Unknown variable 'C171(110)' in MIP start 0 - ignored
+Unknown variable 'C172(110)' in MIP start 0 - ignored
+Unknown variable 'C173(110)' in MIP start 0 - ignored
+Unknown variable 'C174(110)' in MIP start 0 - ignored
+Unknown variable 'C175(108)' in MIP start 0 - ignored
+Unknown variable 'C176(108)' in MIP start 0 - ignored
+Unknown variable 'C177(110)' in MIP start 0 - ignored
+Unknown variable 'C178(110)' in MIP start 0 - ignored
+Unknown variable 'C179(110)' in MIP start 0 - ignored
+Unknown variable 'C180(110)' in MIP start 0 - ignored
+Unknown variable 'C181(110)' in MIP start 0 - ignored
+Unknown variable 'C182(110)' in MIP start 0 - ignored
+Unknown variable 'C183(110)' in MIP start 0 - ignored
+Unknown variable 'C184(110)' in MIP start 0 - ignored
+Unknown variable 'C185(110)' in MIP start 0 - ignored
+Unknown variable 'C186(110)' in MIP start 0 - ignored
+Unknown variable 'C187(110)' in MIP start 0 - ignored
+Unknown variable 'C188(110)' in MIP start 0 - ignored
+Unknown variable 'C189(110)' in MIP start 0 - ignored
+Unknown variable 'C190(110)' in MIP start 0 - ignored
+Unknown variable 'C191(110)' in MIP start 0 - ignored
+Unknown variable 'C192(110)' in MIP start 0 - ignored
+Unknown variable 'C193(110)' in MIP start 0 - ignored
+Unknown variable 'C194(110)' in MIP start 0 - ignored
+Unknown variable 'C195(110)' in MIP start 0 - ignored
+Unknown variable 'C196(110)' in MIP start 0 - ignored
+Unknown variable 'C197(106)' in MIP start 0 - ignored
+Unknown variable 'C198(106)' in MIP start 0 - ignored
+Unknown variable 'C199(94)' in MIP start 0 - ignored
+Unknown variable 'C200(94)' in MIP start 0 - ignored
+Unknown variable 'C201(110)' in MIP start 0 - ignored
+Unknown variable 'C202(110)' in MIP start 0 - ignored
+Unknown variable 'C203(110)' in MIP start 0 - ignored
+Unknown variable 'C204(110)' in MIP start 0 - ignored
+Unknown variable 'C205(110)' in MIP start 0 - ignored
+Unknown variable 'C206(110)' in MIP start 0 - ignored
+Unknown variable 'C207(110)' in MIP start 0 - ignored
+Unknown variable 'C208(110)' in MIP start 0 - ignored
+Unknown variable 'C209(110)' in MIP start 0 - ignored
+Unknown variable 'C210(110)' in MIP start 0 - ignored
+Unknown variable 'C211(110)' in MIP start 0 - ignored
+Unknown variable 'C212(110)' in MIP start 0 - ignored
+Unknown variable 'C213(110)' in MIP start 0 - ignored
+Unknown variable 'C214(110)' in MIP start 0 - ignored
+Unknown variable 'C215(110)' in MIP start 0 - ignored
+Unknown variable 'C216(110)' in MIP start 0 - ignored
+Unknown variable 'C217(110)' in MIP start 0 - ignored
+Unknown variable 'C218(110)' in MIP start 0 - ignored
+Unknown variable 'C219(110)' in MIP start 0 - ignored
+Unknown variable 'C220(110)' in MIP start 0 - ignored
+Unknown variable 'C221(110)' in MIP start 0 - ignored
+Unknown variable 'C222(110)' in MIP start 0 - ignored
+Unknown variable 'C223(110)' in MIP start 0 - ignored
+Unknown variable 'C224(110)' in MIP start 0 - ignored
+Unknown variable 'C225(110)' in MIP start 0 - ignored
+Unknown variable 'C226(110)' in MIP start 0 - ignored
+Unknown variable 'C227(110)' in MIP start 0 - ignored
+Unknown variable 'C228(110)' in MIP start 0 - ignored
+Unknown variable 'C229(110)' in MIP start 0 - ignored
+Unknown variable 'C230(110)' in MIP start 0 - ignored
+Unknown variable 'C231(110)' in MIP start 0 - ignored
+Unknown variable 'C232(110)' in MIP start 0 - ignored
+Unknown variable 'C233(110)' in MIP start 0 - ignored
+Unknown variable 'C234(110)' in MIP start 0 - ignored
+Unknown variable 'C235(110)' in MIP start 0 - ignored
+Unknown variable 'C236(110)' in MIP start 0 - ignored
+Unknown variable 'C237(110)' in MIP start 0 - ignored
+Unknown variable 'C238(110)' in MIP start 0 - ignored
+Unknown variable 'C239(110)' in MIP start 0 - ignored
+Unknown variable 'C240(110)' in MIP start 0 - ignored
+Unknown variable 'C241(110)' in MIP start 0 - ignored
+Unknown variable 'C242(110)' in MIP start 0 - ignored
+Unknown variable 'C243(110)' in MIP start 0 - ignored
+Unknown variable 'C244(110)' in MIP start 0 - ignored
+Unknown variable 'C245(110)' in MIP start 0 - ignored
+Unknown variable 'C246(110)' in MIP start 0 - ignored
+Unknown variable 'C247(110)' in MIP start 0 - ignored
+Unknown variable 'C248(110)' in MIP start 0 - ignored
+Unknown variable 'C249(110)' in MIP start 0 - ignored
+Unknown variable 'C250(110)' in MIP start 0 - ignored
+Unknown variable 'C251(110)' in MIP start 0 - ignored
+Unknown variable 'C252(110)' in MIP start 0 - ignored
+Unknown variable 'C253(110)' in MIP start 0 - ignored
+Unknown variable 'C254(110)' in MIP start 0 - ignored
+Unknown variable 'C255(110)' in MIP start 0 - ignored
+Unknown variable 'C256(110)' in MIP start 0 - ignored
+Unknown variable 'C257(110)' in MIP start 0 - ignored
+Unknown variable 'C258(110)' in MIP start 0 - ignored
+Unknown variable 'C259(110)' in MIP start 0 - ignored
+Unknown variable 'C260(110)' in MIP start 0 - ignored
+Unknown variable 'C261(110)' in MIP start 0 - ignored
+Unknown variable 'C262(110)' in MIP start 0 - ignored
+Unknown variable 'C263(110)' in MIP start 0 - ignored
+Unknown variable 'C264(110)' in MIP start 0 - ignored
+Unknown variable 'C265(110)' in MIP start 0 - ignored
+Unknown variable 'C266(110)' in MIP start 0 - ignored
+Unknown variable 'C267(110)' in MIP start 0 - ignored
+Unknown variable 'C268(110)' in MIP start 0 - ignored
+Unknown variable 'C269(110)' in MIP start 0 - ignored
+Unknown variable 'C270(110)' in MIP start 0 - ignored
+Unknown variable 'C271(110)' in MIP start 0 - ignored
+Unknown variable 'C272(110)' in MIP start 0 - ignored
+Unknown variable 'C273(110)' in MIP start 0 - ignored
+Unknown variable 'C274(110)' in MIP start 0 - ignored
+Unknown variable 'C275(110)' in MIP start 0 - ignored
+Unknown variable 'C276(110)' in MIP start 0 - ignored
+Unknown variable 'C277(110)' in MIP start 0 - ignored
+Unknown variable 'C278(110)' in MIP start 0 - ignored
+Unknown variable 'C279(110)' in MIP start 0 - ignored
+Unknown variable 'C280(110)' in MIP start 0 - ignored
+Unknown variable 'C281(110)' in MIP start 0 - ignored
+Unknown variable 'C282(110)' in MIP start 0 - ignored
+Unknown variable 'C283(110)' in MIP start 0 - ignored
+Unknown variable 'C284(110)' in MIP start 0 - ignored
+Unknown variable 'C285(0)' in MIP start 0 - ignored
+Unknown variable 'C286(0)' in MIP start 0 - ignored
+Unknown variable 'C287(0)' in MIP start 0 - ignored
+Unknown variable 'C288(0)' in MIP start 0 - ignored
+Unknown variable 'C289(0)' in MIP start 0 - ignored
+Unknown variable 'C290(0)' in MIP start 0 - ignored
+Unknown variable 'C291(0)' in MIP start 0 - ignored
+Unknown variable 'C292(0)' in MIP start 0 - ignored
+Unknown variable 'C293(0)' in MIP start 0 - ignored
+Unknown variable 'C294(0)' in MIP start 0 - ignored
+Unknown variable 'C295(0)' in MIP start 0 - ignored
+Unknown variable 'C296(0)' in MIP start 0 - ignored
+Unknown variable 'C297(0)' in MIP start 0 - ignored
+Unknown variable 'C298(0)' in MIP start 0 - ignored
+Unknown variable 'C299(0)' in MIP start 0 - ignored
+Unknown variable 'C300(0)' in MIP start 0 - ignored
+Unknown variable 'C301(0)' in MIP start 0 - ignored
+Unknown variable 'C302(0)' in MIP start 0 - ignored
+Unknown variable 'C303(0)' in MIP start 0 - ignored
+Unknown variable 'C304(0)' in MIP start 0 - ignored
+Unknown variable 'C305(0)' in MIP start 0 - ignored
+Unknown variable 'C306(0)' in MIP start 0 - ignored
+Unknown variable 'C307(0)' in MIP start 0 - ignored
+Unknown variable 'C308(0)' in MIP start 0 - ignored
+Unknown variable 'C309(0)' in MIP start 0 - ignored
+Unknown variable 'C310(0)' in MIP start 0 - ignored
+Unknown variable 'C311(0)' in MIP start 0 - ignored
+Unknown variable 'C312(0)' in MIP start 0 - ignored
+Unknown variable 'C313(0)' in MIP start 0 - ignored
+Unknown variable 'C314(0)' in MIP start 0 - ignored
+Unknown variable 'C315(0)' in MIP start 0 - ignored
+Unknown variable 'C316(0)' in MIP start 0 - ignored
+Unknown variable 'C317(0)' in MIP start 0 - ignored
+Unknown variable 'C318(0)' in MIP start 0 - ignored
+Unknown variable 'C319(0)' in MIP start 0 - ignored
+Unknown variable 'C320(0)' in MIP start 0 - ignored
+Unknown variable 'C321(0)' in MIP start 0 - ignored
+Unknown variable 'C322(0)' in MIP start 0 - ignored
+Unknown variable 'C323(0)' in MIP start 0 - ignored
+Unknown variable 'C324(0)' in MIP start 0 - ignored
+Unknown variable 'C325(0)' in MIP start 0 - ignored
+Unknown variable 'C326(0)' in MIP start 0 - ignored
+Unknown variable 'C327(0)' in MIP start 0 - ignored
+Unknown variable 'C328(0)' in MIP start 0 - ignored
+Unknown variable 'C329(0)' in MIP start 0 - ignored
+Unknown variable 'C330(0)' in MIP start 0 - ignored
+Unknown variable 'C331(0)' in MIP start 0 - ignored
+Unknown variable 'C332(0)' in MIP start 0 - ignored
+Unknown variable 'C333(0)' in MIP start 0 - ignored
+Unknown variable 'C334(0)' in MIP start 0 - ignored
+Unknown variable 'C335(0)' in MIP start 0 - ignored
+Unknown variable 'C336(0)' in MIP start 0 - ignored
+Unknown variable 'C337(0)' in MIP start 0 - ignored
+Unknown variable 'C338(0)' in MIP start 0 - ignored
+Unknown variable 'C339(0)' in MIP start 0 - ignored
+Unknown variable 'C340(0)' in MIP start 0 - ignored
+Unknown variable 'C341(0)' in MIP start 0 - ignored
+Unknown variable 'C342(0)' in MIP start 0 - ignored
+Unknown variable 'C343(0)' in MIP start 0 - ignored
+Unknown variable 'C344(0)' in MIP start 0 - ignored
+Unknown variable 'C345(0)' in MIP start 0 - ignored
+Unknown variable 'C346(0)' in MIP start 0 - ignored
+Unknown variable 'C347(0)' in MIP start 0 - ignored
+Unknown variable 'C348(0)' in MIP start 0 - ignored
+Unknown variable 'C349(0)' in MIP start 0 - ignored
+Unknown variable 'C350(0)' in MIP start 0 - ignored
+Unknown variable 'C351(0)' in MIP start 0 - ignored
+Unknown variable 'C352(0)' in MIP start 0 - ignored
+Unknown variable 'C353(0)' in MIP start 0 - ignored
+Unknown variable 'C354(0)' in MIP start 0 - ignored
+Unknown variable 'C355(0)' in MIP start 0 - ignored
+Unknown variable 'C356(0)' in MIP start 0 - ignored
+Unknown variable 'C357(0)' in MIP start 0 - ignored
+Unknown variable 'C358(0)' in MIP start 0 - ignored
+Unknown variable 'C359(0)' in MIP start 0 - ignored
+Unknown variable 'C360(0)' in MIP start 0 - ignored
+Unknown variable 'C361(0)' in MIP start 0 - ignored
+Unknown variable 'C362(0)' in MIP start 0 - ignored
+Unknown variable 'C363(0)' in MIP start 0 - ignored
+Unknown variable 'C364(0)' in MIP start 0 - ignored
+Unknown variable 'C365(0)' in MIP start 0 - ignored
+Unknown variable 'C366(0)' in MIP start 0 - ignored
+Unknown variable 'C367(0)' in MIP start 0 - ignored
+Unknown variable 'C368(0)' in MIP start 0 - ignored
+Unknown variable 'C369(0)' in MIP start 0 - ignored
+Unknown variable 'C370(0)' in MIP start 0 - ignored
+Unknown variable 'C371(0)' in MIP start 0 - ignored
+Unknown variable 'C372(0)' in MIP start 0 - ignored
+Unknown variable 'C373(0)' in MIP start 0 - ignored
+Unknown variable 'C374(0)' in MIP start 0 - ignored
+Unknown variable 'C375(0)' in MIP start 0 - ignored
+Unknown variable 'C376(0)' in MIP start 0 - ignored
+Unknown variable 'C377(0)' in MIP start 0 - ignored
+Unknown variable 'C378(0)' in MIP start 0 - ignored
+Unknown variable 'C379(0)' in MIP start 0 - ignored
+Unknown variable 'C380(0)' in MIP start 0 - ignored
+Unknown variable 'C381(0)' in MIP start 0 - ignored
+Unknown variable 'C382(0)' in MIP start 0 - ignored
+Unknown variable 'C383(0)' in MIP start 0 - ignored
+Unknown variable 'C384(0)' in MIP start 0 - ignored
+Unknown variable 'C385(0)' in MIP start 0 - ignored
+Unknown variable 'C386(0)' in MIP start 0 - ignored
+Unknown variable 'C387(0)' in MIP start 0 - ignored
+Unknown variable 'C388(0)' in MIP start 0 - ignored
+Unknown variable 'C389(0)' in MIP start 0 - ignored
+Unknown variable 'C390(0)' in MIP start 0 - ignored
+Unknown variable 'C391(0)' in MIP start 0 - ignored
+Unknown variable 'C392(0)' in MIP start 0 - ignored
+Unknown variable 'C393(0)' in MIP start 0 - ignored
+Unknown variable 'C394(0)' in MIP start 0 - ignored
+Unknown variable 'C395(0)' in MIP start 0 - ignored
+Unknown variable 'C396(0)' in MIP start 0 - ignored
+Unknown variable 'C397(0)' in MIP start 0 - ignored
+Unknown variable 'C398(0)' in MIP start 0 - ignored
+Unknown variable 'C401(2)' in MIP start 0 - ignored
+Unknown variable 'C402(2)' in MIP start 0 - ignored
+Unknown variable 'C403(2)' in MIP start 0 - ignored
+Unknown variable 'C404(2)' in MIP start 0 - ignored
+Unknown variable 'C405(2)' in MIP start 0 - ignored
+Unknown variable 'C406(2)' in MIP start 0 - ignored
+Unknown variable 'C407(2)' in MIP start 0 - ignored
+Unknown variable 'C408(2)' in MIP start 0 - ignored
+Unknown variable 'C409(2)' in MIP start 0 - ignored
+Unknown variable 'C410(2)' in MIP start 0 - ignored
+Unknown variable 'C411(2)' in MIP start 0 - ignored
+Unknown variable 'C412(2)' in MIP start 0 - ignored
+Unknown variable 'C413(2)' in MIP start 0 - ignored
+Unknown variable 'C414(2)' in MIP start 0 - ignored
+Unknown variable 'C415(2)' in MIP start 0 - ignored
+Unknown variable 'C416(2)' in MIP start 0 - ignored
+Unknown variable 'C417(2)' in MIP start 0 - ignored
+Unknown variable 'C418(2)' in MIP start 0 - ignored
+Unknown variable 'C419(2)' in MIP start 0 - ignored
+Unknown variable 'C420(2)' in MIP start 0 - ignored
+Unknown variable 'C421(2)' in MIP start 0 - ignored
+Unknown variable 'C422(2)' in MIP start 0 - ignored
+Unknown variable 'C423(2)' in MIP start 0 - ignored
+Unknown variable 'C424(2)' in MIP start 0 - ignored
+Unknown variable 'C425(2)' in MIP start 0 - ignored
+Unknown variable 'C426(2)' in MIP start 0 - ignored
+Unknown variable 'C427(2)' in MIP start 0 - ignored
+Unknown variable 'C428(2)' in MIP start 0 - ignored
+Unknown variable 'C429(2)' in MIP start 0 - ignored
+Unknown variable 'C430(2)' in MIP start 0 - ignored
+Unknown variable 'C431(2)' in MIP start 0 - ignored
+Unknown variable 'C432(2)' in MIP start 0 - ignored
+Unknown variable 'C433(2)' in MIP start 0 - ignored
+Unknown variable 'C434(2)' in MIP start 0 - ignored
+Unknown variable 'C435(2)' in MIP start 0 - ignored
+Unknown variable 'C436(2)' in MIP start 0 - ignored
+Unknown variable 'C437(2)' in MIP start 0 - ignored
+Unknown variable 'C438(2)' in MIP start 0 - ignored
+Unknown variable 'C439(2)' in MIP start 0 - ignored
+Unknown variable 'C440(2)' in MIP start 0 - ignored
+Unknown variable 'C441(2)' in MIP start 0 - ignored
+Unknown variable 'C442(2)' in MIP start 0 - ignored
+Unknown variable 'C443(2)' in MIP start 0 - ignored
+Unknown variable 'C444(2)' in MIP start 0 - ignored
+Unknown variable 'C445(2)' in MIP start 0 - ignored
+Unknown variable 'C446(2)' in MIP start 0 - ignored
+Unknown variable 'C447(2)' in MIP start 0 - ignored
+Unknown variable 'C448(2)' in MIP start 0 - ignored
+Unknown variable 'C449(2)' in MIP start 0 - ignored
+Unknown variable 'C450(2)' in MIP start 0 - ignored
+Unknown variable 'C451(2)' in MIP start 0 - ignored
+Unknown variable 'C452(2)' in MIP start 0 - ignored
+Unknown variable 'C453(2)' in MIP start 0 - ignored
+Unknown variable 'C454(2)' in MIP start 0 - ignored
+Unknown variable 'C455(2)' in MIP start 0 - ignored
+Unknown variable 'C456(2)' in MIP start 0 - ignored
+Unknown variable 'C457(2)' in MIP start 0 - ignored
+Unknown variable 'C458(2)' in MIP start 0 - ignored
+Unknown variable 'C459(2)' in MIP start 0 - ignored
+Unknown variable 'C460(2)' in MIP start 0 - ignored
+Unknown variable 'C461(2)' in MIP start 0 - ignored
+Unknown variable 'C462(2)' in MIP start 0 - ignored
+Unknown variable 'C463(2)' in MIP start 0 - ignored
+Unknown variable 'C464(2)' in MIP start 0 - ignored
+Unknown variable 'C465(2)' in MIP start 0 - ignored
+Unknown variable 'C466(2)' in MIP start 0 - ignored
+Unknown variable 'C467(2)' in MIP start 0 - ignored
+Unknown variable 'C468(2)' in MIP start 0 - ignored
+Unknown variable 'C469(2)' in MIP start 0 - ignored
+Unknown variable 'C470(2)' in MIP start 0 - ignored
+Unknown variable 'C471(2)' in MIP start 0 - ignored
+Unknown variable 'C472(2)' in MIP start 0 - ignored
+Unknown variable 'C473(2)' in MIP start 0 - ignored
+Unknown variable 'C474(2)' in MIP start 0 - ignored
+Unknown variable 'C475(2)' in MIP start 0 - ignored
+Unknown variable 'C476(2)' in MIP start 0 - ignored
+Unknown variable 'C477(2)' in MIP start 0 - ignored
+Unknown variable 'C478(2)' in MIP start 0 - ignored
+Unknown variable 'C479(2)' in MIP start 0 - ignored
+Unknown variable 'C480(2)' in MIP start 0 - ignored
+Unknown variable 'C481(2)' in MIP start 0 - ignored
+Unknown variable 'C482(2)' in MIP start 0 - ignored
+Unknown variable 'C483(2)' in MIP start 0 - ignored
+Unknown variable 'C484(2)' in MIP start 0 - ignored
+Unknown variable 'C485(2)' in MIP start 0 - ignored
+Unknown variable 'C486(2)' in MIP start 0 - ignored
+Unknown variable 'C487(2)' in MIP start 0 - ignored
+Unknown variable 'C488(2)' in MIP start 0 - ignored
+Unknown variable 'C489(2)' in MIP start 0 - ignored
+Unknown variable 'C490(2)' in MIP start 0 - ignored
+Unknown variable 'C491(2)' in MIP start 0 - ignored
+Unknown variable 'C492(2)' in MIP start 0 - ignored
+Unknown variable 'C493(2)' in MIP start 0 - ignored
+Unknown variable 'C494(2)' in MIP start 0 - ignored
+Unknown variable 'C495(2)' in MIP start 0 - ignored
+Unknown variable 'C496(2)' in MIP start 0 - ignored
+Unknown variable 'C497(2)' in MIP start 0 - ignored
+Unknown variable 'C498(2)' in MIP start 0 - ignored
+Unknown variable 'C499(2)' in MIP start 0 - ignored
+Unknown variable 'C500(2)' in MIP start 0 - ignored
+Unknown variable 'C501(2)' in MIP start 0 - ignored
+Unknown variable 'C502(2)' in MIP start 0 - ignored
+Unknown variable 'C503(2)' in MIP start 0 - ignored
+Unknown variable 'C504(2)' in MIP start 0 - ignored
+Unknown variable 'C505(2)' in MIP start 0 - ignored
+Unknown variable 'C506(2)' in MIP start 0 - ignored
+Unknown variable 'C507(2)' in MIP start 0 - ignored
+Unknown variable 'C508(2)' in MIP start 0 - ignored
+Unknown variable 'C509(2)' in MIP start 0 - ignored
+Unknown variable 'C510(2)' in MIP start 0 - ignored
+Unknown variable 'C511(0)' in MIP start 0 - ignored
+Unknown variable 'C512(0)' in MIP start 0 - ignored
+Unknown variable 'C513(0)' in MIP start 0 - ignored
+Unknown variable 'C514(0)' in MIP start 0 - ignored
+Unknown variable 'C515(0)' in MIP start 0 - ignored
+Unknown variable 'C516(0)' in MIP start 0 - ignored
+Unknown variable 'C517(0)' in MIP start 0 - ignored
+Unknown variable 'C518(0)' in MIP start 0 - ignored
+Unknown variable 'C519(0)' in MIP start 0 - ignored
+Unknown variable 'C520(0)' in MIP start 0 - ignored
+Unknown variable 'C521(0)' in MIP start 0 - ignored
+Unknown variable 'C522(0)' in MIP start 0 - ignored
+Unknown variable 'C523(0)' in MIP start 0 - ignored
+Unknown variable 'C524(0)' in MIP start 0 - ignored
+Unknown variable 'C525(0)' in MIP start 0 - ignored
+Unknown variable 'C526(0)' in MIP start 0 - ignored
+Unknown variable 'C527(0)' in MIP start 0 - ignored
+Unknown variable 'C528(0)' in MIP start 0 - ignored
+Unknown variable 'C529(0)' in MIP start 0 - ignored
+Unknown variable 'C530(0)' in MIP start 0 - ignored
+Unknown variable 'C531(0)' in MIP start 0 - ignored
+Unknown variable 'C532(0)' in MIP start 0 - ignored
+Unknown variable 'C533(0)' in MIP start 0 - ignored
+Unknown variable 'C534(0)' in MIP start 0 - ignored
+Unknown variable 'C535(0)' in MIP start 0 - ignored
+Unknown variable 'C536(0)' in MIP start 0 - ignored
+Unknown variable 'C537(0)' in MIP start 0 - ignored
+Unknown variable 'C538(0)' in MIP start 0 - ignored
+Unknown variable 'C539(0)' in MIP start 0 - ignored
+Unknown variable 'C540(0)' in MIP start 0 - ignored
+Unknown variable 'C541(0)' in MIP start 0 - ignored
+Unknown variable 'C542(0)' in MIP start 0 - ignored
+Unknown variable 'C543(0)' in MIP start 0 - ignored
+Unknown variable 'C544(0)' in MIP start 0 - ignored
+Unknown variable 'C545(0)' in MIP start 0 - ignored
+Unknown variable 'C546(0)' in MIP start 0 - ignored
+Unknown variable 'C547(0)' in MIP start 0 - ignored
+Unknown variable 'C548(0)' in MIP start 0 - ignored
+Unknown variable 'C549(0)' in MIP start 0 - ignored
+Unknown variable 'C550(0)' in MIP start 0 - ignored
+Unknown variable 'C551(0)' in MIP start 0 - ignored
+Unknown variable 'C552(0)' in MIP start 0 - ignored
+Unknown variable 'C553(0)' in MIP start 0 - ignored
+Unknown variable 'C554(0)' in MIP start 0 - ignored
+Unknown variable 'C555(0)' in MIP start 0 - ignored
+Unknown variable 'C556(0)' in MIP start 0 - ignored
+Unknown variable 'C557(0)' in MIP start 0 - ignored
+Unknown variable 'C558(0)' in MIP start 0 - ignored
+Unknown variable 'C559(0)' in MIP start 0 - ignored
+Unknown variable 'C560(0)' in MIP start 0 - ignored
+Unknown variable 'C561(0)' in MIP start 0 - ignored
+Unknown variable 'C562(0)' in MIP start 0 - ignored
+Unknown variable 'C563(0)' in MIP start 0 - ignored
+Unknown variable 'C564(0)' in MIP start 0 - ignored
+Unknown variable 'C565(0)' in MIP start 0 - ignored
+Unknown variable 'C566(0)' in MIP start 0 - ignored
+Unknown variable 'C567(0)' in MIP start 0 - ignored
+Unknown variable 'C568(0)' in MIP start 0 - ignored
+Unknown variable 'C569(0)' in MIP start 0 - ignored
+Unknown variable 'C570(0)' in MIP start 0 - ignored
+Unknown variable 'C571(0)' in MIP start 0 - ignored
+Unknown variable 'C572(0)' in MIP start 0 - ignored
+Unknown variable 'C573(0)' in MIP start 0 - ignored
+Unknown variable 'C574(0)' in MIP start 0 - ignored
+Unknown variable 'C575(0)' in MIP start 0 - ignored
+Unknown variable 'C576(0)' in MIP start 0 - ignored
+Unknown variable 'C577(0)' in MIP start 0 - ignored
+Unknown variable 'C578(0)' in MIP start 0 - ignored
+Unknown variable 'C579(0)' in MIP start 0 - ignored
+Unknown variable 'C580(0)' in MIP start 0 - ignored
+Unknown variable 'C581(0)' in MIP start 0 - ignored
+Unknown variable 'C582(0)' in MIP start 0 - ignored
+Unknown variable 'C583(0)' in MIP start 0 - ignored
+Unknown variable 'C584(0)' in MIP start 0 - ignored
+Unknown variable 'C585(0)' in MIP start 0 - ignored
+Unknown variable 'C586(0)' in MIP start 0 - ignored
+Unknown variable 'C587(0)' in MIP start 0 - ignored
+Unknown variable 'C588(0)' in MIP start 0 - ignored
+Unknown variable 'C589(0)' in MIP start 0 - ignored
+Unknown variable 'C590(0)' in MIP start 0 - ignored
+Unknown variable 'C591(0)' in MIP start 0 - ignored
+Unknown variable 'C592(0)' in MIP start 0 - ignored
+Unknown variable 'C593(0)' in MIP start 0 - ignored
+Unknown variable 'C594(0)' in MIP start 0 - ignored
+Unknown variable 'C595(0)' in MIP start 0 - ignored
+Unknown variable 'C596(0)' in MIP start 0 - ignored
+Unknown variable 'C597(0)' in MIP start 0 - ignored
+Unknown variable 'C598(0)' in MIP start 0 - ignored
+Unknown variable 'C599(0)' in MIP start 0 - ignored
+Unknown variable 'C600(0)' in MIP start 0 - ignored
+Unknown variable 'C601(0)' in MIP start 0 - ignored
+Unknown variable 'C602(0)' in MIP start 0 - ignored
+Unknown variable 'C603(0)' in MIP start 0 - ignored
+Unknown variable 'C604(0)' in MIP start 0 - ignored
+Unknown variable 'C605(0)' in MIP start 0 - ignored
+Unknown variable 'C606(0)' in MIP start 0 - ignored
+Unknown variable 'C607(0)' in MIP start 0 - ignored
+Unknown variable 'C608(0)' in MIP start 0 - ignored
+Unknown variable 'C609(0)' in MIP start 0 - ignored
+Unknown variable 'C610(0)' in MIP start 0 - ignored
+Unknown variable 'C611(0)' in MIP start 0 - ignored
+Unknown variable 'C612(0)' in MIP start 0 - ignored
+Unknown variable 'C613(0)' in MIP start 0 - ignored
+Unknown variable 'C614(0)' in MIP start 0 - ignored
+Unknown variable 'C615(0)' in MIP start 0 - ignored
+Unknown variable 'C616(0)' in MIP start 0 - ignored
+Unknown variable 'C617(0)' in MIP start 0 - ignored
+Unknown variable 'C618(0)' in MIP start 0 - ignored
+Unknown variable 'C619(0)' in MIP start 0 - ignored
+Unknown variable 'C620(0)' in MIP start 0 - ignored
+Read MIP start from file WarmStarts/auto93_6.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 503 rows, 621 columns and 20252 nonzeros
+Model fingerprint: 0xbaef3a48
+Model has 224 general constraints
+Variable types: 451 continuous, 170 integer (113 binary)
+Coefficient statistics:
+  Matrix range     [2e-03, 1e+03]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+03]
+
+No start values specified in MIP start
+
+Presolve added 395 rows and 0 columns
+Presolve removed 0 rows and 51 columns
+Presolve time: 0.03s
+Presolved: 898 rows, 570 columns, 21368 nonzeros
+Variable types: 451 continuous, 119 integer (118 binary)
+Found heuristic solution: objective 983.5444585
+Found heuristic solution: objective 61.7569741
+
+Root relaxation: objective 0.000000e+00, 365 iterations, 0.00 seconds (0.01 work units)
+Another try with MIP start
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0   63   61.75697    0.00000   100%     -    0s
+     0     0    0.00000    0   61   61.75697    0.00000   100%     -    0s
+     0     0    6.81790    0   59   61.75697    6.81790  89.0%     -    0s
+     0     0    8.76325    0   61   61.75697    8.76325  85.8%     -    0s
+     0     0    9.55798    0   61   61.75697    9.55798  84.5%     -    0s
+     0     0   11.41636    0   57   61.75697   11.41636  81.5%     -    0s
+     0     0   11.41636    0   57   61.75697   11.41636  81.5%     -    0s
+     0     2   11.41636    0   57   61.75697   11.41636  81.5%     -    1s
+*   58    26               8      55.9723764   11.41636  79.6%   144    1s
+*   66    26               8      45.8511163   11.41636  75.1%   134    1s
+
+Cutting planes:
+  Cover: 97
+  Clique: 1
+  MIR: 129
+  StrongCG: 11
+  Flow cover: 1
+  GUB cover: 7
+  RLT: 3
+
+Explored 656 nodes (41779 simplex iterations) in 2.35 seconds (1.65 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 4: 45.8511 55.9724 61.757 983.544 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.585111633719e+01, best bound 4.585111633719e+01, gap 0.0000%
+Warning: variables 171 and 285 have the same name "Beta[City_MPG,1]"
+Warning: default variable names used to write MIP start file

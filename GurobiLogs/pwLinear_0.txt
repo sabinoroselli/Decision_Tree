@@ -1,0 +1,1301 @@
+
+Gurobi 11.0.0 (mac64[arm]) logging started Tue Apr 23 13:31:41 2024
+
+Set parameter LogFile to value "GurobiLogs/pwLinear_0.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/pwLinear_0.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 242 rows, 362 columns and 481 nonzeros
+Model fingerprint: 0x1729874c
+Model has 240 general constraints
+Variable types: 241 continuous, 121 integer (121 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+  GenCon rhs range [6e-02, 1e+01]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 8 rows and 244 columns
+Presolve time: 0.00s
+Presolved: 234 rows, 118 columns, 468 nonzeros
+Variable types: 118 continuous, 0 integer (0 binary)
+
+Root relaxation: objective 4.092900e+02, 118 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     409.2900000  409.29000  0.00%     -    0s
+
+Explored 1 nodes (118 simplex iterations) in 0.04 seconds (0.00 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 1: 409.29 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.092900000000e+02, best bound 4.092900000000e+02, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Tue Apr 23 13:31:41 2024
+
+Set parameter LogFile to value "GurobiLogs/pwLinear_0.txt"
+Set parameter TimeLimit to value 3600
+Unknown variable 'z[187,0]' in MIP start 0 - ignored
+Unknown variable 'z[46,0]' in MIP start 0 - ignored
+Unknown variable 'z[138,0]' in MIP start 0 - ignored
+Unknown variable 'z[195,0]' in MIP start 0 - ignored
+Unknown variable 'z[108,0]' in MIP start 0 - ignored
+Unknown variable 'z[62,0]' in MIP start 0 - ignored
+Unknown variable 'z[2,0]' in MIP start 0 - ignored
+Unknown variable 'z[59,0]' in MIP start 0 - ignored
+Unknown variable 'z[136,0]' in MIP start 0 - ignored
+Unknown variable 'z[197,0]' in MIP start 0 - ignored
+Unknown variable 'z[43,0]' in MIP start 0 - ignored
+Unknown variable 'z[10,0]' in MIP start 0 - ignored
+Unknown variable 'z[194,0]' in MIP start 0 - ignored
+Unknown variable 'z[73,0]' in MIP start 0 - ignored
+Unknown variable 'z[196,0]' in MIP start 0 - ignored
+Unknown variable 'z[178,0]' in MIP start 0 - ignored
+Unknown variable 'z[175,0]' in MIP start 0 - ignored
+Unknown variable 'z[126,0]' in MIP start 0 - ignored
+Unknown variable 'z[93,0]' in MIP start 0 - ignored
+Unknown variable 'z[112,0]' in MIP start 0 - ignored
+Unknown variable 'z[158,0]' in MIP start 0 - ignored
+Unknown variable 'z[191,0]' in MIP start 0 - ignored
+Unknown variable 'z[50,0]' in MIP start 0 - ignored
+Unknown variable 'z[0,0]' in MIP start 0 - ignored
+Unknown variable 'z[94,0]' in MIP start 0 - ignored
+Unknown variable 'z[110,0]' in MIP start 0 - ignored
+Unknown variable 'z[95,0]' in MIP start 0 - ignored
+Unknown variable 'z[64,0]' in MIP start 0 - ignored
+Unknown variable 'z[167,0]' in MIP start 0 - ignored
+Unknown variable 'z[41,0]' in MIP start 0 - ignored
+Unknown variable 'z[69,0]' in MIP start 0 - ignored
+Unknown variable 'z[49,0]' in MIP start 0 - ignored
+Unknown variable 'z[48,0]' in MIP start 0 - ignored
+Unknown variable 'z[85,0]' in MIP start 0 - ignored
+Unknown variable 'z[13,0]' in MIP start 0 - ignored
+Unknown variable 'z[161,0]' in MIP start 0 - ignored
+Unknown variable 'z[23,0]' in MIP start 0 - ignored
+Unknown variable 'z[186,0]' in MIP start 0 - ignored
+Unknown variable 'z[135,0]' in MIP start 0 - ignored
+Unknown variable 'z[20,0]' in MIP start 0 - ignored
+Unknown variable 'z[15,0]' in MIP start 0 - ignored
+Unknown variable 'z[78,0]' in MIP start 0 - ignored
+Unknown variable 'z[104,0]' in MIP start 0 - ignored
+Unknown variable 'z[52,0]' in MIP start 0 - ignored
+Unknown variable 'z[100,0]' in MIP start 0 - ignored
+Unknown variable 'z[76,0]' in MIP start 0 - ignored
+Unknown variable 'z[3,0]' in MIP start 0 - ignored
+Unknown variable 'z[116,0]' in MIP start 0 - ignored
+Unknown variable 'z[164,0]' in MIP start 0 - ignored
+Unknown variable 'z[198,0]' in MIP start 0 - ignored
+Unknown variable 'z[6,0]' in MIP start 0 - ignored
+Unknown variable 'z[68,0]' in MIP start 0 - ignored
+Unknown variable 'z[84,0]' in MIP start 0 - ignored
+Unknown variable 'z[121,0]' in MIP start 0 - ignored
+Unknown variable 'z[155,0]' in MIP start 0 - ignored
+Unknown variable 'z[171,0]' in MIP start 0 - ignored
+Unknown variable 'z[156,0]' in MIP start 0 - ignored
+Unknown variable 'z[91,0]' in MIP start 0 - ignored
+Unknown variable 'z[199,0]' in MIP start 0 - ignored
+Unknown variable 'z[11,0]' in MIP start 0 - ignored
+Unknown variable 'z[119,0]' in MIP start 0 - ignored
+Unknown variable 'z[102,0]' in MIP start 0 - ignored
+Unknown variable 'z[35,0]' in MIP start 0 - ignored
+Unknown variable 'z[57,0]' in MIP start 0 - ignored
+Unknown variable 'z[65,0]' in MIP start 0 - ignored
+Unknown variable 'z[1,0]' in MIP start 0 - ignored
+Unknown variable 'z[120,0]' in MIP start 0 - ignored
+Unknown variable 'z[162,0]' in MIP start 0 - ignored
+Unknown variable 'z[42,0]' in MIP start 0 - ignored
+Unknown variable 'z[105,0]' in MIP start 0 - ignored
+Unknown variable 'z[132,0]' in MIP start 0 - ignored
+Unknown variable 'z[173,0]' in MIP start 0 - ignored
+Unknown variable 'z[17,0]' in MIP start 0 - ignored
+Unknown variable 'z[38,0]' in MIP start 0 - ignored
+Unknown variable 'z[133,0]' in MIP start 0 - ignored
+Unknown variable 'z[53,0]' in MIP start 0 - ignored
+Unknown variable 'z[157,0]' in MIP start 0 - ignored
+Unknown variable 'z[128,0]' in MIP start 0 - ignored
+Unknown variable 'z[34,0]' in MIP start 0 - ignored
+Unknown variable 'z[28,0]' in MIP start 0 - ignored
+Unknown variable 'z[114,0]' in MIP start 0 - ignored
+Unknown variable 'z[151,0]' in MIP start 0 - ignored
+Unknown variable 'z[31,0]' in MIP start 0 - ignored
+Unknown variable 'z[166,0]' in MIP start 0 - ignored
+Unknown variable 'z[127,0]' in MIP start 0 - ignored
+Unknown variable 'z[176,0]' in MIP start 0 - ignored
+Unknown variable 'z[32,0]' in MIP start 0 - ignored
+Unknown variable 'z[142,0]' in MIP start 0 - ignored
+Unknown variable 'z[169,0]' in MIP start 0 - ignored
+Unknown variable 'z[147,0]' in MIP start 0 - ignored
+Unknown variable 'z[29,0]' in MIP start 0 - ignored
+Unknown variable 'z[99,0]' in MIP start 0 - ignored
+Unknown variable 'z[82,0]' in MIP start 0 - ignored
+Unknown variable 'z[79,0]' in MIP start 0 - ignored
+Unknown variable 'z[115,0]' in MIP start 0 - ignored
+Unknown variable 'z[148,0]' in MIP start 0 - ignored
+Unknown variable 'z[193,0]' in MIP start 0 - ignored
+Unknown variable 'z[72,0]' in MIP start 0 - ignored
+Unknown variable 'z[77,0]' in MIP start 0 - ignored
+Unknown variable 'z[25,0]' in MIP start 0 - ignored
+Unknown variable 'z[165,0]' in MIP start 0 - ignored
+Unknown variable 'z[81,0]' in MIP start 0 - ignored
+Unknown variable 'z[188,0]' in MIP start 0 - ignored
+Unknown variable 'z[174,0]' in MIP start 0 - ignored
+Unknown variable 'z[190,0]' in MIP start 0 - ignored
+Unknown variable 'z[39,0]' in MIP start 0 - ignored
+Unknown variable 'z[58,0]' in MIP start 0 - ignored
+Unknown variable 'z[140,0]' in MIP start 0 - ignored
+Unknown variable 'z[88,0]' in MIP start 0 - ignored
+Unknown variable 'z[70,0]' in MIP start 0 - ignored
+Unknown variable 'z[87,0]' in MIP start 0 - ignored
+Unknown variable 'z[36,0]' in MIP start 0 - ignored
+Unknown variable 'z[21,0]' in MIP start 0 - ignored
+Unknown variable 'z[9,0]' in MIP start 0 - ignored
+Unknown variable 'z[103,0]' in MIP start 0 - ignored
+Unknown variable 'z[67,0]' in MIP start 0 - ignored
+Unknown variable 'z[192,0]' in MIP start 0 - ignored
+Unknown variable 'z[117,0]' in MIP start 0 - ignored
+Unknown variable 'z[47,0]' in MIP start 0 - ignored
+Unknown variable 'z[172,0]' in MIP start 0 - ignored
+Unknown variable 'l[0]' in MIP start 0 - ignored
+Unknown variable 'c[0]' in MIP start 0 - ignored
+Unknown variable 'n[187,0]' in MIP start 0 - ignored
+Unknown variable 'n[46,0]' in MIP start 0 - ignored
+Unknown variable 'n[138,0]' in MIP start 0 - ignored
+Unknown variable 'n[195,0]' in MIP start 0 - ignored
+Unknown variable 'n[108,0]' in MIP start 0 - ignored
+Unknown variable 'n[62,0]' in MIP start 0 - ignored
+Unknown variable 'n[2,0]' in MIP start 0 - ignored
+Unknown variable 'n[59,0]' in MIP start 0 - ignored
+Unknown variable 'n[136,0]' in MIP start 0 - ignored
+Unknown variable 'n[197,0]' in MIP start 0 - ignored
+Unknown variable 'n[43,0]' in MIP start 0 - ignored
+Unknown variable 'n[10,0]' in MIP start 0 - ignored
+Unknown variable 'n[194,0]' in MIP start 0 - ignored
+Unknown variable 'n[73,0]' in MIP start 0 - ignored
+Unknown variable 'n[196,0]' in MIP start 0 - ignored
+Unknown variable 'n[178,0]' in MIP start 0 - ignored
+Unknown variable 'n[175,0]' in MIP start 0 - ignored
+Unknown variable 'n[126,0]' in MIP start 0 - ignored
+Unknown variable 'n[93,0]' in MIP start 0 - ignored
+Unknown variable 'n[112,0]' in MIP start 0 - ignored
+Unknown variable 'n[158,0]' in MIP start 0 - ignored
+Unknown variable 'n[191,0]' in MIP start 0 - ignored
+Unknown variable 'n[50,0]' in MIP start 0 - ignored
+Unknown variable 'n[0,0]' in MIP start 0 - ignored
+Unknown variable 'n[94,0]' in MIP start 0 - ignored
+Unknown variable 'n[110,0]' in MIP start 0 - ignored
+Unknown variable 'n[95,0]' in MIP start 0 - ignored
+Unknown variable 'n[64,0]' in MIP start 0 - ignored
+Unknown variable 'n[167,0]' in MIP start 0 - ignored
+Unknown variable 'n[41,0]' in MIP start 0 - ignored
+Unknown variable 'n[69,0]' in MIP start 0 - ignored
+Unknown variable 'n[49,0]' in MIP start 0 - ignored
+Unknown variable 'n[48,0]' in MIP start 0 - ignored
+Unknown variable 'n[85,0]' in MIP start 0 - ignored
+Unknown variable 'n[13,0]' in MIP start 0 - ignored
+Unknown variable 'n[161,0]' in MIP start 0 - ignored
+Unknown variable 'n[23,0]' in MIP start 0 - ignored
+Unknown variable 'n[186,0]' in MIP start 0 - ignored
+Unknown variable 'n[135,0]' in MIP start 0 - ignored
+Unknown variable 'n[20,0]' in MIP start 0 - ignored
+Unknown variable 'n[15,0]' in MIP start 0 - ignored
+Unknown variable 'n[78,0]' in MIP start 0 - ignored
+Unknown variable 'n[104,0]' in MIP start 0 - ignored
+Unknown variable 'n[52,0]' in MIP start 0 - ignored
+Unknown variable 'n[100,0]' in MIP start 0 - ignored
+Unknown variable 'n[76,0]' in MIP start 0 - ignored
+Unknown variable 'n[3,0]' in MIP start 0 - ignored
+Unknown variable 'n[116,0]' in MIP start 0 - ignored
+Unknown variable 'n[164,0]' in MIP start 0 - ignored
+Unknown variable 'n[198,0]' in MIP start 0 - ignored
+Unknown variable 'n[6,0]' in MIP start 0 - ignored
+Unknown variable 'n[68,0]' in MIP start 0 - ignored
+Unknown variable 'n[84,0]' in MIP start 0 - ignored
+Unknown variable 'n[121,0]' in MIP start 0 - ignored
+Unknown variable 'n[155,0]' in MIP start 0 - ignored
+Unknown variable 'n[171,0]' in MIP start 0 - ignored
+Unknown variable 'n[156,0]' in MIP start 0 - ignored
+Unknown variable 'n[91,0]' in MIP start 0 - ignored
+Unknown variable 'n[199,0]' in MIP start 0 - ignored
+Unknown variable 'n[11,0]' in MIP start 0 - ignored
+Unknown variable 'n[119,0]' in MIP start 0 - ignored
+Unknown variable 'n[102,0]' in MIP start 0 - ignored
+Unknown variable 'n[35,0]' in MIP start 0 - ignored
+Unknown variable 'n[57,0]' in MIP start 0 - ignored
+Unknown variable 'n[65,0]' in MIP start 0 - ignored
+Unknown variable 'n[1,0]' in MIP start 0 - ignored
+Unknown variable 'n[120,0]' in MIP start 0 - ignored
+Unknown variable 'n[162,0]' in MIP start 0 - ignored
+Unknown variable 'n[42,0]' in MIP start 0 - ignored
+Unknown variable 'n[105,0]' in MIP start 0 - ignored
+Unknown variable 'n[132,0]' in MIP start 0 - ignored
+Unknown variable 'n[173,0]' in MIP start 0 - ignored
+Unknown variable 'n[17,0]' in MIP start 0 - ignored
+Unknown variable 'n[38,0]' in MIP start 0 - ignored
+Unknown variable 'n[133,0]' in MIP start 0 - ignored
+Unknown variable 'n[53,0]' in MIP start 0 - ignored
+Unknown variable 'n[157,0]' in MIP start 0 - ignored
+Unknown variable 'n[128,0]' in MIP start 0 - ignored
+Unknown variable 'n[34,0]' in MIP start 0 - ignored
+Unknown variable 'n[28,0]' in MIP start 0 - ignored
+Unknown variable 'n[114,0]' in MIP start 0 - ignored
+Unknown variable 'n[151,0]' in MIP start 0 - ignored
+Unknown variable 'n[31,0]' in MIP start 0 - ignored
+Unknown variable 'n[166,0]' in MIP start 0 - ignored
+Unknown variable 'n[127,0]' in MIP start 0 - ignored
+Unknown variable 'n[176,0]' in MIP start 0 - ignored
+Unknown variable 'n[32,0]' in MIP start 0 - ignored
+Unknown variable 'n[142,0]' in MIP start 0 - ignored
+Unknown variable 'n[169,0]' in MIP start 0 - ignored
+Unknown variable 'n[147,0]' in MIP start 0 - ignored
+Unknown variable 'n[29,0]' in MIP start 0 - ignored
+Unknown variable 'n[99,0]' in MIP start 0 - ignored
+Unknown variable 'n[82,0]' in MIP start 0 - ignored
+Unknown variable 'n[79,0]' in MIP start 0 - ignored
+Unknown variable 'n[115,0]' in MIP start 0 - ignored
+Unknown variable 'n[148,0]' in MIP start 0 - ignored
+Unknown variable 'n[193,0]' in MIP start 0 - ignored
+Unknown variable 'n[72,0]' in MIP start 0 - ignored
+Unknown variable 'n[77,0]' in MIP start 0 - ignored
+Unknown variable 'n[25,0]' in MIP start 0 - ignored
+Unknown variable 'n[165,0]' in MIP start 0 - ignored
+Unknown variable 'n[81,0]' in MIP start 0 - ignored
+Unknown variable 'n[188,0]' in MIP start 0 - ignored
+Unknown variable 'n[174,0]' in MIP start 0 - ignored
+Unknown variable 'n[190,0]' in MIP start 0 - ignored
+Unknown variable 'n[39,0]' in MIP start 0 - ignored
+Unknown variable 'n[58,0]' in MIP start 0 - ignored
+Unknown variable 'n[140,0]' in MIP start 0 - ignored
+Unknown variable 'n[88,0]' in MIP start 0 - ignored
+Unknown variable 'n[70,0]' in MIP start 0 - ignored
+Unknown variable 'n[87,0]' in MIP start 0 - ignored
+Unknown variable 'n[36,0]' in MIP start 0 - ignored
+Unknown variable 'n[21,0]' in MIP start 0 - ignored
+Unknown variable 'n[9,0]' in MIP start 0 - ignored
+Unknown variable 'n[103,0]' in MIP start 0 - ignored
+Unknown variable 'n[67,0]' in MIP start 0 - ignored
+Unknown variable 'n[192,0]' in MIP start 0 - ignored
+Unknown variable 'n[117,0]' in MIP start 0 - ignored
+Unknown variable 'n[47,0]' in MIP start 0 - ignored
+Unknown variable 'n[172,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[187,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[46,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[138,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[195,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[108,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[62,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[2,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[59,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[136,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[197,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[43,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[10,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[194,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[73,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[196,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[178,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[175,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[126,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[93,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[112,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[158,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[191,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[50,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[0,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[94,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[110,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[95,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[64,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[167,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[41,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[69,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[49,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[48,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[85,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[13,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[161,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[23,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[186,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[135,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[20,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[15,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[78,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[104,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[52,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[100,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[76,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[3,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[116,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[164,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[198,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[6,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[68,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[84,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[121,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[155,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[171,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[156,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[91,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[199,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[11,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[119,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[102,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[35,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[57,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[65,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[1,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[120,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[162,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[42,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[105,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[132,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[173,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[17,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[38,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[133,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[53,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[157,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[128,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[34,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[28,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[114,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[151,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[31,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[166,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[127,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[176,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[32,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[142,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[169,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[147,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[29,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[99,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[82,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[79,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[115,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[148,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[193,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[72,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[77,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[25,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[165,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[81,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[188,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[174,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[190,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[39,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[58,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[140,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[88,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[70,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[87,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[36,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[21,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[9,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[103,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[67,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[192,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[117,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[47,0]' in MIP start 0 - ignored
+Unknown variable 'n_abs[172,0]' in MIP start 0 - ignored
+Read MIP start from file WarmStarts/pwLinear_0.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 608 rows, 736 columns and 3862 nonzeros
+Model fingerprint: 0xf358f8ea
+Model has 480 general constraints
+Variable types: 483 continuous, 253 integer (243 binary)
+Coefficient statistics:
+  Matrix range     [2e-02, 4e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+00]
+  GenCon rhs range [6e-02, 1e+01]
+  GenCon coe range [1e+00, 1e+00]
+
+No start values specified in MIP start
+
+Presolve added 326 rows and 0 columns
+Presolve removed 0 rows and 26 columns
+Presolve time: 0.03s
+Presolved: 934 rows, 710 columns, 5115 nonzeros
+Presolved model has 236 SOS constraint(s)
+Variable types: 477 continuous, 233 integer (233 binary)
+Found heuristic solution: objective 409.2900000
+
+Root relaxation: objective 3.570000e+00, 360 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    3.57000    0  118  409.29000    3.57000  99.1%     -    0s
+Another try with MIP start
+     0     0    3.57000    0  118  409.29000    3.57000  99.1%     -    0s
+     0     2    3.57000    0  118  409.29000    3.57000  99.1%     -    0s
+*    1     2               1     408.8900000    3.57000  99.1%   178    0s
+*    6     4               3     407.0900000   15.77000  96.1%  92.5    0s
+*    8     4               3     406.0100000   24.67000  93.9%  89.6    0s
+*    9     4               4     402.9800000   24.67000  93.9%  94.0    0s
+*   20     2               6     402.6200000   52.89000  86.9%  74.3    0s
+*   21     2               6     374.1100000   52.89000  85.9%  77.6    0s
+
+Explored 43 nodes (2431 simplex iterations) in 0.32 seconds (0.17 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 7: 374.11 402.62 402.98 ... 409.29
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.741100000000e+02, best bound 3.741100000000e+02, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Tue Apr 23 13:31:41 2024
+
+Set parameter LogFile to value "GurobiLogs/pwLinear_0.txt"
+Set parameter TimeLimit to value 3600
+Unknown variable 'z[187,1]' in MIP start 0 - ignored
+Unknown variable 'z[187,2]' in MIP start 0 - ignored
+Unknown variable 'z[46,1]' in MIP start 0 - ignored
+Unknown variable 'z[46,2]' in MIP start 0 - ignored
+Unknown variable 'z[138,1]' in MIP start 0 - ignored
+Unknown variable 'z[138,2]' in MIP start 0 - ignored
+Unknown variable 'z[195,1]' in MIP start 0 - ignored
+Unknown variable 'z[195,2]' in MIP start 0 - ignored
+Unknown variable 'z[108,1]' in MIP start 0 - ignored
+Unknown variable 'z[108,2]' in MIP start 0 - ignored
+Unknown variable 'z[62,1]' in MIP start 0 - ignored
+Unknown variable 'z[62,2]' in MIP start 0 - ignored
+Unknown variable 'z[2,1]' in MIP start 0 - ignored
+Unknown variable 'z[2,2]' in MIP start 0 - ignored
+Unknown variable 'z[59,1]' in MIP start 0 - ignored
+Unknown variable 'z[59,2]' in MIP start 0 - ignored
+Unknown variable 'z[136,1]' in MIP start 0 - ignored
+Unknown variable 'z[136,2]' in MIP start 0 - ignored
+Unknown variable 'z[197,1]' in MIP start 0 - ignored
+Unknown variable 'z[197,2]' in MIP start 0 - ignored
+Unknown variable 'z[43,1]' in MIP start 0 - ignored
+Unknown variable 'z[43,2]' in MIP start 0 - ignored
+Unknown variable 'z[10,1]' in MIP start 0 - ignored
+Unknown variable 'z[10,2]' in MIP start 0 - ignored
+Unknown variable 'z[194,1]' in MIP start 0 - ignored
+Unknown variable 'z[194,2]' in MIP start 0 - ignored
+Unknown variable 'z[73,1]' in MIP start 0 - ignored
+Unknown variable 'z[73,2]' in MIP start 0 - ignored
+Unknown variable 'z[196,1]' in MIP start 0 - ignored
+Unknown variable 'z[196,2]' in MIP start 0 - ignored
+Unknown variable 'z[178,1]' in MIP start 0 - ignored
+Unknown variable 'z[178,2]' in MIP start 0 - ignored
+Unknown variable 'z[175,1]' in MIP start 0 - ignored
+Unknown variable 'z[175,2]' in MIP start 0 - ignored
+Unknown variable 'z[126,1]' in MIP start 0 - ignored
+Unknown variable 'z[126,2]' in MIP start 0 - ignored
+Unknown variable 'z[93,1]' in MIP start 0 - ignored
+Unknown variable 'z[93,2]' in MIP start 0 - ignored
+Unknown variable 'z[112,1]' in MIP start 0 - ignored
+Unknown variable 'z[112,2]' in MIP start 0 - ignored
+Unknown variable 'z[158,1]' in MIP start 0 - ignored
+Unknown variable 'z[158,2]' in MIP start 0 - ignored
+Unknown variable 'z[191,1]' in MIP start 0 - ignored
+Unknown variable 'z[191,2]' in MIP start 0 - ignored
+Unknown variable 'z[50,1]' in MIP start 0 - ignored
+Unknown variable 'z[50,2]' in MIP start 0 - ignored
+Unknown variable 'z[0,1]' in MIP start 0 - ignored
+Unknown variable 'z[0,2]' in MIP start 0 - ignored
+Unknown variable 'z[94,1]' in MIP start 0 - ignored
+Unknown variable 'z[94,2]' in MIP start 0 - ignored
+Unknown variable 'z[110,1]' in MIP start 0 - ignored
+Unknown variable 'z[110,2]' in MIP start 0 - ignored
+Unknown variable 'z[95,1]' in MIP start 0 - ignored
+Unknown variable 'z[95,2]' in MIP start 0 - ignored
+Unknown variable 'z[64,1]' in MIP start 0 - ignored
+Unknown variable 'z[64,2]' in MIP start 0 - ignored
+Unknown variable 'z[167,1]' in MIP start 0 - ignored
+Unknown variable 'z[167,2]' in MIP start 0 - ignored
+Unknown variable 'z[41,1]' in MIP start 0 - ignored
+Unknown variable 'z[41,2]' in MIP start 0 - ignored
+Unknown variable 'z[69,1]' in MIP start 0 - ignored
+Unknown variable 'z[69,2]' in MIP start 0 - ignored
+Unknown variable 'z[49,1]' in MIP start 0 - ignored
+Unknown variable 'z[49,2]' in MIP start 0 - ignored
+Unknown variable 'z[48,1]' in MIP start 0 - ignored
+Unknown variable 'z[48,2]' in MIP start 0 - ignored
+Unknown variable 'z[85,1]' in MIP start 0 - ignored
+Unknown variable 'z[85,2]' in MIP start 0 - ignored
+Unknown variable 'z[13,1]' in MIP start 0 - ignored
+Unknown variable 'z[13,2]' in MIP start 0 - ignored
+Unknown variable 'z[161,1]' in MIP start 0 - ignored
+Unknown variable 'z[161,2]' in MIP start 0 - ignored
+Unknown variable 'z[23,1]' in MIP start 0 - ignored
+Unknown variable 'z[23,2]' in MIP start 0 - ignored
+Unknown variable 'z[186,1]' in MIP start 0 - ignored
+Unknown variable 'z[186,2]' in MIP start 0 - ignored
+Unknown variable 'z[135,1]' in MIP start 0 - ignored
+Unknown variable 'z[135,2]' in MIP start 0 - ignored
+Unknown variable 'z[20,1]' in MIP start 0 - ignored
+Unknown variable 'z[20,2]' in MIP start 0 - ignored
+Unknown variable 'z[15,1]' in MIP start 0 - ignored
+Unknown variable 'z[15,2]' in MIP start 0 - ignored
+Unknown variable 'z[78,1]' in MIP start 0 - ignored
+Unknown variable 'z[78,2]' in MIP start 0 - ignored
+Unknown variable 'z[104,1]' in MIP start 0 - ignored
+Unknown variable 'z[104,2]' in MIP start 0 - ignored
+Unknown variable 'z[52,1]' in MIP start 0 - ignored
+Unknown variable 'z[52,2]' in MIP start 0 - ignored
+Unknown variable 'z[100,1]' in MIP start 0 - ignored
+Unknown variable 'z[100,2]' in MIP start 0 - ignored
+Unknown variable 'z[76,1]' in MIP start 0 - ignored
+Unknown variable 'z[76,2]' in MIP start 0 - ignored
+Unknown variable 'z[3,1]' in MIP start 0 - ignored
+Unknown variable 'z[3,2]' in MIP start 0 - ignored
+Unknown variable 'z[116,1]' in MIP start 0 - ignored
+Unknown variable 'z[116,2]' in MIP start 0 - ignored
+Unknown variable 'z[164,1]' in MIP start 0 - ignored
+Unknown variable 'z[164,2]' in MIP start 0 - ignored
+Unknown variable 'z[198,1]' in MIP start 0 - ignored
+Unknown variable 'z[198,2]' in MIP start 0 - ignored
+Unknown variable 'z[6,1]' in MIP start 0 - ignored
+Unknown variable 'z[6,2]' in MIP start 0 - ignored
+Unknown variable 'z[68,1]' in MIP start 0 - ignored
+Unknown variable 'z[68,2]' in MIP start 0 - ignored
+Unknown variable 'z[84,1]' in MIP start 0 - ignored
+Unknown variable 'z[84,2]' in MIP start 0 - ignored
+Unknown variable 'z[121,1]' in MIP start 0 - ignored
+Unknown variable 'z[121,2]' in MIP start 0 - ignored
+Unknown variable 'z[155,1]' in MIP start 0 - ignored
+Unknown variable 'z[155,2]' in MIP start 0 - ignored
+Unknown variable 'z[171,1]' in MIP start 0 - ignored
+Unknown variable 'z[171,2]' in MIP start 0 - ignored
+Unknown variable 'z[156,1]' in MIP start 0 - ignored
+Unknown variable 'z[156,2]' in MIP start 0 - ignored
+Unknown variable 'z[91,1]' in MIP start 0 - ignored
+Unknown variable 'z[91,2]' in MIP start 0 - ignored
+Unknown variable 'z[199,1]' in MIP start 0 - ignored
+Unknown variable 'z[199,2]' in MIP start 0 - ignored
+Unknown variable 'z[11,1]' in MIP start 0 - ignored
+Unknown variable 'z[11,2]' in MIP start 0 - ignored
+Unknown variable 'z[119,1]' in MIP start 0 - ignored
+Unknown variable 'z[119,2]' in MIP start 0 - ignored
+Unknown variable 'z[102,1]' in MIP start 0 - ignored
+Unknown variable 'z[102,2]' in MIP start 0 - ignored
+Unknown variable 'z[35,1]' in MIP start 0 - ignored
+Unknown variable 'z[35,2]' in MIP start 0 - ignored
+Unknown variable 'z[57,1]' in MIP start 0 - ignored
+Unknown variable 'z[57,2]' in MIP start 0 - ignored
+Unknown variable 'z[65,1]' in MIP start 0 - ignored
+Unknown variable 'z[65,2]' in MIP start 0 - ignored
+Unknown variable 'z[1,1]' in MIP start 0 - ignored
+Unknown variable 'z[1,2]' in MIP start 0 - ignored
+Unknown variable 'z[120,1]' in MIP start 0 - ignored
+Unknown variable 'z[120,2]' in MIP start 0 - ignored
+Unknown variable 'z[162,1]' in MIP start 0 - ignored
+Unknown variable 'z[162,2]' in MIP start 0 - ignored
+Unknown variable 'z[42,1]' in MIP start 0 - ignored
+Unknown variable 'z[42,2]' in MIP start 0 - ignored
+Unknown variable 'z[105,1]' in MIP start 0 - ignored
+Unknown variable 'z[105,2]' in MIP start 0 - ignored
+Unknown variable 'z[132,1]' in MIP start 0 - ignored
+Unknown variable 'z[132,2]' in MIP start 0 - ignored
+Unknown variable 'z[173,1]' in MIP start 0 - ignored
+Unknown variable 'z[173,2]' in MIP start 0 - ignored
+Unknown variable 'z[17,1]' in MIP start 0 - ignored
+Unknown variable 'z[17,2]' in MIP start 0 - ignored
+Unknown variable 'z[38,1]' in MIP start 0 - ignored
+Unknown variable 'z[38,2]' in MIP start 0 - ignored
+Unknown variable 'z[133,1]' in MIP start 0 - ignored
+Unknown variable 'z[133,2]' in MIP start 0 - ignored
+Unknown variable 'z[53,1]' in MIP start 0 - ignored
+Unknown variable 'z[53,2]' in MIP start 0 - ignored
+Unknown variable 'z[157,1]' in MIP start 0 - ignored
+Unknown variable 'z[157,2]' in MIP start 0 - ignored
+Unknown variable 'z[128,1]' in MIP start 0 - ignored
+Unknown variable 'z[128,2]' in MIP start 0 - ignored
+Unknown variable 'z[34,1]' in MIP start 0 - ignored
+Unknown variable 'z[34,2]' in MIP start 0 - ignored
+Unknown variable 'z[28,1]' in MIP start 0 - ignored
+Unknown variable 'z[28,2]' in MIP start 0 - ignored
+Unknown variable 'z[114,1]' in MIP start 0 - ignored
+Unknown variable 'z[114,2]' in MIP start 0 - ignored
+Unknown variable 'z[151,1]' in MIP start 0 - ignored
+Unknown variable 'z[151,2]' in MIP start 0 - ignored
+Unknown variable 'z[31,1]' in MIP start 0 - ignored
+Unknown variable 'z[31,2]' in MIP start 0 - ignored
+Unknown variable 'z[166,1]' in MIP start 0 - ignored
+Unknown variable 'z[166,2]' in MIP start 0 - ignored
+Unknown variable 'z[127,1]' in MIP start 0 - ignored
+Unknown variable 'z[127,2]' in MIP start 0 - ignored
+Unknown variable 'z[176,1]' in MIP start 0 - ignored
+Unknown variable 'z[176,2]' in MIP start 0 - ignored
+Unknown variable 'z[32,1]' in MIP start 0 - ignored
+Unknown variable 'z[32,2]' in MIP start 0 - ignored
+Unknown variable 'z[142,1]' in MIP start 0 - ignored
+Unknown variable 'z[142,2]' in MIP start 0 - ignored
+Unknown variable 'z[169,1]' in MIP start 0 - ignored
+Unknown variable 'z[169,2]' in MIP start 0 - ignored
+Unknown variable 'z[147,1]' in MIP start 0 - ignored
+Unknown variable 'z[147,2]' in MIP start 0 - ignored
+Unknown variable 'z[29,1]' in MIP start 0 - ignored
+Unknown variable 'z[29,2]' in MIP start 0 - ignored
+Unknown variable 'z[99,1]' in MIP start 0 - ignored
+Unknown variable 'z[99,2]' in MIP start 0 - ignored
+Unknown variable 'z[82,1]' in MIP start 0 - ignored
+Unknown variable 'z[82,2]' in MIP start 0 - ignored
+Unknown variable 'z[79,1]' in MIP start 0 - ignored
+Unknown variable 'z[79,2]' in MIP start 0 - ignored
+Unknown variable 'z[115,1]' in MIP start 0 - ignored
+Unknown variable 'z[115,2]' in MIP start 0 - ignored
+Unknown variable 'z[148,1]' in MIP start 0 - ignored
+Unknown variable 'z[148,2]' in MIP start 0 - ignored
+Unknown variable 'z[193,1]' in MIP start 0 - ignored
+Unknown variable 'z[193,2]' in MIP start 0 - ignored
+Unknown variable 'z[72,1]' in MIP start 0 - ignored
+Unknown variable 'z[72,2]' in MIP start 0 - ignored
+Unknown variable 'z[77,1]' in MIP start 0 - ignored
+Unknown variable 'z[77,2]' in MIP start 0 - ignored
+Unknown variable 'z[25,1]' in MIP start 0 - ignored
+Unknown variable 'z[25,2]' in MIP start 0 - ignored
+Unknown variable 'z[165,1]' in MIP start 0 - ignored
+Unknown variable 'z[165,2]' in MIP start 0 - ignored
+Unknown variable 'z[81,1]' in MIP start 0 - ignored
+Unknown variable 'z[81,2]' in MIP start 0 - ignored
+Unknown variable 'z[188,1]' in MIP start 0 - ignored
+Unknown variable 'z[188,2]' in MIP start 0 - ignored
+Unknown variable 'z[174,1]' in MIP start 0 - ignored
+Unknown variable 'z[174,2]' in MIP start 0 - ignored
+Unknown variable 'z[190,1]' in MIP start 0 - ignored
+Unknown variable 'z[190,2]' in MIP start 0 - ignored
+Unknown variable 'z[39,1]' in MIP start 0 - ignored
+Unknown variable 'z[39,2]' in MIP start 0 - ignored
+Unknown variable 'z[58,1]' in MIP start 0 - ignored
+Unknown variable 'z[58,2]' in MIP start 0 - ignored
+Unknown variable 'z[140,1]' in MIP start 0 - ignored
+Unknown variable 'z[140,2]' in MIP start 0 - ignored
+Unknown variable 'z[88,1]' in MIP start 0 - ignored
+Unknown variable 'z[88,2]' in MIP start 0 - ignored
+Unknown variable 'z[70,1]' in MIP start 0 - ignored
+Unknown variable 'z[70,2]' in MIP start 0 - ignored
+Unknown variable 'z[87,1]' in MIP start 0 - ignored
+Unknown variable 'z[87,2]' in MIP start 0 - ignored
+Unknown variable 'z[36,1]' in MIP start 0 - ignored
+Unknown variable 'z[36,2]' in MIP start 0 - ignored
+Unknown variable 'z[21,1]' in MIP start 0 - ignored
+Unknown variable 'z[21,2]' in MIP start 0 - ignored
+Unknown variable 'z[9,1]' in MIP start 0 - ignored
+Unknown variable 'z[9,2]' in MIP start 0 - ignored
+Unknown variable 'z[103,1]' in MIP start 0 - ignored
+Unknown variable 'z[103,2]' in MIP start 0 - ignored
+Unknown variable 'z[67,1]' in MIP start 0 - ignored
+Unknown variable 'z[67,2]' in MIP start 0 - ignored
+Unknown variable 'z[192,1]' in MIP start 0 - ignored
+Unknown variable 'z[192,2]' in MIP start 0 - ignored
+Unknown variable 'z[117,1]' in MIP start 0 - ignored
+Unknown variable 'z[117,2]' in MIP start 0 - ignored
+Unknown variable 'z[47,1]' in MIP start 0 - ignored
+Unknown variable 'z[47,2]' in MIP start 0 - ignored
+Unknown variable 'z[172,1]' in MIP start 0 - ignored
+Unknown variable 'z[172,2]' in MIP start 0 - ignored
+Unknown variable 'l[1]' in MIP start 0 - ignored
+Unknown variable 'l[2]' in MIP start 0 - ignored
+Unknown variable 'c[1]' in MIP start 0 - ignored
+Unknown variable 'c[2]' in MIP start 0 - ignored
+Unknown variable 'n[187,1]' in MIP start 0 - ignored
+Unknown variable 'n[187,2]' in MIP start 0 - ignored
+Unknown variable 'n[46,1]' in MIP start 0 - ignored
+Unknown variable 'n[46,2]' in MIP start 0 - ignored
+Unknown variable 'n[138,1]' in MIP start 0 - ignored
+Unknown variable 'n[138,2]' in MIP start 0 - ignored
+Unknown variable 'n[195,1]' in MIP start 0 - ignored
+Unknown variable 'n[195,2]' in MIP start 0 - ignored
+Unknown variable 'n[108,1]' in MIP start 0 - ignored
+Unknown variable 'n[108,2]' in MIP start 0 - ignored
+Unknown variable 'n[62,1]' in MIP start 0 - ignored
+Unknown variable 'n[62,2]' in MIP start 0 - ignored
+Unknown variable 'n[2,1]' in MIP start 0 - ignored
+Unknown variable 'n[2,2]' in MIP start 0 - ignored
+Unknown variable 'n[59,1]' in MIP start 0 - ignored
+Unknown variable 'n[59,2]' in MIP start 0 - ignored
+Unknown variable 'n[136,1]' in MIP start 0 - ignored
+Unknown variable 'n[136,2]' in MIP start 0 - ignored
+Unknown variable 'n[197,1]' in MIP start 0 - ignored
+Unknown variable 'n[197,2]' in MIP start 0 - ignored
+Unknown variable 'n[43,1]' in MIP start 0 - ignored
+Unknown variable 'n[43,2]' in MIP start 0 - ignored
+Unknown variable 'n[10,1]' in MIP start 0 - ignored
+Unknown variable 'n[10,2]' in MIP start 0 - ignored
+Unknown variable 'n[194,1]' in MIP start 0 - ignored
+Unknown variable 'n[194,2]' in MIP start 0 - ignored
+Unknown variable 'n[73,1]' in MIP start 0 - ignored
+Unknown variable 'n[73,2]' in MIP start 0 - ignored
+Unknown variable 'n[196,1]' in MIP start 0 - ignored
+Unknown variable 'n[196,2]' in MIP start 0 - ignored
+Unknown variable 'n[178,1]' in MIP start 0 - ignored
+Unknown variable 'n[178,2]' in MIP start 0 - ignored
+Unknown variable 'n[175,1]' in MIP start 0 - ignored
+Unknown variable 'n[175,2]' in MIP start 0 - ignored
+Unknown variable 'n[126,1]' in MIP start 0 - ignored
+Unknown variable 'n[126,2]' in MIP start 0 - ignored
+Unknown variable 'n[93,1]' in MIP start 0 - ignored
+Unknown variable 'n[93,2]' in MIP start 0 - ignored
+Unknown variable 'n[112,1]' in MIP start 0 - ignored
+Unknown variable 'n[112,2]' in MIP start 0 - ignored
+Unknown variable 'n[158,1]' in MIP start 0 - ignored
+Unknown variable 'n[158,2]' in MIP start 0 - ignored
+Unknown variable 'n[191,1]' in MIP start 0 - ignored
+Unknown variable 'n[191,2]' in MIP start 0 - ignored
+Unknown variable 'n[50,1]' in MIP start 0 - ignored
+Unknown variable 'n[50,2]' in MIP start 0 - ignored
+Unknown variable 'n[0,1]' in MIP start 0 - ignored
+Unknown variable 'n[0,2]' in MIP start 0 - ignored
+Unknown variable 'n[94,1]' in MIP start 0 - ignored
+Unknown variable 'n[94,2]' in MIP start 0 - ignored
+Unknown variable 'n[110,1]' in MIP start 0 - ignored
+Unknown variable 'n[110,2]' in MIP start 0 - ignored
+Unknown variable 'n[95,1]' in MIP start 0 - ignored
+Unknown variable 'n[95,2]' in MIP start 0 - ignored
+Unknown variable 'n[64,1]' in MIP start 0 - ignored
+Unknown variable 'n[64,2]' in MIP start 0 - ignored
+Unknown variable 'n[167,1]' in MIP start 0 - ignored
+Unknown variable 'n[167,2]' in MIP start 0 - ignored
+Unknown variable 'n[41,1]' in MIP start 0 - ignored
+Unknown variable 'n[41,2]' in MIP start 0 - ignored
+Unknown variable 'n[69,1]' in MIP start 0 - ignored
+Unknown variable 'n[69,2]' in MIP start 0 - ignored
+Unknown variable 'n[49,1]' in MIP start 0 - ignored
+Unknown variable 'n[49,2]' in MIP start 0 - ignored
+Unknown variable 'n[48,1]' in MIP start 0 - ignored
+Unknown variable 'n[48,2]' in MIP start 0 - ignored
+Unknown variable 'n[85,1]' in MIP start 0 - ignored
+Unknown variable 'n[85,2]' in MIP start 0 - ignored
+Unknown variable 'n[13,1]' in MIP start 0 - ignored
+Unknown variable 'n[13,2]' in MIP start 0 - ignored
+Unknown variable 'n[161,1]' in MIP start 0 - ignored
+Unknown variable 'n[161,2]' in MIP start 0 - ignored
+Unknown variable 'n[23,1]' in MIP start 0 - ignored
+Unknown variable 'n[23,2]' in MIP start 0 - ignored
+Unknown variable 'n[186,1]' in MIP start 0 - ignored
+Unknown variable 'n[186,2]' in MIP start 0 - ignored
+Unknown variable 'n[135,1]' in MIP start 0 - ignored
+Unknown variable 'n[135,2]' in MIP start 0 - ignored
+Unknown variable 'n[20,1]' in MIP start 0 - ignored
+Unknown variable 'n[20,2]' in MIP start 0 - ignored
+Unknown variable 'n[15,1]' in MIP start 0 - ignored
+Unknown variable 'n[15,2]' in MIP start 0 - ignored
+Unknown variable 'n[78,1]' in MIP start 0 - ignored
+Unknown variable 'n[78,2]' in MIP start 0 - ignored
+Unknown variable 'n[104,1]' in MIP start 0 - ignored
+Unknown variable 'n[104,2]' in MIP start 0 - ignored
+Unknown variable 'n[52,1]' in MIP start 0 - ignored
+Unknown variable 'n[52,2]' in MIP start 0 - ignored
+Unknown variable 'n[100,1]' in MIP start 0 - ignored
+Unknown variable 'n[100,2]' in MIP start 0 - ignored
+Unknown variable 'n[76,1]' in MIP start 0 - ignored
+Unknown variable 'n[76,2]' in MIP start 0 - ignored
+Unknown variable 'n[3,1]' in MIP start 0 - ignored
+Unknown variable 'n[3,2]' in MIP start 0 - ignored
+Unknown variable 'n[116,1]' in MIP start 0 - ignored
+Unknown variable 'n[116,2]' in MIP start 0 - ignored
+Unknown variable 'n[164,1]' in MIP start 0 - ignored
+Unknown variable 'n[164,2]' in MIP start 0 - ignored
+Unknown variable 'n[198,1]' in MIP start 0 - ignored
+Unknown variable 'n[198,2]' in MIP start 0 - ignored
+Unknown variable 'n[6,1]' in MIP start 0 - ignored
+Unknown variable 'n[6,2]' in MIP start 0 - ignored
+Unknown variable 'n[68,1]' in MIP start 0 - ignored
+Unknown variable 'n[68,2]' in MIP start 0 - ignored
+Unknown variable 'n[84,1]' in MIP start 0 - ignored
+Unknown variable 'n[84,2]' in MIP start 0 - ignored
+Unknown variable 'n[121,1]' in MIP start 0 - ignored
+Unknown variable 'n[121,2]' in MIP start 0 - ignored
+Unknown variable 'n[155,1]' in MIP start 0 - ignored
+Unknown variable 'n[155,2]' in MIP start 0 - ignored
+Unknown variable 'n[171,1]' in MIP start 0 - ignored
+Unknown variable 'n[171,2]' in MIP start 0 - ignored
+Unknown variable 'n[156,1]' in MIP start 0 - ignored
+Unknown variable 'n[156,2]' in MIP start 0 - ignored
+Unknown variable 'n[91,1]' in MIP start 0 - ignored
+Unknown variable 'n[91,2]' in MIP start 0 - ignored
+Unknown variable 'n[199,1]' in MIP start 0 - ignored
+Unknown variable 'n[199,2]' in MIP start 0 - ignored
+Unknown variable 'n[11,1]' in MIP start 0 - ignored
+Unknown variable 'n[11,2]' in MIP start 0 - ignored
+Unknown variable 'n[119,1]' in MIP start 0 - ignored
+Unknown variable 'n[119,2]' in MIP start 0 - ignored
+Unknown variable 'n[102,1]' in MIP start 0 - ignored
+Unknown variable 'n[102,2]' in MIP start 0 - ignored
+Unknown variable 'n[35,1]' in MIP start 0 - ignored
+Unknown variable 'n[35,2]' in MIP start 0 - ignored
+Unknown variable 'n[57,1]' in MIP start 0 - ignored
+Unknown variable 'n[57,2]' in MIP start 0 - ignored
+Unknown variable 'n[65,1]' in MIP start 0 - ignored
+Unknown variable 'n[65,2]' in MIP start 0 - ignored
+Unknown variable 'n[1,1]' in MIP start 0 - ignored
+Unknown variable 'n[1,2]' in MIP start 0 - ignored
+Unknown variable 'n[120,1]' in MIP start 0 - ignored
+Unknown variable 'n[120,2]' in MIP start 0 - ignored
+Unknown variable 'n[162,1]' in MIP start 0 - ignored
+Unknown variable 'n[162,2]' in MIP start 0 - ignored
+Unknown variable 'n[42,1]' in MIP start 0 - ignored
+Unknown variable 'n[42,2]' in MIP start 0 - ignored
+Unknown variable 'n[105,1]' in MIP start 0 - ignored
+Unknown variable 'n[105,2]' in MIP start 0 - ignored
+Unknown variable 'n[132,1]' in MIP start 0 - ignored
+Unknown variable 'n[132,2]' in MIP start 0 - ignored
+Unknown variable 'n[173,1]' in MIP start 0 - ignored
+Unknown variable 'n[173,2]' in MIP start 0 - ignored
+Unknown variable 'n[17,1]' in MIP start 0 - ignored
+Unknown variable 'n[17,2]' in MIP start 0 - ignored
+Unknown variable 'n[38,1]' in MIP start 0 - ignored
+Unknown variable 'n[38,2]' in MIP start 0 - ignored
+Unknown variable 'n[133,1]' in MIP start 0 - ignored
+Unknown variable 'n[133,2]' in MIP start 0 - ignored
+Unknown variable 'n[53,1]' in MIP start 0 - ignored
+Unknown variable 'n[53,2]' in MIP start 0 - ignored
+Unknown variable 'n[157,1]' in MIP start 0 - ignored
+Unknown variable 'n[157,2]' in MIP start 0 - ignored
+Unknown variable 'n[128,1]' in MIP start 0 - ignored
+Unknown variable 'n[128,2]' in MIP start 0 - ignored
+Unknown variable 'n[34,1]' in MIP start 0 - ignored
+Unknown variable 'n[34,2]' in MIP start 0 - ignored
+Unknown variable 'n[28,1]' in MIP start 0 - ignored
+Unknown variable 'n[28,2]' in MIP start 0 - ignored
+Unknown variable 'n[114,1]' in MIP start 0 - ignored
+Unknown variable 'n[114,2]' in MIP start 0 - ignored
+Unknown variable 'n[151,1]' in MIP start 0 - ignored
+Unknown variable 'n[151,2]' in MIP start 0 - ignored
+Unknown variable 'n[31,1]' in MIP start 0 - ignored
+Unknown variable 'n[31,2]' in MIP start 0 - ignored
+Unknown variable 'n[166,1]' in MIP start 0 - ignored
+Unknown variable 'n[166,2]' in MIP start 0 - ignored
+Unknown variable 'n[127,1]' in MIP start 0 - ignored
+Unknown variable 'n[127,2]' in MIP start 0 - ignored
+Unknown variable 'n[176,1]' in MIP start 0 - ignored
+Unknown variable 'n[176,2]' in MIP start 0 - ignored
+Unknown variable 'n[32,1]' in MIP start 0 - ignored
+Unknown variable 'n[32,2]' in MIP start 0 - ignored
+Unknown variable 'n[142,1]' in MIP start 0 - ignored
+Unknown variable 'n[142,2]' in MIP start 0 - ignored
+Unknown variable 'n[169,1]' in MIP start 0 - ignored
+Unknown variable 'n[169,2]' in MIP start 0 - ignored
+Unknown variable 'n[147,1]' in MIP start 0 - ignored
+Unknown variable 'n[147,2]' in MIP start 0 - ignored
+Unknown variable 'n[29,1]' in MIP start 0 - ignored
+Unknown variable 'n[29,2]' in MIP start 0 - ignored
+Unknown variable 'n[99,1]' in MIP start 0 - ignored
+Unknown variable 'n[99,2]' in MIP start 0 - ignored
+Unknown variable 'n[82,1]' in MIP start 0 - ignored
+Unknown variable 'n[82,2]' in MIP start 0 - ignored
+Unknown variable 'n[79,1]' in MIP start 0 - ignored
+Unknown variable 'n[79,2]' in MIP start 0 - ignored
+Unknown variable 'n[115,1]' in MIP start 0 - ignored
+Unknown variable 'n[115,2]' in MIP start 0 - ignored
+Unknown variable 'n[148,1]' in MIP start 0 - ignored
+Unknown variable 'n[148,2]' in MIP start 0 - ignored
+Unknown variable 'n[193,1]' in MIP start 0 - ignored
+Unknown variable 'n[193,2]' in MIP start 0 - ignored
+Unknown variable 'n[72,1]' in MIP start 0 - ignored
+Unknown variable 'n[72,2]' in MIP start 0 - ignored
+Unknown variable 'n[77,1]' in MIP start 0 - ignored
+Unknown variable 'n[77,2]' in MIP start 0 - ignored
+Unknown variable 'n[25,1]' in MIP start 0 - ignored
+Unknown variable 'n[25,2]' in MIP start 0 - ignored
+Unknown variable 'n[165,1]' in MIP start 0 - ignored
+Unknown variable 'n[165,2]' in MIP start 0 - ignored
+Unknown variable 'n[81,1]' in MIP start 0 - ignored
+Unknown variable 'n[81,2]' in MIP start 0 - ignored
+Unknown variable 'n[188,1]' in MIP start 0 - ignored
+Unknown variable 'n[188,2]' in MIP start 0 - ignored
+Unknown variable 'n[174,1]' in MIP start 0 - ignored
+Unknown variable 'n[174,2]' in MIP start 0 - ignored
+Unknown variable 'n[190,1]' in MIP start 0 - ignored
+Unknown variable 'n[190,2]' in MIP start 0 - ignored
+Unknown variable 'n[39,1]' in MIP start 0 - ignored
+Unknown variable 'n[39,2]' in MIP start 0 - ignored
+Unknown variable 'n[58,1]' in MIP start 0 - ignored
+Unknown variable 'n[58,2]' in MIP start 0 - ignored
+Unknown variable 'n[140,1]' in MIP start 0 - ignored
+Unknown variable 'n[140,2]' in MIP start 0 - ignored
+Unknown variable 'n[88,1]' in MIP start 0 - ignored
+Unknown variable 'n[88,2]' in MIP start 0 - ignored
+Unknown variable 'n[70,1]' in MIP start 0 - ignored
+Unknown variable 'n[70,2]' in MIP start 0 - ignored
+Unknown variable 'n[87,1]' in MIP start 0 - ignored
+Unknown variable 'n[87,2]' in MIP start 0 - ignored
+Unknown variable 'n[36,1]' in MIP start 0 - ignored
+Unknown variable 'n[36,2]' in MIP start 0 - ignored
+Unknown variable 'n[21,1]' in MIP start 0 - ignored
+Unknown variable 'n[21,2]' in MIP start 0 - ignored
+Unknown variable 'n[9,1]' in MIP start 0 - ignored
+Unknown variable 'n[9,2]' in MIP start 0 - ignored
+Unknown variable 'n[103,1]' in MIP start 0 - ignored
+Unknown variable 'n[103,2]' in MIP start 0 - ignored
+Unknown variable 'n[67,1]' in MIP start 0 - ignored
+Unknown variable 'n[67,2]' in MIP start 0 - ignored
+Unknown variable 'n[192,1]' in MIP start 0 - ignored
+Unknown variable 'n[192,2]' in MIP start 0 - ignored
+Unknown variable 'n[117,1]' in MIP start 0 - ignored
+Unknown variable 'n[117,2]' in MIP start 0 - ignored
+Unknown variable 'n[47,1]' in MIP start 0 - ignored
+Unknown variable 'n[47,2]' in MIP start 0 - ignored
+Unknown variable 'n[172,1]' in MIP start 0 - ignored
+Unknown variable 'n[172,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[187,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[187,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[46,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[46,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[138,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[138,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[195,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[195,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[108,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[108,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[62,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[62,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[2,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[2,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[59,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[59,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[136,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[136,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[197,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[197,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[43,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[43,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[10,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[10,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[194,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[194,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[73,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[73,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[196,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[196,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[178,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[178,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[175,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[175,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[126,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[126,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[93,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[93,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[112,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[112,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[158,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[158,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[191,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[191,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[50,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[50,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[0,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[0,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[94,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[94,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[110,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[110,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[95,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[95,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[64,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[64,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[167,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[167,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[41,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[41,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[69,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[69,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[49,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[49,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[48,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[48,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[85,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[85,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[13,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[13,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[161,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[161,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[23,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[23,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[186,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[186,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[135,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[135,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[20,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[20,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[15,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[15,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[78,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[78,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[104,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[104,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[52,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[52,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[100,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[100,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[76,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[76,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[3,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[3,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[116,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[116,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[164,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[164,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[198,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[198,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[6,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[6,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[68,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[68,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[84,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[84,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[121,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[121,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[155,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[155,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[171,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[171,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[156,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[156,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[91,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[91,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[199,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[199,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[11,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[11,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[119,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[119,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[102,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[102,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[35,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[35,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[57,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[57,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[65,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[65,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[1,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[1,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[120,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[120,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[162,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[162,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[42,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[42,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[105,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[105,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[132,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[132,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[173,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[173,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[17,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[17,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[38,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[38,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[133,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[133,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[53,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[53,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[157,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[157,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[128,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[128,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[34,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[34,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[28,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[28,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[114,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[114,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[151,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[151,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[31,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[31,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[166,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[166,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[127,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[127,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[176,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[176,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[32,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[32,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[142,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[142,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[169,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[169,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[147,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[147,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[29,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[29,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[99,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[99,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[82,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[82,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[79,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[79,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[115,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[115,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[148,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[148,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[193,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[193,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[72,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[72,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[77,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[77,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[25,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[25,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[165,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[165,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[81,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[81,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[188,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[188,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[174,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[174,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[190,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[190,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[39,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[39,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[58,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[58,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[140,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[140,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[88,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[88,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[70,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[70,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[87,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[87,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[36,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[36,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[21,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[21,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[9,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[9,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[103,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[103,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[67,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[67,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[192,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[192,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[117,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[117,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[47,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[47,2]' in MIP start 0 - ignored
+Unknown variable 'n_abs[172,1]' in MIP start 0 - ignored
+Unknown variable 'n_abs[172,2]' in MIP start 0 - ignored
+Read MIP start from file WarmStarts/pwLinear_0.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 1582 rows, 1484 columns and 13510 nonzeros
+Model fingerprint: 0x1ca07aef
+Model has 960 general constraints
+Variable types: 967 continuous, 517 integer (487 binary)
+Coefficient statistics:
+  Matrix range     [2e-02, 4e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+00]
+  GenCon rhs range [6e-02, 1e+01]
+  GenCon coe range [1e+00, 1e+00]
+
+Warning: Completing partial solution with 506 unfixed non-continuous variables out of 517
+User MIP start produced solution with objective 397.73 (0.05s)
+User MIP start produced solution with objective 366.17 (0.07s)
+User MIP start produced solution with objective 341.52 (0.15s)
+Loaded user MIP start with objective 341.52
+
+Presolve added 797 rows and 0 columns
+Presolve removed 0 rows and 29 columns
+Presolve time: 0.04s
+Presolved: 2379 rows, 1455 columns, 18041 nonzeros
+Presolved model has 472 SOS constraint(s)
+Variable types: 953 continuous, 502 integer (502 binary)
+
+Root relaxation: objective 3.570000e+00, 606 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    3.57000    0  123  341.52000    3.57000  99.0%     -    0s
+     0     0    3.57000    0  124  341.52000    3.57000  99.0%     -    0s
+     0     0    3.57000    0  124  341.52000    3.57000  99.0%     -    0s
+     0     0    3.57000    0  117  341.52000    3.57000  99.0%     -    0s
+     0     0    3.57000    0  117  341.52000    3.57000  99.0%     -    0s
+     0     2    3.57000    0  117  341.52000    3.57000  99.0%     -    0s
+
+Cutting planes:
+  Gomory: 3
+  Cover: 431
+  Implied bound: 18
+  Clique: 1
+  MIR: 1
+  Inf proof: 1
+  Relax-and-lift: 1
+
+Explored 5421 nodes (127070 simplex iterations) in 2.19 seconds (2.58 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 3: 341.52 366.17 397.73 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.415200000000e+02, best bound 3.415200000000e+02, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Tue Apr 23 13:31:44 2024
+
+Set parameter LogFile to value "GurobiLogs/pwLinear_0.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/pwLinear_0.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 1582 rows, 1484 columns and 13510 nonzeros
+Model fingerprint: 0x8ff28572
+Model has 960 general constraints
+Variable types: 967 continuous, 517 integer (487 binary)
+Coefficient statistics:
+  Matrix range     [2e-02, 4e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+00]
+  GenCon rhs range [6e-02, 1e+01]
+  GenCon coe range [1e+00, 1e+00]
+
+User MIP start produced solution with objective 341.52 (0.01s)
+Loaded user MIP start with objective 341.52
+
+Presolve added 748 rows and 0 columns
+Presolve removed 0 rows and 59 columns
+Presolve time: 0.04s
+Presolved: 2330 rows, 1425 columns, 17094 nonzeros
+Presolved model has 462 SOS constraint(s)
+Variable types: 933 continuous, 492 integer (492 binary)
+
+Root relaxation: objective 3.570000e+00, 596 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    3.57000    0  123  341.52000    3.57000  99.0%     -    0s
+     0     0    3.57000    0  124  341.52000    3.57000  99.0%     -    0s
+     0     0    3.57000    0  124  341.52000    3.57000  99.0%     -    0s
+     0     0    3.57000    0  117  341.52000    3.57000  99.0%     -    0s
+     0     0    3.57000    0  117  341.52000    3.57000  99.0%     -    0s
+     0     2    3.57000    0  117  341.52000    3.57000  99.0%     -    0s
+H  424   131                     334.8900000    3.57000  98.9%  46.6    0s
+H 5135   834                     333.8000000   39.08000  88.3%  31.8    2s
+
+Explored 9553 nodes (246004 simplex iterations) in 3.97 seconds (6.68 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 3: 333.8 334.89 341.52 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.338000000000e+02, best bound 3.338000000000e+02, gap 0.0000%

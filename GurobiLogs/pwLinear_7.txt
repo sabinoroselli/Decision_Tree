@@ -1,0 +1,62 @@
+
+Gurobi 11.0.0 (mac64[arm]) logging started Tue Apr 23 13:44:16 2024
+
+Set parameter LogFile to value "GurobiLogs/pwLinear_7.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/pwLinear_7.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 3382 rows, 2034 columns and 35902 nonzeros
+Model fingerprint: 0xee1ca810
+Model has 670 general constraints
+Variable types: 1387 continuous, 647 integer (647 binary)
+Coefficient statistics:
+  Matrix range     [2e-02, 6e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 6e+02]
+
+User MIP start produced solution with objective 140.399 (0.03s)
+Loaded user MIP start with objective 140.399
+
+Presolve added 1396 rows and 90 columns
+Presolve time: 0.05s
+Presolved: 4778 rows, 2124 columns, 39721 nonzeros
+Variable types: 1447 continuous, 677 integer (677 binary)
+
+Root relaxation: objective 0.000000e+00, 1581 iterations, 0.03 seconds (0.12 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0  298  140.39946    0.00000   100%     -    0s
+     0     0    0.00000    0  298  140.39946    0.00000   100%     -    0s
+     0     0    0.00000    0  298  140.39946    0.00000   100%     -    0s
+     0     0    0.00000    0  298  140.39946    0.00000   100%     -    0s
+     0     0    0.00000    0  298  140.39946    0.00000   100%     -    0s
+     0     0    0.00000    0  301  140.39946    0.00000   100%     -    0s
+     0     0    0.00000    0  298  140.39946    0.00000   100%     -    0s
+     0     0    0.00000    0  298  140.39946    0.00000   100%     -    0s
+     0     0    0.00000    0  298  140.39946    0.00000   100%     -    0s
+     0     0    0.00000    0  298  140.39946    0.00000   100%     -    1s
+     0     0    0.00000    0  298  140.39946    0.00000   100%     -    1s
+     0     2    0.00000    0  298  140.39946    0.00000   100%     -    1s
+   815  1546    0.00000   65  293  140.39946    0.00000   100%   251    5s
+  3487  1838    0.00000   58  271  140.39946    0.00000   100%   157   10s
+
+Cutting planes:
+  Cover: 15
+  MIR: 97
+  StrongCG: 1
+  Flow cover: 23
+
+Explored 4508 nodes (709496 simplex iterations) in 11.94 seconds (37.06 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 1: 140.399 
+
+Solve interrupted
+Best objective 1.403994603042e+02, best bound 0.000000000000e+00, gap 100.0000%
