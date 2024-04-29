@@ -1,14 +1,202 @@
 {
-    "biomed": [
-        81.75,
-        54.17
-    ],
-    "blogger": [
-        80.0,
-        16.67
-    ],
-    "corral": [
-        95.83,
-        8.68
-    ]
+    "blogger": {
+        "Accuracy": [
+            83.17,
+            70.81
+        ],
+        "Leaves": [
+            18.9,
+            2.22
+        ]
+    },
+    "boxing": {
+        "Accuracy": [
+            80.28,
+            67.06
+        ],
+        "Leaves": [
+            24.2,
+            6.09
+        ]
+    },
+    "mux6": {
+        "Accuracy": [
+            95.9,
+            26.55
+        ],
+        "Leaves": [
+            22.67,
+            11.29
+        ]
+    },
+    "corral": {
+        "Accuracy": [
+            98.65,
+            7.61
+        ],
+        "Leaves": [
+            13.33,
+            3.02
+        ]
+    },
+    "biomed": {
+        "Accuracy": [
+            86.35,
+            27.58
+        ],
+        "Leaves": [
+            16.67,
+            2.76
+        ]
+    },
+    "ionosphere": {
+        "Accuracy": [
+            87.52,
+            18.49
+        ],
+        "Leaves": [
+            20.7,
+            4.21
+        ]
+    },
+    "jEdit": {
+        "Accuracy": [
+            59.96,
+            20.02
+        ],
+        "Leaves": [
+            77.8,
+            13.63
+        ]
+    },
+    "schizo": {
+        "Accuracy": [
+            79.95,
+            22.4
+        ],
+        "Leaves": [
+            37.47,
+            14.78
+        ]
+    },
+    "colic": {
+        "Accuracy": [
+            80.54,
+            10.17
+        ],
+        "Leaves": [
+            35.07,
+            3.86
+        ]
+    },
+    "threeOf9": {
+        "Accuracy": [
+            98.76,
+            2.11
+        ],
+        "Leaves": [
+            30.17,
+            1.67
+        ]
+    },
+    "R_data_frame": {
+        "Accuracy": [
+            92.16,
+            6.87
+        ],
+        "Leaves": [
+            18.4,
+            6.57
+        ]
+    },
+    "australian": {
+        "Accuracy": [
+            81.33,
+            10.63
+        ],
+        "Leaves": [
+            72.33,
+            27.49
+        ]
+    },
+    "doa_bwin_balanced": {
+        "Accuracy": [
+            65.45,
+            15.8
+        ],
+        "Leaves": [
+            106.7,
+            37.28
+        ]
+    },
+    "blood-transf": {
+        "Accuracy": [
+            72.07,
+            8.87
+        ],
+        "Leaves": [
+            162.47,
+            55.38
+        ]
+    },
+    "autoUniv": {
+        "Accuracy": [
+            68.53,
+            15.52
+        ],
+        "Leaves": [
+            221.37,
+            100.7
+        ]
+    },
+    "parity": {
+        "Accuracy": [
+            66.53,
+            97.86
+        ],
+        "Leaves": [
+            446.53,
+            8347.25
+        ]
+    },
+    "banknote": {
+        "Accuracy": [
+            98.26,
+            0.68
+        ],
+        "Leaves": [
+            24.2,
+            5.49
+        ]
+    },
+    "gametes_Epistasis": {
+        "Accuracy": [
+            51.85,
+            6.9
+        ],
+        "Leaves": [
+            424.13,
+            139.12
+        ]
+    },
+    "kr-vs-kp": {
+        "Accuracy": [
+            99.47,
+            0.12
+        ],
+        "Leaves": [
+            48.7,
+            13.01
+        ]
+    },
+    "banana": {
+        "Accuracy": [
+            87.18,
+            0.77
+        ],
+        "Leaves": [
+            490.3,
+            173.81
+        ]
+    }
 }

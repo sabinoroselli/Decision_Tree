@@ -7,7 +7,7 @@
 @attribute u5 numeric
 @attribute u6 numeric
 @attribute u7 numeric
-@attribute y numeric
+@attribute class numeric
 
 @data
 0.26890035,0.65089438,0.83274183,0.58342045,0.78475930,0.84307935,0.82207920,0.18029533

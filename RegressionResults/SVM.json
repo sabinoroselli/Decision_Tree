@@ -1,28 +1,202 @@
 {
-    "auto93": {
-        "MAPE": [
-            32.05,
-            0.0
+    "wisconsin": {
+        "RelAbsErr": [
+            1.0,
+            0.01
         ],
-        "RAE": [
-            0.77,
-            0.0
+        "RelRootSqErr": [
+            1.05,
+            0.01
+        ]
+    },
+    "pwLinear": {
+        "RelAbsErr": [
+            0.51,
+            0.01
         ],
-        "RRSE": [
-            32.05,
+        "RelRootSqErr": [
+            0.52,
             0.0
         ]
     },
-    "bolts": [
-        36.05,
-        11.43
-    ],
-    "cpu": [
-        19.39,
-        1.08
-    ],
-    "pwLinear": [
-        190.56,
-        473.98
-    ]
+    "cpu": {
+        "RelAbsErr": [
+            0.26,
+            0.0
+        ],
+        "RelRootSqErr": [
+            0.33,
+            0.01
+        ]
+    },
+    "yacht_hydrodynamics": {
+        "RelAbsErr": [
+            0.57,
+            0.0
+        ],
+        "RelRootSqErr": [
+            0.7,
+            0.0
+        ]
+    },
+    "RAM_price": {
+        "RelAbsErr": [
+            121.54,
+            77889.51
+        ],
+        "RelRootSqErr": [
+            48.67,
+            13176.21
+        ]
+    },
+    "autoMpg": {
+        "RelAbsErr": [
+            0.34,
+            0.0
+        ],
+        "RelRootSqErr": [
+            0.38,
+            0.0
+        ]
+    },
+    "vineyard": {
+        "RelAbsErr": [
+            0.65,
+            0.0
+        ],
+        "RelRootSqErr": [
+            0.68,
+            0.0
+        ]
+    },
+    "boston_corrected": {
+        "RelAbsErr": [
+            0.49,
+            0.0
+        ],
+        "RelRootSqErr": [
+            0.54,
+            0.0
+        ]
+    },
+    "forest_fires": {
+        "RelAbsErr": [
+            0.82,
+            0.01
+        ],
+        "RelRootSqErr": [
+            1.01,
+            0.0
+        ]
+    },
+    "meta": {
+        "RelAbsErr": [
+            0.93,
+            0.07
+        ],
+        "RelRootSqErr": [
+            0.96,
+            0.0
+        ]
+    },
+    "arsenic-female-lung": {
+        "RelAbsErr": [
+            0.98,
+            0.59
+        ],
+        "RelRootSqErr": [
+            1.01,
+            0.83
+        ]
+    },
+    "arsenic-male-lung": {
+        "RelAbsErr": [
+            1.48,
+            2.57
+        ],
+        "RelRootSqErr": [
+            1.66,
+            3.54
+        ]
+    },
+    "titanic_1": {
+        "RelAbsErr": [
+            0.49,
+            0.0
+        ],
+        "RelRootSqErr": [
+            0.89,
+            0.0
+        ]
+    },
+    "stock": {
+        "RelAbsErr": [
+            0.34,
+            0.0
+        ],
+        "RelRootSqErr": [
+            0.38,
+            0.0
+        ]
+    },
+    "Bank-Note": {
+        "RelAbsErr": [
+            0.27,
+            0.0
+        ],
+        "RelRootSqErr": [
+            0.37,
+            0.0
+        ]
+    },
+    "balloon": {
+        "RelAbsErr": [
+            0.31,
+            0.0
+        ],
+        "RelRootSqErr": [
+            0.26,
+            0.0
+        ]
+    },
+    "debutanizer": {
+        "RelAbsErr": [
+            0.88,
+            0.0
+        ],
+        "RelRootSqErr": [
+            0.9,
+            0.0
+        ]
+    },
+    "analcatdata_supreme": {
+        "RelAbsErr": [
+            0.67,
+            0.0
+        ],
+        "RelRootSqErr": [
+            0.9,
+            0.0
+        ]
+    },
+    "Long": {
+        "RelAbsErr": [
+            0.63,
+            0.0
+        ],
+        "RelRootSqErr": [
+            0.7,
+            0.0
+        ]
+    },
+    "KDD": {
+        "RelAbsErr": [
+            0.64,
+            0.0
+        ],
+        "RelRootSqErr": [
+            0.88,
+            0.0
+        ]
+    }
 }

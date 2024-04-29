@@ -264,3 +264,70 @@ Solution count 1: 72
 
 Solve interrupted
 Best objective 7.200000000000e+01, best bound 0.000000000000e+00, gap 100.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Wed May  1 15:06:05 2024
+
+Set parameter LogFile to value "GurobiLogs/delta_ailerons_7.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/delta_ailerons_7.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 11072 rows, 5269 columns and 67655 nonzeros
+Model fingerprint: 0x9db6c98e
+Model has 20 general constraints
+Variable types: 2647 continuous, 2622 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-04, 6e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 6e+00]
+
+User MIP start produced solution with objective 72 (0.01s)
+Loaded user MIP start with objective 72
+
+Presolve added 35 rows and 0 columns
+Presolve removed 0 rows and 2 columns
+Presolve time: 0.10s
+Presolved: 11107 rows, 5267 columns, 72265 nonzeros
+Variable types: 2647 continuous, 2620 integer (2620 binary)
+
+Root relaxation: objective 0.000000e+00, 2483 iterations, 0.15 seconds (0.46 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0   90   72.00000    0.00000   100%     -    0s
+     0     0    0.00000    0  809   72.00000    0.00000   100%     -    0s
+     0     0    0.00000    0  608   72.00000    0.00000   100%     -    0s
+     0     0    0.00000    0  189   72.00000    0.00000   100%     -    1s
+     0     0    0.00000    0  239   72.00000    0.00000   100%     -    1s
+     0     0    0.00000    0  142   72.00000    0.00000   100%     -    1s
+     0     0    0.00000    0  476   72.00000    0.00000   100%     -    1s
+     0     0    0.00000    0   92   72.00000    0.00000   100%     -    1s
+     0     0    0.00000    0   92   72.00000    0.00000   100%     -    2s
+     0     2    0.00000    0   85   72.00000    0.00000   100%     -    2s
+   200   154    0.00000   16 1019   72.00000    0.00000   100%   634    5s
+   763   480 infeasible   56        72.00000    0.00000   100%   338   10s
+
+Cutting planes:
+  Learned: 41
+  Gomory: 54
+  Cover: 10118
+  Implied bound: 228
+  Clique: 12
+  MIR: 1273
+  StrongCG: 119
+  GUB cover: 217
+  RLT: 58
+  Relax-and-lift: 202
+
+Explored 1586 nodes (451713 simplex iterations) in 14.81 seconds (31.37 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 1: 72 
+
+Solve interrupted
+Best objective 7.200000000000e+01, best bound 0.000000000000e+00, gap 100.0000%

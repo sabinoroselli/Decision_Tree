@@ -37,7 +37,7 @@
 @attribute TAX INTEGER
 @attribute PTRATIO REAL
 @attribute B REAL
-@attribute LSTAT REAL
+@attribute class REAL
 
 @data
 1,Nahant,0,2011,-70.955000,42.255000,24.0,24.0,0.00632,18.0,2.31,0,0.538,6.575,65.2,4.0900,1,296,15.3,396.90,4.98

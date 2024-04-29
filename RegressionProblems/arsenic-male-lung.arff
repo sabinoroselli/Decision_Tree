@@ -11,7 +11,7 @@
 @attribute conc INTEGER
 @attribute age REAL
 @attribute at.risk INTEGER
-@attribute events INTEGER
+@attribute class INTEGER
 
 @data
 1,0,22.5,2956638,14

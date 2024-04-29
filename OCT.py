@@ -11,7 +11,6 @@ def optimal_CT(df, features, labels, depth, Splits, RS, df_name,SplitType):
 
     I = df.index.values
 
-    bigM = max([df[i].max() for i in features])
 
     mu = {
         feature: min([abs(first - second)
@@ -20,8 +19,8 @@ def optimal_CT(df, features, labels, depth, Splits, RS, df_name,SplitType):
                       ])
         for feature in features
     }
-
-    mu_max = max(mu.values())
+    #
+    # mu_max = max(mu.values())
     mu_min = min(mu.values())
 
     # depth of the tree does not account for root level
@@ -65,6 +64,7 @@ def optimal_CT(df, features, labels, depth, Splits, RS, df_name,SplitType):
 
     m = Model('OCT')
     m.setParam('LogToConsole', 0)
+    m.setParam('Threads',1)
     m.setParam("LogFile", f'GurobiLogs/{df_name.split(".")[0]}_{RS}.txt')
     m.setParam('TimeLimit', 60 * 60)
 
@@ -88,9 +88,10 @@ def optimal_CT(df, features, labels, depth, Splits, RS, df_name,SplitType):
     try:
         m.read(f'WarmStarts/{df_name.split(".")[0]}_{RS}.mst')
     except:
-        print('NO WARM START')
-    else:
-        print('USING WARM START')
+        pass
+        # print('NO WARM START')
+    # else:
+    #     print('USING WARM START')
 
     if SplitType == "Parallel":
         Const_1 = m.addConstrs(
@@ -105,12 +106,12 @@ def optimal_CT(df, features, labels, depth, Splits, RS, df_name,SplitType):
             quicksum([a_abs[j, t] for j in features]) == d[t] for t in T_B
         )
 
-    Const_2 = m.addConstrs(
-        b[t] <= bigM * d[t] for t in T_B
-    )
-    Const_3 = m.addConstrs(
-        b[t] >= -bigM * d[t] for t in T_B
-    )
+    # Const_2 = m.addConstrs(
+    #     b[t] <= (1 + mu_max) * d[t] for t in T_B
+    # )
+    # Const_3 = m.addConstrs(
+    #     b[t] >= - (1 + mu_max) * d[t] for t in T_B
+    # )
 
     Const_5 = m.addConstrs(
         d[t] <= d[P[t]] for t in [i for i in T_B if i != root.value]
@@ -129,15 +130,18 @@ def optimal_CT(df, features, labels, depth, Splits, RS, df_name,SplitType):
     )
 
     Const_12 = m.addConstrs(
-        quicksum([a[j, t] * (df.loc[i, j] + mu[j] - mu_min) for j in features]) + mu_min <= b[t] + bigM * (
-                    1 - z[i, l]) * (1 + mu_max)
+        (z[i,l] == 1)
+        >>
+        (quicksum([a[j, t] * (df.loc[i, j] + mu[j]-mu_min) for j in features]) + mu_min <= b[t]) # + (1 - z[i, l]) * mu_max
         for i in I
         for l in T_L
         for t in A_l[l]
     )
 
     Const_13 = m.addConstrs(
-        quicksum([a[j, t] * df.loc[i, j] for j in features]) >= b[t] - bigM * (1 - z[i, l])
+        (z[i, l] == 1)
+        >>
+        (quicksum([a[j, t] * df.loc[i, j] for j in features]) >= b[t]) # - (1 + mu_max) * (1 - z[i, l])
         for i in I
         for l in T_L
         for t in A_r[l]
@@ -232,10 +236,10 @@ def optimal_CT(df, features, labels, depth, Splits, RS, df_name,SplitType):
 if __name__ == "__main__":
 
     label_name = 'class'
-    file = 'biomed'
+    file = 'schizo'
     RS=7
     depth = 2
-    Splits = 2
+    Splits = 3
     SplitType = 'Parallel'
 
     df = DataParser(f'{file}.arff','Classification', one_hot=True)

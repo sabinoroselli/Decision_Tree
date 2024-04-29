@@ -1,9 +1,11 @@
-from time import time as tm
+from time import process_time as tm # todo double-check this
 from sklearn.metrics import accuracy_score
 from OCT import optimal_CT
 from TreeStructure import OptimalTree
+from datetime import  datetime as dt
 
-def train_OCT(Max_depth, Train_df, Val_df, label_name,RS,df_name,SplitType,ModelTree):
+
+def train_OCT(Min_depth,Max_depth, Train_df, Val_df, label_name,RS,df_name,SplitType,ModelTree):
 
     #empty WARM START log file
     open(f'WarmStarts/{df_name.split(".")[0]}_{RS}.mst', 'w').close()
@@ -16,12 +18,10 @@ def train_OCT(Max_depth, Train_df, Val_df, label_name,RS,df_name,SplitType,Model
     best_solution = {}
     iteration_log = {}
     RunTimeLog = {}
-    for depth in range(Max_depth + 1):
+    for depth in range(Min_depth,Max_depth + 1):
         MaxSplits = 2 ** (depth) - 1
         MinSplits = MaxSplits - int(2 ** (depth - 1) - 1)
         for Splits in range(MinSplits,MaxSplits + 1):
-            print('######################################################################')
-            print(f'Splits: {Splits}')
             start = tm()
             # Solve the optimization problem to find the optimal tree structure and the optimal splits
             splitting_nodes,non_empty_nodes = optimal_CT(
@@ -47,7 +47,6 @@ def train_OCT(Max_depth, Train_df, Val_df, label_name,RS,df_name,SplitType,Model
             # Predict the train set
             train_pred = ODT.predict_class(X_train, the_tree)
             train_acc = round(accuracy_score(Y_train, train_pred) * 100, 2)
-            print(f'Accuracy (Train Set): {train_acc}%')
 
             # split validation set into features and labels
             X_val = Val_df.drop(columns=label_name)
@@ -57,7 +56,7 @@ def train_OCT(Max_depth, Train_df, Val_df, label_name,RS,df_name,SplitType,Model
             # Predict the validation set
             val_pred = ODT.predict_class(X_val,the_tree)
             val_Accuracy = round(accuracy_score(Y_val,val_pred) * 100, 2)
-            print(f'Acc (val Set): {val_Accuracy}%')
+            print(f'{df_name}({RS}) Splits: {Splits} Accuracy (Train Set): {train_acc}% Acc (val Set): {val_Accuracy}% -- {dt.now()}')
 
             iteration_log.update({
                 f'{Splits}':{

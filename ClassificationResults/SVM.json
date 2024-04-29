@@ -1,14 +1,122 @@
 {
-    "biomed": [
-        84.92,
-        23.95
-    ],
-    "blogger": [
-        71.67,
-        5.56
-    ],
-    "corral": [
-        85.42,
-        67.34
-    ]
+    "blogger": {
+        "Accuracy": [
+            70.67,
+            56.22
+        ]
+    },
+    "boxing": {
+        "Accuracy": [
+            83.89,
+            69.14
+        ]
+    },
+    "mux6": {
+        "Accuracy": [
+            62.18,
+            59.27
+        ]
+    },
+    "corral": {
+        "Accuracy": [
+            90.21,
+            31.09
+        ]
+    },
+    "biomed": {
+        "Accuracy": [
+            87.54,
+            15.77
+        ]
+    },
+    "ionosphere": {
+        "Accuracy": [
+            88.9,
+            6.36
+        ]
+    },
+    "jEdit": {
+        "Accuracy": [
+            62.48,
+            28.33
+        ]
+    },
+    "schizo": {
+        "Accuracy": [
+            59.9,
+            28.84
+        ]
+    },
+    "colic": {
+        "Accuracy": [
+            72.7,
+            18.2
+        ]
+    },
+    "threeOf9": {
+        "Accuracy": [
+            80.62,
+            12.21
+        ]
+    },
+    "R_data_frame": {
+        "Accuracy": [
+            96.96,
+            1.84
+        ]
+    },
+    "australian": {
+        "Accuracy": [
+            84.15,
+            6.26
+        ]
+    },
+    "doa_bwin_balanced": {
+        "Accuracy": [
+            60.4,
+            10.44
+        ]
+    },
+    "blood-transf": {
+        "Accuracy": [
+            75.82,
+            5.06
+        ]
+    },
+    "autoUniv": {
+        "Accuracy": [
+            73.2,
+            6.74
+        ]
+    },
+    "parity": {
+        "Accuracy": [
+            44.8,
+            8.46
+        ]
+    },
+    "banknote": {
+        "Accuracy": [
+            98.43,
+            0.58
+        ]
+    },
+    "gametes_Epistasis": {
+        "Accuracy": [
+            48.94,
+            5.2
+        ]
+    },
+    "kr-vs-kp": {
+        "Accuracy": [
+            96.71,
+            0.47
+        ]
+    },
+    "banana": {
+        "Accuracy": [
+            55.19,
+            1.55
+        ]
+    }
 }

@@ -2,7 +2,7 @@
 
 @attribute row_id numeric
 @attribute date numeric
-@attribute price numeric
+@attribute class numeric
 
 @data
 0,1957,411041792

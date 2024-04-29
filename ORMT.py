@@ -2,7 +2,6 @@ from gurobipy import *
 from TreeStructure import Parent
 from binarytree import build
 from TreeStructure import OptimalTree
-from sklearn.metrics import mean_absolute_percentage_error as MAPE
 from TreeStructure import RRSE,RAE
 from sklearn.utils import shuffle
 from DatabaseParser import DataParser
@@ -11,11 +10,23 @@ def optimal_RMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
 
     I = df.index.values
 
-    bigM = max( [abs(i) for i in df[labels[0]].values] ) # TODO maybe some more experiments on these two
+    mu = {
+        feature: min([abs(first - second)
+                      for first, second in zip(df[feature][:-1], df[feature][1:])
+                      if second != first
+                      ])
+        for feature in features
+    }
 
-    BigM = sum( [abs(i) for i in df[labels[0]].values] ) # TODO not sure this is correct
+    mu_min = min(mu.values())
+    # mu_max = max(mu.values())
+    #
+    # bigM = { # todo figure out why this does not work sometimes
+    #     i: max([abs(df.loc[i, j]) for j in features])
+    #     for i in I
+    # }
 
-    epsilon = 0#bigM/100 # TODO what value should we give to that? {0,0.1}
+    epsilon = 0
 
     # depth of the tree DOES NOT include root level
     nodes = [i for i in range(2 ** (depth + 1) - 1)]
@@ -57,6 +68,7 @@ def optimal_RMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
 
     m = Model('ORMT')
     m.setParam('LogToConsole', 0)
+    m.setParam('Threads',1)
     m.setParam("LogFile", f'GurobiLogs/{df_name.split(".")[0]}_{RS}.txt')
     m.setParam('TimeLimit', 60 * 60)
 
@@ -67,7 +79,7 @@ def optimal_RMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
     elif SplitType == "Oblique":
         a = m.addVars(features, T_B, lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='a')
         a_abs = m.addVars(features, T_B, vtype=GRB.CONTINUOUS, name='a_abs')
-    b = m.addVars(T_B,vtype=GRB.CONTINUOUS,name='b')
+    b = m.addVars(T_B,lb=-GRB.INFINITY,vtype=GRB.CONTINUOUS,name='b')
     z = m.addVars(I,T_L,vtype=GRB.BINARY,name='z') # point 'i' is in node 't'
     l = m.addVars(T_L,vtype=GRB.BINARY,name='l') # leaf 't' contains any points at all
     Beta = m.addVars(features,T_L,lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='Beta')  # coefficient for feature i at node t
@@ -81,9 +93,10 @@ def optimal_RMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
     try:
         m.read(f'WarmStarts/{df_name.split(".")[0]}_{RS}.mst')
     except:
-        print('NO WARM START')
-    else:
-        print('USING WARM START')
+        pass
+        # print('NO WARM START')
+    # else:
+    #     print('USING WARM START')
 
     if SplitType == "Parallel":
         Const_1 = m.addConstrs(
@@ -98,12 +111,12 @@ def optimal_RMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
             quicksum([a_abs[j, t] for j in features]) == d[t] for t in T_B
         )
 
-    Const_3_1 = m.addConstrs(
-            b[t] <= bigM * d[t] for t in T_B
-        )
-    Const_3_2 = m.addConstrs(
-            b[t] >= -bigM * d[t] for t in T_B
-        )
+    # Const_3_1 = m.addConstrs( do not think these are actually required
+    #         b[t] <= bigM * d[t] for t in T_B
+    #     )
+    # Const_3_2 = m.addConstrs(
+    #         b[t] >= -bigM * d[t] for t in T_B
+    #     )
 
 
     Const_5 = m.addConstrs(
@@ -122,27 +135,19 @@ def optimal_RMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
         quicksum([z[i,t] for t in T_L]) == 1 for i in I
     )
 
-    mu = {
-        feature: min([abs(first - second)
-                      for first, second in zip(df[feature][:-1], df[feature][1:])
-                      if second != first
-                      ])
-        for feature in features
-    }
-
-    mu_min = min(mu.values())
-    mu_max = max(mu.values())
-
     Const_12 = m.addConstrs(
-        quicksum([a[j, t] * (df.loc[i, j] + mu[j] - mu_min) for j in features]) + mu_min <= b[t] + bigM * (
-                    1 - z[i, l]) * (1 + mu_max)
+        (z[i,l] == 1)
+        >>
+        (quicksum([a[j, t] * (df.loc[i, j] + mu[j]-mu_min) for j in features]) + mu_min <= b[t]) #+ (1-z[i,l]) * (bigM[i] + mu_max)
         for i in I
         for l in T_L
         for t in A_l[l]
     )
 
     Const_13 = m.addConstrs(
-        quicksum([a[j, t] * df.loc[i, j] for j in features]) >= b[t] - bigM * (1 - z[i, l])
+        (z[i, l] == 1)
+        >>
+        (quicksum([a[j, t] * df.loc[i, j] for j in features]) >= b[t]) # - (1 - z[i,l]) * bigM[i]
         for i in I
         for l in T_L
         for t in A_r[l]
@@ -158,14 +163,17 @@ def optimal_RMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
 
 
     Const_16 = m.addConstrs(
-
-        gamma[i,t] + epsilon <= quicksum([ Beta[j,t] * df.loc[i,j] for j in features ]) + Delta[t] - df.loc[i,labels[0]] + BigM * (1 - z[i,t])
+        (z[i,t] == 1)
+        >>
+        (gamma[i,t] + epsilon <= quicksum([ Beta[j,t] * df.loc[i,j] for j in features ]) + Delta[t] - df.loc[i,labels[0]] )
         for i in I
         for t in T_L
     )
 
     Const_17 = m.addConstrs(
-        gamma[i, t] + epsilon >= quicksum([Beta[j, t] * df.loc[i, j] for j in features]) + Delta[t] - df.loc[i,labels[0]] - BigM * (1 - z[i, t])
+        (z[i,t] == 1)
+        >>
+        (gamma[i, t] + epsilon >= quicksum([Beta[j, t] * df.loc[i, j] for j in features]) + Delta[t] - df.loc[i,labels[0]])
         for i in I
         for t in T_L
     )
@@ -237,7 +245,7 @@ def optimal_RMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
 if __name__ == "__main__":
 
     label_name = 'class'
-    file = 'pwLinear'
+    file = 'wisconsin'
     RS = 7
     depth = 1
     Splits = 1
@@ -251,6 +259,8 @@ if __name__ == "__main__":
     df = shuffle(df, random_state=RS)
     Test_df = df.iloc[:round(len(df) * 0.2)]
     Train_df = df.iloc[len(Test_df):]
+
+    # print(Train_df.head(10))
 
     # ELIMIATING A COLUMN FROM ALL DATASETS IF ALL THE VALUES IN IT ARE THE SAME IN THE TRAIN SET
     for i in Train_df.columns:
@@ -291,10 +301,6 @@ if __name__ == "__main__":
     X_train = X_train.to_dict('index')
     Y_train = Train_df[label_name]
 
-    # Make a single prediction (mostly for debugging)
-    # x = X_train[list(X_train.keys())[0]]
-    # print(ODT.make_regression(x,the_tree))
-
     # Predict the train set
     train_pred = ODT.predict_regr(X_train, the_tree)
 
@@ -309,7 +315,6 @@ if __name__ == "__main__":
     # for ind,i in enumerate(list(Y_test)):
     #     print(i,test_pred[ind])
 
-    print('MAPE Train: ', round(MAPE(Y_train, train_pred) * 100, 2), '%','Test: ', round(MAPE(Y_test, test_pred) * 100, 2), '%')
     print('RAE Train: ', RAE(Y_train, train_pred),'Test: ', RAE(Y_test, test_pred))
     print('RRSE Train: ', RRSE(Y_train, train_pred),'Test: ', RRSE(Y_test, test_pred))
 

@@ -12,7 +12,7 @@
 @attribute RH numeric
 @attribute wind numeric
 @attribute rain numeric
-@attribute area numeric
+@attribute class numeric
 
 @data
 7,5,mar,fri,86.2,26.2,94.3,5.1,8.2,51,6.7,0,0

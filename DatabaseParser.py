@@ -11,9 +11,10 @@ def DataParser(name, ProbType, one_hot = True):
     except:
         pass
 
-    label_name = 'class'
+    label_name = 'class' # todo this should be flexible (last column in file)
 
     data = rf.load(open(f'{ProbType}Problems/{name}','rt'))
+
     df = pd.DataFrame(data['data'])
     df.columns = [i[0] for i in data['attributes'] ]
 
@@ -48,18 +49,18 @@ def DataParser(name, ProbType, one_hot = True):
         if df[i].nunique() == 1:
             df = df.drop(i, axis=1)
 
-    ##### STANDARD SCALING ####### # todo scale target for REGRESSION
+    ##### STANDARD SCALING #######
     std_scaler = StandardScaler()
-    # if ProbType == 'Classification':
-    features = list(df.columns.drop([label_name]))
-    df_scaled = df.drop(columns=label_name)
-    # else:
-    #     features = list(df.columns)
-    #     df_scaled = df
+    if ProbType == 'Classification':
+        features = list(df.columns.drop([label_name]))
+        df_scaled = df.drop(columns=label_name)
+    else:
+        features = list(df.columns)
+        df_scaled = df
     df_scaled = std_scaler.fit_transform(df_scaled.to_numpy())
     df_scaled = pd.DataFrame(df_scaled,columns=features)
-    # if ProbType == 'Classification':
-    df_scaled.insert(len(features), label_name, df[label_name], True)
+    if ProbType == 'Classification':
+        df_scaled.insert(len(features), label_name, df[label_name], True)
     df = df_scaled
 
     return df
@@ -76,10 +77,10 @@ if __name__ == "__main__":
 
     #################### CLASSIFICATION #####################
     collection = [
-        # 'kr-vs-kp',
+        'kr-vs-kp.arff',
     ]
     for i in collection:
-        df = DataParser(i)
+        df = DataParser(i,'Classification')
         print(i)
         print(df)#.to_markdown())
     #########################################

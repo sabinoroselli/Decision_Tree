@@ -12,8 +12,6 @@ def optimal_CMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
 
     I = df.index.values
 
-    bigM = max([df[i].max() for i in features])
-
     mu = {
         feature: min([abs(first - second)
                       for first, second in zip(df[feature][:-1], df[feature][1:])
@@ -23,8 +21,8 @@ def optimal_CMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
     }
 
     mu_min = min(mu.values())
-
-    mu_max = max(mu.values())
+    #
+    # mu_max = max(mu.values())
 
     # depth of the tree DOES NOT include root level
     nodes = [i for i in range(2 ** (depth + 1) - 1)]
@@ -65,9 +63,10 @@ def optimal_CMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
     }
 
     m = Model('OCMT')
-    m.setParam('LogToConsole', 0)
-    m.setParam("LogFile",f'GurobiLogs/{df_name.split(".")[0]}_{RS}.txt')
-    m.setParam('TimeLimit', 60*60)
+    # m.setParam('LogToConsole', 0)
+    # m.setParam('Threads',1)
+    # m.setParam("LogFile",f'GurobiLogs/{df_name.split(".")[0]}_{RS}.txt')
+    m.setParam('TimeLimit', 60*60*6)
 
     # variables
     d = m.addVars(T_B,lb=0,ub=1,vtype=GRB.INTEGER,name='d') # d_t = 1 if node splits
@@ -89,9 +88,10 @@ def optimal_CMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
     try:
         m.read(f'WarmStarts/{df_name.split(".")[0]}_{RS}.mst')
     except:
-        print('NO WARM START')
-    else:
-        print('USING WARM START')
+        # print('NO WARM START')
+        pass
+    # else:
+    #     print('USING WARM START')
 
     if SplitType == "Parallel":
         Const_1 = m.addConstrs(
@@ -106,12 +106,12 @@ def optimal_CMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
             quicksum([a_abs[j,t] for j in features]) == d[t] for t in T_B
         )
 
-    Const_2 = m.addConstrs(
-            b[t] <= bigM * d[t] for t in T_B
-        )
-    Const_3 = m.addConstrs(
-            b[t] >= -bigM * d[t] for t in T_B
-        )
+    # Const_2 = m.addConstrs(
+    #         b[t] <= mu_max * d[t] for t in T_B
+    #     )
+    # Const_3 = m.addConstrs(
+    #         b[t] >= -mu_max * d[t] for t in T_B
+    #     )
 
     Const_5 = m.addConstrs(
         d[t] <= d[P[t]] for t in [i for i in T_B if i != root.value]
@@ -130,14 +130,18 @@ def optimal_CMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
     )
 
     Const_12 = m.addConstrs(
-        quicksum([ a[j,t] * (df.loc[i, j] + mu[j] - mu_min) for j in features ]) + mu_min <= b[t] + bigM * (1 - z[i,l]) * (1 + mu_max)
+        (z[i, l] == 1)
+        >>
+        (quicksum([a[j, t] * (df.loc[i, j] + mu[j]-mu_min) for j in features]) + mu_min <= b[t])  # + (1-z[i,l]) * (bigM[i] + mu_max)
         for i in I
         for l in T_L
         for t in A_l[l]
     )
 
     Const_13 = m.addConstrs(
-        quicksum([a[j,t] * df.loc[i, j] for j in features ]) >= b[t] - bigM * (1 - z[i,l])
+        (z[i, l] == 1)
+        >>
+        (quicksum([a[j, t] * df.loc[i, j] for j in features]) >= b[t])  # - (1 - z[i,l]) * bigM[i]
         for i in I
         for l in T_L
         for t in A_r[l]
@@ -154,7 +158,9 @@ def optimal_CMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
 
 
     Const_16 = m.addConstrs(
-        1 - e[i,t] <= (quicksum([ Beta[j,t] * df.loc[i,j] for j in features ]) + Delta[t] ) * df.loc[i,labels[0]] + bigM * (1 - z[i,t])
+        (1 == z[i, t])
+        >>
+        (1 - e[i,t] <= (quicksum([ Beta[j,t] * df.loc[i,j] for j in features ]) + Delta[t] ) * df.loc[i,labels[0]])
         for i in I
         for t in T_L
     )
@@ -220,16 +226,20 @@ def optimal_CMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
 
 if __name__ == "__main__":
 
+    import multiprocessing
+
+
+
     label_name = 'class'
-    file = 'delta_ailerons'
+    file = 'schizo'
     RS=7
-    depth = 2
-    Splits = 3
+    depth = 1
+    Splits = 1
     SplitType = 'Parallel'
 
-    df = DataParser(f'DownSampled/{file}.arff','Classification', one_hot=False)
+    df = DataParser(f'{file}.arff','Classification', one_hot=False)
 
-    print(len(df))
+    # print(len(df))
 
     df = shuffle(df,random_state=RS)
     Test_df = df.iloc[:round(len(df) * 0.2)]

@@ -6,7 +6,7 @@
 @attribute Beam.draught.ratio numeric
 @attribute Length.beam.ratio numeric
 @attribute Froude.number numeric
-@attribute Residuary.resistance numeric
+@attribute class numeric
 
 @data
 -2.3,0.568,4.78,3.99,3.17,0.125,0.11
