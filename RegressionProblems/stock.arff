@@ -18,7 +18,7 @@
 @attribute 'company7' numeric
 @attribute 'company8' numeric
 @attribute 'company9' numeric
-@attribute 'company10' numeric
+@attribute 'class' numeric
 
 @data
 17.219,50.5,18.75,43,60.875,26.375,67.75,19,48.75,34.875

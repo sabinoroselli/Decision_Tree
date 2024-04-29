@@ -176,17 +176,50 @@ if __name__ == "__main__":
     # collection = os.listdir('RegressionProblems')
 
     ########### CLASSIFICATION
-    # collection = [
-    #     'biomed.arff',
-    #     'blogger.arff',
-    #     'boxing.arff'
-    # ]
+    collection = [
+        'blogger.arff',
+        'boxing.arff',
+        'mux6.arff',
+        'corral.arff',
+        'biomed.arff',
+        'ionosphere.arff',
+        'jEdit.arff',
+        'schizo.arff',
+        'colic.arff',
+        'threeOf9.arff',
+        'R_data_frame.arff',
+        'australian.arff',
+        'doa_bwin_balanced.arff',
+        'blood-trans.arff',
+        'autoUniv.arff',
+        'parity.arff',
+        'banknote.arff',
+        'gametes_Epistasis.arff',
+        'kr-vs-kp.arff',
+        'banana.arff'
+    ]
     ########### REGRESSION
     collection = [
-        # 'pwLinear.arff',
-        # 'bolts.arff',
-        # 'cpu.arff',
-        'auto93.arff'
+        'wisconsin.arff',
+        'pwLinear.arff',
+        'cpu.arff',
+        'yacht_hydrodynamics.arff',
+        'RAM_price.arff',
+        'autoMpg.arff',
+        'vineyard.arff',
+        'boston_corrected.arff',
+        'forest_fires.arff',
+        'meta.arff',
+        'arsenic-female-lung.arff',
+        'arsenic-male-lung.arff',
+        'titanic_1.arff',
+        'stock.arff',
+        'Bank-Note.arff',
+        'baloon.arff',
+        'debutanizer.arff',
+        'analcatdata_supreme.arff',
+        'Long.arff',
+        'KDD.arff'
     ]
 
     Runs = 10

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="localhost" id="6c292097-165c-4db0-a41c-4ab61ecef3b9" keyPath="$USER_HOME$/.ssh/id_rsa" port="22" nameFormat="DESCRIPTIVE" username="sroselli@epyc.cms.waikato.ac.nz -J sroselli@linux-labs.cms.waikato.ac.nz" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>

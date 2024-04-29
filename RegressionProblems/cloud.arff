@@ -26,7 +26,7 @@
 @attribute 'NC' real
 @attribute 'SC' real
 @attribute 'NWC' real
-@attribute 'TE' real
+@attribute 'class' real
 
 @data
 1,S,AUTUMN,1.65,1.8,3.33,1.69

@@ -1,0 +1,82 @@
+
+Gurobi 11.0.0 (mac64[arm]) logging started Tue Apr 30 10:20:21 2024
+
+Set parameter LogFile to value "GurobiLogs/3D_Estimation_7.txt"
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 41480 rows, 27689 columns and 313361 nonzeros
+Model fingerprint: 0x0ba972af
+Model has 9230 general constraints
+Variable types: 18463 continuous, 9226 integer (9219 binary)
+Coefficient statistics:
+  Matrix range     [2e-03, 6e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 6e+03]
+Presolve added 13843 rows and 0 columns
+Presolve removed 0 rows and 4609 columns
+Presolve time: 0.65s
+Presolved: 55323 rows, 23080 columns, 330802 nonzeros
+Variable types: 18463 continuous, 4617 integer (4616 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing primal log only...
+
+Root relaxation presolved: 55323 rows, 23080 columns, 330802 nonzeros
+
+Concurrent spin time: 0.01s
+
+Solved with dual simplex
+
+Root relaxation: objective 0.000000e+00, 16587 iterations, 0.39 seconds (1.16 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0 1518          -    0.00000      -     -    6s
+H    0     0                    2806.8738295    0.00000   100%     -    8s
+     0     0    0.00000    0 3119 2806.87383    0.00000   100%     -   12s
+     0     0    0.00000    0 3675 2806.87383    0.00000   100%     -   13s
+H    0     0                    1709.2709615    0.00000   100%     -   13s
+     0     0    0.00000    0 3675 1709.27096    0.00000   100%     -   14s
+     0     0    0.00000    0 3052 1709.27096    0.00000   100%     -   17s
+     0     2    0.00000    0 3052 1709.27096    0.00000   100%     -   22s
+     3     2    0.00000    2 3605 1709.27096    0.00000   100%  6427   28s
+     7     4    0.00000    4 3768 1709.27096    0.00000   100%  8014   31s
+*   14     2               5    1700.7433917   15.43622  99.1%  6825   33s
+    21    16   74.69507    8 3472 1700.74339   31.37271  98.2%  5965   35s
+   369   370   83.30065   39 3890 1700.74339   74.61981  95.6%   972   42s
+H  373   370                    1700.7433914   74.61981  95.6%   961   42s
+H  380   370                    1700.7433905   74.61981  95.6%   945   42s
+   413   411   83.30065   44 3885 1700.74339   74.61981  95.6%   885   66s
+   602   632   86.98814   52 3912 1700.74339   74.61981  95.6%   739  120s
+   953  1023   88.01524   77 3835 1700.74339   74.61981  95.6%   597  125s
+  1424  1422   90.70683  113 3728 1700.74339   74.61981  95.6%   545  131s
+  1669  1740   92.81476  132 3781 1700.74339   74.61981  95.6%   585  135s
+  2221  2335   95.49305  190 3686 1700.74339   74.61981  95.6%   635  141s
+  2604  2723  101.66996  225 3137 1700.74339   74.61981  95.6%   662  145s
+  3198  3384  109.62778  256 3625 1700.74339   74.61981  95.6%   693  150s
+  3785  3951  111.44052  314 3086 1700.74339   74.61981  95.6%   676  155s
+  4977  5314  140.54052  385 3015 1700.74339   74.61981  95.6%   706  160s
+  6523  6893  180.94052  453 2947 1700.74339   74.61981  95.6%   746  165s
+  7726  8135  214.80802  585 3138 1700.74339   74.61981  95.6%   775  170s
+H 8650  8637                    1532.3753793   74.61981  95.1%   783  196s
+  8651  8638  140.71593  446 3052 1532.37538   74.61981  95.1%   783  214s
+  8653  8639  174.88788  570 3041 1532.37538   74.61981  95.1%   782  218s
+
+Cutting planes:
+  Learned: 833
+
+Explored 8653 nodes (6845361 simplex iterations) in 221.69 seconds (729.47 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 4: 1532.38 1700.74 1709.27 2806.87 
+
+Solve interrupted
+Best objective 1.532375379346e+03, best bound 7.461981266169e+01, gap 95.1304%
+Warning: variables 9227 and 9241 have the same name "Beta[UnixTime,1]"
+Warning: default variable names used to write MIP start file

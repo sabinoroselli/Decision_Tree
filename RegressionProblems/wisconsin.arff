@@ -194,7 +194,7 @@
 @attribute 'fractal_dimension_se' numeric
 @attribute 'fractal_dimension_worst' numeric
 @attribute 'tumor_size' numeric
-@attribute 'time' numeric
+@attribute 'class' numeric
 
 @data
 

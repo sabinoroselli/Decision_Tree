@@ -15,7 +15,7 @@ def optimal_RMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
 
     BigM = sum( [abs(i) for i in df[labels[0]].values] ) # TODO not sure this is correct
 
-    epsilon = bigM/100 # TODO what value should we give to that? {0,0.1}
+    epsilon = 0#bigM/100 # TODO what value should we give to that? {0,0.1}
 
     # depth of the tree DOES NOT include root level
     nodes = [i for i in range(2 ** (depth + 1) - 1)]
@@ -237,10 +237,10 @@ def optimal_RMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
 if __name__ == "__main__":
 
     label_name = 'class'
-    file = 'auto93'
+    file = 'pwLinear'
     RS = 7
-    depth = 0
-    Splits = 0
+    depth = 1
+    Splits = 1
     SplitType = 'Parallel'
 
     # empty WARM START log file
@@ -305,6 +305,9 @@ if __name__ == "__main__":
 
     # Predict the test set
     test_pred = ODT.predict_regr(X_test, the_tree)
+
+    # for ind,i in enumerate(list(Y_test)):
+    #     print(i,test_pred[ind])
 
     print('MAPE Train: ', round(MAPE(Y_train, train_pred) * 100, 2), '%','Test: ', round(MAPE(Y_test, test_pred) * 100, 2), '%')
     print('RAE Train: ', RAE(Y_train, train_pred),'Test: ', RAE(Y_test, test_pred))

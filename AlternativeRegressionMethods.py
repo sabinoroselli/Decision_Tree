@@ -72,14 +72,14 @@ if __name__ == "__main__":
     # ]
     ########### REGRESSION
     collection = [
-        'auto93.arff',
+        'wisconsin.arff',
         # 'bolts.arff',
         # 'cpu.arff'
         # 'pwLinear.arff'
     ]
 
     Runs = 1
-    methods = ['CART','RF','SVM'] #,'LMT'] todo Cannot use LMT on this machine
+    methods = ['RF'] #'CART','SVM','LMT'] todo Cannot use LMT on this machine
     for m in methods:
         for i in collection:
             print(m,i)

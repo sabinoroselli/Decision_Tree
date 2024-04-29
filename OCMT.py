@@ -221,13 +221,15 @@ def optimal_CMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
 if __name__ == "__main__":
 
     label_name = 'class'
-    file = 'biomed'
+    file = 'delta_ailerons'
     RS=7
     depth = 2
-    Splits = 2
-    SplitType = 'Oblique'
+    Splits = 3
+    SplitType = 'Parallel'
 
-    df = DataParser(f'{file}.arff','Classification', one_hot=False)
+    df = DataParser(f'DownSampled/{file}.arff','Classification', one_hot=False)
+
+    print(len(df))
 
     df = shuffle(df,random_state=RS)
     Test_df = df.iloc[:round(len(df) * 0.2)]

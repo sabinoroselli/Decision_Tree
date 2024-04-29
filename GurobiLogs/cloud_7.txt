@@ -1,0 +1,70 @@
+
+Gurobi 11.0.0 (mac64[arm]) logging started Tue Apr 30 10:25:04 2024
+
+Set parameter LogFile to value "GurobiLogs/cloud_7.txt"
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.4.0 23E224)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 11 threads
+
+Optimize a model with 782 rows, 567 columns and 6899 nonzeros
+Model fingerprint: 0xdc80b725
+Model has 190 general constraints
+Variable types: 383 continuous, 184 integer (175 binary)
+Coefficient statistics:
+  Matrix range     [3e-03, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+02]
+Presolve added 204 rows and 0 columns
+Presolve removed 0 rows and 87 columns
+Presolve time: 0.01s
+Presolved: 986 rows, 480 columns, 7068 nonzeros
+Variable types: 383 continuous, 97 integer (96 binary)
+Found heuristic solution: objective 21.2228220
+Found heuristic solution: objective 21.1101968
+
+Root relaxation: objective 0.000000e+00, 526 iterations, 0.01 seconds (0.02 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0   90   21.11020    0.00000   100%     -    0s
+     0     0    0.45000    0   90   21.11020    0.45000  97.9%     -    0s
+     0     0    0.45000    0   88   21.11020    0.45000  97.9%     -    0s
+H    0     0                      21.0620812    0.45000  97.9%     -    0s
+     0     0    2.28249    0   91   21.06208    2.28249  89.2%     -    0s
+     0     0    3.12209    0   91   21.06208    3.12209  85.2%     -    0s
+     0     0    4.17959    0   92   21.06208    4.17959  80.2%     -    0s
+     0     0    5.85862    0   91   21.06208    5.85862  72.2%     -    0s
+H    0     0                      19.9040550    6.89828  65.3%     -    0s
+H    0     0                      19.7613863    6.89828  65.1%     -    0s
+     0     0    7.20210    0   95   19.76139    7.20210  63.6%     -    0s
+     0     0    7.20210    0   93   19.76139    7.20210  63.6%     -    0s
+     0     2    7.20210    0   93   19.76139    7.20210  63.6%     -    0s
+*  162    10              17      17.6734978    9.44952  46.5%  72.5    0s
+
+Cutting planes:
+  Learned: 18
+  Gomory: 6
+  Cover: 115
+  Implied bound: 2
+  Clique: 57
+  MIR: 82
+  StrongCG: 2
+  Flow cover: 27
+  GUB cover: 21
+  Mod-K: 1
+  RLT: 4
+  Relax-and-lift: 2
+
+Explored 222 nodes (15825 simplex iterations) in 0.35 seconds (0.85 work units)
+Thread count was 11 (of 11 available processors)
+
+Solution count 6: 17.6735 19.7614 19.9041 ... 21.2228
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.767349780177e+01, best bound 1.767349780177e+01, gap 0.0000%
+Warning: variables 185 and 203 have the same name "Beta[period,1]"
+Warning: default variable names used to write MIP start file

@@ -48,20 +48,17 @@ def DataParser(name, ProbType, one_hot = True):
         if df[i].nunique() == 1:
             df = df.drop(i, axis=1)
 
-
-    # if abs(df.values.max()) < 0.001: # todo REMOVE WHEN SURE THIS IS NOT NEEDED
-    #     print('####### SCALING DF UP BY A 100 FACTOR ##########')
-    #     # If you want to scale up by 100
-    #     temp_df = df.drop(columns=label_name) * 100
-    #     temp_label = df[label_name]
-    #     temp_df.insert(0, label_name, temp_label, True)
-    #     df = temp_df
-    ##### STANDARD SCALING #######
+    ##### STANDARD SCALING ####### # todo scale target for REGRESSION
     std_scaler = StandardScaler()
+    # if ProbType == 'Classification':
     features = list(df.columns.drop([label_name]))
     df_scaled = df.drop(columns=label_name)
+    # else:
+    #     features = list(df.columns)
+    #     df_scaled = df
     df_scaled = std_scaler.fit_transform(df_scaled.to_numpy())
     df_scaled = pd.DataFrame(df_scaled,columns=features)
+    # if ProbType == 'Classification':
     df_scaled.insert(len(features), label_name, df[label_name], True)
     df = df_scaled
 

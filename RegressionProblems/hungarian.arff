@@ -259,7 +259,7 @@
 @attribute 'slope' { 3, 2, 1}
 @attribute 'ca' real
 @attribute 'thal' { 6, 3, 7}
-@attribute 'num' real
+@attribute 'class' real
 @data
 28,1,2,130,132,0,2,185,0,0,?,?,?,0
 29,1,2,120,243,0,0,160,0,0,?,?,?,0
