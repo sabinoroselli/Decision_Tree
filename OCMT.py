@@ -1,5 +1,4 @@
-import random
-
+import numpy as np
 from gurobipy import *
 from TreeStructure import Parent
 from binarytree import build
@@ -8,7 +7,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.utils import shuffle
 from DatabaseParser import DataParser
 
-def optimal_CMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
+def optimal_CMT(df, features, labels, Splits, C, config):
 
     I = df.index.values
 
@@ -25,7 +24,7 @@ def optimal_CMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
     # mu_max = max(mu.values())
 
     # depth of the tree DOES NOT include root level
-    nodes = [i for i in range(2 ** (depth + 1) - 1)]
+    nodes = [i for i in range(2 ** (int(np.ceil(np.log2(Splits + 1))) + 1) - 1)]
     binary_tree = build(nodes)
     root = binary_tree.levels[0][0]
 
@@ -63,16 +62,16 @@ def optimal_CMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
     }
 
     m = Model('OCMT')
-    # m.setParam('LogToConsole', 0)
-    # m.setParam('Threads',1)
-    # m.setParam("LogFile",f'GurobiLogs/{df_name.split(".")[0]}_{RS}.txt')
-    m.setParam('TimeLimit', 60*60*6)
+    m.setParam('LogToConsole', 0)
+    m.setParam('Threads',1)
+    m.setParam("LogFile",f'GurobiLogs/{config["df_name"].split(".")[0]}_{config["RandomSeed"]}.txt')
+    m.setParam('TimeLimit', 60 * config['Timeout'])
 
     # variables
     d = m.addVars(T_B,lb=0,ub=1,vtype=GRB.INTEGER,name='d') # d_t = 1 if node splits
-    if SplitType == "Parallel":
+    if config["SplitType"] == "Parallel":
         a = m.addVars(features,T_B,lb=0,ub=1,vtype=GRB.INTEGER,name='a')
-    elif SplitType == "Oblique":
+    elif config["SplitType"] == "Oblique":
         a = m.addVars(features, T_B, lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='a')
         a_abs = m.addVars(features, T_B, vtype=GRB.CONTINUOUS, name='a_abs')
     b = m.addVars(T_B,lb=-GRB.INFINITY,vtype=GRB.CONTINUOUS,name='b')
@@ -86,18 +85,18 @@ def optimal_CMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
     # Load previous solution for warm start
     m.update()
     try:
-        m.read(f'WarmStarts/{df_name.split(".")[0]}_{RS}.mst')
+        m.read(f'WarmStarts/{config["df_name"].split(".")[0]}_{config["RandomSeed"]}.mst')
     except:
         # print('NO WARM START')
         pass
     # else:
     #     print('USING WARM START')
 
-    if SplitType == "Parallel":
+    if config["SplitType"] == "Parallel":
         Const_1 = m.addConstrs(
             quicksum([a[j, t] for j in features]) == d[t] for t in T_B
         )
-    elif SplitType == "Oblique":
+    elif config["SplitType"] == "Oblique":
         Const_0 = m.addConstrs(
             a_abs[j,t] == abs_(a[j,t]) for j in features for t in T_B
         )
@@ -182,7 +181,7 @@ def optimal_CMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
     non_empty_nodes = {}
 
     if m.status != GRB.INFEASIBLE:
-        m.write(f'WarmStarts/{df_name.split(".")[0]}_{RS}.mst')
+        m.write(f'WarmStarts/{config["df_name"].split(".")[0]}_{config["RandomSeed"]}.mst')
         vars = m.getVars()
         solution = {
                 i.VarName:i.X
@@ -190,7 +189,7 @@ def optimal_CMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
 
         non_zero_vars = [key for key,value in solution.items() if value > 0]
 
-        if SplitType == "Parallel":
+        if config["SplitType"] == "Parallel":
             splitting_nodes = {
                 i:{
                     'a': [f for f in features if solution[f'a[{f},{i}]'] > 0][0],
@@ -198,7 +197,7 @@ def optimal_CMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
                 }
                 for i in T_B if f'd[{i}]' in non_zero_vars
             }
-        elif SplitType == "Oblique":
+        elif config["SplitType"] == "Oblique":
             splitting_nodes = {
                 i: {
                     'a': {f: round(solution[f'a[{f},{i}]'], 2)
@@ -226,9 +225,7 @@ def optimal_CMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
 
 if __name__ == "__main__":
 
-    import multiprocessing
-
-
+    # import multiprocessing
 
     label_name = 'class'
     file = 'schizo'

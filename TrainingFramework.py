@@ -7,16 +7,16 @@ from sklearn.utils import shuffle
 from DatabaseParser import DataParser
 
 
-def log_training(config,ProbType,SplitType,ModelTree):
+def log_training(config):
 
-    if ProbType == 'Classification':
-        if ModelTree:
+    if config['ProbType'] == 'Classification':
+        if config['ModelTree']:
             from OCMT_Learning import train_OCMT as TrainFunction
         else:
             from OCT_Learning import train_OCT as TrainFunction
 
-    elif ProbType =='Regression':
-        if ModelTree:
+    elif config['ProbType'] =='Regression':
+        if config['ModelTree']:
             from ORMT_Learning import train_ORMT as TrainFunction
         else:
             from ORT_Learning import train_ORT as TrainFunction
@@ -32,8 +32,14 @@ def log_training(config,ProbType,SplitType,ModelTree):
 
     Test_df = df.iloc[:round(len(df) * config['TestSize'])]
     Val_df = df.iloc[len(Test_df): len(Test_df) + round(len(df) * config['ValSize'])]
-    Train_df = df.iloc[len(Test_df) + len(Val_df):]
-
+    if config['Fraction'] == '':
+        Train_df = df.iloc[len(Test_df) + len(Val_df):]
+    else:
+        print(f'Reducing Training data set to {float(config["Fraction"])*100}% of its original length')
+        Train_df = df.iloc[len(Test_df) + len(Val_df):] # todo this could have been coded a little more elegantly
+        print('Original Length:',len(Train_df))
+        Train_df = df.iloc[:round(len(Train_df) * float(config['Fraction']))]
+        print('Reduced Length:', len(Train_df))
     # ELIMIATING A COLUMN FROM ALL DATASETS IF ALL THE VALUES IN IT ARE THE SAME IN THE TRAIN SET
     for i in Train_df.columns:
         if Train_df[i].nunique() == 1:
@@ -42,17 +48,11 @@ def log_training(config,ProbType,SplitType,ModelTree):
             Test_df = Test_df.drop(columns=[i])
 
     best_solution,iteration_log,RunTimeLog = TrainFunction(
-        config['Min_depth'],
-        config['Max_depth'],
+        config,
         Train_df,
-        Val_df,
-        config['label_name'],
-        config['RandomSeed'],
-        config['df_name'],
-        SplitType,
-        ModelTree
+        Val_df
     )
-    if ModelTree:
+    if config['ModelTree']:
         print(f"######## TESTING ---Optimal hyperparameters for the {config['RandomSeed']}th run: NumLeaves = {best_solution['NumLeaves']}, C = {best_solution['C']}")
     else:
         print(f"######## TESTING ---Optimal hyperparameters for the {config['RandomSeed']}th run: NumLeaves = {best_solution['NumLeaves']}")
@@ -66,7 +66,7 @@ def log_training(config,ProbType,SplitType,ModelTree):
     Y_test = Test_df[config['label_name']]
 
 
-    if ProbType == 'Classification':
+    if config['ProbType'] == 'Classification':
         test_pred = ODT.predict_class(X_test, the_tree)
         test_metric = round(ClassMetr(Y_test, test_pred) * 100, 2)
         print('     ACC (Test Set): ', test_metric, '%')
@@ -89,20 +89,20 @@ def log_training(config,ProbType,SplitType,ModelTree):
 
     return train_log
 
-def training_session(config,Runs,ProbType,SplitType,ModelTree,extended=False):
+def training_session(config):
     args = []
-    for i in range(Runs):
+    for i in range(config['Runs']):
         config_copy = config.copy()
-        config_copy['df'] = DataParser(name=config['df_name'],ProbType=ProbType)
+        config_copy['df'] = DataParser(name=config['df_name'],ProbType=config['ProbType'])
         config_copy['RandomSeed'] = i
-        args.append((config_copy,ProbType,SplitType,ModelTree))
+        args.append(config_copy)
 
     p = mp.Pool()
-    result = p.starmap(log_training,args)
+    result = p.map(log_training,args)
     best_tree_struct = [i['NumLeaves'] for i in result]
     leaves_avg = round(np.average(best_tree_struct), 2)
     leaves_var = round(np.std(best_tree_struct), 2)
-    if ProbType == 'Classification':
+    if config['ProbType'] == 'Classification':
         best_scores = [i['TestMetric'] for i in result]
         Metric_average = round(np.average(best_scores), 2)
         Metric_var = round(np.std(best_scores), 2)
@@ -117,38 +117,32 @@ def training_session(config,Runs,ProbType,SplitType,ModelTree,extended=False):
 
 
 
-    # min_splits = 2** config['Min_depth'] - 1
-    # max_splits = 2** config['Min_depth'] - 1
     RunTime_avg_and_std = {}
-    for depth in range(config['Min_depth'],config['Max_depth']+1):
-        Max_C = 2 ** (depth) - 1
-        Min_C = Max_C - int(2 ** (depth - 1) - 1)
-        for split in range(Min_C,Max_C + 1):
-            RunTime_avg_and_std.update({
-                split:
-                    (
-                        round(np.average([i['RunTime'][split] for i in result]),2),
-                        round(np.std([i['RunTime'][split] for i in result]),2)
-                    )
-            })
+    for split in range(config['MinSplits'],config['MaxSplits'] + 1):
+        RunTime_avg_and_std.update({
+            split:
+                (
+                    round(np.average([i['RunTime'][split] for i in result]),2),
+                    round(np.std([i['RunTime'][split] for i in result]),2)
+                )
+        })
 
     #### WRITE THE LOG OF THE TRAINING SESSION IN A JSON FILE ####
-    if extended:
-        extension = '_ext'
-    else:
-        extension = ''
-    if ModelTree:
+
+    name = config['df_name'].split(".")[0] + config['Fraction']
+
+    if config['ModelTree']:
         TreeType = 'MOD'
     else:
-        TreeType = 'STD'
+        config['ModelTree'] = 'STD'
     prev_logs = {}
-    name = config['df_name'].split(".")[0] + extension
-    with open(f'{ProbType}Results/{SplitType}_{TreeType}.json', 'r+', ) as logfile:
+
+    with open(f'{config["ProbType"]}Results/{config["SplitType"]}_{TreeType}.json', 'r+', ) as logfile:
         try:
             prev_logs = json.load(logfile)
         except json.decoder.JSONDecodeError:
             pass
-        if ProbType == 'Classification':
+        if config['ProbType'] == 'Classification':
             prev_logs.update({
                 name: {
                                         'Metric':(Metric_average,Metric_var),
@@ -169,7 +163,7 @@ def training_session(config,Runs,ProbType,SplitType,ModelTree,extended=False):
             })
 
     # rewrite the file
-    with open(f'{ProbType}Results/{SplitType}_{TreeType}.json', 'w') as logfile:
+    with open(f'{config["ProbType"]}Results/{config["SplitType"]}_{TreeType}.json', 'w') as logfile:
         json.dump(prev_logs,logfile,indent=4)
 
     return prev_logs
@@ -189,7 +183,7 @@ if __name__ == "__main__":
         # 'jEdit.arff',
         # 'schizo.arff',
         # 'colic.arff',
-        'threeOf9.arff',
+        # 'threeOf9.arff',
         # 'R_data_frame.arff',
         # 'australian.arff',
         # 'doa_bwin_balanced.arff',
@@ -199,7 +193,7 @@ if __name__ == "__main__":
         # 'banknote.arff',
         # 'gametes_Epistasis.arff',
         # 'kr-vs-kp.arff',
-        # 'banana.arff'
+        'banana.arff'
     ]
     ########### REGRESSION
     RegrDataBases = [
@@ -227,20 +221,26 @@ if __name__ == "__main__":
 
     choice = [ClassDataBases,'Classification']
     # choice = [RegrDataBases,'Regression']
-    Runs = 1
+    Runs = 3
     config = {}
-    for SplitType in ['Parallel']: # 'Oblique'
-        for ModelTree in [True]:
-            for i in choice[0]:
-                print(f" %%%%%%%%%%%%%%%%%%%% Solving {i.split('.')[0]} %%%%%%%%%%%%%%%%%%%%%%")
-                config.update({
-                    'label_name': 'class',
-                    'TestSize': 0.2,
-                    'ValSize': 0.2,
-                    'Min_depth': 3,
-                    'Max_depth': 3,
-                    'df_name':i,
-                    'Timeout': 60# for the single iteration (IN MINUTES)
-                })
-                prev_log = training_session(config,Runs,choice[1],SplitType,ModelTree,True)
+    for fraction in ['0.3','0.5','0.7']:
+        for SplitType in ['Parallel']: # 'Oblique'
+            for ModelTree in [True]:
+                for i in choice[0]:
+                    print(f" %%%%%%%%%%%%%%%%%%%% Solving {i.split('.')[0]} %%%%%%%%%%%%%%%%%%%%%%")
+                    config.update({
+                        'Runs': Runs,
+                        'ProbType': choice[1],
+                        'SplitType': SplitType,
+                        'ModelTree': ModelTree,
+                        'label_name': 'class',
+                        'TestSize': 0.2,
+                        'ValSize': 0.2,
+                        'MinSplits': 3,
+                        'MaxSplits': 6,
+                        'df_name':i,
+                        'Timeout': 60, # for the single iteration (IN MINUTES)
+                        'Fraction': fraction
+                    })
+                    prev_log = training_session(config)
             # print(pd.DataFrame(prev_log).to_markdown())
