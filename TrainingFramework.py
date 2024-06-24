@@ -32,14 +32,17 @@ def log_training(config):
 
     Test_df = df.iloc[:round(len(df) * config['TestSize'])]
     Val_df = df.iloc[len(Test_df): len(Test_df) + round(len(df) * config['ValSize'])]
-    if config['Fraction'] == '':
+    if config['Fraction'] == 1:
         Train_df = df.iloc[len(Test_df) + len(Val_df):]
-    else:
-        print(f'Reducing Training data set to {float(config["Fraction"])*100}% of its original length')
-        Train_df = df.iloc[len(Test_df) + len(Val_df):] # todo this could have been coded a little more elegantly
-        print('Original Length:',len(Train_df))
+    elif 0 < config['Fraction'] < 1:
+        print(f'Reducing Training data set to {float(config["Fraction"]) * 100}% of its original length')
+        Train_df = df.iloc[len(Test_df) + len(Val_df):]  # todo this could have been coded a little more elegantly
+        print('Original Length:', len(Train_df))
         Train_df = df.iloc[:round(len(Train_df) * float(config['Fraction']))]
         print('Reduced Length:', len(Train_df))
+    else:
+        raise ValueError('WRONG TRAINING DATASET FRACTION')
+
     # ELIMIATING A COLUMN FROM ALL DATASETS IF ALL THE VALUES IN IT ARE THE SAME IN THE TRAIN SET
     for i in Train_df.columns:
         if Train_df[i].nunique() == 1:
@@ -61,22 +64,22 @@ def log_training(config):
     the_tree = ODT.build_tree(ODT.root.value)
 
     # split validation set into features and labels
-    X_test = Test_df.drop(columns=config['label_name'])
+    X_test = Test_df.drop(columns='class')
     X_test = X_test.to_dict('index')
-    Y_test = Test_df[config['label_name']]
+    Y_test = Test_df['class']
 
 
     if config['ProbType'] == 'Classification':
         test_pred = ODT.predict_class(X_test, the_tree)
         test_metric = round(ClassMetr(Y_test, test_pred) * 100, 2)
-        print('     ACC (Test Set): ', test_metric, '%')
+        print('     Test Accuracy: ', test_metric, '%')
     else:
         test_pred = ODT.predict_regr(X_test, the_tree)
         test_metric = {
                 "RAE":RAE(Y_test,test_pred),
                 "RRSE":RRSE(Y_test,test_pred)
         }
-        print('RAE (Test Set): ', round(test_metric['RAE'], 2))
+        print('Test RAE: ', round(test_metric['RAE'], 2))
         # print('RRSE (Test Set): ', round(test_metric['RRSE'], 2))
 
     train_log = {
@@ -129,12 +132,12 @@ def training_session(config):
 
     #### WRITE THE LOG OF THE TRAINING SESSION IN A JSON FILE ####
 
-    name = config['df_name'].split(".")[0] + config['Fraction']
+    name = config['df_name'].split(".")[0] + str(config['Fraction'])
 
     if config['ModelTree']:
         TreeType = 'MOD'
     else:
-        config['ModelTree'] = 'STD'
+        TreeType = 'STD'
     prev_logs = {}
 
     with open(f'{config["ProbType"]}Results/{config["SplitType"]}_{TreeType}.json', 'r+', ) as logfile:
@@ -178,32 +181,32 @@ if __name__ == "__main__":
         # 'boxing.arff',
         # 'mux6.arff',
         # 'corral.arff',
-        # 'biomed.arff',
-        # 'ionosphere.arff',
-        # 'jEdit.arff',
-        # 'schizo.arff',
-        # 'colic.arff',
-        # 'threeOf9.arff',
-        # 'R_data_frame.arff',
-        # 'australian.arff',
-        # 'doa_bwin_balanced.arff',
-        # 'blood-transf.arff',
-        # 'autoUniv.arff',
-        # 'parity.arff',
-        # 'banknote.arff',
-        # 'gametes_Epistasis.arff',
-        # 'kr-vs-kp.arff',
+        'biomed.arff',
+        'ionosphere.arff',
+        'jEdit.arff',
+        'schizo.arff',
+        'colic.arff',
+        'threeOf9.arff',
+        'R_data_frame.arff',
+        'australian.arff',
+        'doa_bwin_balanced.arff',
+        'blood-transf.arff',
+        'autoUniv.arff',
+        'parity.arff',
+        'banknote.arff',
+        'gametes_Epistasis.arff',
+        'kr-vs-kp.arff',
         'banana.arff'
     ]
     ########### REGRESSION
     RegrDataBases = [
-        'wisconsin.arff',
-        'pwLinear.arff',
-        'cpu.arff',
-        'yacht_hydrodynamics.arff',
-        'RAM_price.arff',
-        'autoMpg.arff',
-        'vineyard.arff',
+        # 'wisconsin.arff',
+        # 'pwLinear.arff',
+        # 'cpu.arff',
+        # 'yacht_hydrodynamics.arff',
+        'RAM_price.arff', ### todo re-run
+        # 'autoMpg.arff',
+        'vineyard.arff', ### todo re-run
         'boston_corrected.arff',
         'forest_fires.arff',
         'meta.arff',
@@ -221,26 +224,25 @@ if __name__ == "__main__":
 
     choice = [ClassDataBases,'Classification']
     # choice = [RegrDataBases,'Regression']
-    Runs = 3
+    Runs = 30
     config = {}
-    for fraction in ['0.3','0.5','0.7']:
-        for SplitType in ['Parallel']: # 'Oblique'
-            for ModelTree in [True]:
-                for i in choice[0]:
-                    print(f" %%%%%%%%%%%%%%%%%%%% Solving {i.split('.')[0]} %%%%%%%%%%%%%%%%%%%%%%")
-                    config.update({
-                        'Runs': Runs,
-                        'ProbType': choice[1],
-                        'SplitType': SplitType,
-                        'ModelTree': ModelTree,
-                        'label_name': 'class',
-                        'TestSize': 0.2,
-                        'ValSize': 0.2,
-                        'MinSplits': 3,
-                        'MaxSplits': 6,
-                        'df_name':i,
-                        'Timeout': 60, # for the single iteration (IN MINUTES)
-                        'Fraction': fraction
-                    })
-                    prev_log = training_session(config)
+    # for fraction in [0.3,0.5,0.7]:
+    for SplitType in ['Oblique']: # 'Oblique','Parallel'
+        for ModelTree in [True]: # TODO keep an eye on this one
+            for i in choice[0]:
+                print(f" %%%%%%%%%%%%%%%%%%%% Solving {i.split('.')[0]} %%%%%%%%%%%%%%%%%%%%%%")
+                config.update({
+                    'Runs': Runs,
+                    'ProbType': choice[1],
+                    'SplitType': SplitType,
+                    'ModelTree': ModelTree,
+                    'TestSize': 0.2,
+                    'ValSize': 0.2,
+                    'MinSplits': 0,
+                    'MaxSplits': 3,
+                    'df_name':i,
+                    'Timeout': 60, # for the single iteration (IN MINUTES)
+                    'Fraction': 1 # fraction
+                })
+                prev_log = training_session(config)
             # print(pd.DataFrame(prev_log).to_markdown())

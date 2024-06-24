@@ -27,7 +27,7 @@ def optimal_CT(df, features, labels, depth, C):
     binary_tree = build(nodes)
     root = binary_tree.levels[0][0]
 
-    # print(binary_tree)
+    print(binary_tree)
 
     T_L = [i.value for i in binary_tree.leaves]  # leave nodes
     T_B = [i for i in binary_tree.values if i not in T_L] # branch nodes
@@ -114,8 +114,10 @@ def optimal_CT(df, features, labels, depth, C):
 if __name__ == "__main__":
 
     label_name = 'class'
+    probType = 'Classification'
+    name = 'ionosphere.arff'
 
-    df = DataParser('banana.arff', one_hot=False)
+    df = DataParser(name, probType)
 
     # print(df.head(20).to_markdown())
 
@@ -134,7 +136,7 @@ if __name__ == "__main__":
     labels = df[label_name].unique()
     labels = (label_name, labels)
 
-    depth = 2
+    depth = 3
 
     solution = optimal_CT(
         df= Train_df,

@@ -4,8 +4,11 @@ from binarytree import build
 from TreeStructure import RAE,RRSE
 from sklearn.utils import shuffle
 from DatabaseParser import DataParser
+import numpy as np
+from time import process_time as tm # todo double-check this
 
-def optimal_RT(df, features, labels, depth, Splits, RS, df_name,SplitType):
+
+def optimal_RT(df, features, labels, Splits,config):
     I = df.index.values
 
     mu = {
@@ -21,7 +24,7 @@ def optimal_RT(df, features, labels, depth, Splits, RS, df_name,SplitType):
 
     # depth of the tree does not account for root level
     # depth of the tree DOES NOT include root level
-    nodes = [i for i in range(2 ** (depth + 1) - 1)]
+    nodes = [i for i in range(2 ** (int(np.ceil(np.log2(Splits + 1))) + 1) - 1)]
     binary_tree = build(nodes)
     root = binary_tree.levels[0][0]
 
@@ -60,14 +63,14 @@ def optimal_RT(df, features, labels, depth, Splits, RS, df_name,SplitType):
     m = Model('OCT')
     m.setParam('LogToConsole', 0)
     m.setParam('Threads',1)
-    m.setParam("LogFile", f'GurobiLogs/{df_name.split(".")[0]}_{RS}.txt')
-    m.setParam('TimeLimit', 60 * 60)
+    m.setParam("LogFile", f'GurobiLogs/{config["df_name"].split(".")[0]}_{config["RandomSeed"]}.txt')
+    m.setParam('TimeLimit', 60 * config['Timeout'])
 
     # variables
     d = m.addVars(T_B, vtype=GRB.BINARY, name='d')  # d_t = 1 if node splits
-    if SplitType == "Parallel":
+    if config["SplitType"] == "Parallel":
         a = m.addVars(features, T_B, lb=0, ub=1, vtype=GRB.INTEGER, name='a')
-    elif SplitType == "Oblique":
+    elif config["SplitType"] == "Oblique":
         a = m.addVars(features, T_B, lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='a')
         a_abs = m.addVars(features, T_B, vtype=GRB.CONTINUOUS, name='a_abs')
     b = m.addVars(T_B, lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='b')
@@ -81,18 +84,18 @@ def optimal_RT(df, features, labels, depth, Splits, RS, df_name,SplitType):
     # Load previous solution for warm start
     m.update()
     try:
-        m.read(f'WarmStarts/{df_name.split(".")[0]}_{RS}.mst')
+        m.read(f'WarmStarts/{config["df_name"].split(".")[0]}_{config["RandomSeed"]}.mst')
     except:
         pass
         # print('NO WARM START')
     # else:
     #     print('USING WARM START')
 
-    if SplitType == "Parallel":
+    if config["SplitType"] == "Parallel":
         Const_1 = m.addConstrs(
             quicksum([a[j, t] for j in features]) == d[t] for t in T_B
         )
-    elif SplitType == "Oblique":
+    elif config["SplitType"] == "Oblique":
         Const_0 = m.addConstrs(
             a_abs[j, t] == abs_(a[j, t]) for j in features for t in T_B
         )
@@ -166,10 +169,12 @@ def optimal_RT(df, features, labels, depth, Splits, RS, df_name,SplitType):
         quicksum([n_abs[i,t] for i in I for t in T_L])  # overall absolute error
     )
 
+    start = tm()
     m.optimize()
+    runtime = tm() - start
 
     if m.status != GRB.INFEASIBLE:
-        m.write(f'WarmStarts/{df_name.split(".")[0]}_{RS}.mst')
+        m.write(f'WarmStarts/{config["df_name"].split(".")[0]}_{config["RandomSeed"]}.mst')
         vars = m.getVars()
         solution = {
             i.VarName: i.X
@@ -177,7 +182,7 @@ def optimal_RT(df, features, labels, depth, Splits, RS, df_name,SplitType):
 
         non_zero_vars = [key for key, value in solution.items() if value > 0]
 
-        if SplitType == "Parallel":
+        if config["SplitType"] == "Parallel":
             splitting_nodes = {
                 i: {
                     'a': [f for f in features if solution[f'a[{f},{i}]'] > 0][0],
@@ -185,7 +190,7 @@ def optimal_RT(df, features, labels, depth, Splits, RS, df_name,SplitType):
                 }
                 for i in T_B if f'd[{i}]' in non_zero_vars
             }
-        elif SplitType == "Oblique":
+        elif config["SplitType"] == "Oblique":
             splitting_nodes = {
                 i: {
                     'a': {f: round(solution[f'a[{f},{i}]'], 2)
@@ -201,14 +206,22 @@ def optimal_RT(df, features, labels, depth, Splits, RS, df_name,SplitType):
             for i in T_L if f'l[{i}]' in non_zero_vars
         }
 
+        ODT = OptimalTree(
+            non_empty_nodes,
+            splitting_nodes,
+            int(np.ceil(np.log2(Splits + 1))),
+            config["SplitType"],
+            config["ModelTree"]
+        )
+
     else:
         print('MODEL IS INFEASIBLE')
-    return splitting_nodes, non_empty_nodes
+        ODT = None
+    return ODT, runtime
 
 
 if __name__ == "__main__":
 
-    label_name = 'class'
     file = 'RAM_price'
     RS = 7
     depth = 1
@@ -229,13 +242,13 @@ if __name__ == "__main__":
             Train_df.drop(columns=[i], inplace=True)
             Test_df.drop(columns=[i], inplace=True)
 
-    features = list(Train_df.columns.drop([label_name]))
+    features = list(Train_df.columns.drop(['class']))
     # features = random.sample(features, 30)
     # Train_df = Train_df[features+['class']]
     # Test_df = Test_df[features+['class']]
 
-    labels = df[label_name].unique()
-    labels = (label_name, labels)
+    labels = df['class'].unique()
+    labels = ('class', labels)
 
     splitting_nodes, non_empty_nodes = optimal_RT(
         df=Train_df,
@@ -260,9 +273,9 @@ if __name__ == "__main__":
     # ODT.print_tree(the_tree)
 
     # split train into features and labels
-    X_train = Train_df.drop(columns=label_name)
+    X_train = Train_df.drop(columns='class')
     X_train = X_train.to_dict('index')
-    Y_train = Train_df[label_name]
+    Y_train = Train_df['class']
 
     # Predict the train set
     train_pred = ODT.predict_class(X_train, the_tree)
@@ -270,9 +283,9 @@ if __name__ == "__main__":
     print('RAE (Train Set): ', RAE(Y_train, train_pred) )
     print('RRSE (Train Set): ', RRSE(Y_train, train_pred))
     # split test set into features and labels
-    X_test = Test_df.drop(columns=label_name)
+    X_test = Test_df.drop(columns='class')
     X_test = X_test.to_dict('index')
-    Y_test = Test_df[label_name]
+    Y_test = Test_df['class']
 
     # Predict the test set
     test_pred = ODT.predict_regr(X_test, the_tree)

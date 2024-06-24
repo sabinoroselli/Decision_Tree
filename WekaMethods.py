@@ -17,13 +17,24 @@ def LMT_M5P(file, ProbType, RS):
     df = loader.load_file(f'{ProbType}Problems/{file}')
     df.class_is_last()
 
-    TestSize = 0.2
+
     shuffled_indexes = shuffle([str(i+1) for i in range(len(df))],random_state=RS)
-    Test_indexes = shuffled_indexes[:round(len(df) * TestSize)]
-    Train_indexes = shuffled_indexes[len(Test_indexes):]
+
+    # TestSize = 0.2
+    # Test_indexes = shuffled_indexes[:round(len(df) * TestSize)]
+    # Train_indexes = shuffled_indexes[len(Test_indexes):]
+    #
+    # Train_df = df.subset(row_range=",".join(Train_indexes))
+    # Test_df = df.subset(row_range=",".join(Test_indexes))
+
+    Test_indexes = shuffled_indexes[:round(len(df) * 0.2)]
+    Val_indexes = shuffled_indexes[len(Test_indexes): len(Test_indexes) + round(len(df) * 0.2)]
+    Train_indexes = shuffled_indexes[len(Test_indexes) + len(Val_indexes):]
 
     Train_df = df.subset(row_range=",".join(Train_indexes))
+    # Val_df = df.subset(row_range=",".join(Val_indexes))
     Test_df = df.subset(row_range=",".join(Test_indexes))
+
 
     # print(Test_df.subset(col_names=[label_name]))
 

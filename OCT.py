@@ -3,11 +3,12 @@ from TreeStructure import Parent,OptimalTree
 from binarytree import build
 from sklearn.metrics import accuracy_score
 from sklearn.utils import shuffle
-# import pandas as pd
-# import json
+import numpy as np
 from DatabaseParser import DataParser
+from time import process_time as tm # todo double-check this
 
-def optimal_CT(df, features, labels, depth, Splits, RS, df_name,SplitType):
+
+def optimal_CT(df, features, labels, Splits, config):
 
     I = df.index.values
 
@@ -25,7 +26,7 @@ def optimal_CT(df, features, labels, depth, Splits, RS, df_name,SplitType):
 
     # depth of the tree does not account for root level
     # depth of the tree DOES NOT include root level
-    nodes = [i for i in range(2 ** (depth + 1) - 1)]
+    nodes = [i for i in range(2 ** (int(np.ceil(np.log2(Splits + 1))) + 1) - 1)]
     binary_tree = build(nodes)
     root = binary_tree.levels[0][0]
 
@@ -65,14 +66,14 @@ def optimal_CT(df, features, labels, depth, Splits, RS, df_name,SplitType):
     m = Model('OCT')
     m.setParam('LogToConsole', 0)
     m.setParam('Threads',1)
-    m.setParam("LogFile", f'GurobiLogs/{df_name.split(".")[0]}_{RS}.txt')
-    m.setParam('TimeLimit', 60 * 60)
+    m.setParam("LogFile", f'GurobiLogs/{config["df_name"].split(".")[0]}_{config["RandomSeed"]}.txt')
+    m.setParam('TimeLimit', 60 * config['Timeout'])
 
     # variables
     d = m.addVars(T_B,vtype=GRB.BINARY,name='d') # d_t = 1 if node splits
-    if SplitType == "Parallel":
+    if config["SplitType"] == "Parallel":
         a = m.addVars(features, T_B, lb=0, ub=1, vtype=GRB.INTEGER, name='a')
-    elif SplitType == "Oblique":
+    elif config["SplitType"] == "Oblique":
         a = m.addVars(features, T_B, lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='a')
         a_abs = m.addVars(features, T_B, vtype=GRB.CONTINUOUS, name='a_abs')
     b = m.addVars(T_B,lb=-GRB.INFINITY,vtype=GRB.CONTINUOUS,name='b')
@@ -86,18 +87,18 @@ def optimal_CT(df, features, labels, depth, Splits, RS, df_name,SplitType):
     # Load previous solution for warm start
     m.update()
     try:
-        m.read(f'WarmStarts/{df_name.split(".")[0]}_{RS}.mst')
+        m.read(f'WarmStarts/{config["df_name"].split(".")[0]}_{config["RandomSeed"]}.mst')
     except:
         pass
         # print('NO WARM START')
     # else:
     #     print('USING WARM START')
 
-    if SplitType == "Parallel":
+    if config["SplitType"] == "Parallel":
         Const_1 = m.addConstrs(
             quicksum([a[j, t] for j in features]) == d[t] for t in T_B
         )
-    elif SplitType == "Oblique":
+    elif config["SplitType"] == "Oblique":
         Const_0 = m.addConstrs(
             a_abs[j, t] == abs_(a[j, t]) for j in features for t in T_B
         )
@@ -193,10 +194,12 @@ def optimal_CT(df, features, labels, depth, Splits, RS, df_name,SplitType):
         quicksum([L[t] for t in T_L]) # cost of miscalculate
     )
 
+    start = tm()
     m.optimize()
+    runtime = tm() - start
 
     if m.status != GRB.INFEASIBLE:
-        m.write(f'WarmStarts/{df_name.split(".")[0]}_{RS}.mst')
+        m.write(f'WarmStarts/{config["df_name"].split(".")[0]}_{config["RandomSeed"]}.mst')
         vars = m.getVars()
         solution = {
             i.VarName: i.X
@@ -204,7 +207,7 @@ def optimal_CT(df, features, labels, depth, Splits, RS, df_name,SplitType):
 
         non_zero_vars = [key for key, value in solution.items() if value > 0]
 
-        if SplitType == "Parallel":
+        if config["SplitType"] == "Parallel":
             splitting_nodes = {
                 i: {
                     'a': [f for f in features if solution[f'a[{f},{i}]'] > 0][0],
@@ -212,7 +215,7 @@ def optimal_CT(df, features, labels, depth, Splits, RS, df_name,SplitType):
                 }
                 for i in T_B if f'd[{i}]' in non_zero_vars
             }
-        elif SplitType == "Oblique":
+        elif config["SplitType"] == "Oblique":
             splitting_nodes = {
                 i: {
                     'a': {f: round(solution[f'a[{f},{i}]'], 2)
@@ -228,14 +231,22 @@ def optimal_CT(df, features, labels, depth, Splits, RS, df_name,SplitType):
             for i in T_L if f'l[{i}]' in non_zero_vars
         }
 
+        ODT = OptimalTree(
+            non_empty_nodes,
+            splitting_nodes,
+            int(np.ceil(np.log2(Splits + 1))),
+            config["SplitType"],
+            config["ModelTree"]
+        )
+
     else:
         print('MODEL IS INFEASIBLE')
-    return splitting_nodes, non_empty_nodes
+        ODT = None
+    return ODT, runtime
 
 
 if __name__ == "__main__":
 
-    label_name = 'class'
     file = 'schizo'
     RS=7
     depth = 2
@@ -254,10 +265,10 @@ if __name__ == "__main__":
             Train_df.drop(columns=[i], inplace=True)
             Test_df.drop(columns=[i], inplace=True)
 
-    features = list(Train_df.columns.drop([label_name]))
+    features = list(Train_df.columns.drop(['class']))
 
-    labels = df[label_name].unique()
-    labels = (label_name, labels)
+    labels = df['class'].unique()
+    labels = ('class', labels)
 
     splitting_nodes, non_empty_nodes = optimal_CT(
         df=Train_df,
@@ -282,18 +293,18 @@ if __name__ == "__main__":
     # ODT.print_tree(the_tree)
 
     # split train into features and labels
-    X_train = Train_df.drop(columns=label_name)
+    X_train = Train_df.drop(columns='class')
     X_train = X_train.to_dict('index')
-    Y_train = Train_df[label_name]
+    Y_train = Train_df['class']
 
     # Predict the train set
     train_pred = ODT.predict_class(X_train, the_tree)
 
     print('Accuracy (Train Set): ', round(accuracy_score(Y_train, train_pred) * 100, 2), '%')
     # split test set into features and labels
-    X_test = Test_df.drop(columns=label_name)
+    X_test = Test_df.drop(columns='class')
     X_test = X_test.to_dict('index')
-    Y_test = Test_df[label_name]
+    Y_test = Test_df['class']
 
     # Predict the test set
     test_pred = ODT.predict_class(X_test, the_tree)

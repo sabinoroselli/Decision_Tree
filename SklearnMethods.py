@@ -17,9 +17,13 @@ def CART_RF_SVM(file, mode, RS, ProblemType):
 
     df = shuffle(df, random_state=RS)
 
-    TestSize = 0.2
-    Test_df = df.iloc[:round(len(df) * TestSize)]
-    Train_df = df.iloc[len(Test_df):]
+    # TestSize = 0.2
+    # Test_df = df.iloc[:round(len(df) * TestSize)]
+    # Train_df = df.iloc[len(Test_df):]
+
+    Test_df = df.iloc[:round(len(df) * 0.2)]
+    Val_df = df.iloc[len(Test_df): len(Test_df) + round(len(df) * 0.2)]
+    Train_df = df.iloc[len(Test_df) + len(Val_df):]
 
     # split train set into features and labels
     X_train = Train_df.drop(columns=label_name)
@@ -37,7 +41,7 @@ def CART_RF_SVM(file, mode, RS, ProblemType):
         elif mode == 'CART':
             clf = DecisionTreeRegressor(random_state=RS)
         elif mode == 'SVM':
-            clf = SVR(kernel='linear')
+            clf = SVR(kernel='linear',C=1)
         else:
             raise ValueError('WRONG REGRESSION MODE')
     elif ProblemType == 'Classification':
@@ -46,7 +50,7 @@ def CART_RF_SVM(file, mode, RS, ProblemType):
         elif mode == 'CART':
             clf = DecisionTreeClassifier(random_state=RS)
         elif mode == 'SVM':
-            clf = SVC(kernel='linear', random_state=RS)
+            clf = SVC(kernel='linear', random_state=RS,C=1)
         else:
             raise ValueError('WRONG CLASSIFICATION MODE')
     else:
@@ -128,11 +132,11 @@ if __name__ == "__main__":
         # 'KDD.arff'
     ]
 
-    # choice = [ClassDataBases, 'Classification']
-    choice = [RegrDataBases,'Regression']
+    choice = [ClassDataBases, 'Classification']
+    # choice = [RegrDataBases,'Regression']
 
 Runs = 30
-methods = ['RF']#,'CART','SVM',]
+methods = ['RF','CART','SVM',]
 for m in methods:
     for i in choice[0]:
         print(m,i.split('.')[0])

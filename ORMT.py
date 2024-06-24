@@ -5,8 +5,10 @@ from TreeStructure import OptimalTree
 from TreeStructure import RRSE,RAE
 from sklearn.utils import shuffle
 from DatabaseParser import DataParser
+from time import process_time as tm # todo double-check this
+import numpy as np
 
-def optimal_RMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
+def optimal_RMT(df, features, labels, Splits, C, config ):
 
     I = df.index.values
 
@@ -26,10 +28,8 @@ def optimal_RMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
     #     for i in I
     # }
 
-    epsilon = 0
-
     # depth of the tree DOES NOT include root level
-    nodes = [i for i in range(2 ** (depth + 1) - 1)]
+    nodes = [i for i in range(2 ** (int(np.ceil(np.log2(Splits + 1))) + 1) - 1)]
     binary_tree = build(nodes)
     root = binary_tree.levels[0][0]
 
@@ -69,46 +69,59 @@ def optimal_RMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
     m = Model('ORMT')
     m.setParam('LogToConsole', 0)
     m.setParam('Threads',1)
-    m.setParam("LogFile", f'GurobiLogs/{df_name.split(".")[0]}_{RS}.txt')
+    m.setParam("LogFile", f'GurobiLogs/{config["df_name"].split(".")[0]}_{config["RandomSeed"]}.txt')
     m.setParam('TimeLimit', 60 * 60)
 
     # variables
     d = m.addVars(T_B,vtype=GRB.BINARY,name='d') # d_t = 1 if node splits
-    if SplitType == "Parallel":
+    if config["SplitType"] == "Parallel":
         a = m.addVars(features, T_B, lb=0, ub=1, vtype=GRB.INTEGER, name='a')
-    elif SplitType == "Oblique":
+    elif config["SplitType"] == "Oblique":
         a = m.addVars(features, T_B, lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='a')
         a_abs = m.addVars(features, T_B, vtype=GRB.CONTINUOUS, name='a_abs')
+        s = m.addVars(features, T_B,lb=0,ub=1, vtype=GRB.INTEGER, name='s')
     b = m.addVars(T_B,lb=-GRB.INFINITY,vtype=GRB.CONTINUOUS,name='b')
     z = m.addVars(I,T_L,vtype=GRB.BINARY,name='z') # point 'i' is in node 't'
     l = m.addVars(T_L,vtype=GRB.BINARY,name='l') # leaf 't' contains any points at all
     Beta = m.addVars(features,T_L,lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='Beta')  # coefficient for feature i at node t
-    Bet_abs = m.addVars(features,T_L, vtype=GRB.CONTINUOUS, name='Beta')  # coefficient for feature i at node t
+    Bet_abs = m.addVars(features,T_L, vtype=GRB.CONTINUOUS, name='Beta_abs')  # coefficient for feature i at node t
     Delta = m.addVars(T_L,lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='Delta')  # constant at node t
     gamma = m.addVars(I,T_L,lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='gamma')  # function f(x) - y_i at node t
-    gamma_abs = m.addVars(I,T_L, vtype=GRB.CONTINUOUS, name='gamma_abs')  # abs of gamma
+    gamm_abs = m.addVars(I,T_L, vtype=GRB.CONTINUOUS, name='gamm_abs')  # abs of gamma
 
     # Load previous solution for warm start
     m.update()
     try:
-        m.read(f'WarmStarts/{df_name.split(".")[0]}_{RS}.mst')
+        m.read(f'WarmStarts/{config["df_name"].split(".")[0]}_{config["RandomSeed"]}.mst')
     except:
         pass
         # print('NO WARM START')
     # else:
     #     print('USING WARM START')
 
-    if SplitType == "Parallel":
+    if config["SplitType"] == "Parallel":
         Const_1 = m.addConstrs(
             quicksum([a[j, t] for j in features]) == d[t] for t in T_B
         )
-    elif SplitType == "Oblique":
+    elif config["SplitType"] == "Oblique":
         Const_0 = m.addConstrs(
             a_abs[j, t] == abs_(a[j, t]) for j in features for t in T_B
         )
 
+        Const_01 = m.addConstrs(
+            s[j, t] >= a_abs[j, t] for j in features for t in T_B
+        )
+        # Guarantee that the sum of fractions for the split is equal to 1
         Const_1 = m.addConstrs(
-            quicksum([a_abs[j, t] for j in features]) == d[t] for t in T_B
+            quicksum([a_abs[j, t] for j in features]) <= d[t] for t in T_B
+        )
+
+        Const_11 = m.addConstrs(
+            s[j, t] <= d[t] for j in features for t in T_B
+        )
+
+        Const12 = m.addConstrs(
+            quicksum([s[j, t] for j in features]) >= d[t] for t in T_B
         )
 
     # Const_3_1 = m.addConstrs( do not think these are actually required
@@ -135,14 +148,27 @@ def optimal_RMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
         quicksum([z[i,t] for t in T_L]) == 1 for i in I
     )
 
-    Const_12 = m.addConstrs(
-        (z[i,l] == 1)
-        >>
-        (quicksum([a[j, t] * (df.loc[i, j] + mu[j]-mu_min) for j in features]) + mu_min <= b[t]) #+ (1-z[i,l]) * (bigM[i] + mu_max)
-        for i in I
-        for l in T_L
-        for t in A_l[l]
-    )
+    if config["SplitType"] == "Parallel":
+        Const_12 = m.addConstrs(
+            (z[i, l] == 1)
+            >>
+            (quicksum([a[j, t] * (df.loc[i, j] + mu[j] - mu_min) for j in features]) + mu_min <= b[t])
+            # + (1-z[i,l]) * (bigM[i] + mu_max)
+            for i in I
+            for l in T_L
+            for t in A_l[l]
+        )
+
+    elif config["SplitType"] == "Oblique":
+        Const_12 = m.addConstrs(
+            (z[i, l] == 1)
+            >>
+            (quicksum([a[j, t] * df.loc[i, j] for j in features]) + 0.0001 <= b[t])
+            # + (1-z[i,l]) * (bigM[i] + mu_max)
+            for i in I
+            for l in T_L
+            for t in A_l[l]
+        )
 
     Const_13 = m.addConstrs(
         (z[i, l] == 1)
@@ -161,25 +187,16 @@ def optimal_RMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
         d[t] <= quicksum([z[i, m] for i in I for m in D_r[t]]) for t in T_B
     )
 
-
-    Const_16 = m.addConstrs(
-        (z[i,t] == 1)
-        >>
-        (gamma[i,t] + epsilon <= quicksum([ Beta[j,t] * df.loc[i,j] for j in features ]) + Delta[t] - df.loc[i,labels[0]] )
-        for i in I
-        for t in T_L
-    )
-
     Const_17 = m.addConstrs(
         (z[i,t] == 1)
         >>
-        (gamma[i, t] + epsilon >= quicksum([Beta[j, t] * df.loc[i, j] for j in features]) + Delta[t] - df.loc[i,labels[0]])
+        (quicksum([Beta[j, t] * df.loc[i, j] for j in features]) + Delta[t] - df.loc[i,labels[0]] == gamma[i, t] )
         for i in I
         for t in T_L
     )
 
     Const_18 = m.addConstrs(
-        gamma_abs[i,t] == abs_(gamma[i,t])  for i in I for t in T_L
+        gamm_abs[i, t] == abs_(gamma[i, t]) for i in I for t in T_L
     )
 
     Const_19 = m.addConstrs(
@@ -187,20 +204,23 @@ def optimal_RMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
     )
 
     Const_20 = m.addConstr(
-        quicksum([ d[t] for t in T_B]) <= Splits
+        quicksum([d[t] for t in T_B]) <= Splits
     )
 
     m.setObjective(
         # variance cost
-        quicksum([ Bet_abs[f,t] for f in features for t in T_L ]) + C * quicksum([ gamma_abs[i,t] for i in I for t in T_L])
+        quicksum([ Bet_abs[f,t] for f in features for t in T_L ]) + C * quicksum([ gamm_abs[i,t] for i in I for t in T_L])
         )
+
+    start = tm()
     m.optimize()
+    runtime = tm() - start
 
     splitting_nodes = {}
     non_empty_nodes = {}
 
     if m.status != GRB.INFEASIBLE:
-        m.write(f'WarmStarts/{df_name.split(".")[0]}_{RS}.mst')
+        m.write(f'WarmStarts/{config["df_name"].split(".")[0]}_{config["RandomSeed"]}.mst')
         vars = m.getVars()
         solution = {
                 i.VarName:i.X
@@ -208,21 +228,21 @@ def optimal_RMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
 
         non_zero_vars = [key for key,value in solution.items() if value > 0]
 
-        if SplitType == "Parallel":
+        if config["SplitType"] == "Parallel":
             splitting_nodes = {
                 i: {
                     'a': [f for f in features if solution[f'a[{f},{i}]'] > 0][0],
-                    'b': round(solution[f'b[{i}]'], 2)
+                    'b': round(solution[f'b[{i}]'], 6)
                 }
                 for i in T_B if f'd[{i}]' in non_zero_vars
             }
-        elif SplitType == "Oblique":
+        elif config["SplitType"] == "Oblique":
             splitting_nodes = {
                 i: {
-                    'a': {f: round(solution[f'a[{f},{i}]'], 2)
+                    'a': {f: round(solution[f'a[{f},{i}]'], 6)
                           for f in features
                           },
-                    'b': round(solution[f'b[{i}]'], 2)
+                    'b': round(solution[f'b[{i}]'], 6)
                 }
                 for i in T_B if f'd[{i}]' in non_zero_vars
             }
@@ -238,29 +258,48 @@ def optimal_RMT(df, features, labels, depth, Splits, C, RS, df_name, SplitType):
             for i in T_L if f'l[{i}]' in non_zero_vars
         }
 
+        ODT = OptimalTree(
+            non_empty_nodes,
+            splitting_nodes,
+            int(np.ceil(np.log2(Splits + 1))),
+            config["SplitType"],
+            config["ModelTree"]
+        )
+
     else:
         print('MODEL IS INFEASIBLE')
-    return splitting_nodes,non_empty_nodes
+        ODT = None
+    return ODT,runtime
 
 if __name__ == "__main__":
 
-    label_name = 'class'
-    file = 'wisconsin'
-    RS = 7
-    depth = 1
-    Splits = 1
-    SplitType = 'Parallel'
+    file = 'vineyard'
+    Splits = 0
 
-    # empty WARM START log file
-    open(f'GurobiLogs/{file}_{RS}.txt', 'w').close()
+    config = {
+        'RandomSeed': 0,
+        'ProbType': 'Regression',
+        "ModelTree": True,
+        'SplitType': 'Parallel',
+        'label_name': 'class',
+        'TestSize': 0.2,
+        'ValSize': 0.2,
+        'df_name': file,
+        'Timeout': 60,  # for the single iteration (IN MINUTES)
+        'Fraction': 1  # fraction
+    }
 
     df = DataParser(f'{file}.arff','Regression', one_hot=True)
 
-    df = shuffle(df, random_state=RS)
-    Test_df = df.iloc[:round(len(df) * 0.2)]
+    df = shuffle(df, random_state=config['RandomSeed'])
+
+    Test_df = df.iloc[:round(len(df) * config['TestSize'])]
     Train_df = df.iloc[len(Test_df):]
 
-    # print(Train_df.head(10))
+    # Test_df = df.iloc[:round(len(df) * config['TestSize'])]
+    # Val_df = df.iloc[len(Test_df): len(Test_df) + round(len(df) * config['ValSize'])]
+    # Train_df = df.iloc[len(Test_df) + len(Val_df):]
+
 
     # ELIMIATING A COLUMN FROM ALL DATASETS IF ALL THE VALUES IN IT ARE THE SAME IN THE TRAIN SET
     for i in Train_df.columns:
@@ -268,21 +307,18 @@ if __name__ == "__main__":
             Train_df.drop(columns=[i], inplace=True)
             Test_df.drop(columns=[i], inplace=True)
 
-    features = list(Train_df.columns.drop([label_name]))
+    features = list(Train_df.columns.drop(['class']))
 
-    labels = df[label_name].unique()
-    labels = (label_name, labels)
+    labels = df['class'].unique()
+    labels = ('class', labels)
 
     splitting_nodes,non_empty_nodes = optimal_RMT(
-        df= Train_df,
-        features= features,
-        labels= labels,
-        depth= depth,
-        Splits= Splits,
-        C= 1,
-        RS=RS,
-        df_name=file,
-        SplitType= SplitType
+        df=Train_df,
+        features=features,
+        labels=labels,
+        Splits=Splits,
+        C=1,
+        config=config
     )
 
     print('Splitting Nodes')
@@ -292,22 +328,28 @@ if __name__ == "__main__":
     for i in non_empty_nodes.items():
         print(i[0], i[1])
 
-    ODT = OptimalTree(non_empty_nodes, splitting_nodes, depth,SplitType,True)
+    ODT = OptimalTree(
+        non_empty_nodes,
+        splitting_nodes,
+        int(np.ceil(np.log2(Splits + 1))),
+        config["SplitType"],
+        config["ModelTree"]
+    )
     the_tree = ODT.build_tree(ODT.root.value)
     # ODT.print_tree(the_tree)
 
     # split train into features and labels
-    X_train = Train_df.drop(columns=label_name)
+    X_train = Train_df.drop(columns='class')
     X_train = X_train.to_dict('index')
-    Y_train = Train_df[label_name]
+    Y_train = Train_df['class']
 
     # Predict the train set
     train_pred = ODT.predict_regr(X_train, the_tree)
 
     # split test set into features and labels
-    X_test = Test_df.drop(columns=label_name)
+    X_test = Test_df.drop(columns='class')
     X_test = X_test.to_dict('index')
-    Y_test = Test_df[label_name]
+    Y_test = Test_df['class']
 
     # Predict the test set
     test_pred = ODT.predict_regr(X_test, the_tree)
