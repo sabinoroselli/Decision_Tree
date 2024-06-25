@@ -1,0 +1,706 @@
+
+Gurobi 11.0.0 (mac64[arm]) logging started Mon May 27 11:39:50 2024
+
+Set parameter LogFile to value "GurobiLogs/boxing_2.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/boxing_2.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.5.0 23F79)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 1 threads
+
+Optimize a model with 146 rows, 192 columns and 289 nonzeros
+Model fingerprint: 0x8c48dcea
+Model has 95 general constraints
+Variable types: 119 continuous, 73 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e-01, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [3e-01, 3e+00]
+Presolve removed 28 rows and 73 columns
+Presolve time: 0.00s
+Presolved: 118 rows, 119 columns, 1892 nonzeros
+Variable types: 119 continuous, 0 integer (0 binary)
+
+Root relaxation: objective 3.622057e+00, 80 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0       3.6220567    3.62206  0.00%     -    0s
+
+Explored 1 nodes (80 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 3.62206 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.622056735776e+00, best bound 3.622056735776e+00, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Mon May 27 11:39:50 2024
+
+Set parameter LogFile to value "GurobiLogs/boxing_2.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/boxing_2.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.5.0 23F79)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 1 threads
+
+Optimize a model with 146 rows, 192 columns and 289 nonzeros
+Model fingerprint: 0x7ebb1c7d
+Model has 95 general constraints
+Variable types: 119 continuous, 73 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [3e-01, 3e+00]
+
+Loaded user MIP start with objective 18.0221
+
+Presolve removed 28 rows and 73 columns
+Presolve time: 0.00s
+Presolved: 118 rows, 119 columns, 1892 nonzeros
+Variable types: 119 continuous, 0 integer (0 binary)
+
+Root relaxation: objective 1.139699e+01, 65 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      11.3969939   11.39699  0.00%     -    0s
+
+Explored 1 nodes (65 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 11.397 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.139699392131e+01, best bound 1.139699392131e+01, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Mon May 27 11:39:50 2024
+
+Set parameter LogFile to value "GurobiLogs/boxing_2.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/boxing_2.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.5.0 23F79)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 1 threads
+
+Optimize a model with 146 rows, 192 columns and 289 nonzeros
+Model fingerprint: 0x547117ae
+Model has 95 general constraints
+Variable types: 119 continuous, 73 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [3e-01, 3e+00]
+
+Loaded user MIP start with objective 29.397
+
+Presolve removed 28 rows and 73 columns
+Presolve time: 0.00s
+Presolved: 118 rows, 119 columns, 1892 nonzeros
+Variable types: 119 continuous, 0 integer (0 binary)
+
+Root relaxation: objective 1.197182e+01, 55 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      11.9718215   11.97182  0.00%     -    0s
+
+Explored 1 nodes (55 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 11.9718 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.197182145548e+01, best bound 1.197182145548e+01, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Mon May 27 11:39:50 2024
+
+Set parameter LogFile to value "GurobiLogs/boxing_2.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/boxing_2.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.5.0 23F79)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 1 threads
+
+Optimize a model with 146 rows, 192 columns and 289 nonzeros
+Model fingerprint: 0x09b96f3c
+Model has 95 general constraints
+Variable types: 119 continuous, 73 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [3e-01, 3e+00]
+
+Loaded user MIP start with objective 11.9718
+
+Presolve removed 28 rows and 73 columns
+Presolve time: 0.00s
+Presolved: 118 rows, 119 columns, 1892 nonzeros
+Variable types: 119 continuous, 0 integer (0 binary)
+
+Root relaxation: cutoff, 59 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0        11.97182   11.97182  0.00%     -    0s
+
+Explored 1 nodes (59 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 11.9718 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.197182145548e+01, best bound 1.197182145548e+01, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Mon May 27 11:39:50 2024
+
+Set parameter LogFile to value "GurobiLogs/boxing_2.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/boxing_2.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.5.0 23F79)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 1 threads
+
+Optimize a model with 194 rows, 240 columns and 385 nonzeros
+Model fingerprint: 0x25a8e921
+Model has 119 general constraints
+Variable types: 143 continuous, 97 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [3e-01, 3e+00]
+
+User MIP start produced solution with objective 43.9718 (0.00s)
+Loaded user MIP start with objective 43.9718
+
+Presolve removed 52 rows and 97 columns
+Presolve time: 0.00s
+Presolved: 142 rows, 143 columns, 2492 nonzeros
+Variable types: 143 continuous, 0 integer (0 binary)
+
+Root relaxation: objective 2.053868e+01, 74 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      20.5386815   20.53868  0.00%     -    0s
+
+Explored 1 nodes (74 simplex iterations) in 0.01 seconds (0.01 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 20.5387 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.053868152613e+01, best bound 2.053868152613e+01, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Mon May 27 11:39:50 2024
+
+Set parameter LogFile to value "GurobiLogs/boxing_2.txt"
+Set parameter TimeLimit to value 3600
+Unknown variable 'z[18,0]' in MIP start 0 - ignored
+Unknown variable 'z[19,0]' in MIP start 0 - ignored
+Unknown variable 'z[81,0]' in MIP start 0 - ignored
+Unknown variable 'z[101,0]' in MIP start 0 - ignored
+Unknown variable 'z[6,0]' in MIP start 0 - ignored
+Unknown variable 'z[99,0]' in MIP start 0 - ignored
+Unknown variable 'z[54,0]' in MIP start 0 - ignored
+Unknown variable 'z[9,0]' in MIP start 0 - ignored
+Unknown variable 'z[117,0]' in MIP start 0 - ignored
+Unknown variable 'z[119,0]' in MIP start 0 - ignored
+Unknown variable 'z[10,0]' in MIP start 0 - ignored
+Unknown variable 'z[12,0]' in MIP start 0 - ignored
+Unknown variable 'z[89,0]' in MIP start 0 - ignored
+Unknown variable 'z[71,0]' in MIP start 0 - ignored
+Unknown variable 'z[26,0]' in MIP start 0 - ignored
+Unknown variable 'z[32,0]' in MIP start 0 - ignored
+Unknown variable 'z[114,0]' in MIP start 0 - ignored
+Unknown variable 'z[62,0]' in MIP start 0 - ignored
+Unknown variable 'z[57,0]' in MIP start 0 - ignored
+Unknown variable 'z[115,0]' in MIP start 0 - ignored
+Unknown variable 'z[17,0]' in MIP start 0 - ignored
+Unknown variable 'z[116,0]' in MIP start 0 - ignored
+Unknown variable 'z[118,0]' in MIP start 0 - ignored
+Unknown variable 'z[78,0]' in MIP start 0 - ignored
+Unknown variable 'z[8,0]' in MIP start 0 - ignored
+Unknown variable 'z[86,0]' in MIP start 0 - ignored
+Unknown variable 'z[98,0]' in MIP start 0 - ignored
+Unknown variable 'z[108,0]' in MIP start 0 - ignored
+Unknown variable 'z[103,0]' in MIP start 0 - ignored
+Unknown variable 'z[96,0]' in MIP start 0 - ignored
+Unknown variable 'z[50,0]' in MIP start 0 - ignored
+Unknown variable 'z[76,0]' in MIP start 0 - ignored
+Unknown variable 'z[52,0]' in MIP start 0 - ignored
+Unknown variable 'z[80,0]' in MIP start 0 - ignored
+Unknown variable 'z[66,0]' in MIP start 0 - ignored
+Unknown variable 'z[102,0]' in MIP start 0 - ignored
+Unknown variable 'z[83,0]' in MIP start 0 - ignored
+Unknown variable 'z[70,0]' in MIP start 0 - ignored
+Unknown variable 'z[46,0]' in MIP start 0 - ignored
+Unknown variable 'z[68,0]' in MIP start 0 - ignored
+Unknown variable 'z[88,0]' in MIP start 0 - ignored
+Unknown variable 'z[69,0]' in MIP start 0 - ignored
+Unknown variable 'z[97,0]' in MIP start 0 - ignored
+Unknown variable 'z[58,0]' in MIP start 0 - ignored
+Unknown variable 'z[33,0]' in MIP start 0 - ignored
+Unknown variable 'z[38,0]' in MIP start 0 - ignored
+Unknown variable 'z[51,0]' in MIP start 0 - ignored
+Unknown variable 'z[42,0]' in MIP start 0 - ignored
+Unknown variable 'z[4,0]' in MIP start 0 - ignored
+Unknown variable 'z[67,0]' in MIP start 0 - ignored
+Unknown variable 'z[39,0]' in MIP start 0 - ignored
+Unknown variable 'z[37,0]' in MIP start 0 - ignored
+Unknown variable 'z[20,0]' in MIP start 0 - ignored
+Unknown variable 'z[90,0]' in MIP start 0 - ignored
+Unknown variable 'z[31,0]' in MIP start 0 - ignored
+Unknown variable 'z[63,0]' in MIP start 0 - ignored
+Unknown variable 'z[47,0]' in MIP start 0 - ignored
+Unknown variable 'z[85,0]' in MIP start 0 - ignored
+Unknown variable 'z[112,0]' in MIP start 0 - ignored
+Unknown variable 'z[95,0]' in MIP start 0 - ignored
+Unknown variable 'z[49,0]' in MIP start 0 - ignored
+Unknown variable 'z[34,0]' in MIP start 0 - ignored
+Unknown variable 'z[7,0]' in MIP start 0 - ignored
+Unknown variable 'z[104,0]' in MIP start 0 - ignored
+Unknown variable 'z[75,0]' in MIP start 0 - ignored
+Unknown variable 'z[82,0]' in MIP start 0 - ignored
+Unknown variable 'z[43,0]' in MIP start 0 - ignored
+Unknown variable 'z[22,0]' in MIP start 0 - ignored
+Unknown variable 'z[72,0]' in MIP start 0 - ignored
+Unknown variable 'z[109,0]' in MIP start 0 - ignored
+Unknown variable 'z[15,0]' in MIP start 0 - ignored
+Unknown variable 'z[40,0]' in MIP start 0 - ignored
+Unknown variable 'z[30,0]' in MIP start 0 - ignored
+Unknown variable 'z[11,0]' in MIP start 0 - ignored
+Unknown variable 'z[29,0]' in MIP start 0 - ignored
+Unknown variable 'z[79,0]' in MIP start 0 - ignored
+Unknown variable 'z[107,0]' in MIP start 0 - ignored
+Unknown variable 'z[21,0]' in MIP start 0 - ignored
+Unknown variable 'z[16,0]' in MIP start 0 - ignored
+Unknown variable 'z[0,0]' in MIP start 0 - ignored
+Unknown variable 'z[27,0]' in MIP start 0 - ignored
+Unknown variable 'z[93,0]' in MIP start 0 - ignored
+Unknown variable 'z[60,0]' in MIP start 0 - ignored
+Unknown variable 'z[91,0]' in MIP start 0 - ignored
+Unknown variable 'z[94,0]' in MIP start 0 - ignored
+Unknown variable 'z[23,0]' in MIP start 0 - ignored
+Unknown variable 'z[65,0]' in MIP start 0 - ignored
+Unknown variable 'z[100,0]' in MIP start 0 - ignored
+Unknown variable 'z[48,0]' in MIP start 0 - ignored
+Unknown variable 'z[92,0]' in MIP start 0 - ignored
+Unknown variable 'z[53,0]' in MIP start 0 - ignored
+Unknown variable 'z[61,0]' in MIP start 0 - ignored
+Unknown variable 'z[87,0]' in MIP start 0 - ignored
+Unknown variable 'z[113,0]' in MIP start 0 - ignored
+Unknown variable 'z[77,0]' in MIP start 0 - ignored
+Unknown variable 'z[1,0]' in MIP start 0 - ignored
+Unknown variable 'l[0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Judge_Associated_Press,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Judge_Boxing_Monthly-Leach,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Judge_Boxing_Times,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Judge_E._Williams,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Judge_ESPN,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Judge_HBO-Lederman,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Judge_L._OConnell,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Judge_S._Christodoulu,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Judge_Sportsline,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Judge_Sportsticker,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Official_Yes,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Round_1,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Round_10,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Round_11,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Round_12,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Round_2,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Round_3,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Round_4,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Round_5,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Round_6,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Round_7,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Round_8,0]' in MIP start 0 - ignored
+Unknown variable 'Beta[Round_9,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Judge_Associated_Press,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Judge_Boxing_Monthly-Leach,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Judge_Boxing_Times,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Judge_E._Williams,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Judge_ESPN,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Judge_HBO-Lederman,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Judge_L._OConnell,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Judge_S._Christodoulu,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Judge_Sportsline,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Judge_Sportsticker,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Official_Yes,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Round_1,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Round_10,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Round_11,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Round_12,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Round_2,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Round_3,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Round_4,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Round_5,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Round_6,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Round_7,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Round_8,0]' in MIP start 0 - ignored
+Unknown variable 'Beta_abs[Round_9,0]' in MIP start 0 - ignored
+Unknown variable 'Delta[0]' in MIP start 0 - ignored
+Unknown variable 'e[18,0]' in MIP start 0 - ignored
+Unknown variable 'e[19,0]' in MIP start 0 - ignored
+Unknown variable 'e[81,0]' in MIP start 0 - ignored
+Unknown variable 'e[101,0]' in MIP start 0 - ignored
+Unknown variable 'e[6,0]' in MIP start 0 - ignored
+Unknown variable 'e[99,0]' in MIP start 0 - ignored
+Unknown variable 'e[54,0]' in MIP start 0 - ignored
+Unknown variable 'e[9,0]' in MIP start 0 - ignored
+Unknown variable 'e[117,0]' in MIP start 0 - ignored
+Unknown variable 'e[119,0]' in MIP start 0 - ignored
+Unknown variable 'e[10,0]' in MIP start 0 - ignored
+Unknown variable 'e[12,0]' in MIP start 0 - ignored
+Unknown variable 'e[89,0]' in MIP start 0 - ignored
+Unknown variable 'e[71,0]' in MIP start 0 - ignored
+Unknown variable 'e[26,0]' in MIP start 0 - ignored
+Unknown variable 'e[32,0]' in MIP start 0 - ignored
+Unknown variable 'e[114,0]' in MIP start 0 - ignored
+Unknown variable 'e[62,0]' in MIP start 0 - ignored
+Unknown variable 'e[57,0]' in MIP start 0 - ignored
+Unknown variable 'e[115,0]' in MIP start 0 - ignored
+Unknown variable 'e[17,0]' in MIP start 0 - ignored
+Unknown variable 'e[116,0]' in MIP start 0 - ignored
+Unknown variable 'e[118,0]' in MIP start 0 - ignored
+Unknown variable 'e[78,0]' in MIP start 0 - ignored
+Unknown variable 'e[8,0]' in MIP start 0 - ignored
+Unknown variable 'e[86,0]' in MIP start 0 - ignored
+Unknown variable 'e[98,0]' in MIP start 0 - ignored
+Unknown variable 'e[108,0]' in MIP start 0 - ignored
+Unknown variable 'e[103,0]' in MIP start 0 - ignored
+Unknown variable 'e[96,0]' in MIP start 0 - ignored
+Unknown variable 'e[50,0]' in MIP start 0 - ignored
+Unknown variable 'e[76,0]' in MIP start 0 - ignored
+Unknown variable 'e[52,0]' in MIP start 0 - ignored
+Unknown variable 'e[80,0]' in MIP start 0 - ignored
+Unknown variable 'e[66,0]' in MIP start 0 - ignored
+Unknown variable 'e[102,0]' in MIP start 0 - ignored
+Unknown variable 'e[83,0]' in MIP start 0 - ignored
+Unknown variable 'e[70,0]' in MIP start 0 - ignored
+Unknown variable 'e[46,0]' in MIP start 0 - ignored
+Unknown variable 'e[68,0]' in MIP start 0 - ignored
+Unknown variable 'e[88,0]' in MIP start 0 - ignored
+Unknown variable 'e[69,0]' in MIP start 0 - ignored
+Unknown variable 'e[97,0]' in MIP start 0 - ignored
+Unknown variable 'e[58,0]' in MIP start 0 - ignored
+Unknown variable 'e[33,0]' in MIP start 0 - ignored
+Unknown variable 'e[38,0]' in MIP start 0 - ignored
+Unknown variable 'e[51,0]' in MIP start 0 - ignored
+Unknown variable 'e[42,0]' in MIP start 0 - ignored
+Unknown variable 'e[4,0]' in MIP start 0 - ignored
+Unknown variable 'e[67,0]' in MIP start 0 - ignored
+Unknown variable 'e[39,0]' in MIP start 0 - ignored
+Unknown variable 'e[37,0]' in MIP start 0 - ignored
+Unknown variable 'e[20,0]' in MIP start 0 - ignored
+Unknown variable 'e[90,0]' in MIP start 0 - ignored
+Unknown variable 'e[31,0]' in MIP start 0 - ignored
+Unknown variable 'e[63,0]' in MIP start 0 - ignored
+Unknown variable 'e[47,0]' in MIP start 0 - ignored
+Unknown variable 'e[85,0]' in MIP start 0 - ignored
+Unknown variable 'e[112,0]' in MIP start 0 - ignored
+Unknown variable 'e[95,0]' in MIP start 0 - ignored
+Unknown variable 'e[49,0]' in MIP start 0 - ignored
+Unknown variable 'e[34,0]' in MIP start 0 - ignored
+Unknown variable 'e[7,0]' in MIP start 0 - ignored
+Unknown variable 'e[104,0]' in MIP start 0 - ignored
+Unknown variable 'e[75,0]' in MIP start 0 - ignored
+Unknown variable 'e[82,0]' in MIP start 0 - ignored
+Unknown variable 'e[43,0]' in MIP start 0 - ignored
+Unknown variable 'e[22,0]' in MIP start 0 - ignored
+Unknown variable 'e[72,0]' in MIP start 0 - ignored
+Unknown variable 'e[109,0]' in MIP start 0 - ignored
+Unknown variable 'e[15,0]' in MIP start 0 - ignored
+Unknown variable 'e[40,0]' in MIP start 0 - ignored
+Unknown variable 'e[30,0]' in MIP start 0 - ignored
+Unknown variable 'e[11,0]' in MIP start 0 - ignored
+Unknown variable 'e[29,0]' in MIP start 0 - ignored
+Unknown variable 'e[79,0]' in MIP start 0 - ignored
+Unknown variable 'e[107,0]' in MIP start 0 - ignored
+Unknown variable 'e[21,0]' in MIP start 0 - ignored
+Unknown variable 'e[16,0]' in MIP start 0 - ignored
+Unknown variable 'e[0,0]' in MIP start 0 - ignored
+Unknown variable 'e[27,0]' in MIP start 0 - ignored
+Unknown variable 'e[93,0]' in MIP start 0 - ignored
+Unknown variable 'e[60,0]' in MIP start 0 - ignored
+Unknown variable 'e[91,0]' in MIP start 0 - ignored
+Unknown variable 'e[94,0]' in MIP start 0 - ignored
+Unknown variable 'e[23,0]' in MIP start 0 - ignored
+Unknown variable 'e[65,0]' in MIP start 0 - ignored
+Unknown variable 'e[100,0]' in MIP start 0 - ignored
+Unknown variable 'e[48,0]' in MIP start 0 - ignored
+Unknown variable 'e[92,0]' in MIP start 0 - ignored
+Unknown variable 'e[53,0]' in MIP start 0 - ignored
+Unknown variable 'e[61,0]' in MIP start 0 - ignored
+Unknown variable 'e[87,0]' in MIP start 0 - ignored
+Unknown variable 'e[113,0]' in MIP start 0 - ignored
+Unknown variable 'e[77,0]' in MIP start 0 - ignored
+Unknown variable 'e[1,0]' in MIP start 0 - ignored
+Read MIP start from file WarmStarts/boxing_2.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.5.0 23F79)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 1 threads
+
+Optimize a model with 222 rows, 409 columns and 607 nonzeros
+Model fingerprint: 0xbb942926
+Model has 334 general constraints
+Variable types: 239 continuous, 170 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e-01, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+  GenCon rhs range [1e+00, 2e+00]
+  GenCon coe range [3e-01, 5e+00]
+
+No start values specified in MIP start
+
+Presolve added 379 rows and 288 columns
+Presolve time: 0.01s
+Presolved: 601 rows, 697 columns, 8138 nonzeros
+Presolved model has 288 SOS constraint(s)
+Variable types: 527 continuous, 170 integer (170 binary)
+Found heuristic solution: objective 3.6220567
+
+Root relaxation: objective 0.000000e+00, 371 iterations, 0.00 seconds (0.00 work units)
+Another try with MIP start
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0   27    3.62206    0.00000   100%     -    0s
+     0     0    0.00000    0   27    3.62206    0.00000   100%     -    0s
+     0     2    0.00000    0   27    3.62206    0.00000   100%     -    0s
+H   56     6                       3.0692859    0.00000   100%   3.3    0s
+H  616     6                       2.7055416    0.20000  92.6%   2.4    0s
+
+Explored 1527 nodes (3225 simplex iterations) in 0.29 seconds (0.37 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 3: 2.70554 3.06929 3.62206 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.705541596785e+00, best bound 2.705541596785e+00, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Mon May 27 11:39:50 2024
+
+Set parameter LogFile to value "GurobiLogs/boxing_2.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/boxing_2.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.5.0 23F79)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 1 threads
+
+Optimize a model with 222 rows, 409 columns and 607 nonzeros
+Model fingerprint: 0xfb17e32a
+Model has 334 general constraints
+Variable types: 239 continuous, 170 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+  GenCon rhs range [1e+00, 2e+00]
+  GenCon coe range [3e-01, 5e+00]
+
+Loaded user MIP start with objective 17.1055
+
+Presolve added 379 rows and 288 columns
+Presolve time: 0.01s
+Presolved: 601 rows, 697 columns, 8138 nonzeros
+Presolved model has 288 SOS constraint(s)
+Variable types: 527 continuous, 170 integer (170 binary)
+
+Root relaxation: objective 0.000000e+00, 342 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0   99   17.10554    0.00000   100%     -    0s
+H    0     0                      11.3969939    0.00000   100%     -    0s
+     0     0    0.00000    0   99   11.39699    0.00000   100%     -    0s
+     0     2    0.00000    0   99   11.39699    0.00000   100%     -    0s
+H   27     5                       9.9497647    0.00000   100%   9.1    0s
+H  389     3                       9.8804788    0.60000  93.9%   4.2    0s
+H  417     3                       8.8914523    0.60000  93.3%   4.1    0s
+
+Explored 1347 nodes (4171 simplex iterations) in 0.28 seconds (0.33 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 5: 8.89145 9.88048 9.94976 ... 17.1055
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.891452324524e+00, best bound 8.891452324524e+00, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Mon May 27 11:39:51 2024
+
+Set parameter LogFile to value "GurobiLogs/boxing_2.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/boxing_2.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.5.0 23F79)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 1 threads
+
+Optimize a model with 222 rows, 409 columns and 607 nonzeros
+Model fingerprint: 0xe3f98f6a
+Model has 334 general constraints
+Variable types: 239 continuous, 170 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+  GenCon rhs range [1e+00, 2e+00]
+  GenCon coe range [3e-01, 5e+00]
+
+Loaded user MIP start with objective 8.89145
+
+Presolve added 379 rows and 288 columns
+Presolve time: 0.01s
+Presolved: 601 rows, 697 columns, 8138 nonzeros
+Presolved model has 288 SOS constraint(s)
+Variable types: 527 continuous, 170 integer (170 binary)
+
+Root relaxation: objective 0.000000e+00, 340 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0   99    8.89145    0.00000   100%     -    0s
+     0     0    0.00000    0   99    8.89145    0.00000   100%     -    0s
+     0     2    0.00000    0   99    8.89145    0.00000   100%     -    0s
+
+Explored 891 nodes (3543 simplex iterations) in 0.22 seconds (0.25 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 8.89145 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.891452324524e+00, best bound 8.891452324524e+00, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Mon May 27 11:39:51 2024
+
+Set parameter LogFile to value "GurobiLogs/boxing_2.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/boxing_2.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.5.0 23F79)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 1 threads
+
+Optimize a model with 222 rows, 409 columns and 607 nonzeros
+Model fingerprint: 0xd4b3eb10
+Model has 334 general constraints
+Variable types: 239 continuous, 170 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+  GenCon rhs range [1e+00, 2e+00]
+  GenCon coe range [3e-01, 5e+00]
+
+Loaded user MIP start with objective 8.89145
+
+Presolve added 379 rows and 288 columns
+Presolve time: 0.01s
+Presolved: 601 rows, 697 columns, 8138 nonzeros
+Presolved model has 288 SOS constraint(s)
+Variable types: 527 continuous, 170 integer (170 binary)
+
+Root relaxation: objective 0.000000e+00, 340 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0   99    8.89145    0.00000   100%     -    0s
+     0     0    0.00000    0   99    8.89145    0.00000   100%     -    0s
+     0     2    0.00000    0   99    8.89145    0.00000   100%     -    0s
+
+Explored 891 nodes (3543 simplex iterations) in 0.21 seconds (0.24 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 8.89145 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.891452324524e+00, best bound 8.891452324524e+00, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Mon May 27 11:39:51 2024
+
+Set parameter LogFile to value "GurobiLogs/boxing_2.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/boxing_2.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.5.0 23F79)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 1 threads
+
+Optimize a model with 294 rows, 505 columns and 799 nonzeros
+Model fingerprint: 0x1aa95f13
+Model has 430 general constraints
+Variable types: 287 continuous, 218 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e-01, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+  GenCon rhs range [1e+00, 2e+00]
+  GenCon coe range [3e-01, 5e+00]
+
+User MIP start produced solution with objective 10.6915 (0.01s)
+Loaded user MIP start with objective 10.6915
+
+Presolve added 475 rows and 384 columns
+Presolve time: 0.01s
+Presolved: 769 rows, 889 columns, 10778 nonzeros
+Presolved model has 384 SOS constraint(s)
+Variable types: 671 continuous, 218 integer (218 binary)
+
+Root relaxation: objective 0.000000e+00, 527 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0   32   10.69145    0.00000   100%     -    0s
+H    0     0                       6.4000000    0.00000   100%     -    0s
+H    0     0                       5.1055416    0.00000   100%     -    0s
+     0     0    0.00000    0   32    5.10554    0.00000   100%     -    0s
+     0     2    0.00000    0   32    5.10554    0.00000   100%     -    0s
+H  865     9                       4.9055416    0.20000  95.9%   3.5    0s
+H  993     7                       4.5527708    0.20000  95.6%   3.3    0s
+
+Explored 4289 nodes (12176 simplex iterations) in 0.92 seconds (1.38 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 4: 4.55277 4.90554 5.10554 10.6915 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.552770798393e+00, best bound 4.552770798393e+00, gap 0.0000%

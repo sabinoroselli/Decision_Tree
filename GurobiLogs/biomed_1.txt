@@ -1,0 +1,177 @@
+
+Gurobi 11.0.0 (mac64[arm]) logging started Wed May 22 15:37:25 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_1.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/biomed_1.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.5.0 23F79)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 1 threads
+
+Optimize a model with 252 rows, 278 columns and 501 nonzeros
+Model fingerprint: 0xf0b7d1d7
+Model has 138 general constraints
+Variable types: 152 continuous, 126 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e-01, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [4e-16, 1e+01]
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Presolve removed 101 rows and 126 columns
+Presolve time: 0.00s
+Presolved: 151 rows, 152 columns, 1917 nonzeros
+Variable types: 152 continuous, 0 integer (0 binary)
+
+Root relaxation: objective 4.541393e+00, 108 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0       4.5413931    4.54139  0.00%     -    0s
+
+Explored 1 nodes (108 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 4.54139 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.541393054860e+00, best bound 4.541393054860e+00, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Wed May 22 15:37:25 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_1.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/biomed_1.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.5.0 23F79)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 1 threads
+
+Optimize a model with 252 rows, 278 columns and 501 nonzeros
+Model fingerprint: 0x802a0cb5
+Model has 138 general constraints
+Variable types: 152 continuous, 126 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [4e-16, 1e+01]
+
+Loaded user MIP start with objective 26.9173
+
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Presolve removed 101 rows and 131 columns
+Presolve time: 0.00s
+Presolved: 151 rows, 147 columns, 1912 nonzeros
+Variable types: 147 continuous, 0 integer (0 binary)
+
+Root relaxation: objective 1.839978e+01, 74 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      18.3997808   18.39978  0.00%     -    0s
+
+Explored 1 nodes (74 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 18.3998 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.839978081909e+01, best bound 1.839978081909e+01, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Wed May 22 15:37:25 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_1.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/biomed_1.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.5.0 23F79)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 1 threads
+
+Optimize a model with 252 rows, 278 columns and 501 nonzeros
+Model fingerprint: 0x3669cbbc
+Model has 138 general constraints
+Variable types: 152 continuous, 126 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [4e-16, 1e+01]
+
+Loaded user MIP start with objective 133.235
+
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Presolve removed 101 rows and 132 columns
+Presolve time: 0.00s
+Presolved: 151 rows, 146 columns, 1911 nonzeros
+Variable types: 146 continuous, 0 integer (0 binary)
+
+Root relaxation: objective 8.661811e+01, 65 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      86.6181093   86.61811  0.00%     -    0s
+
+Explored 1 nodes (65 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 86.6181 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.661810932109e+01, best bound 8.661810932109e+01, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Wed May 22 15:37:25 2024
+
+Set parameter LogFile to value "GurobiLogs/biomed_1.txt"
+Set parameter TimeLimit to value 3600
+Read MIP start from file WarmStarts/biomed_1.mst
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.5.0 23F79)
+
+CPU model: Apple M3 Pro
+Thread count: 11 physical cores, 11 logical processors, using up to 1 threads
+
+Optimize a model with 252 rows, 278 columns and 501 nonzeros
+Model fingerprint: 0x96e35db7
+Model has 138 general constraints
+Variable types: 152 continuous, 126 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [4e-16, 1e+01]
+
+Loaded user MIP start with objective 660.328
+
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Presolve removed 101 rows and 132 columns
+Presolve time: 0.00s
+Presolved: 151 rows, 146 columns, 1911 nonzeros
+Variable types: 146 continuous, 0 integer (0 binary)
+
+Root relaxation: objective 6.544207e+02, 66 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     654.4206852  654.42069  0.00%     -    0s
+
+Explored 1 nodes (66 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 11 available processors)
+
+Solution count 1: 654.421 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.544206852082e+02, best bound 6.544206852082e+02, gap 0.0000%
