@@ -1,13 +1,11 @@
-from TreeStructure import Parent
+from Utilities.OldTrees.TreeStructure import Parent
 from binarytree import build
-from TreeStructure import OptimalTree
-from sklearn.metrics import accuracy_score
 from sklearn.utils import shuffle
 # import pandas as pd
 # import json
 from DatabaseParser import DataParser
 # import random
-from pyscipopt import Model, quicksum, multidict, SCIP_PARAMSETTING,Pricer
+from pyscipopt import Model, quicksum, SCIP_PARAMSETTING,Pricer
 
 class OCMT_pricer(Pricer):
     def pricerredcost(self, *args, **kwargs):

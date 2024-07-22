@@ -72,55 +72,57 @@ class OptimalTree():
         else:
             print('No Node')
 
-    def predict_regr(self, X, tree):
+    def predict_regr(self, X, tree,f2=None):
         '''function to predict_regr a new dataset'''
-        predictions = [self.make_regression(x, tree) for x in X.values()]
+        predictions = [self.make_regression(x, tree,f2) for x in X.values()]
         return predictions
 
-    def make_regression(self, x, tree):
+    def make_regression(self, x, tree,f2=None):
         '''function to make a single prediction'''
+        features = f2 if f2 != None else x
         if self.ModelTree:
             if tree.value != None:
-                return sum([ tree.value['Beta'][f] * x[f] for f in x]) + tree.value['Delta']
+                return sum([ tree.value['Beta'][f] * x[f] for f in features]) + tree.value['Delta']
         else:
             if tree.value != None:
                 return tree.value
 
         if self.SplitType == 'Parallel':
             if x[tree.feature] < tree.threshold:
-                return self.make_regression(x, tree.left)
+                return self.make_regression(x, tree.left,f2)
             else:
-                return self.make_regression(x, tree.right)
+                return self.make_regression(x, tree.right,f2)
         elif self.SplitType == 'Oblique':
             if sum([x[key] * value for key, value in tree.feature.items()]) < tree.threshold:
-                return self.make_regression(x, tree.left)
+                return self.make_regression(x, tree.left,f2)
             else:
-                return self.make_regression(x, tree.right)
+                return self.make_regression(x, tree.right,f2)
 
 
-    def predict_class(self, X, tree):
+    def predict_class(self, X, tree,f2=None):
         '''function to predict_regr a new dataset'''
-        predictions = [self.make_classification(x, tree) for x in X.values()]
+        predictions = [self.make_classification(x, tree,f2) for x in X.values()]
         return predictions
 
-    def make_classification(self, x, tree):
+    def make_classification(self, x, tree,f2=None):
         '''function to make a single prediction'''
+        features = f2 if f2 != None else x
         if self.ModelTree:
             if tree.value != None:
-                return 1 if sum([ tree.value['Beta'][f] * x[f] for f in x]) + tree.value['Delta'] > 0 else -1
+                return 1 if sum([ tree.value['Beta'][f] * x[f] for f in features]) + tree.value['Delta'] > 0 else -1
         else:
             if tree.value != None:
                 return tree.value
         if self.SplitType == 'Parallel':
             if x[tree.feature] < tree.threshold:
-                return self.make_classification(x, tree.left)
+                return self.make_classification(x, tree.left,f2)
             else:
-                return self.make_classification(x, tree.right)
+                return self.make_classification(x, tree.right,f2)
         elif self.SplitType == 'Oblique':
             if sum([x[key] * value for key, value in tree.feature.items()]) < tree.threshold:
-                return self.make_classification(x, tree.left)
+                return self.make_classification(x, tree.left,f2)
             else:
-                return self.make_classification(x, tree.right)
+                return self.make_classification(x, tree.right,f2)
 
 # Some additional functions needed to deal with binary trees
 

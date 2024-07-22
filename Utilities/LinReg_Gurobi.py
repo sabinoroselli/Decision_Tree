@@ -1,7 +1,6 @@
 from gurobipy import *
 from sklearn.utils import shuffle
-from TreeStructure import RRSE,RAE
-from sklearn.metrics import r2_score,mean_absolute_percentage_error
+from Utilities.OldTrees.TreeStructure import RRSE,RAE
 from DatabaseParser import DataParser
 
 

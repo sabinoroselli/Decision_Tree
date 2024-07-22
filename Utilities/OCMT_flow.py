@@ -1,9 +1,8 @@
 from gurobipy import *
 from binarytree import bst
-import pandas as pd
 from sklearn.utils import shuffle
 from DatabaseParser import DataParser
-from TreeStructure import Parent,Children
+from Utilities.OldTrees.TreeStructure import Parent,Children
 
 def optimal_CT(df, features, labels, depth, splits):
 

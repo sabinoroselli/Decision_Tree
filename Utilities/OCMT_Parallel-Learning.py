@@ -1,12 +1,12 @@
 from gurobipy import *
-from TreeStructure import Parent
+from Utilities.OldTrees.TreeStructure import Parent
 from binarytree import build
 from time import process_time as tm # todo double-check this
 from datetime import  datetime as dt
 import numpy as np
 from sklearn.metrics import accuracy_score
-from OCMT import optimal_CMT
-from TreeStructure import OptimalTree
+from Utilities.OldTrees.OCMT import optimal_CMT
+from Utilities.OldTrees.TreeStructure import OptimalTree
 import multiprocessing as mp
 
 def optimal_CMT(df, features, labels, Splits, C, config):

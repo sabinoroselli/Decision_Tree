@@ -1,20 +1,20 @@
 import json
 import pandas as pd
 
-probType = 'Classification'
-# probType = 'Regression'
-ModelType = 'STD' # STD, MOD
+probType = 'Classification'#'Regression'
+ModelType = 'MOD' # STD, MOD
+SplitType = 'Parallel' # 'Parallel'
 
 modeTree = {'Classification':'LMT','Regression':'M5P'}
 
-algorithms = [f'Parallel_{ModelType}']#,modeTree[probType],'CART','RF','SVM']
+algorithms = [f'{SplitType}_{ModelType}']#,modeTree[probType],'CART','RF','SVM']
 
 all_results = []
 for i in algorithms:
     with open(f'{probType}Results/{i}.json') as json_data:
         buffer = json.load(json_data)
         if probType == 'Regression':
-            if i in [f'Parallel_{ModelType}']:
+            if i in [f'{SplitType}_{ModelType}']:
                 sub_buffer = {}
                 for key, value in buffer.items():
                     sub_buffer.update({key: {
@@ -25,7 +25,7 @@ for i in algorithms:
                     }})
                 buffer = sub_buffer
         df = pd.DataFrame.from_dict(buffer).transpose()
-        if i in [f'Parallel_{ModelType}']:
+        if i in [f'{SplitType}_{ModelType}']:
             df = df.drop(columns=['RunTimes'],axis=1)
         all_results.append(df)
 
@@ -33,7 +33,7 @@ metrics_and_leaves = pd.concat(all_results,axis=1,join='inner')
 # print(metrics_and_leaves.to_markdown())
 ## TODO make a table to report times
 all_splits = []
-with open(f'{probType}Results/Parallel_{ModelType}.json') as json_data:
+with open(f'{probType}Results/{SplitType}_{ModelType}.json') as json_data:
     buffer = json.load(json_data)
     for key,value in buffer.items():
         sub_buffer = {key:{k:v for k,v in value['RunTimes'].items() }}

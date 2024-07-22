@@ -1,27 +1,19 @@
 import json
 import numpy as np
 import multiprocessing as mp
-from TreeStructure import RAE,RRSE
 from sklearn.metrics import accuracy_score as ClassMetr
 from sklearn.utils import shuffle
 from DatabaseParser import DataParser
+from TreeStructure import RRSE,RAE
 
 
 def log_training(config):
 
-    if config['ProbType'] == 'Classification':
-        if config['ModelTree']:
-            from OCMT_Learning import train_OCMT as TrainFunction
-        else:
-            from OCT_Learning import train_OCT as TrainFunction
-
-    elif config['ProbType'] =='Regression':
-        if config['ModelTree']:
-            from ORMT_Learning import train_ORMT as TrainFunction
-        else:
-            from ORT_Learning import train_ORT as TrainFunction
+    if config['ModelTree']:
+        from OMT_Learning import train_OMT as TrainFunction
     else:
-        raise ValueError('WRONG MODEL TYPE')
+        from ODT_Learning import train_ODT as TrainFunction
+
 
     # Erase GurobiLog file content
     with open(f'GurobiLogs/{config["df_name"].split(".")[0]}_{config["RandomSeed"]}.txt', 'w'):
@@ -50,7 +42,7 @@ def log_training(config):
             Val_df = Val_df.drop(columns=[i])
             Test_df = Test_df.drop(columns=[i])
 
-    best_solution,iteration_log,RunTimeLog = TrainFunction(
+    best_solution,iteration_log, RunTimeLog = TrainFunction(
         config,
         Train_df,
         Val_df
@@ -70,11 +62,11 @@ def log_training(config):
 
 
     if config['ProbType'] == 'Classification':
-        test_pred = ODT.predict_class(X_test, the_tree)
+        test_pred = ODT.predict_class(X_test, the_tree,config['Leaf_feat'] if config['Meta'] else None)
         test_metric = round(ClassMetr(Y_test, test_pred) * 100, 2)
         print('     Test Accuracy: ', test_metric, '%')
     else:
-        test_pred = ODT.predict_regr(X_test, the_tree)
+        test_pred = ODT.predict_regr(X_test, the_tree,config['Leaf_feat'] if config['Meta'] else None)
         test_metric = {
                 "RAE":RAE(Y_test,test_pred),
                 "RRSE":RRSE(Y_test,test_pred)
@@ -96,7 +88,11 @@ def training_session(config):
     args = []
     for i in range(config['Runs']):
         config_copy = config.copy()
-        config_copy['df'] = DataParser(name=config['df_name'],ProbType=config['ProbType'])
+        config_copy['df'] = DataParser(
+                                        name=config['df_name'],
+                                        ProbType=config['ProbType'],
+                                        one_hot= not(config['Meta'])
+                                        )
         config_copy['RandomSeed'] = i
         args.append(config_copy)
 
@@ -107,6 +103,7 @@ def training_session(config):
     leaves_var = round(np.std(best_tree_struct), 2)
     if config['ProbType'] == 'Classification':
         best_scores = [i['TestMetric'] for i in result]
+
         Metric_average = round(np.average(best_scores), 2)
         Metric_var = round(np.std(best_scores), 2)
     else:
@@ -177,10 +174,10 @@ if __name__ == "__main__":
 
     ########### CLASSIFICATION
     ClassDataBases = [
-        # 'blogger.arff',
-        # 'boxing.arff',
-        # 'mux6.arff',
-        # 'corral.arff',
+        'blogger.arff',
+        'boxing.arff',
+        'mux6.arff',
+        'corral.arff',
         'biomed.arff',
         'ionosphere.arff',
         'jEdit.arff',
@@ -201,12 +198,12 @@ if __name__ == "__main__":
     ########### REGRESSION
     RegrDataBases = [
         # 'wisconsin.arff',
-        # 'pwLinear.arff',
-        # 'cpu.arff',
-        # 'yacht_hydrodynamics.arff',
-        'RAM_price.arff', ### todo re-run
-        # 'autoMpg.arff',
-        'vineyard.arff', ### todo re-run
+    #     'pwLinear.arff',
+    #     'cpu.arff',
+    #     'yacht_hydrodynamics.arff',
+    #     'RAM_price.arff',
+    #     'autoMpg.arff',
+    #     'vineyard.arff',
         'boston_corrected.arff',
         'forest_fires.arff',
         'meta.arff',
@@ -222,13 +219,75 @@ if __name__ == "__main__":
         'KDD.arff'
     ]
 
-    choice = [ClassDataBases,'Classification']
-    # choice = [RegrDataBases,'Regression']
+    meta_features = {
+        'autoMpg.arff':{'Branch_feat':[
+                                        'cylinders',
+                                        'model',
+                                        'origin',
+                                    ],
+                        'Leaf_feat':[
+                                    'displacement',
+                                    'horsepower',
+                                    'weight',
+                                    'acceleration'
+                                ]
+                        },
+        'blogger.arff':{'Branch_feat':[
+                                        'V4',
+                                        'V5'
+                                    ],
+                        'Leaf_feat':[
+                                    'V1',
+                                    'V2',
+                                    'V3'
+                                ]
+        },
+        'wisconsin.arff': {'Branch_feat': [
+                                             'lymph_node_status',
+                                             'radius_mean',
+                                             'radius_se',
+                                             'radius_worst',
+                                             'texture_mean',
+                                             'texture_se'
+                                            ],
+                            'Leaf_feat': [
+                                            'texture_worst',
+                                             'perimeter_mean',
+                                             'perimeter_se',
+                                             'perimeter_worst',
+                                             'area_mean',
+                                             'area_se',
+                                             'area_worst',
+                                             'smoothness_mean',
+                                             'smoothness_se',
+                                             'smoothness_worst',
+                                             'compactness_mean',
+                                             'compactness_se',
+                                             'compactness_worst',
+                                             'concavity_mean',
+                                             'concavity_se',
+                                             'concavity_worst',
+                                             'concave_points_mean',
+                                             'concave_points_se',
+                                             'concave_points_worst',
+                                             'symmetry_mean',
+                                             'symmetry_se',
+                                             'symmetry_worst',
+                                             'fractal_dimension_mean',
+                                             'fractal_dimension_se',
+                                             'fractal_dimension_worst',
+                                             'tumor_size'
+                                        ]
+        }
+    }
+
+    # choice = [ClassDataBases,'Classification']
+    choice = [RegrDataBases,'Regression']
     Runs = 30
     config = {}
     # for fraction in [0.3,0.5,0.7]:
-    for SplitType in ['Oblique']: # 'Oblique','Parallel'
-        for ModelTree in [True]: # TODO keep an eye on this one
+    for SplitType in ['Parallel']: # 'Oblique','Parallel'
+        for ModelTree in [True]:
             for i in choice[0]:
                 print(f" %%%%%%%%%%%%%%%%%%%% Solving {i.split('.')[0]} %%%%%%%%%%%%%%%%%%%%%%")
                 config.update({
@@ -238,11 +297,14 @@ if __name__ == "__main__":
                     'ModelTree': ModelTree,
                     'TestSize': 0.2,
                     'ValSize': 0.2,
-                    'MinSplits': 0,
-                    'MaxSplits': 3,
+                    'MinSplits': 1,
+                    'MaxSplits': 1,
                     'df_name':i,
                     'Timeout': 60, # for the single iteration (IN MINUTES)
-                    'Fraction': 1 # fraction
+                    'Fraction': 1, # fraction
+                    'Meta':False, # TODO not implemented for standard ODT
+                    # 'Branch_feat': meta_features[i]['Branch_feat'],
+                    # 'Leaf_feat': meta_features[i]['Leaf_feat']
                 })
                 prev_log = training_session(config)
             # print(pd.DataFrame(prev_log).to_markdown())

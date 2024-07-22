@@ -1,8 +1,5 @@
-from pyscipopt import Model, quicksum, multidict, SCIP_PARAMSETTING
-from TreeStructure import Parent
+from pyscipopt import Model, quicksum
 from binarytree import build
-from TreeStructure import OptimalTree
-from sklearn.metrics import accuracy_score
 from sklearn.utils import shuffle
 from DatabaseParser import DataParser
 

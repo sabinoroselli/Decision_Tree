@@ -1,7 +1,7 @@
 from gurobipy import *
-from TreeStructure import Parent, OptimalTree
+from Utilities.OldTrees.TreeStructure import Parent, OptimalTree
 from binarytree import build
-from TreeStructure import RAE,RRSE
+from Utilities.OldTrees.TreeStructure import RAE,RRSE
 from sklearn.utils import shuffle
 from DatabaseParser import DataParser
 import numpy as np

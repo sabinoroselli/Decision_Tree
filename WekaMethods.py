@@ -1,6 +1,6 @@
 from sklearn.utils import shuffle
 from sklearn.metrics import accuracy_score
-from TreeStructure import RAE,RRSE
+from Utilities.OldTrees.TreeStructure import RAE,RRSE
 import weka.core.jvm as jvm
 from weka.classifiers import Classifier as Classifier
 from weka.core.converters import Loader

@@ -1,11 +1,6 @@
 from gurobipy import *
-from TreeStructure import Parent
 from binarytree import build
-from TreeStructure import OptimalTree
-from sklearn.metrics import accuracy_score
 from sklearn.utils import shuffle
-import pandas as pd
-import json
 from DatabaseParser import DataParser
 
 def optimal_CT(df, features, labels, depth, C):

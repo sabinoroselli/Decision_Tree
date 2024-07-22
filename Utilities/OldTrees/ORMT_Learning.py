@@ -1,7 +1,8 @@
 import numpy as np
 import pandas as pd
-from TreeStructure import RAE
-from ORMT import optimal_RMT
+from Utilities.OldTrees.TreeStructure import RAE
+# from ORMT import optimal_RMT # todo reset this
+from meta_regression import optimal_RMT
 from datetime import  datetime as dt
 
 
@@ -9,7 +10,15 @@ def train_ORMT(config, Train_df, Val_df):
     # empty WARM START log file
     open(f'WarmStarts/{config["df_name"].split(".")[0]}_{config["RandomSeed"]}.mst', 'w').close()
 
-    features = list(Train_df.columns.drop(['class']))
+    if config['Meta']: # todo make this into config input
+        features1 = config['Branch_feat']
+        features2 = config['Leaf_feat']
+        features = [features1, features2]
+    else:
+        features = list(Train_df.columns.drop(['class']))
+        features2 = None
+
+
     labels = Train_df['class'].unique()
     labels = ('class', labels)
 
@@ -39,7 +48,8 @@ def train_ORMT(config, Train_df, Val_df):
             Y_train = Train_df['class']
 
             # Predict the train set
-            train_pred = ODT.predict_regr(X_train, the_tree)
+            # train_pred = ODT.predict_regr(X_train, the_tree) # todo reset this
+            train_pred = ODT.predict_regr(X_train, the_tree,features2)
             train_RAE = RAE(Y_train, train_pred)
 
             # split validation set into features and labels
@@ -48,9 +58,13 @@ def train_ORMT(config, Train_df, Val_df):
             Y_val = Val_df['class']
 
             # Predict the validation set
-            val_pred = ODT.predict_regr(X_val, the_tree)
+            # val_pred = ODT.predict_regr(X_val, the_tree) # todo reset this
+            val_pred = ODT.predict_regr(X_val, the_tree,features2)
             val_RAE = RAE(Y_val,val_pred)
-            print(f'{config["df_name"].split(".")[0]}({config["RandomSeed"]}) Splits: {Splits}, C:{C} RAE (Train Set): {train_RAE} RAE (val Set): {val_RAE} -- {dt.now()}')
+            print(f'{config["df_name"].split(".")[0]}({config["RandomSeed"]}) Splits: {Splits},'
+                  f' C:{C} RAE (Train Set): {train_RAE} RAE (val Set): {val_RAE} '
+                  f'-- Runtime: {round(runtime,2)} '
+                  f'-- {dt.now()}')
 
             iteration_log.update({
                 f'{(Splits)}':{

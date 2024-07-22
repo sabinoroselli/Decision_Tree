@@ -3,7 +3,7 @@ from sklearn.tree import DecisionTreeClassifier,DecisionTreeRegressor
 from sklearn.svm import SVR,SVC
 from sklearn.utils import shuffle
 from sklearn.metrics import accuracy_score
-from TreeStructure import RAE,RRSE
+from Utilities.OldTrees.TreeStructure import RAE,RRSE
 import json
 from DatabaseParser import DataParser
 import numpy as np
