@@ -75,15 +75,15 @@ def train_OMT(config, Train_df, Val_df):
                 val_performance = RAE(Y_val, val_pred)
 
             print(f'{config["df_name"].split(".")[0]}({config["RandomSeed"]}) Splits: {Splits},'
-                  f' C:{C} RAE (Train Set): {train_performance} RAE (val Set): {val_performance} '
+                  f' C:{C} (Train Set): {train_performance} (Val Set): {val_performance} '
                   f'-- Runtime: {round(runtime, 2)} '
                   f'-- {dt.now()}')
 
 
             iteration_log.update({
                 f'{(Splits)}':{
-                            'RAE (train)':train_performance,
-                            'RAE (val)': val_performance
+                            '(train)':train_performance,
+                            '(val)': val_performance
                 }
             })
 

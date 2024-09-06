@@ -41,12 +41,12 @@
     },
     "RAM_price": {
         "RelAbsErr": [
-            1.83,
-            7.01
+            1.45,
+            9.93
         ],
         "RelRootSqErr": [
-            3.73,
-            28.79
+            2.96,
+            40.1
         ]
     },
     "autoMpg": {
@@ -196,6 +196,16 @@
         ],
         "RelRootSqErr": [
             0.71,
+            0.0
+        ]
+    },
+    "sensory": {
+        "RelAbsErr": [
+            0.89,
+            0.0
+        ],
+        "RelRootSqErr": [
+            0.89,
             0.0
         ]
     }

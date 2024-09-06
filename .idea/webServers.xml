@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="190c55b3-cf2f-4c30-8f72-11f2e3cd7dba" name="Epyc">
+        <fileTransfer accessType="SFTP" host="epyc" port="22" sshConfigId="6c292097-165c-4db0-a41c-4ab61ecef3b9" sshConfig="sroselli@epyc:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" connections="1" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+        <option name="numberOfConnections" value="1" />
+      </webServer>
+      <webServer id="8896b832-f0fe-47a3-8928-7a4f80648d2f" name="ml-19">
+        <fileTransfer rootFolder="/Scratch/sroselli" accessType="SFTP" host="ml-19" port="22" sshConfigId="ebad04a7-1357-4367-875c-843a8d31c4ea" sshConfig="sroselli@ml-19:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" connections="1" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+        <option name="numberOfConnections" value="1" />
+      </webServer>
+    </option>
+  </component>
+</project>

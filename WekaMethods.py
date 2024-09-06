@@ -20,30 +20,33 @@ def LMT_M5P(file, ProbType, RS):
 
     shuffled_indexes = shuffle([str(i+1) for i in range(len(df))],random_state=RS)
 
-    # TestSize = 0.2
-    # Test_indexes = shuffled_indexes[:round(len(df) * TestSize)]
-    # Train_indexes = shuffled_indexes[len(Test_indexes):]
-    #
-    # Train_df = df.subset(row_range=",".join(Train_indexes))
-    # Test_df = df.subset(row_range=",".join(Test_indexes))
+    TestSize = 0.2
+    Test_indexes = shuffled_indexes[:round(len(df) * TestSize)]
+    Train_indexes = shuffled_indexes[len(Test_indexes):]
 
-    Test_indexes = shuffled_indexes[:round(len(df) * 0.2)]
-    Val_indexes = shuffled_indexes[len(Test_indexes): len(Test_indexes) + round(len(df) * 0.2)]
-    Train_indexes = shuffled_indexes[len(Test_indexes) + len(Val_indexes):]
+    Train_df = df.subset(row_range=",".join(Train_indexes))
+    Test_df = df.subset(row_range=",".join(Test_indexes))
+
+    # Test_indexes = shuffled_indexes[:round(len(df) * 0.2)]
+    # Val_indexes = shuffled_indexes[len(Test_indexes): len(Test_indexes) + round(len(df) * 0.2)]
+    # Train_indexes = shuffled_indexes[len(Test_indexes) + len(Val_indexes):]
 
     Train_df = df.subset(row_range=",".join(Train_indexes))
     # Val_df = df.subset(row_range=",".join(Val_indexes))
     Test_df = df.subset(row_range=",".join(Test_indexes))
-
 
     # print(Test_df.subset(col_names=[label_name]))
 
     if ProbType == 'Classification':
         data = rf.load(open(f'{ProbType}Problems/{file}', 'rt'))
         labels = {
-            str(data['attributes'][-1][1][0]): 0.0,
-            str(data['attributes'][-1][1][1]): 1.0
+            i:float(index)
+            for index,i in enumerate(data['attributes'][-1][1])
         }
+        # for i in labels.items():
+        #     print(i,type(i[0]))
+        # for i in Test_df.subset(col_names=[label_name]):
+        #     print(i,str(i))
         Y_test = [labels[str(i)] for i in Test_df.subset(col_names=[label_name])]
         placeholder = 'Leaves'
         cls = Classifier(classname="weka.classifiers.trees.LMT")
@@ -79,55 +82,65 @@ if __name__ == "__main__":
 
     ########### CLASSIFICATION
     ClassDataBases = [
-        'blogger.arff',
-        'boxing.arff',
-        'mux6.arff',
-        'corral.arff',
-        'biomed.arff',
-        'ionosphere.arff',
-        'jEdit.arff',
-        'schizo.arff',
-        'colic.arff',
-        'threeOf9.arff',
-        'R_data_frame.arff',
-        'australian.arff',
-        'doa_bwin_balanced.arff',
-        'blood-transf.arff',
-        'autoUniv.arff',
-        'parity.arff',
-        'banknote.arff',
-        'gametes_Epistasis.arff',
-        'kr-vs-kp.arff',
-        'banana.arff'
+        ############ MULTICLASS ############
+        # 'iris.arff',
+        'glass.arff',
+        'teachingAssistant.arff',
+        'balance-scale.arff',
+        'autoUnivMulti.arff',
+        'hypothyroid.arff',
+        # 'Diabetes.arff',  TOO MANY SYMBOLIC FEATURES...TRY IT AT SOME POINT MAYBE
+        ############ BINARY ############
+        # 'blogger.arff',
+        # 'boxing.arff',
+        # 'mux6.arff',
+        # 'corral.arff',
+        # 'biomed.arff',
+        # 'ionosphere.arff',
+        # 'jEdit.arff',
+        # 'schizo.arff',
+        # 'colic.arff',
+        # 'threeOf9.arff',
+        # 'R_data_frame.arff',
+        # 'australian.arff',
+        # 'doa_bwin_balanced.arff',
+        # 'blood-transf.arff',
+        # 'autoUniv.arff',
+        # 'parity.arff',
+        # 'banknote.arff',
+        # 'gametes_Epistasis.arff',
+        # 'kr-vs-kp.arff',
+        # 'banana.arff'
     ]
     ########### REGRESSION
     RegrDataBases = [
-        'wisconsin.arff',
-        'pwLinear.arff',
-        'cpu.arff',
-        'yacht_hydrodynamics.arff',
-        'RAM_price.arff',
-        'autoMpg.arff',
-        'vineyard.arff',
-        'boston_corrected.arff',
-        'forest_fires.arff',
-        'meta.arff',
-        'arsenic-female-lung.arff',
-        'arsenic-male-lung.arff',
-        'titanic_1.arff',
-        'stock.arff',
-        'Bank-Note.arff',
-        'balloon.arff',
-        'debutanizer.arff',
-        'analcatdata_supreme.arff',
-        'Long.arff',
-        'KDD.arff'
+        'sensory.arff',
+        # 'wisconsin.arff',
+        # 'pwLinear.arff',
+        # 'cpu.arff',
+        # 'yacht_hydrodynamics.arff',
+        # 'RAM_price.arff',
+        # 'autoMpg.arff',
+        # 'vineyard.arff',
+        # 'boston_corrected.arff',
+        # 'forest_fires.arff',
+        # 'meta.arff',
+        # 'arsenic-female-lung.arff',
+        # 'arsenic-male-lung.arff',
+        # 'titanic_1.arff',
+        # 'stock.arff',
+        # 'Bank-Note.arff',
+        # 'balloon.arff',
+        # 'debutanizer.arff',
+        # 'analcatdata_supreme.arff',
+        # 'Long.arff',
+        # 'KDD.arff'
     ]
 
-    choice = [ClassDataBases, 'Classification']
-    # choice = [RegrDataBases,'Regression']
+    # choice = [ClassDataBases, 'Classification']
+    choice = [RegrDataBases,'Regression']
     map = {'Classification':'LMT','Regression':'M5P'}
-    Runs = 30
+    Runs = 10
     jvm.start(packages=True)
     for i in choice[0]:
         print(f'solving {i.split(".")[0]} with {map[choice[1]]}')

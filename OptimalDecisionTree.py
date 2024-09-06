@@ -298,22 +298,22 @@ if __name__ == "__main__":
     # ProbType = 'Regression';file = 'RAM_price'
 
     RS = 7
-    Splits = 1
+    Splits = 0
 
     config = {
-        'RandomSeed': 0,
+        'RandomSeed': RS,
         'ProbType': ProbType,
         "ModelTree": False,
         'SplitType': 'Parallel',
         'label_name': 'class',
-        'TestSize': 0.4,
+        'TestSize': 0.2,
         'df_name': file,
         'Timeout': 60,  # for the single iteration (IN MINUTES)
         'Fraction': 1,  # fraction
         'Meta': False
     }
 
-    df = DataParser(f'{file}.arff', ProbType, one_hot=True)
+    df = DataParser(f'{file}.arff', ProbType, one_hot=True, toInt=False)
 
     df = shuffle(df, random_state=RS)
     Test_df = df.iloc[:round(len(df) * 0.2)]

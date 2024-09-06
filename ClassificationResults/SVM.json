@@ -118,5 +118,47 @@
             55.19,
             1.55
         ]
+    },
+    "iris": {
+        "Accuracy": [
+            96.11,
+            6.74
+        ]
+    },
+    "lymph": {
+        "Accuracy": [
+            83.67,
+            20.26
+        ]
+    },
+    "glass": {
+        "Accuracy": [
+            62.71,
+            41.64
+        ]
+    },
+    "teachingAssistant": {
+        "Accuracy": [
+            55.67,
+            153.43
+        ]
+    },
+    "balance-scale": {
+        "Accuracy": [
+            91.47,
+            6.03
+        ]
+    },
+    "autoUnivMulti": {
+        "Accuracy": [
+            35.39,
+            7.32
+        ]
+    },
+    "hypothyroid": {
+        "Accuracy": [
+            96.77,
+            0.34
+        ]
     }
 }

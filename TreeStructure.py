@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 from binarytree import build
 
 
@@ -17,13 +18,14 @@ class Node():
         return f'Node {self.name}, feature {self.feature}, threshold {self.threshold}'
 
 class OptimalTree():
-    def __init__(self, non_empty_nodes,splitting_nodes,depth,SplitType='Parallel',ModelTree=True):
+    def __init__(self, non_empty_nodes,splitting_nodes,depth,SplitType='Parallel',ModelTree=True,classes=[]):
         self.non_emtpy_nodes = non_empty_nodes
         self.splitting_nodes = splitting_nodes
         self.depth = depth
         self.SplitType = SplitType
         self.ModelTree = ModelTree
         self.nodes = [i for i in range(2 ** (depth + 1) - 1)]
+        self.classes = classes
 
         self.complete_tree = build(self.nodes)
         self.T_L = [i.value for i in self.complete_tree.leaves]  # leave nodes
@@ -107,9 +109,18 @@ class OptimalTree():
     def make_classification(self, x, tree,f2=None):
         '''function to make a single prediction'''
         features = f2 if f2 != None else x
+
         if self.ModelTree:
             if tree.value != None:
-                return 1 if sum([ tree.value['Beta'][f] * x[f] for f in features]) + tree.value['Delta'] > 0 else -1
+                if len(self.classes)>2:
+                    scores = {
+                        c:sum([tree.value[c]['Beta'][f] * x[f] for f in features]) + tree.value[c]['Delta']
+                        for c in self.classes
+                    }
+                    return max(scores, key=scores.get)
+
+                else:
+                    return 1 if sum([ tree.value['Beta'][f] * x[f] for f in features]) + tree.value['Delta'] > 0 else -1
         else:
             if tree.value != None:
                 return tree.value
@@ -201,3 +212,12 @@ def RRSE(Y_labels,Y_predicted):
     numerator = sum([ (i-j)**2 for i,j in zip(Y_predicted,Y_labels)])
     denominator = sum([ (mean_Y - j)**2 for j in Y_labels])
     return round(np.sqrt(numerator/denominator),2)
+
+def Multiplier(vector):
+    theVec = []
+    for i in vector:
+        if '.' in str(i):
+            theVec.append(len(str(i).split('.')[1]))
+        else:
+            theVec.append(0)
+    return 10**max(theVec)

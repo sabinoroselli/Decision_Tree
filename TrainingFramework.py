@@ -22,18 +22,16 @@ def log_training(config):
     # # Shuffle the dataset
     df = shuffle(config['df'], random_state=config["RandomSeed"])
 
-    Test_df = df.iloc[:round(len(df) * config['TestSize'])]
-    Val_df = df.iloc[len(Test_df): len(Test_df) + round(len(df) * config['ValSize'])]
-    if config['Fraction'] == 1:
-        Train_df = df.iloc[len(Test_df) + len(Val_df):]
-    elif 0 < config['Fraction'] < 1:
-        print(f'Reducing Training data set to {float(config["Fraction"]) * 100}% of its original length')
-        Train_df = df.iloc[len(Test_df) + len(Val_df):]  # todo this could have been coded a little more elegantly
-        print('Original Length:', len(Train_df))
-        Train_df = df.iloc[:round(len(Train_df) * float(config['Fraction']))]
-        print('Reduced Length:', len(Train_df))
+    if config['Stratified']:
+        Test_df = df.iloc[:round(len(df) * config['TestSize'])]
+        Val_df = df.iloc[len(Test_df):].groupby('class',
+                group_keys=False).apply(lambda x: x.sample(frac=config['ValSize'],
+                                                           random_state=config['RandomSeed']))
+        Train_df = df[~df.index.isin(Test_df.index.union(Val_df.index))]
     else:
-        raise ValueError('WRONG TRAINING DATASET FRACTION')
+        Test_df = df.iloc[:round(len(df) * 0.2)]
+        Val_df = df.iloc[len(Test_df): len(Test_df) + round(len(df) * 0.2)]
+        Train_df = df.iloc[len(Test_df) + len(Val_df):]
 
     # ELIMIATING A COLUMN FROM ALL DATASETS IF ALL THE VALUES IN IT ARE THE SAME IN THE TRAIN SET
     for i in Train_df.columns:
@@ -129,7 +127,9 @@ def training_session(config):
 
     #### WRITE THE LOG OF THE TRAINING SESSION IN A JSON FILE ####
 
-    name = config['df_name'].split(".")[0] + str(config['Fraction'])
+    WW_placeholder = '_WW' if config['WW'] else ''
+    Strat_placeholder = '_Strat' if config['Stratified'] else ''
+    name = config['df_name'].split(".")[0] + WW_placeholder + Strat_placeholder + '_' + str(int(config['Timeout']/60)) + 'H'
 
     if config['ModelTree']:
         TreeType = 'MOD'
@@ -174,49 +174,59 @@ if __name__ == "__main__":
 
     ########### CLASSIFICATION
     ClassDataBases = [
-        'blogger.arff',
-        'boxing.arff',
-        'mux6.arff',
-        'corral.arff',
-        'biomed.arff',
-        'ionosphere.arff',
-        'jEdit.arff',
-        'schizo.arff',
-        'colic.arff',
-        'threeOf9.arff',
-        'R_data_frame.arff',
-        'australian.arff',
-        'doa_bwin_balanced.arff',
-        'blood-transf.arff',
-        'autoUniv.arff',
-        'parity.arff',
-        'banknote.arff',
-        'gametes_Epistasis.arff',
-        'kr-vs-kp.arff',
-        'banana.arff'
+        ############ MULTICLASS ############
+        # 'teachingAssistant.arff',
+        # 'glass.arff',
+        # 'balance-scale.arff',
+        'autoUnivMulti.arff',
+        'hypothyroid.arff',
+        # 'iris.arff'
+        # 'Diabetes.arff',  TOO MANY SYMBOLIC FEATURES...TRY IT AT SOME POINT MAYBE
+        ############ BINARY ############
+        # 'blogger.arff',
+        # 'boxing.arff',
+        # 'mux6.arff',
+        # 'corral.arff',
+        # 'biomed.arff',
+        # 'ionosphere.arff',
+        # 'jEdit.arff',
+        # 'schizo.arff',
+        # 'colic.arff',
+        # 'threeOf9.arff',
+        # 'R_data_frame.arff',
+        # 'australian.arff',
+        # 'doa_bwin_balanced.arff',
+        # 'blood-transf.arff',
+        # 'autoUniv.arff',
+        # 'parity.arff',
+        # 'banknote.arff',
+        # 'gametes_Epistasis.arff',
+        # 'kr-vs-kp.arff',
+        # 'banana.arff'
     ]
     ########### REGRESSION
     RegrDataBases = [
+        'sensory.arff',
         # 'wisconsin.arff',
-    #     'pwLinear.arff',
-    #     'cpu.arff',
-    #     'yacht_hydrodynamics.arff',
-    #     'RAM_price.arff',
-    #     'autoMpg.arff',
-    #     'vineyard.arff',
-        'boston_corrected.arff',
-        'forest_fires.arff',
-        'meta.arff',
-        'arsenic-female-lung.arff',
-        'arsenic-male-lung.arff',
-        'titanic_1.arff',
-        'stock.arff',
-        'Bank-Note.arff',
-        'balloon.arff',
-        'debutanizer.arff',
-        'analcatdata_supreme.arff',
-        'Long.arff',
-        'KDD.arff'
+        # 'pwLinear.arff',
+        # 'cpu.arff',
+        # 'yacht_hydrodynamics.arff',
+        # 'RAM_price.arff',
+        # 'autoMpg.arff',
+        # 'vineyard.arff',
+        # 'boston_corrected.arff',
+        # 'forest_fires.arff',
+        # 'meta.arff',
+        # 'arsenic-female-lung.arff',
+        # 'arsenic-male-lung.arff',
+        # 'titanic_1.arff',
+        # 'stock.arff',
+        # 'Bank-Note.arff',
+        # 'balloon.arff',
+        # 'debutanizer.arff',
+        # 'analcatdata_supreme.arff',
+        # 'Long.arff',
+        # 'KDD.arff'
     ]
 
     meta_features = {
@@ -285,9 +295,8 @@ if __name__ == "__main__":
     choice = [RegrDataBases,'Regression']
     Runs = 30
     config = {}
-    # for fraction in [0.3,0.5,0.7]:
-    for SplitType in ['Parallel']: # 'Oblique','Parallel'
-        for ModelTree in [True]:
+    for SplitType in ['Parallel','Oblique']: # 'Oblique','Parallel'
+        for ModelTree in [True,False]:
             for i in choice[0]:
                 print(f" %%%%%%%%%%%%%%%%%%%% Solving {i.split('.')[0]} %%%%%%%%%%%%%%%%%%%%%%")
                 config.update({
@@ -297,11 +306,12 @@ if __name__ == "__main__":
                     'ModelTree': ModelTree,
                     'TestSize': 0.2,
                     'ValSize': 0.2,
-                    'MinSplits': 1,
-                    'MaxSplits': 1,
+                    'MinSplits': 0,
+                    'MaxSplits': 3,
                     'df_name':i,
                     'Timeout': 60, # for the single iteration (IN MINUTES)
-                    'Fraction': 1, # fraction
+                    'WW':True,
+                    'Stratified':False,
                     'Meta':False, # TODO not implemented for standard ODT
                     # 'Branch_feat': meta_features[i]['Branch_feat'],
                     # 'Leaf_feat': meta_features[i]['Leaf_feat']

@@ -2,12 +2,18 @@ import json
 import pandas as pd
 
 probType = 'Classification'#'Regression'
-ModelType = 'MOD' # STD, MOD
-SplitType = 'Parallel' # 'Parallel'
+ModelType = 'STD' # STD, MOD
+SplitType = 'Oblique' # Parallel, Oblique
 
 modeTree = {'Classification':'LMT','Regression':'M5P'}
 
-algorithms = [f'{SplitType}_{ModelType}']#,modeTree[probType],'CART','RF','SVM']
+algorithms = [
+                f'{SplitType}_{ModelType}',
+                # modeTree[probType],
+                # 'CART',
+                # 'RF',
+                # 'SVM'
+            ]
 
 all_results = []
 for i in algorithms:
@@ -30,8 +36,7 @@ for i in algorithms:
         all_results.append(df)
 
 metrics_and_leaves = pd.concat(all_results,axis=1,join='inner')
-# print(metrics_and_leaves.to_markdown())
-## TODO make a table to report times
+print(metrics_and_leaves.to_markdown()) # THIS IS THE TABLE WITH THE METRIC
 all_splits = []
 with open(f'{probType}Results/{SplitType}_{ModelType}.json') as json_data:
     buffer = json.load(json_data)
@@ -41,4 +46,4 @@ with open(f'{probType}Results/{SplitType}_{ModelType}.json') as json_data:
         all_splits.append(pd.DataFrame.from_dict(sub_buffer))
     runtimes = pd.concat(all_splits, axis=1, join='inner').transpose()
 all_data = pd.concat([metrics_and_leaves,runtimes],axis=1,join='inner')
-print(all_data.to_markdown())
+# print(all_data.to_markdown()) # THIS IS THE TABLE WITH RUNNING TIMES (OPTIMAL TREES ONLY)

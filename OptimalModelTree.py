@@ -5,6 +5,7 @@ from binarytree import build
 from TreeStructure import OptimalTree,Parent,RAE,RRSE
 from sklearn.metrics import accuracy_score
 from sklearn.utils import shuffle
+from sklearn.model_selection import StratifiedShuffleSplit
 from DatabaseParser import DataParser
 
 def optimal_OMT(df, features, labels, Splits, C, config):
@@ -17,6 +18,16 @@ def optimal_OMT(df, features, labels, Splits, C, config):
         leafFeat = features
 
     I = df.index.values
+
+    classes = df[labels[0]].unique()
+
+    LabelsPerClass = {
+        c: {
+            i: 1 if df.loc[i, labels[0]] == c else -1
+            for i in I
+        }
+        for c in classes
+    }
 
     mu = {
         feature: min([abs(first - second)
@@ -85,12 +96,20 @@ def optimal_OMT(df, features, labels, Splits, C, config):
     b = m.addVars(T_B,lb=-GRB.INFINITY,vtype=GRB.CONTINUOUS,name='b')
     z = m.addVars(I,T_L,lb=0,ub=1,vtype=GRB.INTEGER,name='z') # point 'i' is in node 't'
     l = m.addVars(T_L,lb=0,ub=1,vtype=GRB.INTEGER,name='l') # leaf 't' contains any points at all
-    Beta = m.addVars(leafFeat,T_L,lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='Beta')  # coefficient for feature i at node t
-    Bet_abs = m.addVars(leafFeat, T_L, vtype=GRB.CONTINUOUS,name='Beta_abs')  # coefficient for feature i at node t
-    Delta = m.addVars(T_L,lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='Delta')  # constant at node t
-    if config['ProbType'] == 'Classification':
+    if config['ProbType'] == 'Classification' and len(classes) == 2:
+        Beta = m.addVars(leafFeat, T_L, lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='Beta')  # coefficient for feature i at node t
+        Bet_abs = m.addVars(leafFeat, T_L, vtype=GRB.CONTINUOUS, name='Beta_abs')  # coefficient for feature i at node t
+        Delta = m.addVars(T_L, lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='Delta')
         e = m.addVars(I,T_L, lb=0, vtype=GRB.CONTINUOUS, name='e')
+    if config['ProbType'] == 'Classification' and len(classes) > 2:
+        Beta = m.addVars(classes,leafFeat, T_L, lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='Beta')  # coefficient for feature i at node t
+        Bet_abs = m.addVars(classes,leafFeat, T_L, vtype=GRB.CONTINUOUS, name='Beta_abs')  # coefficient for feature i at node t
+        Delta = m.addVars(classes,T_L, lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='Delta')
+        e = m.addVars(classes,I,T_L, lb=0, vtype=GRB.CONTINUOUS, name='e')
     elif config['ProbType'] == 'Regression':
+        Beta = m.addVars(leafFeat, T_L, lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='Beta')  # coefficient for feature i at node t
+        Bet_abs = m.addVars(leafFeat, T_L, vtype=GRB.CONTINUOUS, name='Beta_abs')  # coefficient for feature i at node t
+        Delta = m.addVars(T_L, lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='Delta')
         e = m.addVars(I, T_L, lb=-GRB.INFINITY, vtype=GRB.CONTINUOUS, name='e')
         e_abs = m.addVars(I, T_L, vtype=GRB.CONTINUOUS, name='e_abs')
 
@@ -184,13 +203,46 @@ def optimal_OMT(df, features, labels, Splits, C, config):
     )
 
     if config['ProbType'] == 'Classification':
-        Const_16 = m.addConstrs(
-            (1 == z[i, t])
-            >>
-            (1 - e[i,t] <= (quicksum([ Beta[j,t] * df.loc[i,j] for j in leafFeat ]) + Delta[t] ) * df.loc[i,labels[0]])
-            for i in I
-            for t in T_L
-        )
+        if len(classes) > 2:
+            if config['WW']:
+                m.addConstrs(
+                    (1 == z[i, t])
+                    >>
+                    ( quicksum([Beta[df.loc[i, labels[0]], j, t] * df.loc[i, j] for j in leafFeat]) + Delta[df.loc[i, labels[0]], t]
+                      >=
+                      quicksum([Beta[m, j, t] * df.loc[i, j] for j in leafFeat]) + Delta[m, t] + 2 - e[m, i, t])
+                    for i in I
+                    for m in classes
+                    for t in T_L
+                    if m != df.loc[i, labels[0]]
+                )
+            else:
+                m.addConstrs(
+                    (1 == z[i, t])
+                    >>
+                    (1 - e[c,i,t] <= (quicksum([ Beta[c,j,t] * df.loc[i,j] for j in leafFeat ]) + Delta[c,t] ) * LabelsPerClass[c][i])
+                    for i in I
+                    for t in T_L
+                    for c in classes
+                )
+
+            # comment this on if you want the sum-to-zero constraint
+            # sum_to_zero = m.addConstrs(
+            #     (1 == z[i, t])
+            #     >>
+            #     (quicksum([ quicksum([Beta[c,f] * df.loc[i,f] for f in features]) + Delta[c] for c in classes]) == 0)
+            #     for i in I
+            #     for t in T_L
+            # )
+
+        else:
+            m.addConstrs(
+                (1 == z[i, t])
+                >>
+                (1 - e[i, t] <= (quicksum([Beta[j, t] * df.loc[i, j] for j in leafFeat]) + Delta[t]) * df.loc[i, labels[0]])
+                for i in I
+                for t in T_L
+            )
     elif config['ProbType'] == 'Regression':
         Const_16 = m.addConstrs(
             (z[i, t] == 1)
@@ -203,10 +255,14 @@ def optimal_OMT(df, features, labels, Splits, C, config):
         Const_17 = m.addConstrs(
             e_abs[i, t] == abs_(e[i, t]) for i in I for t in T_L
         )
-
-    Const_18 = m.addConstrs(
-        Bet_abs[f,t] == abs_(Beta[f,t])  for f in leafFeat for t in T_L
-    )
+    if config['ProbType'] == 'Classification' and len(classes) > 2:
+        Const_18 = m.addConstrs(
+            Bet_abs[c,f,t] == abs_(Beta[c,f,t])  for c in classes for f in leafFeat for t in T_L
+        )
+    else:
+        Const_18 = m.addConstrs(
+            Bet_abs[f, t] == abs_(Beta[f, t]) for f in leafFeat for t in T_L
+        )
 
     Const_19 = m.addConstr(
         quicksum([d[t] for t in T_B]) <= Splits
@@ -225,10 +281,27 @@ def optimal_OMT(df, features, labels, Splits, C, config):
             for t in T_B for j in branchFeat
         )
 
-    if config['ProbType'] == 'Classification':
-        m.setObjective(
-            quicksum([ Bet_abs[f,t] for f in leafFeat for t in T_L]) + C * quicksum([e[i,t] for i in I for t in T_L])
+    if config['ProbType'] == 'Classification' and len(classes)>2:
+        if config['WW']:
+            m.setObjective(
+                quicksum([Bet_abs[c, f, t] for c in classes for f in leafFeat for t in T_L])
+                +
+                C * quicksum([e[c, i, t] for c in classes for i in I for t in T_L
+                              if c != df.loc[i,labels[0]]
+                              ])
             )
+        else:
+            m.setObjective(
+                quicksum([ Bet_abs[c,f,t] for c in classes for f in leafFeat for t in T_L])
+                +
+                C * quicksum([e[c,i,t] for c in classes for i in I for t in T_L
+                              # if c != df.loc[i,labels[0]] # comment this off when switching to the normal SVM formulation
+                              ])
+                )
+    elif config['ProbType'] == 'Classification' and len(classes) == 2:
+        m.setObjective(
+            quicksum([Bet_abs[f, t] for f in leafFeat for t in T_L]) + C * quicksum([e[i, t] for i in I for t in T_L])
+        )
     elif config['ProbType'] == 'Regression':
         m.setObjective(
             quicksum([Bet_abs[f, t] for f in leafFeat for t in T_L]) + C * quicksum([e_abs[i, t] for i in I for t in T_L])
@@ -266,24 +339,39 @@ def optimal_OMT(df, features, labels, Splits, C, config):
                 }
                 for i in T_B if f'd[{i}]' in non_zero_vars
             }
-
-        non_empty_nodes = {
-            i:{
-                'Beta':{
-                    j: round(solution[f'Beta[{j},{i}]'],6)
-                    for j in leafFeat
-                },
-                'Delta':round(solution[f'Delta[{i}]'],6)
+        if config['ProbType'] == 'Classification' and len(classes) == 2 or config['ProbType'] == 'Regression':
+            non_empty_nodes = {
+                i: {
+                    'Beta': {
+                        j: round(solution[f'Beta[{j},{i}]'], 6)
+                        for j in leafFeat
+                    },
+                    'Delta': round(solution[f'Delta[{i}]'], 6)
+                }
+                for i in T_L if f'l[{i}]' in non_zero_vars
             }
-            for i in T_L if f'l[{i}]' in non_zero_vars
-        }
+        else:
+            non_empty_nodes = {
+                i:{
+                    c:{
+                        'Beta':{
+                            j: round(solution[f'Beta[{c},{j},{i}]'],6)
+                            for j in leafFeat
+                        },
+                        'Delta':round(solution[f'Delta[{c},{i}]'],6)
+                    }
+                    for c in classes
+                }
+                for i in T_L if f'l[{i}]' in non_zero_vars
+            }
 
         ODT = OptimalTree(
             non_empty_nodes,
             splitting_nodes,
             int(np.ceil(np.log2(Splits + 1))),
             config["SplitType"],
-            config["ModelTree"]
+            config["ModelTree"],
+            classes
         )
 
     else:
@@ -296,28 +384,34 @@ if __name__ == "__main__":
 
     ProbType = 'Classification'
     # ProbType = 'Regression'
-    file = 'blogger'
-    Splits = 0
+    # file = 'autoUnivMulti'
+    file = 'iris'
+    Splits = 1
 
     config ={
-        'RandomSeed':0,
+        'RandomSeed':7,
         'ProbType': ProbType,
         "ModelTree": True,
         'SplitType': 'Parallel',
         'label_name': 'class',
-        'TestSize': 0.4,
+        'TestSize': 0.2,
         'df_name': file,
         'Timeout': 60,  # for the single iteration (IN MINUTES)
         'Fraction': 1,  # fraction
-        'Meta': False
+        'Meta': False,
+        'WW':False
     }
 
-    df = DataParser(f'{file}.arff',ProbType, one_hot=False)
+    df = DataParser(f'{file}.arff',ProbType, one_hot=True)
 
     df = shuffle(df,random_state=config['RandomSeed'])
 
-    Test_df = df.iloc[:round(len(df) * config['TestSize'])]
-    Train_df = df.iloc[len(Test_df):]
+    # Test_df = df.iloc[:round(len(df) * config['TestSize'])]
+    # Train_df = df.iloc[len(Test_df):]
+    ################### STRATIFIED SPLIT ############################################################
+    Test_df = df.groupby('class', group_keys=False).apply(lambda x: x.sample(frac=config['TestSize'],
+                                                                             random_state=config['RandomSeed']))
+    Train_df = df[~df.index.isin(Test_df.index)]
 
     # ELIMIATING A COLUMN FROM ALL DATASETS IF ALL THE VALUES IN IT ARE THE SAME IN THE TRAIN SET
     for i in Train_df.columns:
@@ -330,45 +424,45 @@ if __name__ == "__main__":
     labels = df['class'].unique()
     labels = ('class', labels)
 
+    for C in [1]:#[0.1, 1, 10, 100, 1000]:
+        ODT,runtime = optimal_OMT(
+            df= Train_df,
+            features= features,
+            labels= labels,
+            Splits= Splits,
+            C= C,
+            config=config
+        )
 
-    ODT,runtime = optimal_OMT(
-        df= Train_df,
-        features= features,
-        labels= labels,
-        Splits= Splits,
-        C= 1,
-        config=config
-    )
+        print('Runtime:',round(runtime,3),end=" ")
+        print('C:',C,end=' ')
+        the_tree = ODT.build_tree(ODT.root.value)
 
-    print('Runtime',runtime)
+        # split train into features and labels
+        X_train = Train_df.drop(columns='class')
+        X_train = X_train.to_dict('index')
+        Y_train = Train_df['class']
 
-    the_tree = ODT.build_tree(ODT.root.value)
+        # split test set into features and labels
+        X_test = Test_df.drop(columns='class')
+        X_test = X_test.to_dict('index')
+        Y_test = Test_df['class']
 
-    # split train into features and labels
-    X_train = Train_df.drop(columns='class')
-    X_train = X_train.to_dict('index')
-    Y_train = Train_df['class']
+        # Predict the train set
+        if ProbType == 'Classification':
+            train_pred = ODT.predict_class(X_train, the_tree, None)
+            print('Train:', round(accuracy_score(Y_train, train_pred) * 100, 2), '%',end=' ')
+        elif ProbType == 'Regression':
+            train_pred = ODT.predict_regr(X_train, the_tree, None)
+            print('Train -- RAE:', RAE(Y_train, train_pred),'RRSE:', RRSE(Y_train, train_pred))
 
-    # split test set into features and labels
-    X_test = Test_df.drop(columns='class')
-    X_test = X_test.to_dict('index')
-    Y_test = Test_df['class']
-
-    # Predict the train set
-    if ProbType == 'Classification':
-        train_pred = ODT.predict_class(X_train, the_tree, None)
-        print('Accuracy (Train Set): ', round(accuracy_score(Y_train, train_pred) * 100, 2), '%')
-    elif ProbType == 'Regression':
-        train_pred = ODT.predict_regr(X_train, the_tree, None)
-        print('Train -- RAE:', RAE(Y_train, train_pred),'RRSE:', RRSE(Y_train, train_pred))
-
-    # Predict the test set
-    if ProbType == 'Classification':
-        test_pred = ODT.predict_class(X_test, the_tree,None)
-        print('Accuracy (Test Set): ', round(accuracy_score(Y_test, test_pred)*100,2),'%')
-    elif ProbType == 'Regression':
-        test_pred = ODT.predict_regr(X_test, the_tree, None)
-        print('Test -- RAE:', RAE(Y_test, test_pred),'RRSE:', RRSE(Y_test, test_pred))
+        # Predict the test set
+        if ProbType == 'Classification':
+            test_pred = ODT.predict_class(X_test, the_tree,None)
+            print('Test:', round(accuracy_score(Y_test, test_pred)*100,2),'%')
+        elif ProbType == 'Regression':
+            test_pred = ODT.predict_regr(X_test, the_tree, None)
+            print('Test -- RAE:', RAE(Y_test, test_pred),'RRSE:', RRSE(Y_test, test_pred))
 
 
 
