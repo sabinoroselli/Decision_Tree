@@ -10,4 +10,8 @@ The Optimal Decision and Model trees, univariate and multivariate, can be comput
 The "WekaMethods" file allows to run LMT (M5P, respectively) algorithm for classification (regression, respectively) problems.
 
 The "SklearnMethods" file allows to run Random Forest, CART, and SVM for classification and regression problems.
+
+The file "requirements.txt" contains all the pip packages required to install to run the above scripts.
+
+The file "ReadJSON.py" can convert the results stored in the ClassificationResults (RegressionResults, respectively) into table format.
     
