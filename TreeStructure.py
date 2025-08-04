@@ -221,3 +221,6 @@ def Multiplier(vector):
         else:
             theVec.append(0)
     return 10**max(theVec)
+
+if __name__ == "__main__":
+    print(Multiplier([2.01,3.0101]))

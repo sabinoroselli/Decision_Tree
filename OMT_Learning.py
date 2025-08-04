@@ -2,7 +2,8 @@ import numpy as np
 import pandas as pd
 from TreeStructure import RAE
 from sklearn.metrics import accuracy_score
-from OptimalModelTree import optimal_OMT
+# from OptimalModelTree import optimal_OMT
+from Utilities.OptimalSuperSparseTree import optimal_OMT
 from datetime import  datetime as dt
 
 

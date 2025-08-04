@@ -31,10 +31,10 @@ def DataParser(name, ProbType, one_hot = True,toInt = False):
         if i[0] != label_name:
             if type(i[1]) == str:
                 # replace NaN with mean for Numeric value features
-                mean_value = df[i[0]].mean()
+                mean_value = round(df[i[0]].mean(),3)
                 df[i[0]] = df[i[0]].fillna(value=mean_value).astype(float)
                 if toInt == True:
-                    df[i[0]] = df[i[0]].round(2)  # todo comment off if you do not wan to to round
+                    # df[i[0]] = df[i[0]].round(3)  # todo comment off if you do not want to round
                     df.loc[:, i[0]] *= Multiplier(df[i[0]])
             else:
                 if one_hot == False:

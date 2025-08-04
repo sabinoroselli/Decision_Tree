@@ -53,7 +53,7 @@ def log_training(config):
     # Build the optimal decision tree out of the MILP solution
     the_tree = ODT.build_tree(ODT.root.value)
 
-    # split validation set into features and labels
+    # split test set into features and labels
     X_test = Test_df.drop(columns='class')
     X_test = X_test.to_dict('index')
     Y_test = Test_df['class']
@@ -129,7 +129,7 @@ def training_session(config):
 
     WW_placeholder = '_WW' if config['WW'] else ''
     Strat_placeholder = '_Strat' if config['Stratified'] else ''
-    name = config['df_name'].split(".")[0] + WW_placeholder + Strat_placeholder + '_' + str(int(config['Timeout']/60)) + 'H'
+    name = config['df_name'].split(".")[0] + WW_placeholder + Strat_placeholder + '_' + str(int(config['Timeout']/60)) + '_' + config['Info']
 
     if config['ModelTree']:
         TreeType = 'MOD'
@@ -178,35 +178,44 @@ if __name__ == "__main__":
         # 'teachingAssistant.arff',
         # 'glass.arff',
         # 'balance-scale.arff',
-        'autoUnivMulti.arff',
-        'hypothyroid.arff',
+        # 'autoUnivMulti.arff',
+        # 'hypothyroid.arff',
         # 'iris.arff'
         # 'Diabetes.arff',  TOO MANY SYMBOLIC FEATURES...TRY IT AT SOME POINT MAYBE
         ############ BINARY ############
-        # 'blogger.arff',
-        # 'boxing.arff',
-        # 'mux6.arff',
-        # 'corral.arff',
-        # 'biomed.arff',
-        # 'ionosphere.arff',
-        # 'jEdit.arff',
-        # 'schizo.arff',
-        # 'colic.arff',
-        # 'threeOf9.arff',
-        # 'R_data_frame.arff',
-        # 'australian.arff',
-        # 'doa_bwin_balanced.arff',
-        # 'blood-transf.arff',
-        # 'autoUniv.arff',
-        # 'parity.arff',
-        # 'banknote.arff',
-        # 'gametes_Epistasis.arff',
-        # 'kr-vs-kp.arff',
-        # 'banana.arff'
+        'blogger.arff',
+        'boxing.arff',
+        'mux6.arff',
+        'corral.arff',
+        'biomed.arff',
+        'ionosphere.arff',
+        'jEdit.arff',
+        'schizo.arff',
+        'colic.arff',
+        'threeOf9.arff',
+        'R_data_frame.arff',
+        'australian.arff',
+        'doa_bwin_balanced.arff',
+        'blood-transf.arff',
+        'autoUniv.arff',
+        'parity.arff',
+        'banknote.arff',
+        'gametes_Epistasis.arff',
+        'kr-vs-kp.arff',
+        'banana.arff'
+        ############ SUPER-SPARSE #############
+        # 'adult.arff',
+        # 'breastcancer.arff',
+        # 'bankruptcy.arff',
+        # 'haberman.arff',
+        # 'heart.arff',
+        # 'mammo.arff',
+        # 'mushroom.arff',
+        # 'spambase.arff'
     ]
     ########### REGRESSION
     RegrDataBases = [
-        'sensory.arff',
+        # 'sensory.arff',
         # 'wisconsin.arff',
         # 'pwLinear.arff',
         # 'cpu.arff',
@@ -291,30 +300,35 @@ if __name__ == "__main__":
         }
     }
 
-    # choice = [ClassDataBases,'Classification']
-    choice = [RegrDataBases,'Regression']
+    choice = [ClassDataBases,'Classification']
+    # choice = [RegrDataBases,'Regression']
     Runs = 30
     config = {}
-    for SplitType in ['Parallel','Oblique']: # 'Oblique','Parallel'
-        for ModelTree in [True,False]:
-            for i in choice[0]:
-                print(f" %%%%%%%%%%%%%%%%%%%% Solving {i.split('.')[0]} %%%%%%%%%%%%%%%%%%%%%%")
-                config.update({
-                    'Runs': Runs,
-                    'ProbType': choice[1],
-                    'SplitType': SplitType,
-                    'ModelTree': ModelTree,
-                    'TestSize': 0.2,
-                    'ValSize': 0.2,
-                    'MinSplits': 0,
-                    'MaxSplits': 3,
-                    'df_name':i,
-                    'Timeout': 60, # for the single iteration (IN MINUTES)
-                    'WW':True,
-                    'Stratified':False,
-                    'Meta':False, # TODO not implemented for standard ODT
-                    # 'Branch_feat': meta_features[i]['Branch_feat'],
-                    # 'Leaf_feat': meta_features[i]['Leaf_feat']
-                })
-                prev_log = training_session(config)
-            # print(pd.DataFrame(prev_log).to_markdown())
+    for setting in [(0,'slim'),(3,'tree')]: # combinations of different settings for the experiments
+        for SplitType in ['Parallel']: # 'Oblique','Parallel'
+            for ModelTree in [True]:
+                for i in choice[0]:
+                    print(f" %%%%%%%%%%%%%%%%%%%% Solving {i.split('.')[0]} %%%%%%%%%%%%%%%%%%%%%%")
+                    config.update({
+                        'Runs': Runs,
+                        'ProbType': choice[1],
+                        'SplitType': SplitType,
+                        'ModelTree': ModelTree,
+                        'TestSize': 0.2,
+                        'ValSize': 0.2,
+                        'MinSplits': 0,
+                        'MaxSplits': setting[0],
+                        'df_name':i,
+                        'Timeout': 60, # for the single iteration (IN MINUTES)
+                        'WW':False,
+                        'Stratified':True,
+                        'SuperSparseIntegers':True,
+                        'SumToZero':False,
+                        'Meta':False, # TODO not implemented for standard ODT
+                        # 'Branch_feat': meta_features[i]['Branch_feat'],
+                        # 'Leaf_feat': meta_features[i]['Leaf_feat']
+                        'Info':setting[1],
+                        'ConsoleLog':False
+                    })
+                    prev_log = training_session(config)
+                # print(pd.DataFrame(prev_log).to_markdown())

@@ -2,8 +2,8 @@ import json
 import pandas as pd
 
 probType = 'Classification'#'Regression'
-ModelType = 'STD' # STD, MOD
-SplitType = 'Oblique' # Parallel, Oblique
+ModelType = 'MOD' # STD, MOD
+SplitType = 'Parallel' # Parallel, Oblique
 
 modeTree = {'Classification':'LMT','Regression':'M5P'}
 
