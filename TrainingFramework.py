@@ -235,7 +235,8 @@ if __name__ == "__main__":
         # 'debutanizer.arff',
         # 'analcatdata_supreme.arff',
         # 'Long.arff',
-        # 'KDD.arff'
+        # 'KDD.arff',
+        'satellite_image.arff'
     ]
 
     meta_features = {
@@ -300,8 +301,8 @@ if __name__ == "__main__":
         }
     }
 
-    choice = [ClassDataBases,'Classification']
-    # choice = [RegrDataBases,'Regression']
+    # choice = [ClassDataBases,'Classification']
+    choice = [RegrDataBases,'Regression']
     Runs = 30
     config = {}
     for setting in [(0,'slim'),(3,'tree')]: # combinations of different settings for the experiments

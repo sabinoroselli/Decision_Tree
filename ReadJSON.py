@@ -8,11 +8,13 @@ SplitType = 'Parallel' # Parallel, Oblique
 modeTree = {'Classification':'LMT','Regression':'M5P'}
 
 algorithms = [
-                f'{SplitType}_{ModelType}',
+                # f'{SplitType}_{ModelType}',
                 # modeTree[probType],
                 # 'CART',
                 # 'RF',
                 # 'SVM'
+                # 'SRTL',
+                'LS_OMT'
             ]
 
 all_results = []

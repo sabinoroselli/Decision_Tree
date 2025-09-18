@@ -1,0 +1,42 @@
+{
+    "yeast": {
+        "Hamming": [
+            0.19,
+            0.0
+        ],
+        "ZeroOne": [
+            0.84,
+            0.0
+        ]
+    },
+    "emotions": {
+        "Hamming": [
+            0.18,
+            0.0
+        ],
+        "ZeroOne": [
+            0.68,
+            0.0
+        ]
+    },
+    "genbase": {
+        "Hamming": [
+            0.0,
+            0.0
+        ],
+        "ZeroOne": [
+            0.03,
+            0.0
+        ]
+    },
+    "reuters": {
+        "Hamming": [
+            0.07,
+            0.0
+        ],
+        "ZeroOne": [
+            0.37,
+            0.0
+        ]
+    }
+}

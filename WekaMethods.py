@@ -114,7 +114,7 @@ if __name__ == "__main__":
     ]
     ########### REGRESSION
     RegrDataBases = [
-        'sensory.arff',
+        # 'sensory.arff',
         # 'wisconsin.arff',
         # 'pwLinear.arff',
         # 'cpu.arff',
@@ -131,7 +131,7 @@ if __name__ == "__main__":
         # 'stock.arff',
         # 'Bank-Note.arff',
         # 'balloon.arff',
-        # 'debutanizer.arff',
+        'debutanizer.arff',
         # 'analcatdata_supreme.arff',
         # 'Long.arff',
         # 'KDD.arff'

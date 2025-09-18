@@ -5,7 +5,7 @@ import pandas as pd
 from TreeStructure import Multiplier
 import os
 
-def DataParser(name, ProbType, one_hot = True,toInt = False):
+def DataParser(name, ProbType, one_hot = True,toInt = False,StdScale=False):
 
     try:
         pd.set_option('future.no_silent_downcasting', True)
@@ -53,14 +53,14 @@ def DataParser(name, ProbType, one_hot = True,toInt = False):
             # else:
             #     temp_label_values = {i: ind for ind, i in enumerate(i[1])}
             #     df[i[0]] = df[i[0]].replace(temp_label_values).astype(int)
-    df.dropna(inplace=True)
+    # df.dropna(inplace=True)
 
     # ELIMIATING A COLUMN IF ALL THE VALUES IN IT ARE THE SAME
     for i in df.columns:
         if df[i].nunique() == 1:
             df = df.drop(i, axis=1)
 
-    if toInt == False:
+    if StdScale == True:
         ##### STANDARD SCALING #######
         std_scaler = StandardScaler()
         if ProbType == 'Classification':
@@ -74,9 +74,10 @@ def DataParser(name, ProbType, one_hot = True,toInt = False):
         if ProbType == 'Classification':
             df_scaled.insert(len(features), label_name, df[label_name], True)
         df = df_scaled
-    id_name = 'row_id'
-    if id_name in df.columns:
-        df.drop(columns=[id_name],inplace=True)
+
+    # id_name = 'row_id'
+    # if id_name in df.columns:
+    #     df.drop(columns=[id_name],inplace=True)
 
     return df
 
@@ -92,10 +93,10 @@ if __name__ == "__main__":
 
     #################### CLASSIFICATION #####################
     collection = [
-        'kr-vs-kp.arff',
+        'wisconsin.arff',
     ]
     for i in collection:
-        df = DataParser(i,'Classification')
+        df = DataParser(i,'Regression')
         print(i)
-        print(df)#.to_markdown())
+        print(df)
     #########################################

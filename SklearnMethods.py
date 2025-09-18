@@ -3,7 +3,7 @@ from sklearn.tree import DecisionTreeClassifier,DecisionTreeRegressor
 from sklearn.svm import SVR,SVC
 from sklearn.utils import shuffle
 from sklearn.metrics import accuracy_score
-from Utilities.OldTrees.TreeStructure import RAE,RRSE
+from TreeStructure import RAE,RRSE
 import json
 from DatabaseParser import DataParser
 import numpy as np
@@ -89,7 +89,7 @@ if __name__ == "__main__":
     ########### CLASSIFICATION
     ClassDataBases = [
         ############ MULTICLASS ############
-        'teachingAssistant.arff',
+        # 'teachingAssistant.arff',
         # 'glass.arff',
         # 'balance-scale.arff',
         # 'autoUnivMulti.arff',
@@ -119,7 +119,7 @@ if __name__ == "__main__":
     ]
     ########### REGRESSION
     RegrDataBases = [
-        'sensory.arff',
+        # 'sensory.arff',
         # 'wisconsin.arff',
         # 'pwLinear.arff',
         # 'cpu.arff',
@@ -139,7 +139,8 @@ if __name__ == "__main__":
         # 'debutanizer.arff',
         # 'analcatdata_supreme.arff',
         # 'Long.arff',
-        # 'KDD.arff'
+        # 'KDD.arff',
+        'satellite_image.arff'
     ]
 
     # choice = [ClassDataBases, 'Classification']

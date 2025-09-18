@@ -1,0 +1,252 @@
+{
+    "teachingAssistant": {
+        "Accuracy": [
+            74.22,
+            192.55
+        ],
+        "Leaves": [
+            12.13,
+            20.78
+        ]
+    },
+    "glass": {
+        "Accuracy": [
+            67.13,
+            78.14
+        ],
+        "Leaves": [
+            11.27,
+            24.66
+        ]
+    },
+    "balance-scale": {
+        "Accuracy": [
+            78.45,
+            7.38
+        ],
+        "Leaves": [
+            11.2,
+            15.36
+        ]
+    },
+    "autoUnivMulti": {
+        "Accuracy": [
+            43.98,
+            9.57
+        ],
+        "Leaves": [
+            11.07,
+            16.73
+        ]
+    },
+    "blogger": {
+        "Accuracy": [
+            77.5,
+            86.25
+        ],
+        "Leaves": [
+            10.27,
+            25.0
+        ]
+    },
+    "boxing": {
+        "Accuracy": [
+            74.72,
+            112.2
+        ],
+        "Leaves": [
+            7.93,
+            28.06
+        ]
+    },
+    "mux6": {
+        "Accuracy": [
+            99.62,
+            4.29
+        ],
+        "Leaves": [
+            12.53,
+            15.72
+        ]
+    },
+    "corral": {
+        "Accuracy": [
+            100.0,
+            0.0
+        ],
+        "Leaves": [
+            8.53,
+            3.98
+        ]
+    },
+    "biomed": {
+        "Accuracy": [
+            89.53,
+            34.63
+        ],
+        "Leaves": [
+            7.17,
+            28.54
+        ]
+    },
+    "ionosphere": {
+        "Accuracy": [
+            90.33,
+            7.99
+        ],
+        "Leaves": [
+            4.87,
+            19.12
+        ]
+    },
+    "jEdit": {
+        "Accuracy": [
+            65.0,
+            26.09
+        ],
+        "Leaves": [
+            6.93,
+            28.13
+        ]
+    },
+    "schizo": {
+        "Accuracy": [
+            69.02,
+            87.06
+        ],
+        "Leaves": [
+            7.87,
+            28.52
+        ]
+    },
+    "threeOf9": {
+        "Accuracy": [
+            92.62,
+            11.27
+        ],
+        "Leaves": [
+            16.0,
+            0.0
+        ]
+    },
+    "R_data_frame": {
+        "Accuracy": [
+            93.45,
+            4.86
+        ],
+        "Leaves": [
+            6.47,
+            22.58
+        ]
+    },
+    "australian": {
+        "Accuracy": [
+            84.28,
+            6.03
+        ],
+        "Leaves": [
+            6.0,
+            35.4
+        ]
+    },
+    "doa_bwin_balanced": {
+        "Accuracy": [
+            60.75,
+            12.39
+        ],
+        "Leaves": [
+            8.5,
+            30.45
+        ]
+    },
+    "blood-transf": {
+        "Accuracy": [
+            78.16,
+            8.46
+        ],
+        "Leaves": [
+            9.33,
+            30.89
+        ]
+    },
+    "autoUniv": {
+        "Accuracy": [
+            80.15,
+            5.3
+        ],
+        "Leaves": [
+            14.8,
+            12.96
+        ]
+    },
+    "parity": {
+        "Accuracy": [
+            58.9,
+            26.86
+        ],
+        "Leaves": [
+            16.0,
+            0.0
+        ]
+    },
+    "banknote": {
+        "Accuracy": [
+            98.3,
+            0.52
+        ],
+        "Leaves": [
+            13.07,
+            14.86
+        ]
+    },
+    "gametes_Epistasis": {
+        "Accuracy": [
+            64.68,
+            48.81
+        ],
+        "Leaves": [
+            5.2,
+            5.76
+        ]
+    },
+    "kr-vs-kp": {
+        "Accuracy": [
+            95.7,
+            0.61
+        ],
+        "Leaves": [
+            15.73,
+            2.06
+        ]
+    },
+    "banana": {
+        "Accuracy": [
+            88.74,
+            0.65
+        ],
+        "Leaves": [
+            16.0,
+            0.0
+        ]
+    },
+    "colic": {
+        "Accuracy": [
+            81.44,
+            12.53
+        ],
+        "Leaves": [
+            5.4,
+            17.64
+        ]
+    },
+    "hypothyroid": {
+        "Accuracy": [
+            99.43,
+            0.04
+        ],
+        "Leaves": [
+            13.73,
+            14.6
+        ]
+    }
+}
